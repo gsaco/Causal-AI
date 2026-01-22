@@ -28,6 +28,7 @@ const entries = logRaw
             <th>Harvest window</th>
             <th>Records</th>
             <th>Status</th>
+            <th>Ranking config</th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +38,7 @@ const entries = logRaw
               <td>{entry.harvest_window}</td>
               <td>{entry.records}</td>
               <td>{entry.status}</td>
+              <td>{entry.ranking_config_version ?? "-"}</td>
             </tr>
           ))}
         </tbody>

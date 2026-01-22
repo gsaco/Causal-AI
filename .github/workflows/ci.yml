@@ -19,10 +19,19 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Lint data + citations
+        run: npm run lint:all
+
+      - name: Test
+        run: npm run test
+
       - name: Build
         run: npm run build
+
+      - name: Validate build artifacts
+        run: node scripts/validate/validate_build_artifacts.mjs

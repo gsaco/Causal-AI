@@ -1,0 +1,49 @@
+---
+title: "Causal Discovery at Scale"
+summary: "Large-scale causal discovery blends optimization advances with scalable estimation pipelines."
+signals:
+  - "Causal Discovery"
+  - "Optimization"
+  - "Scale"
+foundational:
+  - "1803.01422"
+  - "1501.01332"
+new_wave:
+  - "1907.02893"
+  - "1705.08821"
+debates:
+  - "1703.06856"
+open_problems:
+  - prompt: "How do we guarantee identifiability when scaling to high-dimensional causal graphs?"
+    evidence:
+      - "1803.01422"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["1803.01422", "1501.01332"]} type="Claim">
+  Continuous optimization and invariance-based reasoning are the dominant levers for scaling causal discovery.
+</Claim>
+
+## What changed & why it matters
+
+Scaling discovery requires balancing identifiability with practical optimization, making approximate methods the default.
+
+## Core ideas
+
+- Smooth constraints allow gradient-based discovery.
+- Invariance cues help disambiguate competing causal graphs.
+
+## Evidence ledger
+
+**Foundational**: 1803.01422, 1501.01332
+
+**New wave**: 1907.02893, 1705.08821
+
+**Debates**: 1703.06856
+
+## Open problems
+
+<Claim evidence={["1803.01422"]} type="Open Question">
+  What is the minimum intervention budget needed to disambiguate large causal graphs?
+</Claim>

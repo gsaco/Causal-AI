@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { readJson } from "@utils/data";
+
+const config = await readJson("ranking/config.json");
 ---
 <BaseLayout wide title="Ranking Methodology - Causal-AI">
   <section class="section hero">
@@ -13,19 +16,19 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container card">
       <h2>Signals</h2>
       <ul>
-        <li>Recency score (exponential decay over 14 days)</li>
+        <li>Recency score (exponential decay over {config.recency_half_life_days} days)</li>
         <li>Topic momentum (recent vs prior window)</li>
         <li>Cross-listing signal (breadth across categories)</li>
         <li>Version churn (revision activity, when available)</li>
       </ul>
       <h2>Formula</h2>
       <pre class="formula">
-trending_score = 0.55 * recency +
-                 0.20 * momentum +
-                 0.15 * cross_list +
-                 0.10 * churn
+trending_score = {config.weights.recency.toFixed(2)} * recency +
+                 {config.weights.momentum.toFixed(2)} * momentum +
+                 {config.weights.cross_list.toFixed(2)} * cross_list +
+                 {config.weights.churn.toFixed(2)} * churn
       </pre>
-      <p class="subtle">Weights are versioned and changes are logged in the update log.</p>
+      <p class="subtle">Weights are versioned ({config.version}) and changes are logged in the update log.</p>
     </div>
   </section>
 

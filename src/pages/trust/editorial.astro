@@ -12,13 +12,15 @@ import CitationChip from "@components/CitationChip.astro";
 
   <section class="section">
     <div class="container card">
-      <h2>Claim requirements</h2>
+      <h2>Quality gates (enforced in CI)</h2>
       <ul>
-        <li>All claims include at least one arXiv ID.</li>
-        <li>Non-arXiv sources are labeled as secondary supporting sources.</li>
-        <li>When evidence is incomplete, content is marked as a hypothesis.</li>
+        <li>Every &lt;Claim&gt; block must include at least one arXiv ID.</li>
+        <li>Trends must list >=2 foundational, >=2 new-wave, and >=1 debate paper.</li>
+        <li>Overall citation coverage must remain >=95%.</li>
+        <li>Tools and benchmarks must include evidence arrays.</li>
+        <li>arXiv IDs are validated against local snapshots and anchors.</li>
       </ul>
-      <h2>Corrections</h2>
+      <h2>Corrections & ledgering</h2>
       <p class="subtle">Corrections are logged publicly and linked to the evidence update that resolved them.</p>
       <div class="tag-row">
         <CitationChip evidence={["2002.02770"]} />

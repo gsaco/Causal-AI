@@ -1,0 +1,123 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import TrendRadar from "@components/viz/TrendRadar.astro";
+import CrosslistHeatmap from "@components/viz/CrosslistHeatmap.astro";
+import VersionChurnList from "@components/VersionChurnList.astro";
+import PaperTrail from "@components/PaperTrail.astro";
+import Sparkline from "@components/viz/Sparkline.astro";
+import { readJson } from "@utils/data";
+
+const radar = await readJson("metrics/trend_radar.json");
+const heatmap = await readJson("metrics/crosslist_heatmap.json");
+const churn = await readJson("metrics/version_churn.json");
+const timeseries = await readJson("metrics/topic_timeseries.json");
+const topics = await readJson("taxonomy/topics.json");
+const trails = await readJson("curation/paper_trails.json");
+const build = await readJson("provenance/build.json");
+---
+<BaseLayout wide title="Trend Observatory - Causal-AI" description="Causal AI Tendency Radar and activity signals.">
+  <section class="section hero">
+    <div class="container observatory-hero">
+      <div>
+        <p class="chip">Causal AI Tendency Radar</p>
+        <h1>Trend Observatory</h1>
+        <p class="subtle">Signals that highlight where causal AI is shifting, cross-listing, and iterating.</p>
+      </div>
+      <ProvenancePanel provenance={build} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <h2>Trend Radar</h2>
+      <p class="subtle">Compare topic-level signals across momentum, recency, cross-list breadth, and revision churn.</p>
+      <TrendRadar radar={radar} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div class="card">
+        <h2>Cross-list Heatmap</h2>
+        <CrosslistHeatmap heatmap={heatmap} />
+      </div>
+      <div class="card">
+        <h2>Version Churn Lens</h2>
+        <p class="subtle">Rapid iteration signals activity, not necessarily quality.</p>
+        <VersionChurnList churn={churn} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <h2>Topic time series</h2>
+      <p class="subtle">Weekly submission counts per topic.</p>
+      <div class="timeseries-grid">
+        {topics.map((topic) => (
+          <div class="timeseries-row">
+            <div>
+              <strong>{topic.title}</strong>
+              <p class="subtle">{topic.id}</p>
+            </div>
+            <Sparkline values={timeseries.topics[topic.id] ?? []} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Paper Trails</h2>
+      <p class="subtle">Curated sequences for narrative learning across causal AI.</p>
+      <div class="trail-grid">
+        {trails.map((trail) => (
+          <PaperTrail trail={trail} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0.6rem 0 0.4rem;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+    }
+
+    .observatory-hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .trail-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .timeseries-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .timeseries-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+  </style>
+</BaseLayout>

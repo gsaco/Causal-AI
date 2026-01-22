@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-01-22",
+  "overall": {
+    "claims": 14,
+    "with_evidence": 14,
+    "coverage": 1
+  },
+  "sections": {
+    "topics": { "claims": 7, "with_evidence": 7, "coverage": 1 },
+    "trends": { "claims": 6, "with_evidence": 6, "coverage": 1 },
+    "digests": { "claims": 1, "with_evidence": 1, "coverage": 1 },
+    "glossary": { "claims": 0, "with_evidence": 0, "coverage": 1 },
+    "tools": { "claims": 0, "with_evidence": 0, "coverage": 1 },
+    "benchmarks": { "claims": 0, "with_evidence": 0, "coverage": 1 }
+  }
+}

@@ -14,6 +14,25 @@
   --code-bg: #121826;
   --code-text: #e5e7eb;
   --grid: rgba(31, 41, 55, 0.08);
+  --grad-hero: radial-gradient(circle at top, rgba(15, 118, 110, 0.25), transparent 60%),
+    linear-gradient(120deg, rgba(217, 119, 6, 0.2), transparent 55%);
+  --grad-radar: radial-gradient(circle at center, rgba(15, 118, 110, 0.2), transparent 70%);
+  --grad-card: linear-gradient(135deg, rgba(15, 118, 110, 0.08), transparent 60%);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+  --space-10: 5rem;
+  --radius-1: 6px;
+  --radius-2: 10px;
+  --radius-3: 14px;
+  --radius-4: 18px;
+  --radius-5: 24px;
 }
 
 :root[data-theme="dark"] {
@@ -31,4 +50,8 @@
   --code-bg: #0b0f14;
   --code-text: #e6edf3;
   --grid: rgba(148, 163, 184, 0.12);
+  --grad-hero: radial-gradient(circle at top, rgba(32, 201, 151, 0.2), transparent 60%),
+    linear-gradient(120deg, rgba(245, 159, 0, 0.18), transparent 55%);
+  --grad-radar: radial-gradient(circle at center, rgba(32, 201, 151, 0.16), transparent 70%);
+  --grad-card: linear-gradient(135deg, rgba(32, 201, 151, 0.1), transparent 60%);
 }

@@ -1,0 +1,56 @@
+---
+import ArxivIdChip from "@components/ArxivIdChip.astro";
+import { withBase } from "@utils/withBase";
+const { trail } = Astro.props;
+---
+<div class="trail card">
+  <div class="trail-head">
+    <h3>{trail.title}</h3>
+    <p class="subtle">{trail.premise}</p>
+  </div>
+  <ol class="trail-steps">
+    {trail.steps.map((step, index) => (
+      <li>
+        <div class="step-index">{index + 1}</div>
+        <div>
+          <h4><a href={withBase(`/papers/${step.arxiv_id}`)}>arXiv {step.arxiv_id}</a></h4>
+          <p class="subtle">{step.why_it_matters}</p>
+          <ArxivIdChip id={step.arxiv_id} />
+        </div>
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .trail-head {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .trail-steps {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .trail-steps li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .step-index {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+  }
+</style>

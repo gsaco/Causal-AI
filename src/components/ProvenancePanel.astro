@@ -23,6 +23,12 @@ if (!provenance) {
       <span>Last updated</span>
       <strong>{provenance.updated_at}</strong>
     </div>
+    {provenance.ranking_config_version && (
+      <div>
+        <span>Ranking config</span>
+        <strong>{provenance.ranking_config_version}</strong>
+      </div>
+    )}
   </div>
 </aside>
 

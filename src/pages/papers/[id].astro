@@ -4,6 +4,7 @@ import ArxivIdChip from "@components/ArxivIdChip.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
 import PaperCard from "@components/PaperCard.astro";
 import { readJson, listJsonFiles } from "@utils/data";
+import { withBase } from "@utils/withBase";
 
 export async function getStaticPaths() {
   const files = await listJsonFiles("papers");
@@ -19,12 +20,41 @@ const build = await readJson("provenance/build.json");
 const index = await readJson("papers.index.json");
 const related = index
   .filter((p) => p.arxiv_id !== id)
-  .filter((p) => p.topic_tags.some((tag) => paper.topic_tags.some((t) => t.topic_id === tag.topic_id)))
+  .filter((p) =>
+    (p.topic_tags ?? []).some((tag) =>
+      (paper.topic_tags ?? []).some((t) => t.topic_id === tag.topic_id)
+    )
+  )
   .slice(0, 3);
 
 const bibtex = `@article{arxiv:${paper.arxiv_id},\n  title={${paper.title}},\n  eprint={${paper.arxiv_id}},\n  archivePrefix={arXiv},\n  year={${paper.submitted_at.slice(0, 4)}}\n}`;
+const canonicalUrl = Astro.site
+  ? new URL(withBase(`/papers/${paper.arxiv_id}`), Astro.site).toString()
+  : paper.links.arxiv_abs;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  headline: paper.title,
+  author: paper.authors.map((author) => ({ "@type": "Person", name: author.name })),
+  datePublished: paper.submitted_at,
+  dateModified: paper.updated_at,
+  identifier: `arXiv:${paper.arxiv_id}`,
+  url: canonicalUrl,
+  sameAs: paper.links.arxiv_abs,
+  publisher: { "@type": "Organization", name: "arXiv" }
+};
 ---
 <BaseLayout wide title={`${paper.title} - Causal-AI`}>
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+  </Fragment>
+  <span data-pagefind-filter="type:paper" hidden></span>
+  <span data-pagefind-meta="type" hidden>paper</span>
+  <span data-pagefind-meta="title" hidden>{paper.title}</span>
+  {(paper.topic_tags ?? []).map((tag) => (
+    <span data-pagefind-filter={`topic:${tag.topic_id}`} hidden></span>
+  ))}
+  <span data-pagefind-filter={`cat:${paper.primary_category}`} hidden></span>
   <section class="section hero">
     <div class="container paper-hero">
       <div>
@@ -37,7 +67,7 @@ const bibtex = `@article{arxiv:${paper.arxiv_id},\n  title={${paper.title}},\n  
         <h1>{paper.title}</h1>
         <p class="subtle">{paper.authors.map((a) => a.name).join(", ")}</p>
         <div class="tag-row">
-          {paper.topic_tags.map((tag) => (
+          {(paper.topic_tags ?? []).map((tag) => (
             <span class="chip">{tag.topic_id}</span>
           ))}
         </div>

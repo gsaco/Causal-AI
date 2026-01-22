@@ -1,0 +1,118 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+<BaseLayout wide title="Search - Causal-AI" description="Search across papers, topics, and trends.">
+  <section class="section hero">
+    <div class="container">
+      <h1>Search</h1>
+      <p class="subtle">Query the full site index with filters for content type.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container search-shell">
+      <div class="card search-panel">
+        <input type="search" placeholder="Search causal AI" data-search-input />
+        <div class="filters">
+          <label><input type="checkbox" value="paper" checked /> Papers</label>
+          <label><input type="checkbox" value="topic" checked /> Topics</label>
+          <label><input type="checkbox" value="trend" checked /> Trends</label>
+        </div>
+      </div>
+      <div class="card search-results" data-search-results>
+        <p class="subtle">Type to search the site.</p>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const input = document.querySelector("[data-search-input]");
+    const results = document.querySelector("[data-search-results]");
+    const filterInputs = Array.from(document.querySelectorAll(".filters input"));
+
+    async function runSearch() {
+      const query = input.value.trim();
+      if (!query) {
+        results.innerHTML = "<p class='subtle'>Type to search the site.</p>";
+        return;
+      }
+      if (!window.pagefind) return;
+
+      const activeFilters = filterInputs.filter((el) => el.checked).map((el) => el.value);
+      const filter = activeFilters.length ? { type: activeFilters } : undefined;
+      const search = await window.pagefind.search(query, filter ? { filters: filter } : {});
+      const entries = await Promise.all(search.results.map((result) => result.data()));
+      results.innerHTML = entries
+        .map((entry) => {
+          return `
+            <a class="result" href="${entry.url}">
+              <div>
+                <strong>${entry.meta.title ?? entry.title}</strong>
+                <p>${entry.excerpt}</p>
+              </div>
+              <span class="chip">${entry.meta.type ?? "result"}</span>
+            </a>
+          `;
+        })
+        .join("") || "<p class='subtle'>No matches.</p>";
+    }
+
+    input.addEventListener("input", runSearch);
+    filterInputs.forEach((el) => el.addEventListener("change", runSearch));
+  </script>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .search-shell {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+
+    .search-panel {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .search-panel input {
+      padding: 0.7rem 0.9rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+
+    .filters {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .search-results {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .result {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.6rem 0.7rem;
+      border-radius: 10px;
+    }
+
+    .result:hover,
+    .result:focus {
+      background: var(--surface);
+    }
+
+    @media (max-width: 900px) {
+      .search-shell {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

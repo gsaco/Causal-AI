@@ -1,0 +1,36 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import TrendCard from "@components/TrendCard.astro";
+import { getCollection } from "astro:content";
+
+const trends = await getCollection("trends");
+---
+<BaseLayout wide title="Trends - Causal-AI" description="Editorial trend briefs grounded in arXiv evidence.">
+  <section class="section hero">
+    <div class="container">
+      <h1>Trends</h1>
+      <p class="subtle">Editorial trend briefs grounded in arXiv evidence and open questions.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container trend-grid">
+      {trends.map((trend) => (
+        <TrendCard trend={trend} />
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .trend-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

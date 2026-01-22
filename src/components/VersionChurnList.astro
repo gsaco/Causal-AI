@@ -1,0 +1,31 @@
+---
+import ArxivIdChip from "@components/ArxivIdChip.astro";
+import { withBase } from "@utils/withBase";
+const { churn = { papers: [] } } = Astro.props;
+---
+<div class="churn-list">
+  {churn.papers.map((paper) => (
+    <article class="card churn-card">
+      <div>
+        <h3><a href={withBase(`/papers/${paper.arxiv_id}`)}>{paper.title}</a></h3>
+        <p class="subtle">Last updated {paper.updated_at} - v{paper.version_count}</p>
+      </div>
+      <div class="tag-row">
+        <ArxivIdChip id={paper.arxiv_id} />
+        <span class="chip secondary">{paper.primary_category}</span>
+      </div>
+    </article>
+  ))}
+</div>
+
+<style>
+  .churn-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .churn-card {
+    display: grid;
+    gap: 0.8rem;
+  }
+</style>

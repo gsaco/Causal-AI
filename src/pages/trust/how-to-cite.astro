@@ -3,7 +3,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { readJson } from "@utils/data";
 
 const build = await readJson("provenance/build.json");
-const citation = `Causal-AI (snapshot ${build.snapshot}). Causal-AI: an arXiv-grounded field guide for causal AI. https://gsaco.github.io/Causal-AI/ (accessed ${build.snapshot}).`;
+const snapshot = build.snapshot;
+const shortCitation = `Causal-AI. Causal-AI: an arXiv-grounded field guide for causal AI. https://gsaco.github.io/Causal-AI/ (accessed ${snapshot}).`;
+const snapshotCitation = `Causal-AI (snapshot ${snapshot}). Causal-AI: an arXiv-grounded field guide for causal AI. https://gsaco.github.io/Causal-AI/ (snapshot ${snapshot}).`;
 ---
 <BaseLayout wide title="How to Cite - Causal-AI">
   <section class="section hero">
@@ -14,10 +16,17 @@ const citation = `Causal-AI (snapshot ${build.snapshot}). Causal-AI: an arXiv-gr
   </section>
 
   <section class="section">
-    <div class="container card">
-      <h2>Recommended citation</h2>
-      <pre class="citation">{citation}</pre>
-      <p class="subtle">Include the snapshot date so claims are reproducible.</p>
+    <div class="container grid">
+      <div class="card">
+        <h2>Short site citation</h2>
+        <pre class="citation">{shortCitation}</pre>
+        <p class="subtle">Use for general references when the exact snapshot is less important.</p>
+      </div>
+      <div class="card">
+        <h2>Snapshot citation</h2>
+        <pre class="citation">{snapshotCitation}</pre>
+        <p class="subtle">Use when referencing specific evidence or ranking signals.</p>
+      </div>
     </div>
   </section>
 
@@ -25,6 +34,12 @@ const citation = `Causal-AI (snapshot ${build.snapshot}). Causal-AI: an arXiv-gr
     h1 {
       margin: 0 0 0.6rem;
       font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
     .citation {

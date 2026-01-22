@@ -24,23 +24,24 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Fetch arXiv data
-        run: node scripts/arxiv/fetch_api.mjs
+        run: node scripts/arxiv/run.mjs --windowDays=30 --maxPerTopic=200
 
       - name: Validate snapshots
         run: |
           node scripts/validate/validate_schema.mjs
           node scripts/validate/validate_citations.mjs
           node scripts/validate/validate_links.mjs
+          node scripts/validate/compute_coverage.mjs
 
       - name: Commit updated snapshots
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "github-actions"
             git config user.email "github-actions@github.com"
-            git add data
+            git add data src/content
             git commit -m "chore(data): refresh arXiv snapshots"
             git push
           else

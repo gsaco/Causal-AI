@@ -10,6 +10,9 @@ const papers = await readJson("papers.index.json");
 const topics = await readJson("taxonomy/topics.json");
 const build = await readJson("provenance/build.json");
 const momentum = await readJson("metrics/topic_momentum.json");
+const coverage = await readJson("metrics/citation_coverage.json");
+const windowA = momentum.window.A.replace("_to_", " to ");
+const windowB = momentum.window.B.replace("_to_", " to ");
 
 const trending = [...papers]
   .sort((a, b) => (b.metrics.trending_score ?? 0) - (a.metrics.trending_score ?? 0))
@@ -20,19 +23,29 @@ const trending = [...papers]
     <div class="container hero-grid">
       <div class="fade-in">
         <p class="chip">Snapshot {build.snapshot}</p>
-        <h1>Research-grade causal AI intelligence with auditable provenance.</h1>
+        <h1>Causal AI intelligence for teams that need evidence, not vibes.</h1>
         <p class="subtitle">
-          Every research-facing claim is anchored to arXiv IDs, with transparent trending logic and update cadence.
+          We curate causal AI signals, not just papers - linking every claim to arXiv IDs, tracking
+          update cadence, and surfacing momentum across the field.
         </p>
         <div class="hero-actions">
-          <a class="button" href={withBase("/papers")}>Explore papers</a>
-          <a class="button secondary" href={withBase("/topics")}>Browse topics</a>
+          <a class="button" href={withBase("/observatory")}>Enter Observatory</a>
+          <a class="button secondary" href={withBase("/trends")}>Read trends</a>
         </div>
-        {build.dataset === "demo" && (
-          <div class="demo-banner">
-            Demo dataset: ingestion pipeline not yet connected. Replace with scheduled arXiv snapshots.
+        <div class="manifesto">
+          <div class="manifesto-card">
+            <h3>Evidence first</h3>
+            <p class="subtle">Every claim is tied to arXiv metadata and validated in CI.</p>
           </div>
-        )}
+          <div class="manifesto-card">
+            <h3>Signals over lists</h3>
+            <p class="subtle">We highlight movement: momentum, churn, and cross-listing.</p>
+          </div>
+          <div class="manifesto-card">
+            <h3>Reusable trails</h3>
+            <p class="subtle">Curated sequences for learning paths and team onboarding.</p>
+          </div>
+        </div>
       </div>
       <div class="card fade-in">
         <h3>Update cadence</h3>
@@ -46,7 +59,7 @@ const trending = [...papers]
     <div class="container">
       <div class="section-head">
         <h2>Trending this snapshot</h2>
-        <CoverageBadge value={96} />
+        <CoverageBadge value={Math.round((coverage.overall.coverage ?? 0) * 100)} />
       </div>
       <div class="grid">
         {trending.map((paper) => (
@@ -57,10 +70,25 @@ const trending = [...papers]
   </section>
 
   <section class="section">
+    <div class="container callout-grid">
+      <div class="card callout">
+        <h2>Causal AI Tendency Radar</h2>
+        <p class="subtle">Explore momentum, cross-listing, and revision churn in one view.</p>
+        <a class="button" href={withBase("/observatory")}>Open Observatory</a>
+      </div>
+      <div class="card">
+        <h2>Start here</h2>
+        <p class="subtle">Guided learning paths for new team members and busy practitioners.</p>
+        <a class="button secondary" href={withBase("/learn")}>View learning paths</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container">
       <div class="section-head">
         <h2>Topic momentum</h2>
-        <p class="subtle">Week-over-week arXiv momentum from {momentum.window.A} vs {momentum.window.B}.</p>
+        <p class="subtle">Week-over-week arXiv momentum from {windowA} vs {windowB}.</p>
       </div>
       <div class="momentum-grid">
         {topics.map((topic) => (
@@ -70,32 +98,6 @@ const trending = [...papers]
             <div class="chip secondary">Momentum {momentum.topics[topic.id] ?? 0}</div>
           </a>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Start here</h2>
-        <p class="subtle">Curated paths for fast onboarding into the field.</p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <h3>Foundations sprint</h3>
-          <p class="subtle">Understanding identifiability, SCMs, and causal hierarchies.</p>
-          <a class="button ghost" href={withBase("/topics/causal-discovery")}>Start with causal discovery</a>
-        </div>
-        <div class="card">
-          <h3>Applied causal stack</h3>
-          <p class="subtle">Effect estimation to fairness to tooling to ship.</p>
-          <a class="button ghost" href={withBase("/topics/effect-estimation")}>Jump to effect estimation</a>
-        </div>
-        <div class="card">
-          <h3>Distribution shift lab</h3>
-          <p class="subtle">Invariance-driven methods for robust learning.</p>
-          <a class="button ghost" href={withBase("/topics/distribution-shift")}>Explore invariance</a>
-        </div>
       </div>
     </div>
   </section>
@@ -127,13 +129,18 @@ const trending = [...papers]
       flex-wrap: wrap;
     }
 
-    .demo-banner {
+    .manifesto {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       margin-top: 1.5rem;
-      padding: 0.8rem 1rem;
-      border-radius: 12px;
-      background: color-mix(in srgb, var(--accent-2) 16%, transparent);
-      border: 1px solid color-mix(in srgb, var(--accent-2) 40%, transparent);
-      font-size: 0.9rem;
+    }
+
+    .manifesto-card {
+      padding: 0.9rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
     }
 
     .section-head {
@@ -149,6 +156,16 @@ const trending = [...papers]
       display: grid;
       gap: 1.5rem;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .callout-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .callout {
+      background: linear-gradient(120deg, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%);
     }
 
     .momentum-grid {

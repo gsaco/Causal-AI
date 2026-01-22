@@ -1,0 +1,49 @@
+---
+title: "Invariant Representations Under Shift"
+summary: "Causal AI is converging on representation objectives that remain stable across environments and interventions."
+signals:
+  - "Representation"
+  - "Invariance"
+  - "Robustness"
+foundational:
+  - "1501.01332"
+  - "1907.02893"
+new_wave:
+  - "1803.01422"
+  - "1705.08821"
+debates:
+  - "1703.06856"
+open_problems:
+  - prompt: "Can invariant predictors avoid spurious correlations without sacrificing utility?"
+    evidence:
+      - "1907.02893"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["1907.02893", "1501.01332"]} type="Claim">
+  Invariant prediction objectives are now the backbone of robust causal representation learning under distribution shift.
+</Claim>
+
+## What changed & why it matters
+
+Recent work focuses on encoding invariance directly in representation learning rather than relying on post-hoc adjustments, making cross-domain generalization more predictable.
+
+## Core ideas
+
+- Invariance can be enforced via objectives that align predictors across environments.
+- Representation stability reduces dependence on shortcut features.
+
+## Evidence ledger
+
+**Foundational**: 1501.01332, 1907.02893
+
+**New wave**: 1803.01422, 1705.08821
+
+**Debates**: 1703.06856
+
+## Open problems
+
+<Claim evidence={["1907.02893"]} type="Open Question">
+  What guarantees can be provided for invariance objectives when environments are only weakly labeled?
+</Claim>

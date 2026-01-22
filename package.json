@@ -7,7 +7,12 @@
     "build": "node scripts/prepare-public-data.mjs && astro build && pagefind --site dist --output-subdir pagefind",
     "preview": "astro preview",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck"
+    "check": "npm run typecheck",
+    "test": "node --test",
+    "lint:links": "node scripts/validate/validate_links.mjs",
+    "lint:schema": "node scripts/validate/validate_schema.mjs",
+    "lint:citations": "node scripts/validate/validate_citations.mjs",
+    "lint:all": "npm run lint:schema && npm run lint:citations && npm run lint:links"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.0",

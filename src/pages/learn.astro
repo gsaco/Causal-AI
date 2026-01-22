@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { withBase } from "@utils/withBase";
+---
+<BaseLayout wide title="Learn - Causal-AI" description="Learning paths through causal AI.">
+  <section class="section hero">
+    <div class="container">
+      <h1>Start Here</h1>
+      <p class="subtle">Three guided paths into causal AI, grounded in our topic field guides.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      <div class="card">
+        <h2>Foundations</h2>
+        <p class="subtle">Causal graphs, identifiability, and core estimation.</p>
+        <a class="button" href={withBase("/topics/causal-discovery")}>Begin</a>
+      </div>
+      <div class="card">
+        <h2>Robustness & Shift</h2>
+        <p class="subtle">Invariant predictors and distribution shift.</p>
+        <a class="button" href={withBase("/topics/distribution-shift")}>Explore</a>
+      </div>
+      <div class="card">
+        <h2>Applied Systems</h2>
+        <p class="subtle">Tooling, fairness, and deployment signals.</p>
+        <a class="button" href={withBase("/topics/systems-tooling")}>Go</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

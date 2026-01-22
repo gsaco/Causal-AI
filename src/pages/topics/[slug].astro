@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import DocLayout from "@layouts/DocLayout.astro";
 import PaperCard from "@components/PaperCard.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
 import { getCollection } from "astro:content";
@@ -11,105 +11,91 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 const { data } = entry;
 const build = await readJson("provenance/build.json");
 const feed = await readJson(`topic_feeds/${entry.slug}.json`);
 const index = await readJson("papers.index.json");
+const trails = await readJson("curation/paper_trails.json");
+const relevantTrails = trails.filter((trail) =>
+  trail.steps.some((step) => data.anchors.includes(step.arxiv_id))
+);
 const paperMap = new Map(index.map((paper) => [paper.arxiv_id, paper]));
 const latest = feed.latest.map((id) => paperMap.get(id)).filter(Boolean);
 const trending = feed.trending.map((id) => paperMap.get(id)).filter(Boolean);
-
 const readingPath = data.reading_path ?? { beginner: data.anchors };
 ---
-<BaseLayout wide title={`${data.title} - Causal-AI`}>
-  <section class="section hero">
-    <div class="container topic-hero">
-      <div>
-        <p class="chip">Topic</p>
-        <h1>{data.title}</h1>
-        <p class="subtle">{data.scope}</p>
-        <div class="tag-row">
-          {data.anchors.map((anchor) => (
-            <span class="chip secondary">{anchor}</span>
-          ))}
-        </div>
-      </div>
-      <ProvenancePanel provenance={build} />
+<DocLayout
+  title={`${data.title} - Causal-AI`}
+  description={data.scope}
+  headings={headings}
+  evidence={data.anchors}
+  trails={relevantTrails}
+>
+  <span data-pagefind-filter="type:topic" hidden></span>
+  <span data-pagefind-filter={`topic:${entry.slug}`} hidden></span>
+  <span data-pagefind-meta="type" hidden>topic</span>
+  <span data-pagefind-meta="title" hidden>{data.title}</span>
+  <section class="topic-grid">
+    <div class="card">
+      <h2>Field guide</h2>
+      <Content />
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container two-col">
-      <div class="card">
-        <h2>Field guide</h2>
-        <Content />
+    <aside class="card reading">
+      <h3>Reading path</h3>
+      <div class="reading-block">
+        <strong>Beginner</strong>
+        <ul>
+          {readingPath.beginner.map((id) => (
+            <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
+          ))}
+        </ul>
       </div>
-      <aside class="card reading">
-        <h3>Reading path</h3>
+      {readingPath.intermediate && (
         <div class="reading-block">
-          <strong>Beginner</strong>
+          <strong>Intermediate</strong>
           <ul>
-            {readingPath.beginner.map((id) => (
+            {readingPath.intermediate.map((id) => (
               <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
             ))}
           </ul>
         </div>
-        {readingPath.intermediate && (
-          <div class="reading-block">
-            <strong>Intermediate</strong>
-            <ul>
-              {readingPath.intermediate.map((id) => (
-                <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {readingPath.advanced && (
-          <div class="reading-block">
-            <strong>Advanced</strong>
-            <ul>
-              {readingPath.advanced.map((id) => (
-                <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </aside>
-    </div>
+      )}
+      {readingPath.advanced && (
+        <div class="reading-block">
+          <strong>Advanced</strong>
+          <ul>
+            {readingPath.advanced.map((id) => (
+              <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </aside>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>What's new in this topic</h2>
-      <div class="grid">
-        {latest.map((paper) => (
-          <PaperCard paper={paper} />
-        ))}
-      </div>
-      <h3 class="subhead">Trending</h3>
-      <div class="grid">
-        {trending.map((paper) => (
-          <PaperCard paper={paper} />
-        ))}
-      </div>
+  <section class="card">
+    <h2>Snapshot provenance</h2>
+    <ProvenancePanel provenance={build} />
+  </section>
+
+  <section>
+    <h2>What's new in this topic</h2>
+    <div class="grid">
+      {latest.map((paper) => (
+        <PaperCard paper={paper} />
+      ))}
+    </div>
+    <h3 class="subhead">Trending</h3>
+    <div class="grid">
+      {trending.map((paper) => (
+        <PaperCard paper={paper} />
+      ))}
     </div>
   </section>
 
   <style>
-    h1 {
-      margin: 0.6rem 0 0.4rem;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-    }
-
-    .topic-hero {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      align-items: start;
-    }
-
-    .two-col {
+    .topic-grid {
       display: grid;
       gap: 1.5rem;
       grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
@@ -137,9 +123,9 @@ const readingPath = data.reading_path ?? { beginner: data.anchors };
     }
 
     @media (max-width: 900px) {
-      .two-col {
+      .topic-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
-</BaseLayout>
+</DocLayout>

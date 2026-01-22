@@ -1,0 +1,97 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ArxivIdChip from "@components/ArxivIdChip.astro";
+import PaperTrail from "@components/PaperTrail.astro";
+const {
+  title,
+  description,
+  headings = [],
+  evidence = [],
+  trails = []
+} = Astro.props;
+---
+<BaseLayout wide title={title} description={description}>
+  <section class="section hero">
+    <div class="container">
+      <h1>{title}</h1>
+      <p class="subtle">{description}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container doc-layout">
+      <article class="doc-content card">
+        <slot />
+      </article>
+      <aside class="doc-aside">
+        <div class="card">
+          <h3>On this page</h3>
+          <ul>
+            {headings.map((heading) => (
+              <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+            ))}
+          </ul>
+        </div>
+        {evidence.length > 0 && (
+          <div class="card">
+            <h3>Evidence summary</h3>
+            <div class="tag-row">
+              {evidence.map((id) => (
+                <ArxivIdChip id={id} />
+              ))}
+            </div>
+          </div>
+        )}
+        {trails.length > 0 && (
+          <div class="trail-block">
+            <h3>Paper trails</h3>
+            <div class="trail-stack">
+              {trails.map((trail) => (
+                <PaperTrail trail={trail} />
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .doc-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) minmax(240px, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .doc-content {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .doc-aside ul {
+      padding-left: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .trail-stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .trail-block h3 {
+      margin: 0 0 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .doc-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

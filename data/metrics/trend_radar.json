@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-01-22",
+  "topics": {
+    "causal-discovery": {
+      "momentum": 0.6,
+      "recency_share": 0.5,
+      "cross_list_breadth": 0.7,
+      "revision_churn": 0.4
+    },
+    "distribution-shift": {
+      "momentum": 0.75,
+      "recency_share": 0.6,
+      "cross_list_breadth": 0.8,
+      "revision_churn": 0.5
+    },
+    "effect-estimation": {
+      "momentum": 0.55,
+      "recency_share": 0.4,
+      "cross_list_breadth": 0.6,
+      "revision_churn": 0.35
+    },
+    "causal-fairness": {
+      "momentum": 0.4,
+      "recency_share": 0.3,
+      "cross_list_breadth": 0.45,
+      "revision_churn": 0.25
+    },
+    "systems-tooling": {
+      "momentum": 0.5,
+      "recency_share": 0.35,
+      "cross_list_breadth": 0.5,
+      "revision_churn": 0.3
+    }
+  }
+}

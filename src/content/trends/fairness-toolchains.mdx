@@ -1,0 +1,50 @@
+---
+title: "Counterfactual Fairness Toolchains"
+summary: "Fairness debates are moving from theory to reusable causal tooling and diagnostics."
+signals:
+  - "Fairness"
+  - "Tooling"
+  - "Governance"
+foundational:
+  - "1703.06856"
+  - "1705.08821"
+new_wave:
+  - "2011.04216"
+  - "1907.02893"
+debates:
+  - "1501.01332"
+open_problems:
+  - prompt: "How can counterfactual criteria be audited with partial causal knowledge?"
+    evidence:
+      - "1703.06856"
+      - "2011.04216"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["1703.06856", "2011.04216"]} type="Claim">
+  Fairness audits are increasingly paired with causal tooling to operationalize counterfactual criteria.
+</Claim>
+
+## What changed & why it matters
+
+Practical toolchains are lowering the barrier to testing counterfactual fairness at scale, but still demand transparent assumptions.
+
+## Core ideas
+
+- Causal effect estimators underpin fairness diagnostics.
+- Tooling makes evidence trails and refutation steps explicit.
+
+## Evidence ledger
+
+**Foundational**: 1703.06856, 1705.08821
+
+**New wave**: 2011.04216, 1907.02893
+
+**Debates**: 1501.01332
+
+## Open problems
+
+<Claim evidence={["1703.06856"]} type="Open Question">
+  Which causal assumptions are strictly necessary for fairness guarantees in deployed systems?
+</Claim>

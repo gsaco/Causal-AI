@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-01-22",
+  "window": "30d",
+  "categories": ["cs.AI", "cs.LG", "stat.ML"],
+  "matrix": {
+    "cs.AI": { "stat.ML": 1 },
+    "cs.LG": { "stat.ML": 4 },
+    "stat.ML": { "cs.LG": 3 }
+  }
+}

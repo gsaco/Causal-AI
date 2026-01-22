@@ -1,0 +1,72 @@
+---
+const { heatmap } = Astro.props;
+const categories = heatmap.categories ?? [];
+const matrix = categories.map((row) =>
+  categories.map((col) => heatmap.matrix?.[row]?.[col] ?? 0)
+);
+const maxValue = Math.max(1, ...matrix.flat());
+---
+<div class="heatmap">
+  <p class="subtle">Cross-listing does not equal impact. This reflects intersection volume, not quality.</p>
+  <div class="heatmap-grid">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          {categories.map((cat) => (
+            <th>{cat}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {categories.map((row, rowIndex) => (
+          <tr>
+            <th>{row}</th>
+            {categories.map((col, colIndex) => (
+              <td>
+                <div class="cell" style={`--alpha:${(matrix[rowIndex][colIndex] || 0) / maxValue}`}>
+                  <span>{matrix[rowIndex][colIndex] || ""}</span>
+                </div>
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .heatmap-grid {
+    overflow-x: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 0.4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.8rem;
+  }
+
+  th {
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .cell {
+    background: color-mix(in srgb, var(--accent) calc(var(--alpha, 0) * 100%), transparent);
+    border-radius: 6px;
+    padding: 0.25rem 0.35rem;
+    min-width: 36px;
+  }
+
+  .cell span {
+    font-variant-numeric: tabular-nums;
+  }
+</style>

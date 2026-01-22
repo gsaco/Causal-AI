@@ -3,8 +3,11 @@ import ThemeToggle from "@components/ThemeToggle.astro";
 import { withBase } from "@utils/withBase";
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/papers", label: "Paper Explorer" },
+  { href: "/observatory", label: "Observatory" },
+  { href: "/trends", label: "Trends" },
   { href: "/topics", label: "Topics" },
+  { href: "/papers", label: "Paper Explorer" },
+  { href: "/search", label: "Search" },
   { href: "/digest", label: "Weekly Digest" },
   { href: "/glossary", label: "Glossary" },
   { href: "/benchmarks", label: "Benchmarks" },
@@ -52,6 +55,9 @@ const trustLinks = [
       <a href={withBase("/contribute")}>Contribute</a>
     </nav>
     <div class="actions">
+      <button class="button ghost cmdk-trigger" type="button" data-cmdk-open>
+        Search <span class="kbd">Cmd+K</span>
+      </button>
       <ThemeToggle />
     </div>
   </div>
@@ -190,6 +196,11 @@ const trustLinks = [
     display: flex;
     align-items: center;
     gap: 0.6rem;
+  }
+
+  .cmdk-trigger {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
   }
 
   @media (min-width: 960px) {

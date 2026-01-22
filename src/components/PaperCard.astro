@@ -19,7 +19,7 @@ const authorNames = paper.authors.map((author) =>
     <span class="chip">v{paper.metrics.version_count}</span>
   </div>
   <div class="tag-row">
-    {paper.topic_tags.map((tag) => (
+    {(paper.topic_tags ?? []).map((tag) => (
       <span class="chip secondary">{tag.topic_id}</span>
     ))}
   </div>

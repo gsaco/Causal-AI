@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import CoverageBadge from "@components/CoverageBadge.astro";
+import { readJson } from "@utils/data";
 
-const coverage = [
-  { page: "Topics", value: 96 },
-  { page: "Glossary", value: 100 },
-  { page: "Weekly Digest", value: 92 },
-  { page: "Trust pages", value: 85 }
-];
+const coverage = await readJson("metrics/citation_coverage.json");
+const sections = Object.entries(coverage.sections).map(([key, value]) => ({
+  page: key,
+  value: Math.round((value.coverage ?? 0) * 100)
+}));
 ---
 <BaseLayout wide title="Citation Coverage - Causal-AI">
   <section class="section hero">
@@ -19,7 +19,12 @@ const coverage = [
 
   <section class="section">
     <div class="container grid">
-      {coverage.map((item) => (
+      <div class="card">
+        <h3>Overall</h3>
+        <CoverageBadge value={Math.round((coverage.overall.coverage ?? 0) * 100)} />
+        <p class="subtle">Computed as % of claim blocks with at least one arXiv ID.</p>
+      </div>
+      {sections.map((item) => (
         <div class="card">
           <h3>{item.page}</h3>
           <CoverageBadge value={item.value} />

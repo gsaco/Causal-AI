@@ -1,0 +1,23 @@
+---
+const { values = [], width = 140, height = 40 } = Astro.props;
+const max = Math.max(...values, 1);
+const barWidth = values.length ? width / values.length : width;
+---
+<svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Mini bar chart">
+  {values.map((value, index) => {
+    const barHeight = (value / max) * height;
+    const x = index * barWidth;
+    const y = height - barHeight;
+    return (
+      <rect
+        x={x}
+        y={y}
+        width={barWidth * 0.7}
+        height={barHeight}
+        rx="2"
+        fill="var(--accent)"
+        opacity="0.7"
+      />
+    );
+  })}
+</svg>

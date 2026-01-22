@@ -1,0 +1,56 @@
+---
+const {
+  matrix = [],
+  rowLabels = [],
+  colLabels = [],
+  cellSize = 20,
+  labelOffset = 90
+} = Astro.props;
+const rows = matrix.length;
+const cols = matrix[0]?.length ?? 0;
+const max = Math.max(1, ...matrix.flat());
+const width = cols * cellSize + labelOffset;
+const height = rows * cellSize + 40;
+---
+<svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Heatmap grid">
+  <g transform={`translate(${labelOffset}, 20)`}>
+    {matrix.map((row, rowIndex) => (
+      row.map((value, colIndex) => {
+        const opacity = value / max;
+        return (
+          <rect
+            x={colIndex * cellSize}
+            y={rowIndex * cellSize}
+            width={cellSize - 2}
+            height={cellSize - 2}
+            fill="var(--accent)"
+            opacity={opacity}
+          >
+            <title>{`${rowLabels[rowIndex] ?? ""} x ${colLabels[colIndex] ?? ""}: ${value}`}</title>
+          </rect>
+        );
+      })
+    ))}
+  </g>
+  {rowLabels.map((label, index) => (
+    <text
+      x={labelOffset - 10}
+      y={index * cellSize + 34}
+      text-anchor="end"
+      font-size="11"
+      fill="var(--muted)"
+    >
+      {label}
+    </text>
+  ))}
+  {colLabels.map((label, index) => (
+    <text
+      x={labelOffset + index * cellSize + 4}
+      y={14}
+      font-size="11"
+      fill="var(--muted)"
+    >
+      {label}
+    </text>
+  ))}
+</svg>

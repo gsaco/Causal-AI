@@ -3,30 +3,55 @@
     "id": "causal-discovery",
     "title": "Causal Discovery",
     "scope": "Learning causal graphs from observational or interventional data, with explicit identifiability assumptions.",
-    "anchors": ["1803.01422"]
+    "anchors": ["1803.01422"],
+    "query": "ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\"",
+    "keywords_any": ["causal discovery", "structure learning", "DAG", "graph"],
+    "keywords_all": [],
+    "exclude_keywords": ["causal language"],
+    "category_whitelist": ["stat.ML", "cs.LG", "cs.AI"]
   },
   {
     "id": "distribution-shift",
     "title": "Distribution Shift & Invariance",
     "scope": "Leveraging environment changes to find stable causal structure and predictors.",
-    "anchors": ["1501.01332", "1907.02893"]
+    "anchors": ["1501.01332", "1907.02893"],
+    "query": "ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\"",
+    "keywords_any": ["invariant", "distribution shift", "domain generalization", "robust"],
+    "keywords_all": [],
+    "exclude_keywords": [],
+    "category_whitelist": ["cs.LG", "stat.ML"]
   },
   {
     "id": "effect-estimation",
     "title": "Causal Effect Estimation",
     "scope": "Estimating ATE/CATE and counterfactuals under explicit assumptions.",
-    "anchors": ["1705.08821"]
+    "anchors": ["1705.08821"],
+    "query": "ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual",
+    "keywords_any": ["treatment effect", "counterfactual", "ATE", "CATE"],
+    "keywords_all": [],
+    "exclude_keywords": [],
+    "category_whitelist": ["stat.ML", "cs.LG"]
   },
   {
     "id": "causal-fairness",
     "title": "Causal Fairness",
     "scope": "Causal definitions of fairness in high-stakes decisions.",
-    "anchors": ["1703.06856"]
+    "anchors": ["1703.06856"],
+    "query": "ti:\"causal fairness\" OR abs:\"causal fairness\" OR ti:fairness OR abs:fairness",
+    "keywords_any": ["counterfactual fairness", "causal fairness", "fairness"],
+    "keywords_all": [],
+    "exclude_keywords": [],
+    "category_whitelist": ["cs.LG", "stat.ML", "cs.AI"]
   },
   {
     "id": "systems-tooling",
     "title": "Systems & Tooling",
     "scope": "Libraries and tooling for practical causal pipelines.",
-    "anchors": ["2011.04216"]
+    "anchors": ["2011.04216"],
+    "query": "ti:\"causal inference\" AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit)",
+    "keywords_any": ["library", "toolkit", "pipeline", "software"],
+    "keywords_all": [],
+    "exclude_keywords": [],
+    "category_whitelist": ["cs.AI", "cs.LG", "stat.ML"]
   }
 ]

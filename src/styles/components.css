@@ -9,7 +9,7 @@
 }
 
 .section {
-  padding: 3.5rem 0;
+  padding: var(--space-8) 0;
 }
 
 .grid-12 {
@@ -20,9 +20,10 @@
 
 .card {
   background: var(--bg-elevated);
+  background-image: var(--grad-card);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 1.5rem;
+  border-radius: var(--radius-4);
+  padding: var(--space-5);
   box-shadow: 0 12px 30px -24px var(--shadow);
 }
 
@@ -44,13 +45,19 @@
   border-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
 }
 
+.chip.active {
+  background: var(--accent);
+  color: white;
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1rem;
-  border-radius: 12px;
+  border-radius: var(--radius-2);
   border: 1px solid transparent;
   background: var(--accent);
   color: white;
@@ -62,6 +69,14 @@
 .button:hover {
   transform: translateY(-1px);
   box-shadow: 0 16px 24px -20px var(--shadow);
+}
+
+.button:focus-visible,
+.chip:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  outline-offset: 2px;
 }
 
 .button.secondary {
@@ -117,8 +132,7 @@
 }
 
 .hero {
-  background: radial-gradient(circle at top, rgba(15, 118, 110, 0.18), transparent 55%),
-    linear-gradient(135deg, rgba(217, 119, 6, 0.12), transparent 55%);
+  background: var(--grad-hero);
   border-bottom: 1px solid var(--border);
 }
 
