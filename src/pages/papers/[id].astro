@@ -10,7 +10,10 @@ export async function getStaticPaths() {
   return files.map((file) => ({ params: { id: file.replace(".json", "") } }));
 }
 
-const { id } = Astro.params;
+const id = Astro.params.id;
+if (!id) {
+  throw new Error("Missing paper id");
+}
 const paper = await readJson(`papers/${id}.json`);
 const build = await readJson("provenance/build.json");
 const index = await readJson("papers.index.json");

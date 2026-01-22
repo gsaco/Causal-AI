@@ -1,7 +1,8 @@
 ---
 import ArxivIdChip from "@components/ArxivIdChip.astro";
+import { withBase } from "@utils/withBase";
 const { paper } = Astro.props;
-const internalUrl = Astro.resolve(`/papers/${paper.arxiv_id}`);
+const internalUrl = withBase(`/papers/${paper.arxiv_id}`);
 const authorNames = paper.authors.map((author) =>
   typeof author === "string" ? author : author.name
 );

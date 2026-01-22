@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "@components/ThemeToggle.astro";
+import { withBase } from "@utils/withBase";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/papers", label: "Paper Explorer" },
@@ -20,35 +21,35 @@ const trustLinks = [
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href={Astro.resolve("/")}>Causal-AI</a>
+    <a class="logo" href={withBase("/")}>Causal-AI</a>
     <details class="mobile-menu">
       <summary>Menu</summary>
       <div class="mobile-panel">
         {navLinks.map((link) => (
-          <a href={Astro.resolve(link.href)}>{link.label}</a>
+          <a href={withBase(link.href)}>{link.label}</a>
         ))}
         <div class="mobile-trust">
           <span>Trust</span>
           {trustLinks.map((link) => (
-            <a href={Astro.resolve(link.href)}>{link.label}</a>
+            <a href={withBase(link.href)}>{link.label}</a>
           ))}
         </div>
-        <a href={Astro.resolve("/contribute")}>Contribute</a>
+        <a href={withBase("/contribute")}>Contribute</a>
       </div>
     </details>
     <nav class="nav-links" aria-label="Primary">
       {navLinks.map((link) => (
-        <a href={Astro.resolve(link.href)}>{link.label}</a>
+        <a href={withBase(link.href)}>{link.label}</a>
       ))}
       <details class="trust-menu">
         <summary>Trust</summary>
         <div class="trust-panel">
           {trustLinks.map((link) => (
-            <a href={Astro.resolve(link.href)}>{link.label}</a>
+            <a href={withBase(link.href)}>{link.label}</a>
           ))}
         </div>
       </details>
-      <a href={Astro.resolve("/contribute")}>Contribute</a>
+      <a href={withBase("/contribute")}>Contribute</a>
     </nav>
     <div class="actions">
       <ThemeToggle />

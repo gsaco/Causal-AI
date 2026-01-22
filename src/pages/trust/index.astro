@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { withBase } from "@utils/withBase";
 
 const trustLinks = [
   { href: "/trust/editorial", label: "Editorial Policy" },
@@ -21,7 +22,7 @@ const trustLinks = [
   <section class="section">
     <div class="container grid">
       {trustLinks.map((link) => (
-        <a class="card" href={Astro.resolve(link.href)}>
+        <a class="card" href={withBase(link.href)}>
           <h3>{link.label}</h3>
           <p class="subtle">Open policy and methodology details.</p>
         </a>

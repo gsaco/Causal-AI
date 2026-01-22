@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { readJson } from "@utils/data";
+import { withBase } from "@utils/withBase";
 
 const topics = await readJson("taxonomy/topics.json");
 ---
@@ -15,7 +16,7 @@ const topics = await readJson("taxonomy/topics.json");
   <section class="section">
     <div class="container grid">
       {topics.map((topic) => (
-        <a class="card" href={Astro.resolve(`/topics/${topic.id}`)}>
+        <a class="card" href={withBase(`/topics/${topic.id}`)}>
           <h3>{topic.title}</h3>
           <p class="subtle">{topic.scope}</p>
           <div class="tag-row">

@@ -32,13 +32,13 @@ jobs:
         run: pnpm install
 
       - name: Fetch arXiv data
-        run: node scripts/arxiv/fetch_api.ts
+        run: node scripts/arxiv/fetch_api.mjs
 
       - name: Validate snapshots
         run: |
-          node scripts/validate/validate_schema.ts
-          node scripts/validate/validate_citations.ts
-          node scripts/validate/validate_links.ts
+          node scripts/validate/validate_schema.mjs
+          node scripts/validate/validate_citations.mjs
+          node scripts/validate/validate_links.mjs
 
       - name: Commit updated snapshots
         run: |

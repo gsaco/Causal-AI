@@ -4,6 +4,7 @@ import PaperCard from "@components/PaperCard.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
 import CoverageBadge from "@components/CoverageBadge.astro";
 import { readJson } from "@utils/data";
+import { withBase } from "@utils/withBase";
 
 const papers = await readJson("papers.index.json");
 const topics = await readJson("taxonomy/topics.json");
@@ -24,8 +25,8 @@ const trending = [...papers]
           Every research-facing claim is anchored to arXiv IDs, with transparent trending logic and update cadence.
         </p>
         <div class="hero-actions">
-          <a class="button" href={Astro.resolve("/papers")}>Explore papers</a>
-          <a class="button secondary" href={Astro.resolve("/topics")}>Browse topics</a>
+          <a class="button" href={withBase("/papers")}>Explore papers</a>
+          <a class="button secondary" href={withBase("/topics")}>Browse topics</a>
         </div>
         {build.dataset === "demo" && (
           <div class="demo-banner">
@@ -63,7 +64,7 @@ const trending = [...papers]
       </div>
       <div class="momentum-grid">
         {topics.map((topic) => (
-          <a class="card" href={Astro.resolve(`/topics/${topic.id}`)}>
+          <a class="card" href={withBase(`/topics/${topic.id}`)}>
             <h3>{topic.title}</h3>
             <p class="subtle">{topic.scope}</p>
             <div class="chip secondary">Momentum {momentum.topics[topic.id] ?? 0}</div>
@@ -83,17 +84,17 @@ const trending = [...papers]
         <div class="card">
           <h3>Foundations sprint</h3>
           <p class="subtle">Understanding identifiability, SCMs, and causal hierarchies.</p>
-          <a class="button ghost" href={Astro.resolve("/topics/causal-discovery")}>Start with causal discovery</a>
+          <a class="button ghost" href={withBase("/topics/causal-discovery")}>Start with causal discovery</a>
         </div>
         <div class="card">
           <h3>Applied causal stack</h3>
           <p class="subtle">Effect estimation to fairness to tooling to ship.</p>
-          <a class="button ghost" href={Astro.resolve("/topics/effect-estimation")}>Jump to effect estimation</a>
+          <a class="button ghost" href={withBase("/topics/effect-estimation")}>Jump to effect estimation</a>
         </div>
         <div class="card">
           <h3>Distribution shift lab</h3>
           <p class="subtle">Invariance-driven methods for robust learning.</p>
-          <a class="button ghost" href={Astro.resolve("/topics/distribution-shift")}>Explore invariance</a>
+          <a class="button ghost" href={withBase("/topics/distribution-shift")}>Explore invariance</a>
         </div>
       </div>
     </div>

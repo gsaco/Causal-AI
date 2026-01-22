@@ -1,4 +1,6 @@
 ---
+import { withBase } from "@utils/withBase";
+
 const links = [
   { href: "/trust/editorial", label: "Editorial Policy" },
   { href: "/trust/provenance", label: "Data Provenance" },
@@ -14,7 +16,7 @@ const links = [
     </div>
     <div class="footer-links">
       {links.map((link) => (
-        <a href={Astro.resolve(link.href)}>{link.label}</a>
+        <a href={withBase(link.href)}>{link.label}</a>
       ))}
     </div>
   </div>

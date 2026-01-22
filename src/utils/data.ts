@@ -3,7 +3,7 @@ import path from "node:path";
 
 const dataDir = path.resolve("data");
 
-export async function readJson<T>(relativePath: string): Promise<T> {
+export async function readJson<T = any>(relativePath: string): Promise<T> {
   const filePath = path.join(dataDir, relativePath);
   const raw = await fs.readFile(filePath, "utf-8");
   return JSON.parse(raw) as T;

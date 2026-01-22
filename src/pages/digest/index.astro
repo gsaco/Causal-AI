@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { withBase } from "@utils/withBase";
 
 const digests = await getCollection("digests");
 const sorted = digests.sort((a, b) => b.data.week.localeCompare(a.data.week));
@@ -16,7 +17,7 @@ const sorted = digests.sort((a, b) => b.data.week.localeCompare(a.data.week));
   <section class="section">
     <div class="container grid">
       {sorted.map((digest) => (
-        <a class="card" href={Astro.resolve(`/digest/weekly/${digest.data.week}`)}>
+        <a class="card" href={withBase(`/digest/weekly/${digest.data.week}`)}>
           <h3>{digest.data.title}</h3>
           <p class="subtle">{digest.data.summary}</p>
           <div class="chip">{digest.data.week}</div>
