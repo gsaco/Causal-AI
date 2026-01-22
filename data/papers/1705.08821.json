@@ -1,0 +1,43 @@
+{
+  "arxiv_id": "1705.08821",
+  "canonical_url": "https://arxiv.org/abs/1705.08821",
+  "pdf_url": "https://arxiv.org/pdf/1705.08821.pdf",
+  "title": "Causal Effect Inference with Deep Latent-Variable Models",
+  "abstract": "A deep latent-variable model (CEVAE) for causal effect inference with hidden confounding using variational methods.",
+  "authors": [
+    { "name": "Yarin Gal" },
+    { "name": "Ricardo Silva" }
+  ],
+  "submitted_at": "2017-05-24",
+  "updated_at": "2017-10-03",
+  "primary_category": "stat.ML",
+  "categories": ["stat.ML", "cs.LG"],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.24
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.88,
+      "rationale": {
+        "matched_keywords": ["treatment effect", "latent confounding"],
+        "rules_version": "v0.1"
+      }
+    }
+  ],
+  "versions": [
+    { "version": "v1", "updated_at": "2017-05-24" }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/1705.08821",
+    "arxiv_pdf": "https://arxiv.org/pdf/1705.08821.pdf"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-01-22T02:10:00Z",
+    "harvest_run_id": "demo-2026-01-22",
+    "queries": ["ti:\"latent variable\" AND abs:\"causal effect\""]
+  }
+}

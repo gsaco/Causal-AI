@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+<BaseLayout wide title="Contribute - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Contribute</h1>
+      <p class="subtle">Help keep the causal AI field guide accurate, transparent, and evidence-linked.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      <div class="card">
+        <h3>Report a mis-tag</h3>
+        <p class="subtle">Submit an issue with the arXiv ID and the correct topic.</p>
+        <a class="button" href="https://github.com/gsaco/Causal-AI/issues/new">Open an issue</a>
+      </div>
+      <div class="card">
+        <h3>Suggest a claim edit</h3>
+        <p class="subtle">All claims must reference arXiv evidence; propose additions via PR.</p>
+        <a class="button secondary" href="https://github.com/gsaco/Causal-AI/pulls">View pull requests</a>
+      </div>
+      <div class="card">
+        <h3>Improve taxonomy</h3>
+        <p class="subtle">Propose new topics or refine scope boundaries with anchor papers.</p>
+        <a class="button ghost" href="https://github.com/gsaco/Causal-AI/issues/new">Start discussion</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

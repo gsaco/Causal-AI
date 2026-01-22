@@ -1,0 +1,54 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import { readJson } from "@utils/data";
+
+const build = await readJson("provenance/build.json");
+---
+<BaseLayout wide title="Data Provenance - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Data Provenance</h1>
+      <p class="subtle">Transparent sources, query logs, and snapshot metadata.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="card">
+        <h2>Interfaces used</h2>
+        <ul>
+          <li>arXiv API (Atom) for targeted queries</li>
+          <li>OAI-PMH arXivRaw for version history (gold plan)</li>
+        </ul>
+        <h2>Rate-limit compliance</h2>
+        <p class="subtle">Requests are throttled to one every 3 seconds with a single connection.</p>
+      </div>
+      <ProvenancePanel provenance={build} />
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .two-col {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+    }
+
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

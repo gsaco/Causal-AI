@@ -1,0 +1,33 @@
+---
+const { value = 0 } = Astro.props;
+const rounded = Math.round(value);
+const tone = rounded >= 90 ? "good" : rounded >= 75 ? "mid" : "low";
+---
+<span class={`coverage ${tone}`}>Citation coverage: {rounded}%</span>
+
+<style>
+  .coverage {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+  }
+
+  .coverage.good {
+    border-color: color-mix(in srgb, var(--success) 40%, var(--border));
+    color: var(--success);
+  }
+
+  .coverage.mid {
+    border-color: color-mix(in srgb, var(--accent-2) 40%, var(--border));
+    color: var(--accent-2);
+  }
+
+  .coverage.low {
+    border-color: color-mix(in srgb, var(--danger) 40%, var(--border));
+    color: var(--danger);
+  }
+</style>

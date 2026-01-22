@@ -1,0 +1,6 @@
+node_modules
+.astro
+dist
+.data
+/data/_raw
+/public/data

@@ -1,0 +1,49 @@
+---
+const links = [
+  { href: "/trust/editorial", label: "Editorial Policy" },
+  { href: "/trust/provenance", label: "Data Provenance" },
+  { href: "/trust/how-to-cite", label: "How to Cite" },
+  { href: "/contribute", label: "Contribute" }
+];
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>Causal-AI</strong>
+      <p class="subtle">An arXiv-grounded field guide for causal intelligence.</p>
+    </div>
+    <div class="footer-links">
+      {links.map((link) => (
+        <a href={Astro.resolve(link.href)}>{link.label}</a>
+      ))}
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 2.5rem 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer-inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+</style>

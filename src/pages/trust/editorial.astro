@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CitationChip from "@components/CitationChip.astro";
+---
+<BaseLayout wide title="Editorial Policy - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Editorial Policy</h1>
+      <p class="subtle">Every research-facing claim must be evidence-linked to arXiv.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <h2>Claim requirements</h2>
+      <ul>
+        <li>All claims include at least one arXiv ID.</li>
+        <li>Non-arXiv sources are labeled as secondary supporting sources.</li>
+        <li>When evidence is incomplete, content is marked as a hypothesis.</li>
+      </ul>
+      <h2>Corrections</h2>
+      <p class="subtle">Corrections are logged publicly and linked to the evidence update that resolved them.</p>
+      <div class="tag-row">
+        <CitationChip evidence={["2002.02770"]} />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.7;
+    }
+  </style>
+</BaseLayout>

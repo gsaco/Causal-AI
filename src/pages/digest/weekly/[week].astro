@@ -1,0 +1,47 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import { getCollection } from "astro:content";
+import { readJson } from "@utils/data";
+
+export async function getStaticPaths() {
+  const digests = await getCollection("digests");
+  return digests.map((entry) => ({ params: { week: entry.data.week }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, data } = await entry.render();
+const build = await readJson("provenance/build.json");
+---
+<BaseLayout wide title={`${data.title} - Causal-AI`}>
+  <section class="section hero">
+    <div class="container digest-hero">
+      <div>
+        <p class="chip">Weekly Digest</p>
+        <h1>{data.title}</h1>
+        <p class="subtle">{data.summary}</p>
+      </div>
+      <ProvenancePanel provenance={build} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <Content />
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0.6rem 0 0.4rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .digest-hero {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: start;
+    }
+  </style>
+</BaseLayout>

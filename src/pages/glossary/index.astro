@@ -1,0 +1,56 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CitationChip from "@components/CitationChip.astro";
+import { getCollection } from "astro:content";
+
+const terms = await getCollection("glossary");
+const sorted = terms.sort((a, b) => a.data.term.localeCompare(b.data.term));
+---
+<BaseLayout wide title="Glossary - Causal-AI" description="Causal AI glossary with arXiv evidence.">
+  <section class="section hero">
+    <div class="container">
+      <h1>Glossary</h1>
+      <p class="subtle">Definitions anchored to arXiv evidence where possible.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container glossary">
+      {sorted.map((entry) => (
+        <div class="card">
+          <div class="term-head">
+            <h3>{entry.data.term}</h3>
+            <CitationChip evidence={entry.data.evidence_arxiv} />
+          </div>
+          <p class="definition">{entry.data.definition}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .glossary {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .term-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .definition {
+      font-family: var(--font-serif);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</BaseLayout>

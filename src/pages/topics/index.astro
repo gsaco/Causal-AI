@@ -1,0 +1,43 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { readJson } from "@utils/data";
+
+const topics = await readJson("taxonomy/topics.json");
+---
+<BaseLayout wide title="Topics - Causal-AI" description="Navigate the causal AI taxonomy and reading paths.">
+  <section class="section hero">
+    <div class="container">
+      <h1>Topics</h1>
+      <p class="subtle">A scoped taxonomy of causal AI with anchor papers and curated reading paths.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      {topics.map((topic) => (
+        <a class="card" href={Astro.resolve(`/topics/${topic.id}`)}>
+          <h3>{topic.title}</h3>
+          <p class="subtle">{topic.scope}</p>
+          <div class="tag-row">
+            {topic.anchors.map((anchor) => (
+              <span class="chip">{anchor}</span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

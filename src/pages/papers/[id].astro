@@ -1,0 +1,231 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ArxivIdChip from "@components/ArxivIdChip.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import PaperCard from "@components/PaperCard.astro";
+import { readJson, listJsonFiles } from "@utils/data";
+
+export async function getStaticPaths() {
+  const files = await listJsonFiles("papers");
+  return files.map((file) => ({ params: { id: file.replace(".json", "") } }));
+}
+
+const { id } = Astro.params;
+const paper = await readJson(`papers/${id}.json`);
+const build = await readJson("provenance/build.json");
+const index = await readJson("papers.index.json");
+const related = index
+  .filter((p) => p.arxiv_id !== id)
+  .filter((p) => p.topic_tags.some((tag) => paper.topic_tags.some((t) => t.topic_id === tag.topic_id)))
+  .slice(0, 3);
+
+const bibtex = `@article{arxiv:${paper.arxiv_id},\n  title={${paper.title}},\n  eprint={${paper.arxiv_id}},\n  archivePrefix={arXiv},\n  year={${paper.submitted_at.slice(0, 4)}}\n}`;
+---
+<BaseLayout wide title={`${paper.title} - Causal-AI`}>
+  <section class="section hero">
+    <div class="container paper-hero">
+      <div>
+        <div class="tag-row">
+          <ArxivIdChip id={paper.arxiv_id} />
+          {paper.categories.map((cat) => (
+            <span class="chip secondary">{cat}</span>
+          ))}
+        </div>
+        <h1>{paper.title}</h1>
+        <p class="subtle">{paper.authors.map((a) => a.name).join(", ")}</p>
+        <div class="tag-row">
+          {paper.topic_tags.map((tag) => (
+            <span class="chip">{tag.topic_id}</span>
+          ))}
+        </div>
+      </div>
+      <div class="card">
+        <h3>Paper metadata</h3>
+        <div class="meta-grid">
+          <div>
+            <span>Submitted</span>
+            <strong>{paper.submitted_at}</strong>
+          </div>
+          <div>
+            <span>Updated</span>
+            <strong>{paper.updated_at}</strong>
+          </div>
+          <div>
+            <span>Versions</span>
+            <strong>v{paper.metrics.version_count}</strong>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="button" href={paper.links.arxiv_abs} target="_blank" rel="noreferrer">arXiv Abstract</a>
+          <a class="button secondary" href={paper.links.arxiv_pdf} target="_blank" rel="noreferrer">PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="card">
+        <div class="section-head">
+          <h2>Abstract</h2>
+          <button class="button secondary" data-copy="abstract">Copy</button>
+        </div>
+        <p id="abstract" class="abstract">{paper.abstract}</p>
+      </div>
+      <div class="side-rail">
+        <div class="card">
+          <div class="section-head">
+            <h3>BibTeX</h3>
+            <button class="button secondary" data-copy="bibtex">Copy</button>
+          </div>
+          <pre id="bibtex" class="bibtex">{bibtex}</pre>
+          <button class="button ghost" data-download="bibtex">Download .bib</button>
+        </div>
+        <ProvenancePanel provenance={build} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Version history</h2>
+      <div class="versions card">
+        {paper.versions?.map((version) => (
+          <div class="version-row">
+            <span class="chip">{version.version}</span>
+            <span>{version.updated_at}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Related papers</h2>
+      <div class="grid">
+        {related.map((item) => (
+          <PaperCard paper={item} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const copyButtons = document.querySelectorAll("[data-copy]");
+    copyButtons.forEach((button) => {
+      button.addEventListener("click", async () => {
+        const targetId = button.dataset.copy;
+        const content = document.getElementById(targetId).textContent;
+        await navigator.clipboard.writeText(content);
+        button.textContent = "Copied";
+        setTimeout(() => (button.textContent = "Copy"), 1200);
+      });
+    });
+
+    const download = document.querySelector("[data-download='bibtex']");
+    download.addEventListener("click", () => {
+      const content = document.getElementById("bibtex").textContent;
+      const blob = new Blob([content], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "paper.bib";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+  </script>
+
+  <style>
+    h1 {
+      margin: 0.6rem 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .paper-hero {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: start;
+    }
+
+    .meta-grid {
+      display: grid;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+
+    .meta-grid span {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .meta-grid strong {
+      font-size: 0.95rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .two-col {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    }
+
+    .side-rail {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .abstract {
+      font-family: var(--font-serif);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .bibtex {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 1rem;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+
+    .versions {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .version-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

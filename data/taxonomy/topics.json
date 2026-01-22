@@ -1,0 +1,32 @@
+[
+  {
+    "id": "causal-discovery",
+    "title": "Causal Discovery",
+    "scope": "Learning causal graphs from observational or interventional data, with explicit identifiability assumptions.",
+    "anchors": ["1803.01422"]
+  },
+  {
+    "id": "distribution-shift",
+    "title": "Distribution Shift & Invariance",
+    "scope": "Leveraging environment changes to find stable causal structure and predictors.",
+    "anchors": ["1501.01332", "1907.02893"]
+  },
+  {
+    "id": "effect-estimation",
+    "title": "Causal Effect Estimation",
+    "scope": "Estimating ATE/CATE and counterfactuals under explicit assumptions.",
+    "anchors": ["1705.08821"]
+  },
+  {
+    "id": "causal-fairness",
+    "title": "Causal Fairness",
+    "scope": "Causal definitions of fairness in high-stakes decisions.",
+    "anchors": ["1703.06856"]
+  },
+  {
+    "id": "systems-tooling",
+    "title": "Systems & Tooling",
+    "scope": "Libraries and tooling for practical causal pipelines.",
+    "anchors": ["2011.04216"]
+  }
+]

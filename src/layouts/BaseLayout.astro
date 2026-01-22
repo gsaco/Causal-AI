@@ -1,0 +1,47 @@
+---
+import "@styles/tokens.css";
+import "@styles/global.css";
+import "@styles/components.css";
+import SiteHeader from "@components/SiteHeader.astro";
+import SiteFooter from "@components/SiteFooter.astro";
+
+const {
+  title = "Causal-AI",
+  description = "An arXiv-grounded field guide and paper intelligence hub for causal AI.",
+  wide = false
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en" data-theme="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href={Astro.resolve("/favicon.svg")} />
+    <title>{title}</title>
+    <script is:inline>
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme ?? (prefersDark ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    </script>
+  </head>
+  <body>
+    <SiteHeader />
+    <main class={wide ? "" : "reading-width"}>
+      <slot />
+    </main>
+    <SiteFooter />
+    <script is:inline>
+      const toggle = document.querySelector("[data-theme-toggle]");
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          const current = document.documentElement.dataset.theme;
+          const next = current === "dark" ? "light" : "dark";
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem("theme", next);
+        });
+      }
+    </script>
+  </body>
+</html>

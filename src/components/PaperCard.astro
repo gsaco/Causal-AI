@@ -1,0 +1,45 @@
+---
+import ArxivIdChip from "@components/ArxivIdChip.astro";
+const { paper } = Astro.props;
+const internalUrl = Astro.resolve(`/papers/${paper.arxiv_id}`);
+const authorNames = paper.authors.map((author) =>
+  typeof author === "string" ? author : author.name
+);
+---
+<article class="paper-card card">
+  <div class="paper-head">
+    <h3><a href={internalUrl}>{paper.title}</a></h3>
+    <div class="subtle">{authorNames.slice(0, 3).join(", ")}{authorNames.length > 3 ? ` +${authorNames.length - 3}` : ""}</div>
+  </div>
+  <p class="abstract">{paper.abstract}</p>
+  <div class="meta">
+    <ArxivIdChip id={paper.arxiv_id} />
+    <span class="chip secondary">Updated {paper.updated_at}</span>
+    <span class="chip">v{paper.metrics.version_count}</span>
+  </div>
+  <div class="tag-row">
+    {paper.topic_tags.map((tag) => (
+      <span class="chip secondary">{tag.topic_id}</span>
+    ))}
+  </div>
+</article>
+
+<style>
+  .paper-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.1rem;
+  }
+
+  .abstract {
+    font-family: var(--font-serif);
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+  }
+</style>

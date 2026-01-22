@@ -1,0 +1,62 @@
+---
+const { provenance } = Astro.props;
+if (!provenance) {
+  throw new Error("ProvenancePanel requires provenance data");
+}
+---
+<aside class="provenance">
+  <h3>Provenance</h3>
+  <div class="rows">
+    <div>
+      <span>Snapshot</span>
+      <strong>{provenance.snapshot}</strong>
+    </div>
+    <div>
+      <span>Harvest window</span>
+      <strong>{provenance.harvest_window}</strong>
+    </div>
+    <div>
+      <span>Harvest source</span>
+      <strong>{provenance.source}</strong>
+    </div>
+    <div>
+      <span>Last updated</span>
+      <strong>{provenance.updated_at}</strong>
+    </div>
+  </div>
+</aside>
+
+<style>
+  .provenance {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem 1.2rem;
+    background: var(--surface);
+  }
+
+  .provenance h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1rem;
+  }
+
+  .rows {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .rows div {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .rows span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  .rows strong {
+    font-size: 0.95rem;
+  }
+</style>

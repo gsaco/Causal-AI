@@ -1,0 +1,75 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CitationChip from "@components/CitationChip.astro";
+
+const benchmarks = [
+  {
+    name: "OCDB",
+    scope: "Observational Causal Discovery Benchmark",
+    evidence: ["2406.04598"],
+    focus: "Graph recovery under controlled distributional settings"
+  },
+  {
+    name: "CausalBench",
+    scope: "LLM causal reasoning evaluation",
+    evidence: ["2404.06349"],
+    focus: "Counterfactual and interventional reasoning in text"
+  },
+  {
+    name: "CausalProfiler",
+    scope: "Benchmarking causal discovery pipelines",
+    evidence: ["2511.22842"],
+    focus: "Pipeline robustness and reproducibility"
+  }
+];
+---
+<BaseLayout wide title="Benchmarks & Reproducibility - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Benchmarks & Reproducibility</h1>
+      <p class="subtle">Evaluation protocols and reproducibility standards anchored to evidence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      {benchmarks.map((benchmark) => (
+        <div class="card">
+          <div class="term-head">
+            <h3>{benchmark.name}</h3>
+            <CitationChip evidence={benchmark.evidence} />
+          </div>
+          <p class="subtle">{benchmark.scope}</p>
+          <p class="focus">{benchmark.focus}</p>
+          <div class="chip secondary">Replication status: Unknown</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .term-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .focus {
+      font-family: var(--font-serif);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</BaseLayout>

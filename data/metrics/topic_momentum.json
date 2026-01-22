@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-01-22",
+  "window": {
+    "A": "2026-01-15_to_2026-01-21",
+    "B": "2026-01-01_to_2026-01-14"
+  },
+  "topics": {
+    "causal-discovery": 0.2,
+    "distribution-shift": 0.35,
+    "effect-estimation": 0.1,
+    "causal-fairness": 0.05,
+    "systems-tooling": 0.18
+  }
+}

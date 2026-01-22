@@ -1,0 +1,5 @@
+---
+const { id } = Astro.props;
+const absUrl = `https://arxiv.org/abs/${id}`;
+---
+<a class="chip" href={absUrl} target="_blank" rel="noreferrer">arXiv:{id}</a>

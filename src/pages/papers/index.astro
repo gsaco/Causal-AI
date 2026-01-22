@@ -1,0 +1,324 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ArxivIdChip from "@components/ArxivIdChip.astro";
+import { readJson } from "@utils/data";
+
+const papers = await readJson("papers.index.json");
+const topics = await readJson("taxonomy/topics.json");
+---
+<BaseLayout wide title="Paper Explorer - Causal-AI" description="Browse and filter the causal AI paper corpus.">
+  <section class="section hero">
+    <div class="container explorer-head">
+      <div>
+        <h1>Paper Explorer</h1>
+        <p class="subtle">Search, filter, and export arXiv-grounded metadata.</p>
+      </div>
+      <div class="search-block">
+        <input id="paper-search" type="search" placeholder="Search title or abstract" />
+        <div class="shortcut">Press <span class="kbd">/</span> or <span class="kbd">Cmd+K</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container explorer-grid">
+      <aside class="filters card">
+        <h3>Filters</h3>
+        <div class="filter-block">
+          <strong>Topics</strong>
+          <div class="tag-row">
+            {topics.map((topic) => (
+              <button class="chip secondary" data-topic={topic.id} type="button">{topic.title}</button>
+            ))}
+          </div>
+        </div>
+        <div class="filter-block">
+          <strong>Sort</strong>
+          <select id="sort-select">
+            <option value="latest">Latest</option>
+            <option value="updated">Recently updated</option>
+            <option value="trending">Trending</option>
+            <option value="revised">Most revised</option>
+          </select>
+        </div>
+        <div class="filter-block">
+          <strong>Metadata</strong>
+          <label><input type="checkbox" id="crosslist" /> Cross-listed only</label>
+          <label><input type="checkbox" id="multi-version" /> Version count >= 2</label>
+        </div>
+      </aside>
+
+      <div>
+        <div class="results-head">
+          <span class="subtle" id="result-count">{papers.length} papers</span>
+          <div class="export-bar">
+            <button class="button secondary" data-export="csv">Export CSV</button>
+            <button class="button" data-export="bib">Export BibTeX</button>
+          </div>
+        </div>
+        <div class="paper-list" data-list>
+          {papers.map((paper) => (
+            <article
+              class="card paper-row"
+              data-paper
+              data-title={paper.title}
+              data-abstract={paper.abstract}
+              data-topics={paper.topic_tags.map((tag) => tag.topic_id).join(",")}
+              data-submitted={paper.submitted_at}
+              data-updated={paper.updated_at}
+              data-trending={paper.metrics.trending_score}
+              data-version={paper.metrics.version_count}
+              data-crosslist={paper.metrics.cross_list_count}
+            >
+              <div class="row-head">
+                <input type="checkbox" data-select />
+                <div>
+                  <h3><a href={Astro.resolve(`/papers/${paper.arxiv_id}`)}>{paper.title}</a></h3>
+                  <p class="subtle">{paper.authors.slice(0, 3).join(", ")}{paper.authors.length > 3 ? ` +${paper.authors.length - 3}` : ""}</p>
+                </div>
+              </div>
+              <p class="abstract">{paper.abstract}</p>
+              <div class="meta-row">
+                <ArxivIdChip id={paper.arxiv_id} />
+                <span class="chip">Submitted {paper.submitted_at}</span>
+                <span class="chip secondary">Updated {paper.updated_at}</span>
+                <span class="chip">v{paper.metrics.version_count}</span>
+              </div>
+              <div class="tag-row">
+                {paper.topic_tags.map((tag) => (
+                  <span class="chip secondary">{tag.topic_id}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const searchInput = document.getElementById("paper-search");
+    const sortSelect = document.getElementById("sort-select");
+    const crosslistOnly = document.getElementById("crosslist");
+    const multiVersion = document.getElementById("multi-version");
+    const topicButtons = Array.from(document.querySelectorAll("[data-topic]"));
+    const list = document.querySelector("[data-list]");
+    const cards = Array.from(document.querySelectorAll("[data-paper]"));
+    const resultCount = document.getElementById("result-count");
+    const activeTopics = new Set();
+
+    function applyFilters() {
+      const query = (searchInput.value || "").toLowerCase();
+      const filtered = cards.filter((card) => {
+        const title = card.dataset.title.toLowerCase();
+        const abs = card.dataset.abstract.toLowerCase();
+        const topics = card.dataset.topics.split(",");
+        const matchesQuery = !query || title.includes(query) || abs.includes(query);
+        const matchesTopic = activeTopics.size === 0 || topics.some((t) => activeTopics.has(t));
+        const passesCrosslist = !crosslistOnly.checked || Number(card.dataset.crosslist) > 0;
+        const passesVersion = !multiVersion.checked || Number(card.dataset.version) >= 2;
+        return matchesQuery && matchesTopic && passesCrosslist && passesVersion;
+      });
+
+      const sortBy = sortSelect.value;
+      filtered.sort((a, b) => {
+        if (sortBy === "updated") {
+          return new Date(b.dataset.updated) - new Date(a.dataset.updated);
+        }
+        if (sortBy === "trending") {
+          return Number(b.dataset.trending) - Number(a.dataset.trending);
+        }
+        if (sortBy === "revised") {
+          return Number(b.dataset.version) - Number(a.dataset.version);
+        }
+        return new Date(b.dataset.submitted) - new Date(a.dataset.submitted);
+      });
+
+      list.replaceChildren(...filtered);
+      resultCount.textContent = `${filtered.length} papers`;
+    }
+
+    topicButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const topic = button.dataset.topic;
+        if (activeTopics.has(topic)) {
+          activeTopics.delete(topic);
+          button.classList.remove("active");
+        } else {
+          activeTopics.add(topic);
+          button.classList.add("active");
+        }
+        applyFilters();
+      });
+    });
+
+    [searchInput, sortSelect, crosslistOnly, multiVersion].forEach((el) => {
+      el.addEventListener("input", applyFilters);
+      el.addEventListener("change", applyFilters);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "/" && document.activeElement !== searchInput) {
+        event.preventDefault();
+        searchInput.focus();
+      }
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchInput.focus();
+      }
+    });
+
+    const exportButtons = document.querySelectorAll("[data-export]");
+    exportButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = cards.filter((card) => card.querySelector("[data-select]").checked);
+        if (selected.length === 0) {
+          alert("Select at least one paper.");
+          return;
+        }
+        const type = button.dataset.export;
+        if (type === "csv") {
+          const rows = ["arxiv_id,title,updated_at,topics"];
+          selected.forEach((card) => {
+            const id = card.querySelector("a").getAttribute("href").split("/").pop();
+            const title = card.dataset.title.replace(/\"/g, "\"\"");
+            const topics = card.dataset.topics;
+            rows.push(`${id},\"${title}\",${card.dataset.updated},${topics}`);
+          });
+          download("causal-ai-selection.csv", rows.join("\n"));
+        } else {
+          const bib = selected
+            .map((card) => {
+              const id = card.querySelector("a").getAttribute("href").split("/").pop();
+              return `@article{arxiv:${id},\n  title={${card.dataset.title}},\n  eprint={${id}},\n  archivePrefix={arXiv}\n}`;
+            })
+            .join("\n\n");
+          download("causal-ai-selection.bib", bib);
+        }
+      });
+    });
+
+    function download(filename, content) {
+      const blob = new Blob([content], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+  </script>
+
+  <style>
+    h1 {
+      margin: 0 0 0.4rem;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+    }
+
+    .explorer-head {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: center;
+    }
+
+    .search-block {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .search-block input {
+      padding: 0.7rem 0.9rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+
+    .shortcut {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .explorer-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
+    }
+
+    .filters {
+      display: grid;
+      gap: 1.2rem;
+      align-self: start;
+      position: sticky;
+      top: 6rem;
+    }
+
+    .filter-block {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .filter-block label {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .results-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+    }
+
+    .export-bar {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .paper-list {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .paper-row h3 {
+      margin: 0 0 0.3rem;
+    }
+
+    .row-head {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .abstract {
+      font-family: var(--font-serif);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 900px) {
+      .explorer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filters {
+        position: static;
+      }
+    }
+  </style>
+</BaseLayout>

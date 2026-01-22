@@ -1,0 +1,51 @@
+---
+const { evidence = [] } = Astro.props;
+---
+<details class="citation">
+  <summary class="chip secondary">Evidence ({evidence.length})</summary>
+  <div class="citation-panel">
+    {evidence.map((id) => (
+      <a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a>
+    ))}
+  </div>
+</details>
+
+<style>
+  .citation {
+    position: relative;
+  }
+
+  .citation summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .citation summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .citation-panel {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.5rem;
+    min-width: 180px;
+    display: grid;
+    gap: 0.25rem;
+    box-shadow: 0 12px 24px -18px var(--shadow);
+    z-index: 5;
+  }
+
+  .citation-panel a {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.35rem;
+    border-radius: 6px;
+  }
+
+  .citation-panel a:hover {
+    background: var(--surface);
+  }
+</style>

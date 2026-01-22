@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const digests = await getCollection("digests");
+const sorted = digests.sort((a, b) => b.data.week.localeCompare(a.data.week));
+---
+<BaseLayout wide title="Weekly Digest - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Weekly Digest</h1>
+      <p class="subtle">Citation-locked summaries of what moved in causal AI each week.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      {sorted.map((digest) => (
+        <a class="card" href={Astro.resolve(`/digest/weekly/${digest.data.week}`)}>
+          <h3>{digest.data.title}</h3>
+          <p class="subtle">{digest.data.summary}</p>
+          <div class="chip">{digest.data.week}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

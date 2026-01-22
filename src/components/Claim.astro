@@ -1,0 +1,37 @@
+---
+import CitationChip from "@components/CitationChip.astro";
+const { evidence = [], type = "Claim" } = Astro.props;
+---
+<div class="claim">
+  <div class="claim-head">
+    <span class="chip">{type}</span>
+    <CitationChip evidence={evidence} />
+  </div>
+  <div class="claim-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .claim {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    background: var(--bg-elevated);
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .claim-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .claim-body {
+    font-family: var(--font-serif);
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const trustLinks = [
+  { href: "/trust/editorial", label: "Editorial Policy" },
+  { href: "/trust/provenance", label: "Data Provenance" },
+  { href: "/trust/update-log", label: "Update Log" },
+  { href: "/trust/ranking", label: "Ranking Methodology" },
+  { href: "/trust/citation-coverage", label: "Citation Coverage" },
+  { href: "/trust/how-to-cite", label: "How to Cite" }
+];
+---
+<BaseLayout wide title="Trust - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Trust Center</h1>
+      <p class="subtle">Transparency pages that make the project citable and auditable.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      {trustLinks.map((link) => (
+        <a class="card" href={Astro.resolve(link.href)}>
+          <h3>{link.label}</h3>
+          <p class="subtle">Open policy and methodology details.</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

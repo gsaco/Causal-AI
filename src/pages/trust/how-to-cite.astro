@@ -1,0 +1,37 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { readJson } from "@utils/data";
+
+const build = await readJson("provenance/build.json");
+const citation = `Causal-AI (snapshot ${build.snapshot}). Causal-AI: an arXiv-grounded field guide for causal AI. https://gsaco.github.io/Causal-AI/ (accessed ${build.snapshot}).`;
+---
+<BaseLayout wide title="How to Cite - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>How to Cite This Site</h1>
+      <p class="subtle">Use snapshot dates to reference the exact evidence state.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <h2>Recommended citation</h2>
+      <pre class="citation">{citation}</pre>
+      <p class="subtle">Include the snapshot date so claims are reproducible.</p>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .citation {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 1rem;
+      border-radius: 12px;
+    }
+  </style>
+</BaseLayout>

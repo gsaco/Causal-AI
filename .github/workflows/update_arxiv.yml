@@ -1,0 +1,53 @@
+name: Update arXiv snapshots
+
+on:
+  schedule:
+    - cron: "0 9 * * 1-5" # 09:00 UTC weekdays
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Fetch arXiv data
+        run: node scripts/arxiv/fetch_api.ts
+
+      - name: Validate snapshots
+        run: |
+          node scripts/validate/validate_schema.ts
+          node scripts/validate/validate_citations.ts
+          node scripts/validate/validate_links.ts
+
+      - name: Commit updated snapshots
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git add data
+            git commit -m "chore(data): refresh arXiv snapshots"
+            git push
+          else
+            echo "No snapshot changes to commit."
+          fi

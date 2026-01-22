@@ -1,0 +1,203 @@
+---
+import ThemeToggle from "@components/ThemeToggle.astro";
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/papers", label: "Paper Explorer" },
+  { href: "/topics", label: "Topics" },
+  { href: "/digest", label: "Weekly Digest" },
+  { href: "/glossary", label: "Glossary" },
+  { href: "/benchmarks", label: "Benchmarks" },
+  { href: "/tools", label: "Tools" }
+];
+const trustLinks = [
+  { href: "/trust/editorial", label: "Editorial Policy" },
+  { href: "/trust/provenance", label: "Data Provenance" },
+  { href: "/trust/update-log", label: "Update Log" },
+  { href: "/trust/ranking", label: "Ranking Methodology" },
+  { href: "/trust/citation-coverage", label: "Citation Coverage" },
+  { href: "/trust/how-to-cite", label: "How to Cite" }
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href={Astro.resolve("/")}>Causal-AI</a>
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <div class="mobile-panel">
+        {navLinks.map((link) => (
+          <a href={Astro.resolve(link.href)}>{link.label}</a>
+        ))}
+        <div class="mobile-trust">
+          <span>Trust</span>
+          {trustLinks.map((link) => (
+            <a href={Astro.resolve(link.href)}>{link.label}</a>
+          ))}
+        </div>
+        <a href={Astro.resolve("/contribute")}>Contribute</a>
+      </div>
+    </details>
+    <nav class="nav-links" aria-label="Primary">
+      {navLinks.map((link) => (
+        <a href={Astro.resolve(link.href)}>{link.label}</a>
+      ))}
+      <details class="trust-menu">
+        <summary>Trust</summary>
+        <div class="trust-panel">
+          {trustLinks.map((link) => (
+            <a href={Astro.resolve(link.href)}>{link.label}</a>
+          ))}
+        </div>
+      </details>
+      <a href={Astro.resolve("/contribute")}>Contribute</a>
+    </nav>
+    <div class="actions">
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 0;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-menu {
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.35rem 0.6rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-panel {
+    position: absolute;
+    top: 2.6rem;
+    left: 0;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 0.8rem;
+    min-width: 220px;
+    display: grid;
+    gap: 0.4rem;
+    box-shadow: 0 16px 24px -20px var(--shadow);
+  }
+
+  .mobile-panel a {
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .mobile-trust {
+    border-top: 1px solid var(--border);
+    padding-top: 0.4rem;
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .mobile-trust span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a,
+  .nav-links summary {
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .nav-links a:hover,
+  .nav-links summary:hover {
+    background: var(--surface);
+  }
+
+  .trust-menu {
+    position: relative;
+  }
+
+  .trust-menu summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .trust-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .trust-panel {
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.6rem;
+    min-width: 220px;
+    display: grid;
+    gap: 0.2rem;
+    box-shadow: 0 16px 24px -20px var(--shadow);
+  }
+
+  .trust-panel a {
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+  }
+
+  .trust-panel a:hover {
+    background: var(--surface);
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  @media (min-width: 960px) {
+    .mobile-menu {
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+  }
+</style>

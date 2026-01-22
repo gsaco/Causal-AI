@@ -1,0 +1,26 @@
+{
+  "name": "causal-ai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/prepare-public-data.mjs && astro build && pnpm pagefind",
+    "pagefind": "pagefind --site dist --output-subdir pagefind",
+    "preview": "astro preview",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm typecheck"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.1.0",
+    "astro": "^4.16.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@fontsource/jetbrains-mono": "^5.0.20",
+    "@fontsource/source-serif-4": "^5.0.20",
+    "@fontsource/space-grotesk": "^5.0.20",
+    "@types/node": "^22.10.2",
+    "pagefind": "^1.1.0",
+    "typescript": "^5.6.3"
+  }
+}

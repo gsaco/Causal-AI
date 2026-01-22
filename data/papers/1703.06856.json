@@ -1,0 +1,46 @@
+{
+  "arxiv_id": "1703.06856",
+  "canonical_url": "https://arxiv.org/abs/1703.06856",
+  "pdf_url": "https://arxiv.org/pdf/1703.06856.pdf",
+  "title": "Counterfactual Fairness",
+  "abstract": "A causal definition of fairness based on comparing decisions across counterfactual worlds where protected attributes differ.",
+  "authors": [
+    { "name": "Matt J. Kusner" },
+    { "name": "Joshua Loftus" },
+    { "name": "Chris Russell" },
+    { "name": "Ricardo Silva" }
+  ],
+  "submitted_at": "2017-03-20",
+  "updated_at": "2018-03-12",
+  "primary_category": "cs.LG",
+  "categories": ["cs.LG", "stat.ML"],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 2,
+    "trending_score": 0.27
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.93,
+      "rationale": {
+        "matched_keywords": ["counterfactual fairness"],
+        "rules_version": "v0.1"
+      }
+    }
+  ],
+  "versions": [
+    { "version": "v1", "updated_at": "2017-03-20" },
+    { "version": "v2", "updated_at": "2018-03-12" }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/1703.06856",
+    "arxiv_pdf": "https://arxiv.org/pdf/1703.06856.pdf"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-01-22T02:10:00Z",
+    "harvest_run_id": "demo-2026-01-22",
+    "queries": ["ti:\"counterfactual fairness\""]
+  }
+}

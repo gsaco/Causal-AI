@@ -1,0 +1,53 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import fs from "node:fs/promises";
+import path from "node:path";
+
+const logPath = path.resolve("data/provenance/update-log.ndjson");
+const logRaw = await fs.readFile(logPath, "utf-8");
+const entries = logRaw
+  .trim()
+  .split("\n")
+  .filter(Boolean)
+  .map((line) => JSON.parse(line));
+---
+<BaseLayout wide title="Update Log - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Update Log</h1>
+      <p class="subtle">Per-deploy record of harvest windows and snapshot counts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Snapshot</th>
+            <th>Harvest window</th>
+            <th>Records</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {entries.map((entry) => (
+            <tr>
+              <td>{entry.snapshot}</td>
+              <td>{entry.harvest_window}</td>
+              <td>{entry.records}</td>
+              <td>{entry.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+const label = "Toggle theme";
+---
+<button class="button secondary" type="button" aria-label={label} data-theme-toggle>
+  <span aria-hidden="true">O</span>
+  <span class="hide-on-mobile">Theme</span>
+</button>
+
+<style>
+  .hide-on-mobile {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .hide-on-mobile {
+      display: inline;
+    }
+  }
+</style>

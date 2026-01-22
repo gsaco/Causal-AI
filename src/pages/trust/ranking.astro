@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+<BaseLayout wide title="Ranking Methodology - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Ranking Methodology</h1>
+      <p class="subtle">Trending is an attention signal derived from arXiv metadata, not a quality guarantee.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card">
+      <h2>Signals</h2>
+      <ul>
+        <li>Recency score (exponential decay over 14 days)</li>
+        <li>Topic momentum (recent vs prior window)</li>
+        <li>Cross-listing signal (breadth across categories)</li>
+        <li>Version churn (revision activity, when available)</li>
+      </ul>
+      <h2>Formula</h2>
+      <pre class="formula">
+trending_score = 0.55 * recency +
+                 0.20 * momentum +
+                 0.15 * cross_list +
+                 0.10 * churn
+      </pre>
+      <p class="subtle">Weights are versioned and changes are logged in the update log.</p>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .formula {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 1rem;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+  </style>
+</BaseLayout>

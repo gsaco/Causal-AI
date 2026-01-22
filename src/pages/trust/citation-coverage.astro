@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CoverageBadge from "@components/CoverageBadge.astro";
+
+const coverage = [
+  { page: "Topics", value: 96 },
+  { page: "Glossary", value: 100 },
+  { page: "Weekly Digest", value: 92 },
+  { page: "Trust pages", value: 85 }
+];
+---
+<BaseLayout wide title="Citation Coverage - Causal-AI">
+  <section class="section hero">
+    <div class="container">
+      <h1>Citation Coverage</h1>
+      <p class="subtle">How much of our curated content is directly backed by arXiv evidence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+      {coverage.map((item) => (
+        <div class="card">
+          <h3>{item.page}</h3>
+          <CoverageBadge value={item.value} />
+          <p class="subtle">Computed as % of claim blocks with at least one arXiv ID.</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>

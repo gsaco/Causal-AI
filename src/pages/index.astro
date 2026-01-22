@@ -1,0 +1,159 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PaperCard from "@components/PaperCard.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import CoverageBadge from "@components/CoverageBadge.astro";
+import { readJson } from "@utils/data";
+
+const papers = await readJson("papers.index.json");
+const topics = await readJson("taxonomy/topics.json");
+const build = await readJson("provenance/build.json");
+const momentum = await readJson("metrics/topic_momentum.json");
+
+const trending = [...papers]
+  .sort((a, b) => (b.metrics.trending_score ?? 0) - (a.metrics.trending_score ?? 0))
+  .slice(0, 3);
+---
+<BaseLayout wide title="Causal-AI - Researcher-grade causal AI intelligence">
+  <section class="hero section">
+    <div class="container hero-grid">
+      <div class="fade-in">
+        <p class="chip">Snapshot {build.snapshot}</p>
+        <h1>Research-grade causal AI intelligence with auditable provenance.</h1>
+        <p class="subtitle">
+          Every research-facing claim is anchored to arXiv IDs, with transparent trending logic and update cadence.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href={Astro.resolve("/papers")}>Explore papers</a>
+          <a class="button secondary" href={Astro.resolve("/topics")}>Browse topics</a>
+        </div>
+        {build.dataset === "demo" && (
+          <div class="demo-banner">
+            Demo dataset: ingestion pipeline not yet connected. Replace with scheduled arXiv snapshots.
+          </div>
+        )}
+      </div>
+      <div class="card fade-in">
+        <h3>Update cadence</h3>
+        <p class="subtle">Harvest window: {build.harvest_window}</p>
+        <ProvenancePanel provenance={build} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Trending this snapshot</h2>
+        <CoverageBadge value={96} />
+      </div>
+      <div class="grid">
+        {trending.map((paper) => (
+          <PaperCard paper={paper} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Topic momentum</h2>
+        <p class="subtle">Week-over-week arXiv momentum from {momentum.window.A} vs {momentum.window.B}.</p>
+      </div>
+      <div class="momentum-grid">
+        {topics.map((topic) => (
+          <a class="card" href={Astro.resolve(`/topics/${topic.id}`)}>
+            <h3>{topic.title}</h3>
+            <p class="subtle">{topic.scope}</p>
+            <div class="chip secondary">Momentum {momentum.topics[topic.id] ?? 0}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Start here</h2>
+        <p class="subtle">Curated paths for fast onboarding into the field.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Foundations sprint</h3>
+          <p class="subtle">Understanding identifiability, SCMs, and causal hierarchies.</p>
+          <a class="button ghost" href={Astro.resolve("/topics/causal-discovery")}>Start with causal discovery</a>
+        </div>
+        <div class="card">
+          <h3>Applied causal stack</h3>
+          <p class="subtle">Effect estimation to fairness to tooling to ship.</p>
+          <a class="button ghost" href={Astro.resolve("/topics/effect-estimation")}>Jump to effect estimation</a>
+        </div>
+        <div class="card">
+          <h3>Distribution shift lab</h3>
+          <p class="subtle">Invariance-driven methods for robust learning.</p>
+          <a class="button ghost" href={Astro.resolve("/topics/distribution-shift")}>Explore invariance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      margin: 0 0 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      max-width: 48ch;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: center;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .demo-banner {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent-2) 40%, transparent);
+      font-size: 0.9rem;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .momentum-grid {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+  </style>
+</BaseLayout>
