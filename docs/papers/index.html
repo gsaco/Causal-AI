@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en" data-theme=""> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Browse and filter the causal AI paper corpus."><link rel="icon" href="/Causal-AI/favicon.svg"><title>Paper Explorer - Causal-AI</title><script>
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme ?? (prefersDark ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    </script><link rel="stylesheet" href="/Causal-AI/_astro/benchmarks.BSOQ7d4m.css">
+<style>h1[data-astro-cid-vx4zhtwr]{margin:0 0 .4rem;font-size:clamp(2rem,3vw,2.6rem)}.explorer-head[data-astro-cid-vx4zhtwr]{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center}.search-block[data-astro-cid-vx4zhtwr]{display:grid;gap:.5rem}.search-block[data-astro-cid-vx4zhtwr] input[data-astro-cid-vx4zhtwr]{padding:.7rem .9rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-elevated)}.shortcut[data-astro-cid-vx4zhtwr]{font-size:.8rem;color:var(--muted)}.explorer-grid[data-astro-cid-vx4zhtwr]{display:grid;gap:1.5rem;grid-template-columns:minmax(240px,280px) minmax(0,1fr)}.filters[data-astro-cid-vx4zhtwr]{display:grid;gap:1.2rem;align-self:start;position:sticky;top:6rem}.filter-block[data-astro-cid-vx4zhtwr]{display:grid;gap:.6rem}.filter-block[data-astro-cid-vx4zhtwr] label[data-astro-cid-vx4zhtwr]{display:flex;gap:.5rem;align-items:center;font-size:.9rem}.results-head[data-astro-cid-vx4zhtwr]{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}.export-bar[data-astro-cid-vx4zhtwr]{display:flex;gap:.6rem;flex-wrap:wrap}.paper-list[data-astro-cid-vx4zhtwr]{display:grid;gap:1.2rem}.paper-row[data-astro-cid-vx4zhtwr] h3[data-astro-cid-vx4zhtwr]{margin:0 0 .3rem}.row-head[data-astro-cid-vx4zhtwr]{display:flex;gap:.8rem}.abstract[data-astro-cid-vx4zhtwr]{font-family:var(--font-serif);color:var(--muted);line-height:1.6}.meta-row[data-astro-cid-vx4zhtwr]{display:flex;flex-wrap:wrap;gap:.5rem}.chip[data-astro-cid-vx4zhtwr].active{background:var(--accent);color:#fff;border-color:var(--accent)}@media (max-width: 900px){.explorer-grid[data-astro-cid-vx4zhtwr]{grid-template-columns:1fr}.filters[data-astro-cid-vx4zhtwr]{position:static}}
+</style></head> <body> <header class="site-header" data-astro-cid-ctg3m53h> <div class="container header-inner" data-astro-cid-ctg3m53h> <a class="logo" href="/Causal-AI/" data-astro-cid-ctg3m53h>Causal-AI</a> <details class="mobile-menu" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Menu</summary> <div class="mobile-panel" data-astro-cid-ctg3m53h> <a href="/Causal-AI/" data-astro-cid-ctg3m53h>Home</a><a href="/Causal-AI/papers" data-astro-cid-ctg3m53h>Paper Explorer</a><a href="/Causal-AI/topics" data-astro-cid-ctg3m53h>Topics</a><a href="/Causal-AI/digest" data-astro-cid-ctg3m53h>Weekly Digest</a><a href="/Causal-AI/glossary" data-astro-cid-ctg3m53h>Glossary</a><a href="/Causal-AI/benchmarks" data-astro-cid-ctg3m53h>Benchmarks</a><a href="/Causal-AI/tools" data-astro-cid-ctg3m53h>Tools</a> <div class="mobile-trust" data-astro-cid-ctg3m53h> <span data-astro-cid-ctg3m53h>Trust</span> <a href="/Causal-AI/trust/editorial" data-astro-cid-ctg3m53h>Editorial Policy</a><a href="/Causal-AI/trust/provenance" data-astro-cid-ctg3m53h>Data Provenance</a><a href="/Causal-AI/trust/update-log" data-astro-cid-ctg3m53h>Update Log</a><a href="/Causal-AI/trust/ranking" data-astro-cid-ctg3m53h>Ranking Methodology</a><a href="/Causal-AI/trust/citation-coverage" data-astro-cid-ctg3m53h>Citation Coverage</a><a href="/Causal-AI/trust/how-to-cite" data-astro-cid-ctg3m53h>How to Cite</a> </div> <a href="/Causal-AI/contribute" data-astro-cid-ctg3m53h>Contribute</a> </div> </details> <nav class="nav-links" aria-label="Primary" data-astro-cid-ctg3m53h> <a href="/Causal-AI/" data-astro-cid-ctg3m53h>Home</a><a href="/Causal-AI/papers" data-astro-cid-ctg3m53h>Paper Explorer</a><a href="/Causal-AI/topics" data-astro-cid-ctg3m53h>Topics</a><a href="/Causal-AI/digest" data-astro-cid-ctg3m53h>Weekly Digest</a><a href="/Causal-AI/glossary" data-astro-cid-ctg3m53h>Glossary</a><a href="/Causal-AI/benchmarks" data-astro-cid-ctg3m53h>Benchmarks</a><a href="/Causal-AI/tools" data-astro-cid-ctg3m53h>Tools</a> <details class="trust-menu" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Trust</summary> <div class="trust-panel" data-astro-cid-ctg3m53h> <a href="/Causal-AI/trust/editorial" data-astro-cid-ctg3m53h>Editorial Policy</a><a href="/Causal-AI/trust/provenance" data-astro-cid-ctg3m53h>Data Provenance</a><a href="/Causal-AI/trust/update-log" data-astro-cid-ctg3m53h>Update Log</a><a href="/Causal-AI/trust/ranking" data-astro-cid-ctg3m53h>Ranking Methodology</a><a href="/Causal-AI/trust/citation-coverage" data-astro-cid-ctg3m53h>Citation Coverage</a><a href="/Causal-AI/trust/how-to-cite" data-astro-cid-ctg3m53h>How to Cite</a> </div> </details> <a href="/Causal-AI/contribute" data-astro-cid-ctg3m53h>Contribute</a> </nav> <div class="actions" data-astro-cid-ctg3m53h> <button class="button secondary" type="button" aria-label="Toggle theme" data-theme-toggle data-astro-cid-x3pjskd3> <span aria-hidden="true" data-astro-cid-x3pjskd3>O</span> <span class="hide-on-mobile" data-astro-cid-x3pjskd3>Theme</span> </button>  </div> </div> </header>  <main class="">  <section class="section hero" data-astro-cid-vx4zhtwr> <div class="container explorer-head" data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h1 data-astro-cid-vx4zhtwr>Paper Explorer</h1> <p class="subtle" data-astro-cid-vx4zhtwr>Search, filter, and export arXiv-grounded metadata.</p> </div> <div class="search-block" data-astro-cid-vx4zhtwr> <input id="paper-search" type="search" placeholder="Search title or abstract" data-astro-cid-vx4zhtwr> <div class="shortcut" data-astro-cid-vx4zhtwr>Press <span class="kbd" data-astro-cid-vx4zhtwr>/</span> or <span class="kbd" data-astro-cid-vx4zhtwr>Cmd+K</span></div> </div> </div> </section> <section class="section" data-astro-cid-vx4zhtwr> <div class="container explorer-grid" data-astro-cid-vx4zhtwr> <aside class="filters card" data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr>Filters</h3> <div class="filter-block" data-astro-cid-vx4zhtwr> <strong data-astro-cid-vx4zhtwr>Topics</strong> <div class="tag-row" data-astro-cid-vx4zhtwr> <button class="chip secondary" data-topic="causal-discovery" type="button" data-astro-cid-vx4zhtwr>Causal Discovery</button><button class="chip secondary" data-topic="distribution-shift" type="button" data-astro-cid-vx4zhtwr>Distribution Shift &amp; Invariance</button><button class="chip secondary" data-topic="effect-estimation" type="button" data-astro-cid-vx4zhtwr>Causal Effect Estimation</button><button class="chip secondary" data-topic="causal-fairness" type="button" data-astro-cid-vx4zhtwr>Causal Fairness</button><button class="chip secondary" data-topic="systems-tooling" type="button" data-astro-cid-vx4zhtwr>Systems &amp; Tooling</button> </div> </div> <div class="filter-block" data-astro-cid-vx4zhtwr> <strong data-astro-cid-vx4zhtwr>Sort</strong> <select id="sort-select" data-astro-cid-vx4zhtwr> <option value="latest" data-astro-cid-vx4zhtwr>Latest</option> <option value="updated" data-astro-cid-vx4zhtwr>Recently updated</option> <option value="trending" data-astro-cid-vx4zhtwr>Trending</option> <option value="revised" data-astro-cid-vx4zhtwr>Most revised</option> </select> </div> <div class="filter-block" data-astro-cid-vx4zhtwr> <strong data-astro-cid-vx4zhtwr>Metadata</strong> <label data-astro-cid-vx4zhtwr><input type="checkbox" id="crosslist" data-astro-cid-vx4zhtwr> Cross-listed only</label> <label data-astro-cid-vx4zhtwr><input type="checkbox" id="multi-version" data-astro-cid-vx4zhtwr> Version count >= 2</label> </div> </aside> <div data-astro-cid-vx4zhtwr> <div class="results-head" data-astro-cid-vx4zhtwr> <span class="subtle" id="result-count" data-astro-cid-vx4zhtwr>6 papers</span> <div class="export-bar" data-astro-cid-vx4zhtwr> <button class="button secondary" data-export="csv" data-astro-cid-vx4zhtwr>Export CSV</button> <button class="button" data-export="bib" data-astro-cid-vx4zhtwr>Export BibTeX</button> </div> </div> <div class="paper-list" data-list data-astro-cid-vx4zhtwr> <article class="card paper-row" data-paper data-title="DAGs with NO TEARS: Continuous Optimization for Structure Learning" data-abstract="A continuous optimization approach to learning directed acyclic graphs that replaces combinatorial search with a smooth constraint." data-topics="causal-discovery" data-submitted="2018-03-05" data-updated="2018-06-12" data-trending="0.42" data-version="2" data-crosslist="1" data-astro-cid-vx4zhtwr> <div class="row-head" data-astro-cid-vx4zhtwr> <input type="checkbox" data-select data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr><a href="/Causal-AI/papers/1803.01422" data-astro-cid-vx4zhtwr>DAGs with NO TEARS: Continuous Optimization for Structure Learning</a></h3> <p class="subtle" data-astro-cid-vx4zhtwr>Xun Zheng, Bryan Aragam, Pradeep Ravikumar +1</p> </div> </div> <p class="abstract" data-astro-cid-vx4zhtwr>A continuous optimization approach to learning directed acyclic graphs that replaces combinatorial search with a smooth constraint.</p> <div class="meta-row" data-astro-cid-vx4zhtwr> <a class="chip" href="https://arxiv.org/abs/1803.01422" target="_blank" rel="noreferrer">arXiv:1803.01422</a> <span class="chip" data-astro-cid-vx4zhtwr>Submitted 2018-03-05</span> <span class="chip secondary" data-astro-cid-vx4zhtwr>Updated 2018-06-12</span> <span class="chip" data-astro-cid-vx4zhtwr>v2</span> </div> <div class="tag-row" data-astro-cid-vx4zhtwr> <span class="chip secondary" data-astro-cid-vx4zhtwr>causal-discovery</span> </div> </article><article class="card paper-row" data-paper data-title="Invariant Risk Minimization" data-abstract="A principle for learning predictors that are stable across environments by enforcing invariance of optimal classifiers." data-topics="distribution-shift" data-submitted="2019-07-05" data-updated="2020-02-12" data-trending="0.38" data-version="3" data-crosslist="1" data-astro-cid-vx4zhtwr> <div class="row-head" data-astro-cid-vx4zhtwr> <input type="checkbox" data-select data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr><a href="/Causal-AI/papers/1907.02893" data-astro-cid-vx4zhtwr>Invariant Risk Minimization</a></h3> <p class="subtle" data-astro-cid-vx4zhtwr>Martin Arjovsky, Leon Bottou, Ishaan Gulrajani +1</p> </div> </div> <p class="abstract" data-astro-cid-vx4zhtwr>A principle for learning predictors that are stable across environments by enforcing invariance of optimal classifiers.</p> <div class="meta-row" data-astro-cid-vx4zhtwr> <a class="chip" href="https://arxiv.org/abs/1907.02893" target="_blank" rel="noreferrer">arXiv:1907.02893</a> <span class="chip" data-astro-cid-vx4zhtwr>Submitted 2019-07-05</span> <span class="chip secondary" data-astro-cid-vx4zhtwr>Updated 2020-02-12</span> <span class="chip" data-astro-cid-vx4zhtwr>v3</span> </div> <div class="tag-row" data-astro-cid-vx4zhtwr> <span class="chip secondary" data-astro-cid-vx4zhtwr>distribution-shift</span> </div> </article><article class="card paper-row" data-paper data-title="Counterfactual Fairness" data-abstract="A causal definition of fairness based on comparing decisions across counterfactual worlds where protected attributes differ." data-topics="causal-fairness" data-submitted="2017-03-20" data-updated="2018-03-12" data-trending="0.27" data-version="2" data-crosslist="1" data-astro-cid-vx4zhtwr> <div class="row-head" data-astro-cid-vx4zhtwr> <input type="checkbox" data-select data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr><a href="/Causal-AI/papers/1703.06856" data-astro-cid-vx4zhtwr>Counterfactual Fairness</a></h3> <p class="subtle" data-astro-cid-vx4zhtwr>Matt J. Kusner, Joshua Loftus, Chris Russell +1</p> </div> </div> <p class="abstract" data-astro-cid-vx4zhtwr>A causal definition of fairness based on comparing decisions across counterfactual worlds where protected attributes differ.</p> <div class="meta-row" data-astro-cid-vx4zhtwr> <a class="chip" href="https://arxiv.org/abs/1703.06856" target="_blank" rel="noreferrer">arXiv:1703.06856</a> <span class="chip" data-astro-cid-vx4zhtwr>Submitted 2017-03-20</span> <span class="chip secondary" data-astro-cid-vx4zhtwr>Updated 2018-03-12</span> <span class="chip" data-astro-cid-vx4zhtwr>v2</span> </div> <div class="tag-row" data-astro-cid-vx4zhtwr> <span class="chip secondary" data-astro-cid-vx4zhtwr>causal-fairness</span> </div> </article><article class="card paper-row" data-paper data-title="Causal Effect Inference with Deep Latent-Variable Models" data-abstract="A deep latent-variable model (CEVAE) for causal effect inference with hidden confounding using variational methods." data-topics="effect-estimation" data-submitted="2017-05-24" data-updated="2017-10-03" data-trending="0.24" data-version="1" data-crosslist="1" data-astro-cid-vx4zhtwr> <div class="row-head" data-astro-cid-vx4zhtwr> <input type="checkbox" data-select data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr><a href="/Causal-AI/papers/1705.08821" data-astro-cid-vx4zhtwr>Causal Effect Inference with Deep Latent-Variable Models</a></h3> <p class="subtle" data-astro-cid-vx4zhtwr>Yarin Gal, Ricardo Silva</p> </div> </div> <p class="abstract" data-astro-cid-vx4zhtwr>A deep latent-variable model (CEVAE) for causal effect inference with hidden confounding using variational methods.</p> <div class="meta-row" data-astro-cid-vx4zhtwr> <a class="chip" href="https://arxiv.org/abs/1705.08821" target="_blank" rel="noreferrer">arXiv:1705.08821</a> <span class="chip" data-astro-cid-vx4zhtwr>Submitted 2017-05-24</span> <span class="chip secondary" data-astro-cid-vx4zhtwr>Updated 2017-10-03</span> <span class="chip" data-astro-cid-vx4zhtwr>v1</span> </div> <div class="tag-row" data-astro-cid-vx4zhtwr> <span class="chip secondary" data-astro-cid-vx4zhtwr>effect-estimation</span> </div> </article><article class="card paper-row" data-paper data-title="DoWhy: An End-to-End Library for Causal Inference" data-abstract="A practical Python library that unifies causal inference workflows across identification, estimation, and refutation." data-topics="systems-tooling" data-submitted="2020-11-09" data-updated="2021-03-15" data-trending="0.31" data-version="2" data-crosslist="1" data-astro-cid-vx4zhtwr> <div class="row-head" data-astro-cid-vx4zhtwr> <input type="checkbox" data-select data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr><a href="/Causal-AI/papers/2011.04216" data-astro-cid-vx4zhtwr>DoWhy: An End-to-End Library for Causal Inference</a></h3> <p class="subtle" data-astro-cid-vx4zhtwr>Amit Sharma, Emre Kiciman</p> </div> </div> <p class="abstract" data-astro-cid-vx4zhtwr>A practical Python library that unifies causal inference workflows across identification, estimation, and refutation.</p> <div class="meta-row" data-astro-cid-vx4zhtwr> <a class="chip" href="https://arxiv.org/abs/2011.04216" target="_blank" rel="noreferrer">arXiv:2011.04216</a> <span class="chip" data-astro-cid-vx4zhtwr>Submitted 2020-11-09</span> <span class="chip secondary" data-astro-cid-vx4zhtwr>Updated 2021-03-15</span> <span class="chip" data-astro-cid-vx4zhtwr>v2</span> </div> <div class="tag-row" data-astro-cid-vx4zhtwr> <span class="chip secondary" data-astro-cid-vx4zhtwr>systems-tooling</span> </div> </article><article class="card paper-row" data-paper data-title="Invariant Causal Prediction" data-abstract="A framework for causal discovery based on invariance of conditional distributions across environments." data-topics="distribution-shift" data-submitted="2015-01-06" data-updated="2016-05-02" data-trending="0.21" data-version="2" data-crosslist="1" data-astro-cid-vx4zhtwr> <div class="row-head" data-astro-cid-vx4zhtwr> <input type="checkbox" data-select data-astro-cid-vx4zhtwr> <div data-astro-cid-vx4zhtwr> <h3 data-astro-cid-vx4zhtwr><a href="/Causal-AI/papers/1501.01332" data-astro-cid-vx4zhtwr>Invariant Causal Prediction</a></h3> <p class="subtle" data-astro-cid-vx4zhtwr>Peter Buhlmann, Jonas Peters, Nicolai Meinshausen</p> </div> </div> <p class="abstract" data-astro-cid-vx4zhtwr>A framework for causal discovery based on invariance of conditional distributions across environments.</p> <div class="meta-row" data-astro-cid-vx4zhtwr> <a class="chip" href="https://arxiv.org/abs/1501.01332" target="_blank" rel="noreferrer">arXiv:1501.01332</a> <span class="chip" data-astro-cid-vx4zhtwr>Submitted 2015-01-06</span> <span class="chip secondary" data-astro-cid-vx4zhtwr>Updated 2016-05-02</span> <span class="chip" data-astro-cid-vx4zhtwr>v2</span> </div> <div class="tag-row" data-astro-cid-vx4zhtwr> <span class="chip secondary" data-astro-cid-vx4zhtwr>distribution-shift</span> </div> </article> </div> </div> </div> </section> <script>
+    const searchInput = document.getElementById("paper-search");
+    const sortSelect = document.getElementById("sort-select");
+    const crosslistOnly = document.getElementById("crosslist");
+    const multiVersion = document.getElementById("multi-version");
+    const topicButtons = Array.from(document.querySelectorAll("[data-topic]"));
+    const list = document.querySelector("[data-list]");
+    const cards = Array.from(document.querySelectorAll("[data-paper]"));
+    const resultCount = document.getElementById("result-count");
+    const activeTopics = new Set();
+
+    function applyFilters() {
+      const query = (searchInput.value || "").toLowerCase();
+      const filtered = cards.filter((card) => {
+        const title = card.dataset.title.toLowerCase();
+        const abs = card.dataset.abstract.toLowerCase();
+        const topics = card.dataset.topics.split(",");
+        const matchesQuery = !query || title.includes(query) || abs.includes(query);
+        const matchesTopic = activeTopics.size === 0 || topics.some((t) => activeTopics.has(t));
+        const passesCrosslist = !crosslistOnly.checked || Number(card.dataset.crosslist) > 0;
+        const passesVersion = !multiVersion.checked || Number(card.dataset.version) >= 2;
+        return matchesQuery && matchesTopic && passesCrosslist && passesVersion;
+      });
+
+      const sortBy = sortSelect.value;
+      filtered.sort((a, b) => {
+        if (sortBy === "updated") {
+          return new Date(b.dataset.updated) - new Date(a.dataset.updated);
+        }
+        if (sortBy === "trending") {
+          return Number(b.dataset.trending) - Number(a.dataset.trending);
+        }
+        if (sortBy === "revised") {
+          return Number(b.dataset.version) - Number(a.dataset.version);
+        }
+        return new Date(b.dataset.submitted) - new Date(a.dataset.submitted);
+      });
+
+      list.replaceChildren(...filtered);
+      resultCount.textContent = `${filtered.length} papers`;
+    }
+
+    topicButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const topic = button.dataset.topic;
+        if (activeTopics.has(topic)) {
+          activeTopics.delete(topic);
+          button.classList.remove("active");
+        } else {
+          activeTopics.add(topic);
+          button.classList.add("active");
+        }
+        applyFilters();
+      });
+    });
+
+    [searchInput, sortSelect, crosslistOnly, multiVersion].forEach((el) => {
+      el.addEventListener("input", applyFilters);
+      el.addEventListener("change", applyFilters);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "/" && document.activeElement !== searchInput) {
+        event.preventDefault();
+        searchInput.focus();
+      }
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchInput.focus();
+      }
+    });
+
+    const exportButtons = document.querySelectorAll("[data-export]");
+    exportButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = cards.filter((card) => card.querySelector("[data-select]").checked);
+        if (selected.length === 0) {
+          alert("Select at least one paper.");
+          return;
+        }
+        const type = button.dataset.export;
+        if (type === "csv") {
+          const rows = ["arxiv_id,title,updated_at,topics"];
+          selected.forEach((card) => {
+            const id = card.querySelector("a").getAttribute("href").split("/").pop();
+            const title = card.dataset.title.replace(/\"/g, "\"\"");
+            const topics = card.dataset.topics;
+            rows.push(`${id},\"${title}\",${card.dataset.updated},${topics}`);
+          });
+          download("causal-ai-selection.csv", rows.join("\n"));
+        } else {
+          const bib = selected
+            .map((card) => {
+              const id = card.querySelector("a").getAttribute("href").split("/").pop();
+              return `@article{arxiv:${id},\n  title={${card.dataset.title}},\n  eprint={${id}},\n  archivePrefix={arXiv}\n}`;
+            })
+            .join("\n\n");
+          download("causal-ai-selection.bib", bib);
+        }
+      });
+    });
+
+    function download(filename, content) {
+      const blob = new Blob([content], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+  </script>   </main> <footer class="site-footer" data-astro-cid-gcn2mc3v> <div class="container footer-inner" data-astro-cid-gcn2mc3v> <div data-astro-cid-gcn2mc3v> <strong data-astro-cid-gcn2mc3v>Causal-AI</strong> <p class="subtle" data-astro-cid-gcn2mc3v>An arXiv-grounded field guide for causal intelligence.</p> </div> <div class="footer-links" data-astro-cid-gcn2mc3v> <a href="/Causal-AI/trust/editorial" data-astro-cid-gcn2mc3v>Editorial Policy</a><a href="/Causal-AI/trust/provenance" data-astro-cid-gcn2mc3v>Data Provenance</a><a href="/Causal-AI/trust/how-to-cite" data-astro-cid-gcn2mc3v>How to Cite</a><a href="/Causal-AI/contribute" data-astro-cid-gcn2mc3v>Contribute</a> </div> </div> </footer>  <script>
+      const toggle = document.querySelector("[data-theme-toggle]");
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          const current = document.documentElement.dataset.theme;
+          const next = current === "dark" ? "light" : "dark";
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem("theme", next);
+        });
+      }
+    </script> </body> </html>

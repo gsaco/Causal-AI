@@ -1,0 +1,47 @@
+{
+  "arxiv_id": "1907.02893",
+  "canonical_url": "https://arxiv.org/abs/1907.02893",
+  "pdf_url": "https://arxiv.org/pdf/1907.02893.pdf",
+  "title": "Invariant Risk Minimization",
+  "abstract": "A principle for learning predictors that are stable across environments by enforcing invariance of optimal classifiers.",
+  "authors": [
+    { "name": "Martin Arjovsky" },
+    { "name": "Leon Bottou" },
+    { "name": "Ishaan Gulrajani" },
+    { "name": "David Lopez-Paz" }
+  ],
+  "submitted_at": "2019-07-05",
+  "updated_at": "2020-02-12",
+  "primary_category": "cs.LG",
+  "categories": ["cs.LG", "stat.ML"],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 3,
+    "trending_score": 0.38
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.9,
+      "rationale": {
+        "matched_keywords": ["invariant", "risk minimization"],
+        "rules_version": "v0.1"
+      }
+    }
+  ],
+  "versions": [
+    { "version": "v1", "updated_at": "2019-07-05" },
+    { "version": "v2", "updated_at": "2019-10-11" },
+    { "version": "v3", "updated_at": "2020-02-12" }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/1907.02893",
+    "arxiv_pdf": "https://arxiv.org/pdf/1907.02893.pdf"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-01-22T02:10:00Z",
+    "harvest_run_id": "demo-2026-01-22",
+    "queries": ["ti:\"invariant\" AND abs:\"risk minimization\""]
+  }
+}

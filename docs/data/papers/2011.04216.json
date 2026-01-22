@@ -1,0 +1,51 @@
+{
+  "arxiv_id": "2011.04216",
+  "canonical_url": "https://arxiv.org/abs/2011.04216",
+  "pdf_url": "https://arxiv.org/pdf/2011.04216.pdf",
+  "title": "DoWhy: An End-to-End Library for Causal Inference",
+  "abstract": "A practical Python library that unifies causal inference workflows across identification, estimation, and refutation.",
+  "authors": [
+    { "name": "Amit Sharma" },
+    { "name": "Emre Kiciman" }
+  ],
+  "submitted_at": "2020-11-09",
+  "updated_at": "2021-03-15",
+  "primary_category": "cs.AI",
+  "categories": ["cs.AI", "stat.ML"],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 2,
+    "trending_score": 0.31
+  },
+  "topic_tags": [
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.86,
+      "rationale": {
+        "matched_keywords": ["library", "causal inference"],
+        "rules_version": "v0.1"
+      }
+    }
+  ],
+  "versions": [
+    { "version": "v1", "updated_at": "2020-11-09" },
+    { "version": "v2", "updated_at": "2021-03-15" }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2011.04216",
+    "arxiv_pdf": "https://arxiv.org/pdf/2011.04216.pdf",
+    "code": [
+      {
+        "url": "https://github.com/py-why/dowhy",
+        "label": "official",
+        "evidence": "author_link"
+      }
+    ]
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-01-22T02:10:00Z",
+    "harvest_run_id": "demo-2026-01-22",
+    "queries": ["ti:\"DoWhy\" OR abs:\"causal inference library\""]
+  }
+}

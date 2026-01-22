@@ -1,0 +1,45 @@
+{
+  "arxiv_id": "1501.01332",
+  "canonical_url": "https://arxiv.org/abs/1501.01332",
+  "pdf_url": "https://arxiv.org/pdf/1501.01332.pdf",
+  "title": "Invariant Causal Prediction",
+  "abstract": "A framework for causal discovery based on invariance of conditional distributions across environments.",
+  "authors": [
+    { "name": "Peter Buhlmann" },
+    { "name": "Jonas Peters" },
+    { "name": "Nicolai Meinshausen" }
+  ],
+  "submitted_at": "2015-01-06",
+  "updated_at": "2016-05-02",
+  "primary_category": "stat.ML",
+  "categories": ["stat.ML", "cs.LG"],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 2,
+    "trending_score": 0.21
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": ["invariant prediction"],
+        "rules_version": "v0.1"
+      }
+    }
+  ],
+  "versions": [
+    { "version": "v1", "updated_at": "2015-01-06" },
+    { "version": "v2", "updated_at": "2016-05-02" }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/1501.01332",
+    "arxiv_pdf": "https://arxiv.org/pdf/1501.01332.pdf"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-01-22T02:10:00Z",
+    "harvest_run_id": "demo-2026-01-22",
+    "queries": ["ti:\"invariant prediction\" OR abs:\"invariant\""]
+  }
+}

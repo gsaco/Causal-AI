@@ -1,0 +1,206 @@
+[
+  {
+    "arxiv_id": "1803.01422",
+    "title": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
+    "abstract": "A continuous optimization approach to learning directed acyclic graphs that replaces combinatorial search with a smooth constraint.",
+    "authors": ["Xun Zheng", "Bryan Aragam", "Pradeep Ravikumar", "Eric Xing"],
+    "submitted_at": "2018-03-05",
+    "updated_at": "2018-06-12",
+    "primary_category": "stat.ML",
+    "categories": ["stat.ML", "cs.LG"],
+    "topic_tags": [
+      {
+        "topic_id": "causal-discovery",
+        "confidence": 0.92,
+        "rationale": {
+          "matched_keywords": ["structure learning", "DAG"],
+          "rules_version": "v0.1"
+        }
+      }
+    ],
+    "metrics": {
+      "cross_list_count": 1,
+      "version_count": 2,
+      "trending_score": 0.42
+    },
+    "links": {
+      "arxiv_abs": "https://arxiv.org/abs/1803.01422",
+      "arxiv_pdf": "https://arxiv.org/pdf/1803.01422.pdf"
+    },
+    "provenance": {
+      "source": "arxiv_api",
+      "harvested_at": "2026-01-22T02:10:00Z",
+      "harvest_run_id": "demo-2026-01-22"
+    }
+  },
+  {
+    "arxiv_id": "1907.02893",
+    "title": "Invariant Risk Minimization",
+    "abstract": "A principle for learning predictors that are stable across environments by enforcing invariance of optimal classifiers.",
+    "authors": ["Martin Arjovsky", "Leon Bottou", "Ishaan Gulrajani", "David Lopez-Paz"],
+    "submitted_at": "2019-07-05",
+    "updated_at": "2020-02-12",
+    "primary_category": "cs.LG",
+    "categories": ["cs.LG", "stat.ML"],
+    "topic_tags": [
+      {
+        "topic_id": "distribution-shift",
+        "confidence": 0.9,
+        "rationale": {
+          "matched_keywords": ["invariant", "risk minimization"],
+          "rules_version": "v0.1"
+        }
+      }
+    ],
+    "metrics": {
+      "cross_list_count": 1,
+      "version_count": 3,
+      "trending_score": 0.38
+    },
+    "links": {
+      "arxiv_abs": "https://arxiv.org/abs/1907.02893",
+      "arxiv_pdf": "https://arxiv.org/pdf/1907.02893.pdf"
+    },
+    "provenance": {
+      "source": "arxiv_api",
+      "harvested_at": "2026-01-22T02:10:00Z",
+      "harvest_run_id": "demo-2026-01-22"
+    }
+  },
+  {
+    "arxiv_id": "1703.06856",
+    "title": "Counterfactual Fairness",
+    "abstract": "A causal definition of fairness based on comparing decisions across counterfactual worlds where protected attributes differ.",
+    "authors": ["Matt J. Kusner", "Joshua Loftus", "Chris Russell", "Ricardo Silva"],
+    "submitted_at": "2017-03-20",
+    "updated_at": "2018-03-12",
+    "primary_category": "cs.LG",
+    "categories": ["cs.LG", "stat.ML"],
+    "topic_tags": [
+      {
+        "topic_id": "causal-fairness",
+        "confidence": 0.93,
+        "rationale": {
+          "matched_keywords": ["counterfactual fairness"],
+          "rules_version": "v0.1"
+        }
+      }
+    ],
+    "metrics": {
+      "cross_list_count": 1,
+      "version_count": 2,
+      "trending_score": 0.27
+    },
+    "links": {
+      "arxiv_abs": "https://arxiv.org/abs/1703.06856",
+      "arxiv_pdf": "https://arxiv.org/pdf/1703.06856.pdf"
+    },
+    "provenance": {
+      "source": "arxiv_api",
+      "harvested_at": "2026-01-22T02:10:00Z",
+      "harvest_run_id": "demo-2026-01-22"
+    }
+  },
+  {
+    "arxiv_id": "1705.08821",
+    "title": "Causal Effect Inference with Deep Latent-Variable Models",
+    "abstract": "A deep latent-variable model (CEVAE) for causal effect inference with hidden confounding using variational methods.",
+    "authors": ["Yarin Gal", "Ricardo Silva"],
+    "submitted_at": "2017-05-24",
+    "updated_at": "2017-10-03",
+    "primary_category": "stat.ML",
+    "categories": ["stat.ML", "cs.LG"],
+    "topic_tags": [
+      {
+        "topic_id": "effect-estimation",
+        "confidence": 0.88,
+        "rationale": {
+          "matched_keywords": ["treatment effect", "latent confounding"],
+          "rules_version": "v0.1"
+        }
+      }
+    ],
+    "metrics": {
+      "cross_list_count": 1,
+      "version_count": 1,
+      "trending_score": 0.24
+    },
+    "links": {
+      "arxiv_abs": "https://arxiv.org/abs/1705.08821",
+      "arxiv_pdf": "https://arxiv.org/pdf/1705.08821.pdf"
+    },
+    "provenance": {
+      "source": "arxiv_api",
+      "harvested_at": "2026-01-22T02:10:00Z",
+      "harvest_run_id": "demo-2026-01-22"
+    }
+  },
+  {
+    "arxiv_id": "2011.04216",
+    "title": "DoWhy: An End-to-End Library for Causal Inference",
+    "abstract": "A practical Python library that unifies causal inference workflows across identification, estimation, and refutation.",
+    "authors": ["Amit Sharma", "Emre Kiciman"],
+    "submitted_at": "2020-11-09",
+    "updated_at": "2021-03-15",
+    "primary_category": "cs.AI",
+    "categories": ["cs.AI", "stat.ML"],
+    "topic_tags": [
+      {
+        "topic_id": "systems-tooling",
+        "confidence": 0.86,
+        "rationale": {
+          "matched_keywords": ["library", "causal inference"],
+          "rules_version": "v0.1"
+        }
+      }
+    ],
+    "metrics": {
+      "cross_list_count": 1,
+      "version_count": 2,
+      "trending_score": 0.31
+    },
+    "links": {
+      "arxiv_abs": "https://arxiv.org/abs/2011.04216",
+      "arxiv_pdf": "https://arxiv.org/pdf/2011.04216.pdf"
+    },
+    "provenance": {
+      "source": "arxiv_api",
+      "harvested_at": "2026-01-22T02:10:00Z",
+      "harvest_run_id": "demo-2026-01-22"
+    }
+  },
+  {
+    "arxiv_id": "1501.01332",
+    "title": "Invariant Causal Prediction",
+    "abstract": "A framework for causal discovery based on invariance of conditional distributions across environments.",
+    "authors": ["Peter Buhlmann", "Jonas Peters", "Nicolai Meinshausen"],
+    "submitted_at": "2015-01-06",
+    "updated_at": "2016-05-02",
+    "primary_category": "stat.ML",
+    "categories": ["stat.ML", "cs.LG"],
+    "topic_tags": [
+      {
+        "topic_id": "distribution-shift",
+        "confidence": 0.89,
+        "rationale": {
+          "matched_keywords": ["invariant prediction"],
+          "rules_version": "v0.1"
+        }
+      }
+    ],
+    "metrics": {
+      "cross_list_count": 1,
+      "version_count": 2,
+      "trending_score": 0.21
+    },
+    "links": {
+      "arxiv_abs": "https://arxiv.org/abs/1501.01332",
+      "arxiv_pdf": "https://arxiv.org/pdf/1501.01332.pdf"
+    },
+    "provenance": {
+      "source": "arxiv_api",
+      "harvested_at": "2026-01-22T02:10:00Z",
+      "harvest_run_id": "demo-2026-01-22"
+    }
+  }
+]

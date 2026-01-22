@@ -1,0 +1,53 @@
+{
+  "arxiv_id": "1803.01422",
+  "canonical_url": "https://arxiv.org/abs/1803.01422",
+  "pdf_url": "https://arxiv.org/pdf/1803.01422.pdf",
+  "title": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
+  "abstract": "A continuous optimization approach to learning directed acyclic graphs that replaces combinatorial search with a smooth constraint.",
+  "authors": [
+    { "name": "Xun Zheng" },
+    { "name": "Bryan Aragam" },
+    { "name": "Pradeep Ravikumar" },
+    { "name": "Eric Xing" }
+  ],
+  "submitted_at": "2018-03-05",
+  "updated_at": "2018-06-12",
+  "primary_category": "stat.ML",
+  "categories": ["stat.ML", "cs.LG"],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 2,
+    "trending_score": 0.42
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.92,
+      "rationale": {
+        "matched_keywords": ["structure learning", "DAG"],
+        "rules_version": "v0.1"
+      }
+    }
+  ],
+  "versions": [
+    { "version": "v1", "updated_at": "2018-03-05" },
+    { "version": "v2", "updated_at": "2018-06-12" }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/1803.01422",
+    "arxiv_pdf": "https://arxiv.org/pdf/1803.01422.pdf",
+    "code": [
+      {
+        "url": "https://github.com/xunzheng/notears",
+        "label": "official",
+        "evidence": "paper_mentioned"
+      }
+    ]
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-01-22T02:10:00Z",
+    "harvest_run_id": "demo-2026-01-22",
+    "queries": ["ti:\"DAGs\" AND abs:\"structure learning\""]
+  }
+}
