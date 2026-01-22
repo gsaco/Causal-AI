@@ -7,13 +7,14 @@ import { readJson } from "@utils/data";
 
 export async function getStaticPaths() {
   const topics = await getCollection("topics");
-  return topics.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+  return topics.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 
 const { entry } = Astro.props;
-const { Content, data } = await entry.render();
+const { Content } = await entry.render();
+const { data } = entry;
 const build = await readJson("provenance/build.json");
-const feed = await readJson(`topic_feeds/${data.slug}.json`);
+const feed = await readJson(`topic_feeds/${entry.slug}.json`);
 const index = await readJson("papers.index.json");
 const paperMap = new Map(index.map((paper) => [paper.arxiv_id, paper]));
 const latest = feed.latest.map((id) => paperMap.get(id)).filter(Boolean);

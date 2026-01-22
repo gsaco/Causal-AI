@@ -4,7 +4,6 @@ const topics = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    slug: z.string(),
     scope: z.string(),
     anchors: z.array(z.string()),
     last_reviewed: z.string(),

@@ -10,7 +10,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content, data } = await entry.render();
+const { Content } = await entry.render();
+const { data } = entry;
 const build = await readJson("provenance/build.json");
 ---
 <BaseLayout wide title={`${data.title} - Causal-AI`}>

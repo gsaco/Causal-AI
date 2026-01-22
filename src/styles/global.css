@@ -1,6 +1,6 @@
-@import "@fontsource/space-grotesk/variable.css";
-@import "@fontsource/source-serif-4/variable.css";
-@import "@fontsource/jetbrains-mono/variable.css";
+@import "@fontsource/space-grotesk/index.css";
+@import "@fontsource/source-serif-4/index.css";
+@import "@fontsource/jetbrains-mono/index.css";
 
 :root {
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
