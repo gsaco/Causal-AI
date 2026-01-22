@@ -5,14 +5,14 @@ Causal-AI is a static-first Astro site for a researcher-trusted causal AI field 
 ## Quick start
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 ## Build
 
 ```bash
-pnpm build
+npm run build
 ```
 
 ## Deployment
