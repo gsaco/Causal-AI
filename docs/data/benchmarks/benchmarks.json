@@ -1,0 +1,23 @@
+[
+  {
+    "name": "OCDB",
+    "scope": "Observational Causal Discovery Benchmark",
+    "evidence": ["2406.04598"],
+    "focus": "Graph recovery under controlled distributional settings",
+    "replication": "Evidence: none recorded yet"
+  },
+  {
+    "name": "CausalBench",
+    "scope": "LLM causal reasoning evaluation",
+    "evidence": ["2404.06349"],
+    "focus": "Counterfactual and interventional reasoning in text",
+    "replication": "Evidence: none recorded yet"
+  },
+  {
+    "name": "CausalProfiler",
+    "scope": "Benchmarking causal discovery pipelines",
+    "evidence": ["2511.22842"],
+    "focus": "Pipeline robustness and reproducibility",
+    "replication": "Evidence: none recorded yet"
+  }
+]

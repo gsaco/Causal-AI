@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "healthcare-clinical",
+    "title": "Healthcare & Clinical Decision Support",
+    "query": "ti:causal AND (ti:clinical OR abs:clinical OR abs:healthcare OR abs:medical)",
+    "window_days": 30
+  },
+  {
+    "slug": "climate-energy-earth",
+    "title": "Climate, Energy, and Earth Systems",
+    "query": "ti:causal AND (ti:climate OR abs:climate OR abs:energy OR abs:earth system)",
+    "window_days": 30
+  },
+  {
+    "slug": "economics-policy-social",
+    "title": "Economics, Policy, and Social Science",
+    "query": "ti:causal AND (ti:policy OR abs:policy OR abs:economics OR abs:social)",
+    "window_days": 30
+  },
+  {
+    "slug": "recommenders-online-experiments",
+    "title": "Recommender Systems & Online Experiments",
+    "query": "ti:causal AND (ti:recommender OR abs:recommendation OR abs:online experiment)",
+    "window_days": 30
+  },
+  {
+    "slug": "robotics-autonomy",
+    "title": "Robotics & Autonomy",
+    "query": "ti:causal AND (ti:robotics OR abs:robotics OR abs:autonomy)",
+    "window_days": 30
+  },
+  {
+    "slug": "biology-genomics-drug-discovery",
+    "title": "Biology, Genomics, and Drug Discovery",
+    "query": "ti:causal AND (ti:genomics OR abs:genomics OR abs:biology OR abs:drug)",
+    "window_days": 30
+  }
+]

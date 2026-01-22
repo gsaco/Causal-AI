@@ -1,0 +1,66 @@
+[
+  {
+    "id": "student",
+    "title": "Student: foundations -> research-ready",
+    "summary": "Build causal fundamentals, then move into discovery and evaluation.",
+    "sections": [
+      {
+        "label": "Foundations",
+        "items": [
+          { "label": "Structural causal models", "href": "/topics/foundations-scm" },
+          { "label": "Identifiability & do-calculus", "href": "/topics/identifiability-do-calculus" },
+          { "label": "Counterfactuals", "href": "/topics/counterfactuals" }
+        ]
+      },
+      {
+        "label": "Discovery + estimation",
+        "items": [
+          { "label": "Causal discovery", "href": "/topics/causal-discovery" },
+          { "label": "Causal effect estimation", "href": "/topics/effect-estimation" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "researcher",
+    "title": "Researcher: frontiers -> open problems -> papers",
+    "summary": "Track emerging frontiers and debate anchors with evidence-first trails.",
+    "sections": [
+      {
+        "label": "Frontiers",
+        "items": [
+          { "label": "Causal agents", "href": "/frontiers/causal-agents-intervention-planning" },
+          { "label": "Causal evaluation for foundation models", "href": "/frontiers/causal-evaluation-for-foundation-models" }
+        ]
+      },
+      {
+        "label": "Tendencies",
+        "items": [
+          { "label": "Causal discovery at scale", "href": "/trends/discovery-at-scale" },
+          { "label": "Benchmarks & evaluation maturity", "href": "/trends/benchmarks-evaluation-maturity" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "builder",
+    "title": "Builder: estimation -> evaluation -> tooling",
+    "summary": "Apply causal AI in products with tooling and honest evaluation.",
+    "sections": [
+      {
+        "label": "Applications",
+        "items": [
+          { "label": "Recommenders & online experiments", "href": "/applications/recommenders-online-experiments" },
+          { "label": "Healthcare & clinical", "href": "/applications/healthcare-clinical" }
+        ]
+      },
+      {
+        "label": "Tooling",
+        "items": [
+          { "label": "Tools ecosystem", "href": "/tools" },
+          { "label": "Benchmarks", "href": "/benchmarks" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "graphs-to-invariance",
+    "title": "Graphs to Invariance",
+    "premise": "How structural discovery ideas evolved into robust, invariant prediction strategies.",
+    "steps": [
+      {
+        "arxiv_id": "1803.01422",
+        "why_it_matters": "Shows continuous optimization for DAG discovery and anchors the modern causal discovery toolkit.",
+        "claim_evidence": ["1803.01422"]
+      },
+      {
+        "arxiv_id": "1705.08821",
+        "why_it_matters": "Connects latent-variable modeling with causal effect estimation under hidden confounding.",
+        "claim_evidence": ["1705.08821"]
+      },
+      {
+        "arxiv_id": "1907.02893",
+        "why_it_matters": "Introduces invariant risk minimization, motivating stability criteria under distribution shift.",
+        "claim_evidence": ["1907.02893"]
+      },
+      {
+        "arxiv_id": "1501.01332",
+        "why_it_matters": "Frames invariant prediction as a practical objective for robust generalization across environments.",
+        "claim_evidence": ["1501.01332"]
+      }
+    ]
+  },
+  {
+    "id": "fairness-to-systems",
+    "title": "Fairness to Systems",
+    "premise": "From counterfactual fairness to toolchains that operationalize causal reasoning.",
+    "steps": [
+      {
+        "arxiv_id": "1703.06856",
+        "why_it_matters": "Defines counterfactual fairness as a causal criterion for decision systems.",
+        "claim_evidence": ["1703.06856"]
+      },
+      {
+        "arxiv_id": "2011.04216",
+        "why_it_matters": "Demonstrates end-to-end causal workflows in a reusable library.",
+        "claim_evidence": ["2011.04216"]
+      },
+      {
+        "arxiv_id": "1705.08821",
+        "why_it_matters": "Provides a practical estimation pipeline relevant to applied fairness audits.",
+        "claim_evidence": ["1705.08821"]
+      },
+      {
+        "arxiv_id": "1907.02893",
+        "why_it_matters": "Illustrates invariant predictors as fairness-preserving mechanisms under shift.",
+        "claim_evidence": ["1907.02893"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "group": "Discovery",
+    "items": [
+      {
+        "name": "CausalLearn",
+        "summary": "Python toolbox for causal discovery and effect estimation workflows.",
+        "evidence": ["2307.16405"],
+        "links": [
+          { "label": "GitHub (non-arXiv supporting source)", "url": "https://github.com/py-why/causal-learn" }
+        ]
+      },
+      {
+        "name": "PyWhy",
+        "summary": "Ecosystem of open-source causal tools spanning discovery, estimation, and refutation.",
+        "evidence": ["2011.04216"],
+        "links": [
+          { "label": "GitHub (non-arXiv supporting source)", "url": "https://github.com/py-why" }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Inference",
+    "items": [
+      {
+        "name": "DoWhy",
+        "summary": "End-to-end causal inference library with explicit identification and refutation steps.",
+        "evidence": ["2011.04216"],
+        "links": [
+          { "label": "GitHub (non-arXiv supporting source)", "url": "https://github.com/py-why/dowhy" }
+        ]
+      },
+      {
+        "name": "EconML",
+        "summary": "Heterogeneous treatment effect estimation with modern ML estimators.",
+        "evidence": ["2002.11631"],
+        "links": [
+          { "label": "GitHub (non-arXiv supporting source)", "url": "https://github.com/microsoft/EconML" }
+        ]
+      },
+      {
+        "name": "CausalML",
+        "summary": "Uplift and heterogeneous treatment effect estimation toolkit.",
+        "evidence": ["2002.11631"],
+        "links": [
+          { "label": "GitHub (non-arXiv supporting source)", "url": "https://github.com/uber/causalml" }
+        ]
+      }
+    ]
+  },
+  {
+    "group": "Evaluation",
+    "items": [
+      {
+        "name": "Refutation workflows",
+        "summary": "Patterns for sensitivity analysis, refutation, and robustness checks in causal pipelines.",
+        "evidence": ["1705.08821"],
+        "links": [
+          { "label": "Docs (non-arXiv supporting source)", "url": "https://py-why.github.io" }
+        ]
+      }
+    ]
+  }
+]

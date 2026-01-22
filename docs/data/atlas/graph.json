@@ -1,0 +1,351 @@
+{
+  "generated_at": "2026-01-22",
+  "nodes": [
+    {
+      "id": "foundations-scm",
+      "label": "Structural Causal Models",
+      "type": "topic",
+      "group": "Foundations"
+    },
+    {
+      "id": "identifiability-do-calculus",
+      "label": "Identifiability & Do-Calculus",
+      "type": "topic",
+      "group": "Foundations"
+    },
+    {
+      "id": "counterfactuals",
+      "label": "Counterfactual Reasoning",
+      "type": "topic",
+      "group": "Foundations"
+    },
+    {
+      "id": "causal-discovery",
+      "label": "Causal Discovery",
+      "type": "topic",
+      "group": "Discovery"
+    },
+    {
+      "id": "latent-confounding-discovery",
+      "label": "Latent Confounding Discovery",
+      "type": "topic",
+      "group": "Discovery"
+    },
+    {
+      "id": "effect-estimation",
+      "label": "Causal Effect Estimation",
+      "type": "topic",
+      "group": "Inference"
+    },
+    {
+      "id": "instrumental-variables",
+      "label": "Instrumental Variables",
+      "type": "topic",
+      "group": "Inference"
+    },
+    {
+      "id": "mediation",
+      "label": "Mediation & Path Effects",
+      "type": "topic",
+      "group": "Inference"
+    },
+    {
+      "id": "causal-representation-learning",
+      "label": "Causal Representation Learning",
+      "type": "topic",
+      "group": "Representation"
+    },
+    {
+      "id": "causal-generative-models",
+      "label": "Causal Generative Models",
+      "type": "topic",
+      "group": "Representation"
+    },
+    {
+      "id": "causal-world-models",
+      "label": "Causal World Models",
+      "type": "topic",
+      "group": "Sequential"
+    },
+    {
+      "id": "causal-time-series",
+      "label": "Causal Time Series & Spatiotemporal",
+      "type": "topic",
+      "group": "Sequential"
+    },
+    {
+      "id": "causal-rl",
+      "label": "Causal Reinforcement Learning",
+      "type": "topic",
+      "group": "Sequential"
+    },
+    {
+      "id": "off-policy-evaluation",
+      "label": "Off-Policy Evaluation",
+      "type": "topic",
+      "group": "Sequential"
+    },
+    {
+      "id": "causal-llms",
+      "label": "Causal Reasoning in LLMs",
+      "type": "topic",
+      "group": "LLMs & Agents"
+    },
+    {
+      "id": "causal-agents",
+      "label": "Causal Agents",
+      "type": "topic",
+      "group": "LLMs & Agents"
+    },
+    {
+      "id": "distribution-shift",
+      "label": "Distribution Shift & Invariance",
+      "type": "topic",
+      "group": "Robustness"
+    },
+    {
+      "id": "causal-fairness",
+      "label": "Causal Fairness",
+      "type": "topic",
+      "group": "Fairness & Policy"
+    },
+    {
+      "id": "causal-privacy",
+      "label": "Causal Privacy & Data Minimization",
+      "type": "topic",
+      "group": "Fairness & Policy"
+    },
+    {
+      "id": "systems-tooling",
+      "label": "Systems & Tooling",
+      "type": "topic",
+      "group": "Systems"
+    },
+    {
+      "id": "motif-invariance",
+      "label": "invariance",
+      "type": "motif"
+    },
+    {
+      "id": "motif-intervention",
+      "label": "intervention",
+      "type": "motif"
+    },
+    {
+      "id": "motif-counterfactual",
+      "label": "counterfactual",
+      "type": "motif"
+    },
+    {
+      "id": "motif-identifiability",
+      "label": "identifiability",
+      "type": "motif"
+    },
+    {
+      "id": "motif-robustness",
+      "label": "robustness",
+      "type": "motif"
+    }
+  ],
+  "edges": [
+    {
+      "source": "foundations-scm",
+      "target": "identifiability-do-calculus",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "identifiability-do-calculus",
+      "target": "counterfactuals",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-discovery",
+      "target": "latent-confounding-discovery",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "effect-estimation",
+      "target": "instrumental-variables",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "instrumental-variables",
+      "target": "mediation",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-representation-learning",
+      "target": "causal-generative-models",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-world-models",
+      "target": "causal-time-series",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-time-series",
+      "target": "causal-rl",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-rl",
+      "target": "off-policy-evaluation",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-llms",
+      "target": "causal-agents",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-fairness",
+      "target": "causal-privacy",
+      "weight": 0.4,
+      "kind": "similarity"
+    },
+    {
+      "source": "foundations-scm",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "identifiability-do-calculus",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "counterfactuals",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "counterfactuals",
+      "target": "motif-counterfactual",
+      "weight": 0.5,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-discovery",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "latent-confounding-discovery",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "effect-estimation",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "instrumental-variables",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "mediation",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-representation-learning",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-generative-models",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-world-models",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-time-series",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-rl",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "off-policy-evaluation",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-llms",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-agents",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "distribution-shift",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "distribution-shift",
+      "target": "motif-invariance",
+      "weight": 0.5,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-fairness",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "causal-privacy",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    },
+    {
+      "source": "systems-tooling",
+      "target": "motif-intervention",
+      "weight": 0.2,
+      "kind": "similarity"
+    }
+  ],
+  "note": "Edges reflect tag and keyword similarity signals, not causal relationships."
+}

@@ -1,0 +1,9 @@
+{
+  "version": "2026-01-22/v1",
+  "group": "LLMs & Agents",
+  "topics": ["causal-llms", "causal-agents"],
+  "queries": [
+    "ti:causal AND (ti:LLM OR abs:\"language model\")",
+    "ti:causal AND (ti:agent OR abs:agent)"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "2026-01-22/v1",
+  "group": "Sequential",
+  "topics": ["causal-rl", "off-policy-evaluation", "causal-time-series", "causal-world-models"],
+  "queries": [
+    "ti:\"causal reinforcement\" OR abs:\"causal reinforcement\"",
+    "ti:\"off-policy\" OR abs:\"off-policy\"",
+    "ti:\"causal time series\" OR abs:spatiotemporal",
+    "ti:\"world model\" AND ti:causal"
+  ]
+}

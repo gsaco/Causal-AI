@@ -1,0 +1,12 @@
+{
+  "version": "2026-01-22/v1",
+  "weights": {
+    "recency": 0.55,
+    "momentum": 0.2,
+    "cross_list": 0.15,
+    "churn": 0.1
+  },
+  "recency_half_life_days": 14,
+  "momentum_window_days": 7,
+  "baseline_window_days": 14
+}

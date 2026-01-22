@@ -1,4 +1,15 @@
-function tokenize(text) {
+type TopicTag = {
+  topic_id: string;
+};
+
+export type PaperRecord = {
+  arxiv_id: string;
+  title?: string;
+  topic_tags?: TopicTag[];
+  primary_category?: string;
+};
+
+function tokenize(text: string): string[] {
   return text
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, " ")
@@ -6,7 +17,15 @@ function tokenize(text) {
     .filter((token) => token.length > 3);
 }
 
-export function findRelatedPapers({ paper, index, limit = 4 }) {
+export function findRelatedPapers({
+  paper,
+  index,
+  limit = 4
+}: {
+  paper: PaperRecord;
+  index: PaperRecord[];
+  limit?: number;
+}): PaperRecord[] {
   const targetTopics = new Set((paper.topic_tags ?? []).map((tag) => tag.topic_id));
   const targetTokens = new Set(tokenize(paper.title ?? ""));
 
