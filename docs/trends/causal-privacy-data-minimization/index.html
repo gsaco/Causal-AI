@@ -3,7 +3,7 @@
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const theme = storedTheme ?? (prefersDark ? "dark" : "light");
       document.documentElement.dataset.theme = theme;
-    </script><link rel="stylesheet" href="/Causal-AI/_astro/_slug_.Ctk02bym.css">
+    </script><link rel="stylesheet" href="/Causal-AI/_astro/_slug_.D7JDIGf2.css">
 <style>h1[data-astro-cid-fz5pa65a]{margin:0 0 .6rem;font-size:clamp(2rem,3vw,2.8rem)}.doc-layout[data-astro-cid-fz5pa65a]{display:grid;grid-template-columns:minmax(0,2.5fr) minmax(240px,1fr);gap:1.5rem;align-items:start}.doc-content[data-astro-cid-fz5pa65a]{display:grid;gap:1.5rem}.doc-aside[data-astro-cid-fz5pa65a] ul[data-astro-cid-fz5pa65a]{padding-left:1.2rem;line-height:1.6}.trail-stack[data-astro-cid-fz5pa65a]{display:grid;gap:1rem}.trail-block[data-astro-cid-fz5pa65a] h3[data-astro-cid-fz5pa65a]{margin:0 0 .8rem}@media (max-width: 900px){.doc-layout[data-astro-cid-fz5pa65a]{grid-template-columns:1fr}}
 .trail-head[data-astro-cid-3ecx4tpp]{display:grid;gap:.4rem}.trail-steps[data-astro-cid-3ecx4tpp]{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:1rem}.trail-steps[data-astro-cid-3ecx4tpp] li[data-astro-cid-3ecx4tpp]{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}.step-index[data-astro-cid-3ecx4tpp]{width:32px;height:32px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:grid;place-items:center;font-weight:600}
 </style><style>.citation[data-astro-cid-vpb3wxxj]{position:relative}.citation[data-astro-cid-vpb3wxxj] summary[data-astro-cid-vpb3wxxj]{list-style:none;cursor:pointer}.citation[data-astro-cid-vpb3wxxj] summary[data-astro-cid-vpb3wxxj]::-webkit-details-marker{display:none}.citation-panel[data-astro-cid-vpb3wxxj]{position:absolute;top:2.2rem;left:0;background:var(--bg-elevated);border:1px solid var(--border);border-radius:12px;padding:.75rem;min-width:260px;display:grid;gap:.75rem;box-shadow:0 12px 24px -18px var(--shadow);z-index:5}.citation-item[data-astro-cid-vpb3wxxj]{display:grid;gap:.6rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}.citation-item[data-astro-cid-vpb3wxxj]:last-child{border-bottom:none;padding-bottom:0}.citation-meta[data-astro-cid-vpb3wxxj]{display:grid;gap:.2rem;font-size:.85rem}.citation-actions[data-astro-cid-vpb3wxxj]{display:flex;flex-wrap:wrap;gap:.4rem}
@@ -39,79 +39,81 @@ Search <span class="kbd" data-astro-cid-ctg3m53h>Cmd+K</span> </button> <button 
   const closeTriggers = document.querySelectorAll("[data-cmdk-close]");
   const openTriggers = document.querySelectorAll("[data-cmdk-open]");
 
-  function openPalette() {
-    palette.hidden = false;
-    palette.classList.add("open");
-    input.focus();
-    results.innerHTML = "<p class='subtle'>Type to search the site.</p>";
-  }
-
-  function closePalette() {
-    palette.classList.remove("open");
-    palette.hidden = true;
-  }
-
-  closeTriggers.forEach((trigger) => trigger.addEventListener("click", closePalette));
-  openTriggers.forEach((trigger) => trigger.addEventListener("click", openPalette));
-
-  document.addEventListener("keydown", (event) => {
-    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-      event.preventDefault();
-      openPalette();
-    }
-    if (event.key === "Escape" && !palette.hidden) {
-      event.preventDefault();
-      closePalette();
-    }
-  });
-
-  palette.addEventListener("keydown", (event) => {
-    if (event.key !== "Tab") return;
-    const focusable = Array.from(palette.querySelectorAll("input, a, button, [tabindex='0']"))
-      .filter((el) => !el.hasAttribute("disabled"));
-    if (focusable.length === 0) return;
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  });
-
-  async function runSearch(query) {
-    if (!query) {
+  if (palette && input && results) {
+    function openPalette() {
+      palette.hidden = false;
+      palette.classList.add("open");
+      input.focus();
       results.innerHTML = "<p class='subtle'>Type to search the site.</p>";
-      return;
     }
-    if (!window.pagefind) return;
-    const search = await window.pagefind.search(query);
-    const entries = await Promise.all(search.results.slice(0, 6).map((r) => r.data()));
-    results.innerHTML = entries
-      .map((entry) => {
-        return `
-          <a class="cmdk-item" href="${entry.url}">
-            <div>
-              <strong>${entry.meta.title ?? entry.title}</strong>
-              <p>${entry.excerpt}</p>
-            </div>
-            <span class="chip">${entry.meta.type ?? "result"}</span>
-          </a>
-        `;
-      })
-      .join("");
+
+    function closePalette() {
+      palette.classList.remove("open");
+      palette.hidden = true;
+    }
+
+    closeTriggers.forEach((trigger) => trigger.addEventListener("click", closePalette));
+    openTriggers.forEach((trigger) => trigger.addEventListener("click", openPalette));
+
+    document.addEventListener("keydown", (event) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        openPalette();
+      }
+      if (event.key === "Escape" && !palette.hidden) {
+        event.preventDefault();
+        closePalette();
+      }
+    });
+
+    palette.addEventListener("keydown", (event) => {
+      if (event.key !== "Tab") return;
+      const focusable = Array.from(palette.querySelectorAll("input, a, button, [tabindex='0']"))
+        .filter((el) => !el.hasAttribute("disabled"));
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    async function runSearch(query) {
+      if (!query) {
+        results.innerHTML = "<p class='subtle'>Type to search the site.</p>";
+        return;
+      }
+      if (!window.pagefind) return;
+      const search = await window.pagefind.search(query);
+      const entries = await Promise.all(search.results.slice(0, 6).map((r) => r.data()));
+      results.innerHTML = entries
+        .map((entry) => {
+          return `
+            <a class="cmdk-item" href="${entry.url}">
+              <div>
+                <strong>${entry.meta.title ?? entry.title}</strong>
+                <p>${entry.excerpt}</p>
+              </div>
+              <span class="chip">${entry.meta.type ?? "result"}</span>
+            </a>
+          `;
+        })
+        .join("");
+    }
+
+    input.addEventListener("input", (event) => {
+      runSearch(event.target.value);
+    });
+
+    results.addEventListener("click", (event) => {
+      const target = event.target.closest("a");
+      if (target) closePalette();
+    });
   }
-
-  input.addEventListener("input", (event) => {
-    runSearch(event.target.value);
-  });
-
-  results.addEventListener("click", (event) => {
-    const target = event.target.closest("a");
-    if (target) closePalette();
-  });
 </script>  <script>
       const toggle = document.querySelector("[data-theme-toggle]");
       if (toggle) {
