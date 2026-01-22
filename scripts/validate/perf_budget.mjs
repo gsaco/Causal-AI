@@ -1,7 +1,11 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const distDir = path.resolve("dist");
+const preferredOutDirs = [
+  ...(process.env.ASTRO_OUT_DIR ? [process.env.ASTRO_OUT_DIR] : []),
+  "docs",
+  "dist"
+];
 const maxTotalJsKb = 700;
 const maxJsonKb = 500;
 
@@ -19,15 +23,27 @@ async function collectFiles(dir, ext) {
   return files;
 }
 
+async function resolveOutDir() {
+  for (const dir of preferredOutDirs) {
+    const candidate = path.resolve(dir);
+    try {
+      await fs.access(candidate);
+      return candidate;
+    } catch {
+      // try next candidate
+    }
+  }
+  return null;
+}
+
 async function main() {
-  try {
-    await fs.access(distDir);
-  } catch (error) {
-    console.log("perf_budget: dist/ not found, skipping.");
+  const outDir = await resolveOutDir();
+  if (!outDir) {
+    console.log("perf_budget: no build output found, skipping.");
     return;
   }
 
-  const jsFiles = await collectFiles(path.join(distDir, "_astro"), ".js").catch(() => []);
+  const jsFiles = await collectFiles(path.join(outDir, "_astro"), ".js").catch(() => []);
   const totalJs = await Promise.all(jsFiles.map(async (file) => (await fs.stat(file)).size));
   const totalJsKb = totalJs.reduce((acc, size) => acc + size, 0) / 1024;
 
@@ -35,11 +51,11 @@ async function main() {
     throw new Error(`Total JS bundle size ${totalJsKb.toFixed(1)}KB exceeds ${maxTotalJsKb}KB`);
   }
 
-  const jsonFiles = await collectFiles(path.join(distDir, "data"), ".json").catch(() => []);
+  const jsonFiles = await collectFiles(path.join(outDir, "data"), ".json").catch(() => []);
   for (const file of jsonFiles) {
     const sizeKb = (await fs.stat(file)).size / 1024;
     if (sizeKb > maxJsonKb) {
-      throw new Error(`JSON file ${path.relative(distDir, file)} is ${sizeKb.toFixed(1)}KB (> ${maxJsonKb}KB)`);
+      throw new Error(`JSON file ${path.relative(outDir, file)} is ${sizeKb.toFixed(1)}KB (> ${maxJsonKb}KB)`);
     }
   }
 

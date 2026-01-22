@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/prepare-public-data.mjs && astro build && pagefind --site dist --output-subdir pagefind",
+    "build": "node scripts/prepare-public-data.mjs && astro build && pagefind --site docs --output-subdir pagefind",
     "preview": "astro preview",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck",
