@@ -1,0 +1,31 @@
+[
+  {
+    "id": "quick-skim",
+    "title": "Quick skim",
+    "description": "A fast orientation through anchors and summaries.",
+    "items": [
+      { "label": "Causal discovery anchor", "href": "/topics/causal-discovery" },
+      { "label": "Distribution shift overview", "href": "/topics/distribution-shift" },
+      { "label": "Tendency radar", "href": "/observatory" }
+    ]
+  },
+  {
+    "id": "deep-read",
+    "title": "Deep read",
+    "description": "Slow, evidence-first reading across methods and evaluation.",
+    "items": [
+      { "label": "Causal effect estimation", "href": "/topics/effect-estimation" },
+      { "label": "Evaluation maturity", "href": "/trends/benchmarks-evaluation-maturity" },
+      { "label": "Tools ecosystem", "href": "/tools" }
+    ]
+  },
+  {
+    "id": "paper-trail-session",
+    "title": "Paper trail session",
+    "description": "A guided sequence through a curated trail.",
+    "items": [
+      { "label": "Graphs to invariance", "href": "/observatory?trail=graphs-to-invariance" },
+      { "label": "Fairness to systems", "href": "/observatory?trail=fairness-to-systems" }
+    ]
+  }
+]

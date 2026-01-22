@@ -5,6 +5,8 @@ import ProvenancePanel from "@components/ProvenancePanel.astro";
 import PaperCard from "@components/PaperCard.astro";
 import { readJson, listJsonFiles } from "@utils/data";
 import { withBase } from "@utils/withBase";
+import { toBibTex } from "@lib/bibtex.js";
+import { findRelatedPapers } from "@lib/relatedPapers";
 
 export async function getStaticPaths() {
   const files = await listJsonFiles("papers");
@@ -18,16 +20,9 @@ if (!id) {
 const paper = await readJson(`papers/${id}.json`);
 const build = await readJson("provenance/build.json");
 const index = await readJson("papers.index.json");
-const related = index
-  .filter((p) => p.arxiv_id !== id)
-  .filter((p) =>
-    (p.topic_tags ?? []).some((tag) =>
-      (paper.topic_tags ?? []).some((t) => t.topic_id === tag.topic_id)
-    )
-  )
-  .slice(0, 3);
-
-const bibtex = `@article{arxiv:${paper.arxiv_id},\n  title={${paper.title}},\n  eprint={${paper.arxiv_id}},\n  archivePrefix={arXiv},\n  year={${paper.submitted_at.slice(0, 4)}}\n}`;
+const related = findRelatedPapers({ paper, index, limit: 4 });
+const bibtex = toBibTex(paper);
+const topicTags = (paper.topic_tags ?? []).map((tag) => tag.topic_id);
 const canonicalUrl = Astro.site
   ? new URL(withBase(`/papers/${paper.arxiv_id}`), Astro.site).toString()
   : paper.links.arxiv_abs;
@@ -35,7 +30,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   headline: paper.title,
-  author: paper.authors.map((author) => ({ "@type": "Person", name: author.name })),
+  author: paper.authors.map((author) => ({ "@type": "Person", name: author.name ?? author })),
   datePublished: paper.submitted_at,
   dateModified: paper.updated_at,
   identifier: `arXiv:${paper.arxiv_id}`,
@@ -44,7 +39,7 @@ const jsonLd = {
   publisher: { "@type": "Organization", name: "arXiv" }
 };
 ---
-<BaseLayout wide title={`${paper.title} - Causal-AI`}>
+<BaseLayout wide title={`${paper.title} - Causal AI Futures`}>
   <Fragment slot="head">
     <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
   </Fragment>
@@ -97,6 +92,62 @@ const jsonLd = {
   </section>
 
   <section class="section">
+    <div class="container glance-grid">
+      <div class="card">
+        <h2>At a glance</h2>
+        <div class="meta-grid">
+          <div>
+            <span>Submitted</span>
+            <strong>{paper.submitted_at}</strong>
+          </div>
+          <div>
+            <span>Updated</span>
+            <strong>{paper.updated_at}</strong>
+          </div>
+          <div>
+            <span>Versions</span>
+            <strong>v{paper.metrics.version_count}</strong>
+          </div>
+          <div>
+            <span>Primary category</span>
+            <strong>{paper.primary_category}</strong>
+          </div>
+        </div>
+        <h3>Topics & categories</h3>
+        <div class="tag-row">
+          {paper.categories.map((cat) => (
+            <span class="chip secondary">{cat}</span>
+          ))}
+          {topicTags.map((tag) => (
+            <span class="chip">{tag}</span>
+          ))}
+        </div>
+        <h3>Version history</h3>
+        <div class="versions">
+          {paper.versions?.map((version) => (
+            <div class="version-row">
+              <span class="chip">{version.version}</span>
+              <span>{version.updated_at}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="card export-card">
+        <h2>Export</h2>
+        <div class="section-head">
+          <h3>BibTeX</h3>
+          <button class="button secondary" data-copy="bibtex">Copy</button>
+        </div>
+        <pre id="bibtex" class="bibtex">{bibtex}</pre>
+        <div class="export-actions">
+          <button class="button ghost" data-download="bibtex">Download .bib</button>
+          <button class="button ghost" data-download="json">Download JSON</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container two-col">
       <div class="card">
         <div class="section-head">
@@ -106,14 +157,6 @@ const jsonLd = {
         <p id="abstract" class="abstract">{paper.abstract}</p>
       </div>
       <div class="side-rail">
-        <div class="card">
-          <div class="section-head">
-            <h3>BibTeX</h3>
-            <button class="button secondary" data-copy="bibtex">Copy</button>
-          </div>
-          <pre id="bibtex" class="bibtex">{bibtex}</pre>
-          <button class="button ghost" data-download="bibtex">Download .bib</button>
-        </div>
         <ProvenancePanel provenance={build} />
       </div>
     </div>
@@ -121,21 +164,8 @@ const jsonLd = {
 
   <section class="section">
     <div class="container">
-      <h2>Version history</h2>
-      <div class="versions card">
-        {paper.versions?.map((version) => (
-          <div class="version-row">
-            <span class="chip">{version.version}</span>
-            <span>{version.updated_at}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
       <h2>Related papers</h2>
+      <p class="subtle">Similarity is based on topic overlap and keyword signals, not citations.</p>
       <div class="grid">
         {related.map((item) => (
           <PaperCard paper={item} />
@@ -156,16 +186,7 @@ const jsonLd = {
       });
     });
 
-    const download = document.querySelector("[data-download='bibtex']");
-    download.addEventListener("click", () => {
-      const content = document.getElementById("bibtex").textContent;
-      const blob = new Blob([content], { type: "text/plain" });
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "paper.bib";
-      link.click();
-      URL.revokeObjectURL(link.href);
-    });
+    const downloadBib = document.querySelector(\"[data-download='bibtex']\");\n    if (downloadBib) {\n      downloadBib.addEventListener(\"click\", () => {\n        const content = document.getElementById(\"bibtex\").textContent;\n        const blob = new Blob([content], { type: \"text/plain\" });\n        const link = document.createElement(\"a\");\n        link.href = URL.createObjectURL(blob);\n        link.download = \"paper.bib\";\n        link.click();\n        URL.revokeObjectURL(link.href);\n      });\n    }\n\n    const downloadJson = document.querySelector(\"[data-download='json']\");\n    if (downloadJson) {\n      downloadJson.addEventListener(\"click\", () => {\n        const content = JSON.stringify(${JSON.stringify(paper)}, null, 2);\n        const blob = new Blob([content], { type: \"application/json\" });\n        const link = document.createElement(\"a\");\n        link.href = URL.createObjectURL(blob);\n        link.download = `${paper.arxiv_id}.json`;\n        link.click();\n        URL.revokeObjectURL(link.href);\n      });\n    }\n   </script>
   </script>
 
   <style>
@@ -202,6 +223,24 @@ const jsonLd = {
       display: flex;
       gap: 0.6rem;
       flex-wrap: wrap;
+    }
+
+    .glance-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+      align-items: start;
+    }
+
+    .export-card {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .export-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
     }
 
     .two-col {
@@ -241,6 +280,7 @@ const jsonLd = {
     .versions {
       display: grid;
       gap: 0.6rem;
+      margin-top: 0.6rem;
     }
 
     .version-row {

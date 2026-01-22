@@ -1,0 +1,54 @@
+---
+import { readJson } from "@utils/data";
+import { getCollection } from "astro:content";
+import { withBase } from "@utils/withBase";
+
+const { relatedTopicIds = [], relatedTrendSlugs = [] } = Astro.props;
+const topics = await readJson("taxonomy/topics.json");
+const trends = await getCollection("trends");
+const trails = await readJson("curation/paper_trails.json");
+
+const topicSuggestions = relatedTopicIds.length
+  ? topics.filter((topic) => relatedTopicIds.includes(topic.id)).slice(0, 2)
+  : topics.sort((a, b) => (a.priority ?? 3) - (b.priority ?? 3)).slice(0, 2);
+
+const trendSuggestions = relatedTrendSlugs.length
+  ? trends.filter((trend) => relatedTrendSlugs.includes(trend.slug)).slice(0, 1)
+  : trends.slice(0, 1);
+
+const trailSuggestion = trails[0];
+const focusTopic = topicSuggestions[0]?.id;
+---
+<section class="section continue">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Continue exploring</p>
+      <h2>Follow the trail</h2>
+      <p>Jump to a related topic, tendency, or a curated paper trail.</p>
+    </div>
+    <div class="card-grid">
+      {topicSuggestions.map((topic) => (
+        <a class="card" href={withBase(`/topics/${topic.id}`)}>
+          <h3>{topic.title}</h3>
+          <p class="subtle">{topic.scope}</p>
+        </a>
+      ))}
+      {trendSuggestions.map((trend) => (
+        <a class="card" href={withBase(`/trends/${trend.slug}`)}>
+          <h3>{trend.data.title}</h3>
+          <p class="subtle">{trend.data.summary}</p>
+        </a>
+      ))}
+      {trailSuggestion && (
+        <a class="card" href={withBase(`/observatory?trail=${trailSuggestion.id}`)}>
+          <h3>{trailSuggestion.title}</h3>
+          <p class="subtle">{trailSuggestion.premise}</p>
+        </a>
+      )}
+      <a class="card callout-card" href={withBase(focusTopic ? `/observatory?topic=${focusTopic}` : "/observatory")}>
+        <h3>Open the Observatory</h3>
+        <p class="subtle">Follow live signals with filters preselected.</p>
+      </a>
+    </div>
+  </div>
+</section>

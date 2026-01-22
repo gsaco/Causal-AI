@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 const terms = await getCollection("glossary");
 const sorted = terms.sort((a, b) => a.data.term.localeCompare(b.data.term));
 ---
-<BaseLayout wide title="Glossary - Causal-AI" description="Causal AI glossary with arXiv evidence.">
+<BaseLayout wide title="Glossary - Causal AI Futures" description="Causal AI glossary with arXiv evidence.">
   <section class="section hero">
     <div class="container">
       <h1>Glossary</h1>

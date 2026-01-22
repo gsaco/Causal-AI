@@ -2,7 +2,10 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import {
   AnchorList,
+  ApplicationFeed,
+  AtlasGraph,
   BuildProvenance,
+  EmergingClusters,
   MetricsCitationCoverage,
   MetricsCrosslistHeatmap,
   MetricsTopicMomentum,
@@ -13,6 +16,7 @@ import {
   Paper,
   PaperIndexEntry,
   PaperTrails,
+  QueryPack,
   RankingConfig,
   TopicFeed,
   TopicTaxonomy
@@ -41,6 +45,10 @@ function getSchemaForPath(relativePath) {
   if (relativePath === "taxonomy/topics.json") return TopicTaxonomy.array();
   if (relativePath === "taxonomy/anchors.json") return AnchorList;
   if (relativePath.startsWith("topic_feeds/")) return TopicFeed;
+  if (relativePath.startsWith("applications/") && !relativePath.endsWith("registry.json")) return ApplicationFeed;
+  if (relativePath === "atlas/graph.json") return AtlasGraph;
+  if (relativePath === "metrics/emerging_clusters.json") return EmergingClusters;
+  if (relativePath.startsWith("arxiv/query_packs/")) return QueryPack;
   if (relativePath === "provenance/build.json") return BuildProvenance;
   if (relativePath === "metrics/topic_momentum.json") return MetricsTopicMomentum;
   if (relativePath === "metrics/topic_timeseries.json") return MetricsTopicTimeseries;

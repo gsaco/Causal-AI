@@ -1,0 +1,37 @@
+---
+title: "Robotics & Autonomy"
+summary: "Causal world models for interventions, planning, and safety in embodied systems."
+topics: ["causal-rl", "causal-world-models", "counterfactuals"]
+trends: ["causal-world-models-robotics", "causal-agents-intervention-planning"]
+evidence_arxiv: ["2010.05761", "1803.01422", "1501.01332", "1907.02893", "2404.06349", "2511.22842"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## The causal question
+
+Which interventions in a dynamical system lead to safe, reliable outcomes under partial observability?
+
+## Common failure modes without causality
+
+- Spurious correlations in observational data lead to unsafe control.
+- Learned policies overfit to simulated environments.
+- Hidden confounders undermine transfer to the real world.
+
+<Claim evidence={["2010.05761", "1501.01332", "1907.02893"]}>
+  Robust causal reasoning is needed to avoid brittle policies when environments shift or sensors fail.
+</Claim>
+
+## Methods that show up a lot
+
+- Causal world models and counterfactual planning
+- Off-policy evaluation and safe RL
+- System identification and causal discovery for dynamics
+
+<Claim evidence={["1803.01422", "2404.06349", "2511.22842"]} type="Signal">
+  Recent work connects structure learning with world models to support intervention planning in robotics.
+</Claim>
+
+## Benchmarks / datasets
+
+- Favor datasets that include intervention logs and policy metadata.

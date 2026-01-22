@@ -1,0 +1,53 @@
+---
+title: "Off-Policy Evaluation"
+scope: "Estimating policy effects from logged data and partial interventions."
+anchors:
+  - "2010.05761"
+  - "1705.08821"
+last_reviewed: "2026-01-22"
+reading_path:
+  beginner:
+    - "2010.05761"
+  intermediate:
+    - "1705.08821"
+  advanced:
+    - "1803.01422"
+---
+import Claim from "../../components/Claim.astro";
+
+## Field guide
+
+<Claim evidence={["2010.05761", "1705.08821"]}>
+  Off-Policy Evaluation focuses on estimating policy effects from logged data and partial interventions, and relies on explicit assumptions before interpreting effects.
+</Claim>
+
+<Claim evidence={["1705.08821", "1803.01422"]} type="Signal">
+  Recent work in Off-Policy Evaluation emphasizes robustness checks and transparent reporting of causal assumptions.
+</Claim>
+
+<Claim evidence={["2010.05761", "1705.08821"]} type="Debate">
+  A recurring debate in Off-Policy Evaluation concerns how much identifiability can be claimed without interventions.
+</Claim>
+
+## Evaluation cues
+
+<Claim evidence={["1705.08821", "1803.01422"]} type="Metric">
+  Evaluation often uses synthetic interventions or held-out environments, which can miss deployment shifts in Off-Policy Evaluation.
+</Claim>
+
+## Open problems
+
+<Claim evidence={["2010.05761", "1705.08821"]} type="Open Question">
+  Open question: which minimal assumptions are sufficient to estimate effects in Off-Policy Evaluation under realistic data constraints?
+</Claim>
+
+## Common pitfalls / Do not overclaim
+
+<Claim evidence={["2010.05761", "1705.08821"]} type="Warning">
+  Pitfall: treating predictive accuracy as evidence of causal validity within Off-Policy Evaluation.
+</Claim>
+
+## Guardrails
+
+- What this does NOT prove: Correlation alone is not evidence of intervention effects in Off-Policy Evaluation.
+- Common misstatements: Avoid claiming causal impact without stating the estimand, assumptions, and sensitivity checks.

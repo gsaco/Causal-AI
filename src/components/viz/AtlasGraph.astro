@@ -1,0 +1,134 @@
+---
+const { graph } = Astro.props;
+const nodes = graph?.nodes ?? [];
+const edges = graph?.edges ?? [];
+const topics = nodes.filter((node) => node.type === "topic");
+const motifs = nodes.filter((node) => node.type === "motif");
+
+const center = { x: 180, y: 180 };
+const topicRadius = 140;
+const motifRadius = 60;
+
+const positions = new Map();
+
+for (const [index, node] of topics.entries()) {
+  const angle = (Math.PI * 2 * index) / Math.max(1, topics.length);
+  positions.set(node.id, {
+    x: center.x + topicRadius * Math.cos(angle),
+    y: center.y + topicRadius * Math.sin(angle)
+  });
+}
+
+for (const [index, node] of motifs.entries()) {
+  const angle = (Math.PI * 2 * index) / Math.max(1, motifs.length);
+  positions.set(node.id, {
+    x: center.x + motifRadius * Math.cos(angle),
+    y: center.y + motifRadius * Math.sin(angle)
+  });
+}
+
+const grouped = topics.reduce((acc, node) => {
+  const group = node.group ?? "Other";
+  if (!acc[group]) acc[group] = [];
+  acc[group].push(node);
+  return acc;
+}, {});
+---
+<div class="atlas">
+  <div class="atlas-graphic">
+    <svg viewBox="0 0 360 360" role="img" aria-label="Atlas map of causal AI topics">
+      <g class="edges">
+        {edges.map((edge) => {
+          const source = positions.get(edge.source);
+          const target = positions.get(edge.target);
+          if (!source || !target) return null;
+          return (
+            <line
+              x1={source.x}
+              y1={source.y}
+              x2={target.x}
+              y2={target.y}
+              stroke="currentColor"
+              stroke-opacity="0.2"
+              stroke-width="1"
+            />
+          );
+        })}
+      </g>
+      <g class="nodes">
+        {nodes.map((node) => {
+          const pos = positions.get(node.id);
+          if (!pos) return null;
+          const radius = node.type === "motif" ? 8 : 6;
+          return (
+            <g>
+              <circle cx={pos.x} cy={pos.y} r={radius} />
+              <text x={pos.x + 10} y={pos.y + 4}>
+                {node.label}
+              </text>
+            </g>
+          );
+        })}
+      </g>
+    </svg>
+    <p class="subtle atlas-note">{graph?.note}</p>
+  </div>
+  <div class="atlas-list">
+    {Object.entries(grouped).map(([group, items]) => (
+      <div class="card">
+        <h3>{group}</h3>
+        <div class="tag-row">
+          {items.map((item) => (
+            <span class="chip secondary">{item.label}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .atlas {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    background: radial-gradient(circle at center, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%);
+    border-radius: var(--radius-4);
+    border: 1px solid var(--border);
+    padding: 1rem;
+  }
+
+  .nodes circle {
+    fill: color-mix(in srgb, var(--accent) 60%, var(--bg-elevated));
+  }
+
+  .nodes text {
+    font-size: 0.55rem;
+    fill: var(--text);
+  }
+
+  .atlas-note {
+    margin-top: 0.8rem;
+  }
+
+  .atlas-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .atlas {
+      grid-template-columns: 1fr;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+</style>

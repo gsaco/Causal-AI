@@ -1,0 +1,50 @@
+---
+title: "Causal LLM Reasoning + Counterfactual Evaluation"
+summary: "Counterfactual prompts and causal benchmarks are shaping how LLMs are evaluated."
+signals:
+  - "LLMs"
+  - "Counterfactuals"
+  - "Evaluation"
+foundational:
+  - "1705.08821"
+  - "1907.02893"
+new_wave:
+  - "2307.16405"
+  - "2305.10032"
+debates:
+  - "1501.01332"
+open_problems:
+  - prompt: "Can counterfactual QA benchmarks predict model performance under real interventions?"
+    evidence:
+      - "2307.16405"
+      - "2305.10032"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2307.16405", "2305.10032"]} type="Claim">
+  LLM evaluation increasingly uses counterfactual benchmarks to probe causal consistency.
+</Claim>
+
+## What changed & why it matters
+
+Causal prompts are exposing failure modes in models that appear strong on standard benchmarks.
+
+## Core ideas
+
+- Counterfactual questions expose reasoning gaps.
+- Evaluation must consider distribution shifts in prompts and contexts.
+
+## Evidence ledger
+
+**Foundational**: 1705.08821, 1907.02893
+
+**New wave**: 2307.16405, 2305.10032
+
+**Debates**: 1501.01332
+
+## Open problems
+
+<Claim evidence={["2307.16405"]} type="Open Question">
+  Which evaluation protocols measure causal reasoning rather than memorization?
+</Claim>

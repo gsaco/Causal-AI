@@ -1,0 +1,39 @@
+---
+title: "Healthcare & Clinical Decision Support"
+summary: "Causal modeling for treatment effects, safety, and policy decisions in clinical workflows."
+topics: ["effect-estimation", "causal-discovery", "distribution-shift"]
+trends: ["causal-llm-reasoning-counterfactual-eval", "benchmarks-evaluation-maturity"]
+evidence_arxiv: ["1705.08821", "1501.01332", "1907.02893", "1803.01422", "2011.04216", "1703.06856", "2305.10032"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## The causal question
+
+Which treatment or intervention changes patient outcomes, under real-world shifts in population, measurement, and policy?
+
+## Common failure modes without causality
+
+- Confounding in observational cohorts misleads effect estimates.
+- Treatment policies drift over time, invalidating static predictors.
+- Proxy outcomes obscure the real intervention target.
+
+<Claim evidence={["1705.08821", "1501.01332", "1907.02893"]}>
+  Treatment effects are sensitive to hidden confounding and distribution shift, making purely predictive models brittle
+  when deployed in changing clinical settings.
+</Claim>
+
+## Methods that show up a lot
+
+- Causal effect estimation and counterfactual prediction
+- Sensitivity analysis and robustness under shift
+- Causal discovery for observational data audit
+
+<Claim evidence={["1803.01422", "2011.04216", "2305.10032"]} type="Signal">
+  Clinical workflows increasingly combine structure learning, estimation toolkits, and audit pipelines to justify
+  interventions before deployment.
+</Claim>
+
+## Benchmarks / datasets
+
+- Use evidence-backed clinical benchmarks when available; avoid claiming clinical validity without explicit trials.

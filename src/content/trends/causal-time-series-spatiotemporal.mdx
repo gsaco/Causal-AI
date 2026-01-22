@@ -1,0 +1,50 @@
+---
+title: "Causal Time Series & Spatiotemporal"
+summary: "Causal inference is moving into temporal and spatiotemporal settings with explicit interventions."
+signals:
+  - "Time series"
+  - "Spatiotemporal"
+  - "Interventions"
+foundational:
+  - "1501.01332"
+  - "1705.08821"
+new_wave:
+  - "2404.06349"
+  - "1907.02893"
+debates:
+  - "1803.01422"
+open_problems:
+  - prompt: "How do we validate spatiotemporal causal models when interventions are sparse or delayed?"
+    evidence:
+      - "2404.06349"
+      - "1501.01332"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2404.06349", "1907.02893"]} type="Claim">
+  Temporal causal modeling is expanding beyond static datasets, with more focus on intervention timing and shift.
+</Claim>
+
+## What changed & why it matters
+
+Spatiotemporal interventions expose fragility in models that assume stationarity, pushing evaluation into multi-environment settings.
+
+## Core ideas
+
+- Interventions must be aligned with temporal dynamics.
+- Shift-aware evaluation is essential for forecasting policy effects.
+
+## Evidence ledger
+
+**Foundational**: 1501.01332, 1705.08821
+
+**New wave**: 2404.06349, 1907.02893
+
+**Debates**: 1803.01422
+
+## Open problems
+
+<Claim evidence={["2404.06349"]} type="Open Question">
+  Which causal assumptions are minimally sufficient for long-horizon intervention forecasts?
+</Claim>

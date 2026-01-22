@@ -1,0 +1,70 @@
+---
+import { withBase } from "@utils/withBase";
+const { clusters, papers } = Astro.props;
+const paperMap = new Map((papers ?? []).map((paper) => [paper.arxiv_id, paper]));
+---
+<div class="cluster-grid">
+  {clusters.map((cluster) => (
+    <div class="card cluster-card">
+      <div class="cluster-head">
+        <h3>Cluster {cluster.id.replace("cluster-", "")}</h3>
+        <div class="chip-group">
+          {cluster.keywords.map((keyword) => (
+            <span class="chip secondary">{keyword}</span>
+          ))}
+        </div>
+      </div>
+      <div class="cluster-papers">
+        {cluster.papers.map((id) => {
+          const paper = paperMap.get(id);
+          return (
+            <a class="cluster-paper" href={withBase(`/papers/${id}`)}>
+              <strong>{paper?.title ?? id}</strong>
+              <span class="subtle">{id}</span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .cluster-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .cluster-card {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cluster-head {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .cluster-papers {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .cluster-paper {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .cluster-paper strong {
+    font-size: 0.9rem;
+  }
+
+  .cluster-paper span {
+    font-size: 0.75rem;
+  }
+</style>

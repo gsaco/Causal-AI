@@ -5,5 +5,6 @@
   "updated_at": "2026-01-22T02:10:00Z",
   "dataset": "demo",
   "commit": "local",
-  "ranking_config_version": "2026-01-22/v1"
+  "ranking_config_version": "2026-01-22/v1",
+  "query_pack_version": "2026-01-22/v1"
 }

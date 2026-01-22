@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import AtlasGraph from "@components/viz/AtlasGraph.astro";
+import { readJson } from "@utils/data";
+
+const graph = await readJson("atlas/graph.json");
+---
+<BaseLayout wide title="Atlas - Causal AI Futures" description="A visual map of causal AI topics and method motifs.">
+  <section class="section hero">
+    <div class="container">
+      <p class="eyebrow">Atlas</p>
+      <h1>The methods map</h1>
+      <p class="subtle">
+        A visual map of causal AI topics and method motifs. Edges indicate similarity signals (co-tagging + keyword
+        overlap), not causal relationships.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <AtlasGraph graph={graph} />
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+  </style>
+</BaseLayout>

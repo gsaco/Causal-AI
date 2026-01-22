@@ -1,5 +1,6 @@
 ---
 import DocLayout from "@layouts/DocLayout.astro";
+import ContinueExploring from "@components/ContinueExploring.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -12,9 +13,10 @@ const { Content, headings } = await entry.render();
 const { data } = entry;
 const evidence = Array.from(new Set([...(data.foundational ?? []), ...(data.new_wave ?? []), ...(data.debates ?? [])]));
 ---
-<DocLayout title={`${data.title} - Causal-AI`} description={data.summary} headings={headings} evidence={evidence}>
+<DocLayout title={`${data.title} - Tendencies`} description={data.summary} headings={headings} evidence={evidence}>
   <span data-pagefind-filter="type:trend" hidden></span>
   <span data-pagefind-meta="type" hidden>trend</span>
   <span data-pagefind-meta="title" hidden>{data.title}</span>
   <Content />
+  <ContinueExploring currentType="trend" />
 </DocLayout>

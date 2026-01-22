@@ -1,0 +1,105 @@
+---
+import DocLayout from "@layouts/DocLayout.astro";
+import PaperCard from "@components/PaperCard.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import ContinueExploring from "@components/ContinueExploring.astro";
+import { getCollection } from "astro:content";
+import { readJson } from "@utils/data";
+import { withBase } from "@utils/withBase";
+
+export async function getStaticPaths() {
+  const applications = await getCollection("applications");
+  return applications.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+const { data } = entry;
+const build = await readJson("provenance/build.json");
+let feed = { latest: [], trending: [], query: "", window: "" };
+try {
+  feed = await readJson(`applications/${entry.slug}.json`);
+} catch (error) {
+  feed = { latest: [], trending: [], query: "", window: build.harvest_window };
+}
+const index = await readJson("papers.index.json");
+const paperMap = new Map(index.map((paper) => [paper.arxiv_id, paper]));
+const latest = feed.latest.map((id) => paperMap.get(id)).filter(Boolean);
+const trending = feed.trending.map((id) => paperMap.get(id)).filter(Boolean);
+const topics = await readJson("taxonomy/topics.json");
+const relatedTopics = (data.topics ?? [])
+  .map((id) => topics.find((topic) => topic.id === id))
+  .filter(Boolean);
+const trends = await getCollection("trends");
+const relatedTrends = (data.trends ?? [])
+  .map((slug) => trends.find((trend) => trend.slug === slug))
+  .filter(Boolean);
+const evidence = data.evidence_arxiv ?? [];
+---
+<DocLayout title={`${data.title} - Applications`} description={data.summary} headings={headings} evidence={evidence}>
+  <span data-pagefind-filter="type:application" hidden></span>
+  <span data-pagefind-meta="type" hidden>application</span>
+  <span data-pagefind-meta="title" hidden>{data.title}</span>
+
+  <section class="card">
+    <Content />
+  </section>
+
+  {(relatedTopics.length > 0 || relatedTrends.length > 0) && (
+    <section class="card">
+      <h2>Related topics and tendencies</h2>
+      <div class="tag-row">
+        {relatedTopics.map((topic) => (
+          <a class="chip" href={withBase(`/topics/${topic.id}`)}>{topic.title}</a>
+        ))}
+        {relatedTrends.map((trend) => (
+          <a class="chip secondary" href={withBase(`/trends/${trend.slug}`)}>{trend.data.title}</a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="card">
+    <h2>Snapshot provenance</h2>
+    <ProvenancePanel provenance={build} />
+    {feed.query && (
+      <p class="subtle">Query: {feed.query}</p>
+    )}
+    {feed.window && (
+      <p class="subtle">Window: {feed.window}</p>
+    )}
+  </section>
+
+  <section>
+    <h2>Recent arXiv in this area</h2>
+    <div class="grid">
+      {latest.map((paper) => (
+        <PaperCard paper={paper} />
+      ))}
+    </div>
+    <h3 class="subhead">Trending</h3>
+    <div class="grid">
+      {trending.map((paper) => (
+        <PaperCard paper={paper} />
+      ))}
+    </div>
+  </section>
+
+  <ContinueExploring
+    currentType="application"
+    relatedTopicIds={(data.topics ?? []).slice(0, 2)}
+    relatedTrendSlugs={(data.trends ?? []).slice(0, 1)}
+  />
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .subhead {
+      margin-top: 2rem;
+    }
+  </style>
+</DocLayout>

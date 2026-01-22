@@ -94,6 +94,9 @@ export const TopicTaxonomy = z.object({
   id: z.string(),
   title: z.string(),
   scope: z.string(),
+  group: z.string().optional(),
+  icon: z.string().optional(),
+  priority: z.number().int().min(1).max(5).optional(),
   anchors: z.array(ArxivId),
   query: z.string().optional(),
   keywords_any: z.array(z.string()).optional(),
@@ -116,7 +119,8 @@ export const BuildProvenance = z.object({
   updated_at: DateTimeString,
   dataset: z.string(),
   commit: z.string().optional(),
-  ranking_config_version: z.string().optional()
+  ranking_config_version: z.string().optional(),
+  query_pack_version: z.string().optional()
 });
 
 export const UpdateLogEntry = z.object({
@@ -125,7 +129,8 @@ export const UpdateLogEntry = z.object({
   records: z.number().int().nonnegative(),
   status: z.string(),
   updated_at: DateTimeString,
-  ranking_config_version: z.string().optional()
+  ranking_config_version: z.string().optional(),
+  query_pack_version: z.string().optional()
 });
 
 export const MetricsTopicMomentum = z.object({
@@ -196,6 +201,53 @@ export const MetricsCitationCoverage = z.object({
       coverage: z.number()
     })
   )
+});
+
+export const ApplicationFeed = z.object({
+  latest: z.array(ArxivId),
+  trending: z.array(ArxivId),
+  query: z.string(),
+  window: z.string()
+});
+
+export const EmergingClusters = z.object({
+  generated_at: DateString,
+  window_days: z.number().int().positive(),
+  clusters: z.array(
+    z.object({
+      id: z.string(),
+      keywords: z.array(z.string()).min(1),
+      papers: z.array(ArxivId).min(1)
+    })
+  )
+});
+
+export const AtlasGraph = z.object({
+  generated_at: DateString,
+  nodes: z.array(
+    z.object({
+      id: z.string(),
+      label: z.string(),
+      type: z.string(),
+      group: z.string().optional()
+    })
+  ),
+  edges: z.array(
+    z.object({
+      source: z.string(),
+      target: z.string(),
+      weight: z.number(),
+      kind: z.string()
+    })
+  ),
+  note: z.string()
+});
+
+export const QueryPack = z.object({
+  version: z.string(),
+  group: z.string(),
+  topics: z.array(z.string()).min(1),
+  queries: z.array(z.string()).min(1)
 });
 
 export const RankingConfig = z.object({

@@ -4,28 +4,77 @@ import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
 
 const topics = await readJson("taxonomy/topics.json");
+const groupOrder = [
+  "Foundations",
+  "Discovery",
+  "Inference",
+  "Representation",
+  "Sequential",
+  "LLMs & Agents",
+  "Robustness",
+  "Fairness & Policy",
+  "Systems"
+];
+
+const grouped = groupOrder.map((group) => ({
+  group,
+  topics: topics
+    .filter((topic) => topic.group === group)
+    .sort((a, b) => (a.priority ?? 3) - (b.priority ?? 3))
+}));
+const ungrouped = topics.filter((topic) => !groupOrder.includes(topic.group));
 ---
-<BaseLayout wide title="Topics - Causal-AI" description="Navigate the causal AI taxonomy and reading paths.">
+<BaseLayout wide title="Topics - Causal AI Futures" description="Navigate the causal AI taxonomy and reading paths.">
   <section class="section hero">
     <div class="container">
-      <h1>Topics</h1>
-      <p class="subtle">A scoped taxonomy of causal AI with anchor papers and curated reading paths.</p>
+      <p class="eyebrow">Topics</p>
+      <h1>The causal AI map</h1>
+      <p class="subtle">Grouped field guide entries with anchor papers and evidence-first reading paths.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container grid">
-      {topics.map((topic) => (
-        <a class="card" href={withBase(`/topics/${topic.id}`)}>
-          <h3>{topic.title}</h3>
-          <p class="subtle">{topic.scope}</p>
-          <div class="tag-row">
-            {topic.anchors.map((anchor) => (
-              <span class="chip">{anchor}</span>
+    <div class="container topic-groups">
+      {grouped.map(({ group, topics }) => (
+        <div class="topic-group">
+          <div class="section-header">
+            <h2>{group}</h2>
+          </div>
+          <div class="grid">
+            {topics.map((topic) => (
+              <a class="card" href={withBase(`/topics/${topic.id}`)}>
+                <h3>{topic.title}</h3>
+                <p class="subtle">{topic.scope}</p>
+                <div class="tag-row">
+                  {topic.anchors.map((anchor) => (
+                    <span class="chip">{anchor}</span>
+                  ))}
+                </div>
+              </a>
             ))}
           </div>
-        </a>
+        </div>
       ))}
+      {ungrouped.length > 0 && (
+        <div class="topic-group">
+          <div class="section-header">
+            <h2>Other</h2>
+          </div>
+          <div class="grid">
+            {ungrouped.map((topic) => (
+              <a class="card" href={withBase(`/topics/${topic.id}`)}>
+                <h3>{topic.title}</h3>
+                <p class="subtle">{topic.scope}</p>
+                <div class="tag-row">
+                  {topic.anchors.map((anchor) => (
+                    <span class="chip">{anchor}</span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 
@@ -33,6 +82,16 @@ const topics = await readJson("taxonomy/topics.json");
     h1 {
       margin: 0 0 0.6rem;
       font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .topic-groups {
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    .topic-group {
+      display: grid;
+      gap: 1.2rem;
     }
 
     .grid {

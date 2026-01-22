@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-01-22",
+  "window_days": 30,
+  "clusters": [
+    {
+      "id": "cluster-1",
+      "keywords": [
+        "structure",
+        "graph"
+      ],
+      "papers": [
+        "1803.01422",
+        "1907.02893"
+      ]
+    },
+    {
+      "id": "cluster-2",
+      "keywords": [
+        "invariance",
+        "shift"
+      ],
+      "papers": [
+        "1703.06856",
+        "1705.08821"
+      ]
+    },
+    {
+      "id": "cluster-3",
+      "keywords": [
+        "tooling",
+        "fairness"
+      ],
+      "papers": [
+        "2011.04216",
+        "1501.01332"
+      ]
+    }
+  ]
+}

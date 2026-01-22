@@ -2,100 +2,214 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PaperCard from "@components/PaperCard.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
+import SectionDivider from "@components/SectionDivider.astro";
+import HeroCausalGraph from "@components/viz/HeroCausalGraph.astro";
 import CoverageBadge from "@components/CoverageBadge.astro";
 import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
+import { getCollection } from "astro:content";
 
 const papers = await readJson("papers.index.json");
-const topics = await readJson("taxonomy/topics.json");
 const build = await readJson("provenance/build.json");
-const momentum = await readJson("metrics/topic_momentum.json");
 const coverage = await readJson("metrics/citation_coverage.json");
-const windowA = momentum.window.A.replace("_to_", " to ");
-const windowB = momentum.window.B.replace("_to_", " to ");
+const topics = await readJson("taxonomy/topics.json");
+const digests = await getCollection("digests");
+const applications = await getCollection("applications");
 
 const trending = [...papers]
   .sort((a, b) => (b.metrics.trending_score ?? 0) - (a.metrics.trending_score ?? 0))
   .slice(0, 3);
+
+const latestDigest = [...digests].sort((a, b) => (a.data.week < b.data.week ? 1 : -1))[0];
+const appPreview = applications.slice(0, 3);
+const featuredTopics = topics.filter((topic) => (topic.priority ?? 3) <= 2).slice(0, 6);
 ---
-<BaseLayout wide title="Causal-AI - Researcher-grade causal AI intelligence">
-  <section class="hero section">
+<BaseLayout wide title="Causal AI Futures" description="Causal AI Futures is a field guide to the intervention era: evidence-first tendencies, topics, and applications grounded in arXiv.">
+  <section class="section hero hero-ambient">
     <div class="container hero-grid">
-      <div class="fade-in">
+      <div class="hero-copy">
         <p class="chip">Snapshot {build.snapshot}</p>
-        <h1>Causal AI intelligence for teams that need evidence, not vibes.</h1>
+        <h1>Causal AI is the step from pattern recognition to intervention-aware intelligence.</h1>
         <p class="subtitle">
-          We curate causal AI signals, not just papers - linking every claim to arXiv IDs, tracking
-          update cadence, and surfacing momentum across the field.
+          Causal AI Futures is a field guide to the intervention era: evidence-first tendencies, applications, and
+          open problems with transparent provenance and arXiv-backed claims.
         </p>
         <div class="hero-actions">
-          <a class="button" href={withBase("/observatory")}>Enter Observatory</a>
-          <a class="button secondary" href={withBase("/trends")}>Read trends</a>
+          <a class="button" href={withBase("/observatory")}>Enter the Observatory</a>
+          <a class="button secondary" href={withBase("/learn")}>Start learning</a>
         </div>
-        <div class="manifesto">
-          <div class="manifesto-card">
-            <h3>Evidence first</h3>
-            <p class="subtle">Every claim is tied to arXiv metadata and validated in CI.</p>
+        <div class="hero-meta">
+          <div class="hero-stat">
+            <span class="label">Coverage</span>
+            <CoverageBadge value={Math.round((coverage.overall.coverage ?? 0) * 100)} />
           </div>
-          <div class="manifesto-card">
-            <h3>Signals over lists</h3>
-            <p class="subtle">We highlight movement: momentum, churn, and cross-listing.</p>
-          </div>
-          <div class="manifesto-card">
-            <h3>Reusable trails</h3>
-            <p class="subtle">Curated sequences for learning paths and team onboarding.</p>
+          <div class="hero-stat">
+            <span class="label">Harvest window</span>
+            <span class="value">{build.harvest_window}</span>
           </div>
         </div>
       </div>
-      <div class="card fade-in">
-        <h3>Update cadence</h3>
-        <p class="subtle">Harvest window: {build.harvest_window}</p>
-        <ProvenancePanel provenance={build} />
+      <div class="hero-visual">
+        <HeroCausalGraph />
+        <div class="hero-provenance card">
+          <h3>Latest provenance</h3>
+          <ProvenancePanel provenance={build} />
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>Trending this snapshot</h2>
-        <CoverageBadge value={Math.round((coverage.overall.coverage ?? 0) * 100)} />
+      <div class="section-header">
+        <p class="eyebrow">Why it matters</p>
+        <h2>Three reasons causal AI is moving fast</h2>
+        <p>These are signals, not guarantees. Each reflects real shifts in research focus and evaluation practice.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Interventions beat correlations</h3>
+          <p class="subtle">Teams need models that survive policy changes, not just benchmarks.</p>
+        </div>
+        <div class="card">
+          <h3>Evaluation is catching up</h3>
+          <p class="subtle">New benchmarks and counterfactual tests are surfacing weak spots earlier.</p>
+        </div>
+        <div class="card">
+          <h3>Tooling is finally usable</h3>
+          <p class="subtle">Libraries are maturing, and reproducible pipelines are more common.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider label="Counterfactuals" />
+
+  <section class="section">
+    <div class="container split-grid">
+      <div>
+        <div class="section-header">
+          <p class="eyebrow">What if?</p>
+          <h2>Questions the field is now willing to ask</h2>
+          <p>These are the interventions that separate a causal model from a predictive one.</p>
+        </div>
+        <ul class="question-list">
+          <li>What happens if we intervene on a variable we cannot observe directly?</li>
+          <li>Which policies are robust under distribution shift, not just average-case?</li>
+          <li>Can a model explain why its counterfactuals are plausible?</li>
+        </ul>
+      </div>
+      <div class="card callout-card">
+        <h3>Tendency Radar</h3>
+        <p class="subtle">Explore momentum, cross-listing, and revision churn across 20+ topics.</p>
+        <a class="button" href={withBase("/observatory")}>Open the radar</a>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider label="Applications" />
+
+  <section class="section">
+    <div class="container callout-grid">
+      <div class="card callout-card">
+        <h3>Atlas: the methods map</h3>
+        <p class="subtle">A visual map of topics, motifs, and similarity signals across causal AI.</p>
+        <a class="button secondary" href={withBase("/atlas")}>Open the Atlas</a>
+      </div>
+      <div class="card">
+        <h3>Frontiers & future paths</h3>
+        <p class="subtle">Signals, missing pieces, and evidence-backed open problems.</p>
+        <a class="button secondary" href={withBase("/frontiers")}>Explore frontiers</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Applications</p>
+        <h2>Where causal AI becomes real</h2>
+        <p>Focused field notes on domains where interventions matter most.</p>
+      </div>
+      <div class="card-grid">
+        {appPreview.map((app) => (
+          <a class="card" href={withBase(`/applications/${app.slug}`)}>
+            <h3>{app.data.title}</h3>
+            <p class="subtle">{app.data.summary}</p>
+          </a>
+        ))}
+      </div>
+      <div class="section-actions">
+        <a class="button secondary" href={withBase("/applications")}>View all applications</a>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider label="Paths" />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Choose a path</p>
+        <h2>Start from your context</h2>
+        <p>Learning paths for students, researchers, and builders who want evidence fast.</p>
+      </div>
+      <div class="card-grid">
+        <a class="card" href={withBase("/learn#student")}> 
+          <h3>Student</h3>
+          <p class="subtle">Foundations -> experiments -> reading trails.</p>
+        </a>
+        <a class="card" href={withBase("/learn#researcher")}> 
+          <h3>Researcher</h3>
+          <p class="subtle">Frontiers, open problems, and methodology shifts.</p>
+        </a>
+        <a class="card" href={withBase("/learn#builder")}> 
+          <h3>Builder</h3>
+          <p class="subtle">Applications, tooling, and evaluation guardrails.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider label="Snapshot" />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">This snapshot</p>
+        <h2>Trending papers and the weekly digest</h2>
+        <p>Evidence-first highlights from the latest harvest window.</p>
       </div>
       <div class="grid">
         {trending.map((paper) => (
           <PaperCard paper={paper} />
         ))}
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container callout-grid">
-      <div class="card callout">
-        <h2>Causal AI Tendency Radar</h2>
-        <p class="subtle">Explore momentum, cross-listing, and revision churn in one view.</p>
-        <a class="button" href={withBase("/observatory")}>Open Observatory</a>
-      </div>
-      <div class="card">
-        <h2>Start here</h2>
-        <p class="subtle">Guided learning paths for new team members and busy practitioners.</p>
-        <a class="button secondary" href={withBase("/learn")}>View learning paths</a>
-      </div>
+      {latestDigest && (
+        <div class="digest-preview card">
+          <div>
+            <p class="chip secondary">{latestDigest.data.week}</p>
+            <h3>{latestDigest.data.title}</h3>
+            <p class="subtle">{latestDigest.data.summary}</p>
+          </div>
+          <a class="button" href={withBase(`/digest/weekly/${latestDigest.data.week}`)}>Read digest</a>
+        </div>
+      )}
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>Topic momentum</h2>
-        <p class="subtle">Week-over-week arXiv momentum from {windowA} vs {windowB}.</p>
+      <div class="section-header">
+        <p class="eyebrow">Keep exploring</p>
+        <h2>Start with topics and trails</h2>
+        <p>Explore the taxonomy or jump straight into curated paper trails.</p>
       </div>
-      <div class="momentum-grid">
-        {topics.map((topic) => (
+      <div class="card-grid">
+        {featuredTopics.map((topic) => (
           <a class="card" href={withBase(`/topics/${topic.id}`)}>
             <h3>{topic.title}</h3>
             <p class="subtle">{topic.scope}</p>
-            <div class="chip secondary">Momentum {momentum.topics[topic.id] ?? 0}</div>
           </a>
         ))}
       </div>
@@ -104,13 +218,13 @@ const trending = [...papers]
 
   <style>
     h1 {
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
       margin: 0 0 1rem;
     }
 
     .subtitle {
-      font-size: 1.1rem;
-      max-width: 48ch;
+      font-size: 1.05rem;
+      max-width: 56ch;
       color: var(--muted);
       line-height: 1.6;
     }
@@ -118,44 +232,69 @@ const trending = [...papers]
     .hero-grid {
       display: grid;
       gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .hero-visual {
+      display: grid;
+      gap: 1.2rem;
     }
 
     .hero-actions {
       display: flex;
       gap: 0.8rem;
-      margin-top: 1.5rem;
       flex-wrap: wrap;
     }
 
-    .manifesto {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      margin-top: 1.5rem;
-    }
-
-    .manifesto-card {
-      padding: 0.9rem 1rem;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: var(--bg-elevated);
-    }
-
-    .section-head {
+    .hero-meta {
       display: flex;
       flex-wrap: wrap;
+      gap: 1.5rem;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
     }
 
-    .grid {
+    .hero-stat {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-stat .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .hero-provenance {
+      background: color-mix(in srgb, var(--bg-elevated) 92%, transparent);
+    }
+
+    .split-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      align-items: start;
+    }
+
+    .question-list {
+      display: grid;
+      gap: 0.8rem;
+      padding-left: 1.2rem;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .section-actions {
+      margin-top: 1.5rem;
     }
 
     .callout-grid {
@@ -164,14 +303,25 @@ const trending = [...papers]
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
-    .callout {
-      background: linear-gradient(120deg, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%);
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
-    .momentum-grid {
-      display: grid;
-      gap: 1.2rem;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    .digest-preview {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 900px) {
+      .split-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </BaseLayout>

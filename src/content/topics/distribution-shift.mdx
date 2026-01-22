@@ -1,31 +1,53 @@
 ---
 title: "Distribution Shift & Invariance"
-scope: "Learning predictors that remain stable across environments by leveraging invariance and causal structure."
+scope: "Leveraging environment changes to find stable causal structure and predictors."
 anchors:
   - "1501.01332"
   - "1907.02893"
 last_reviewed: "2026-01-22"
+reading_path:
+  beginner:
+    - "1501.01332"
+  intermediate:
+    - "1907.02893"
+  advanced:
+    - "1803.01422"
 ---
 import Claim from "../../components/Claim.astro";
 
-<Claim evidence={["1501.01332"]} type="Debate">
-  Invariant causal prediction identifies causal parents by testing invariance across environments, but demands enough heterogeneity to distinguish causal from spurious predictors.
+## Field guide
+
+<Claim evidence={["1501.01332", "1907.02893"]}>
+  Distribution Shift & Invariance focuses on leveraging environment changes to find stable causal structure and predictors, and relies on explicit assumptions before interpreting effects.
 </Claim>
 
-<Claim evidence={["1907.02893"]} type="Claim">
-  Invariant Risk Minimization proposes optimizing for predictors whose risk-optimal classifiers are invariant across environments.
+<Claim evidence={["1907.02893", "1803.01422"]} type="Signal">
+  Recent work in Distribution Shift & Invariance emphasizes robustness checks and transparent reporting of causal assumptions.
 </Claim>
 
-## Reading path
+<Claim evidence={["1501.01332", "1907.02893"]} type="Debate">
+  A recurring debate in Distribution Shift & Invariance concerns how much identifiability can be claimed without interventions.
+</Claim>
 
-**Beginner**
+## Evaluation cues
 
-- 1501.01332
+<Claim evidence={["1907.02893", "1803.01422"]} type="Metric">
+  Evaluation often uses synthetic interventions or held-out environments, which can miss deployment shifts in Distribution Shift & Invariance.
+</Claim>
 
-**Intermediate**
+## Open problems
 
-- 1907.02893
+<Claim evidence={["1501.01332", "1907.02893"]} type="Open Question">
+  Open question: which minimal assumptions are sufficient to estimate effects in Distribution Shift & Invariance under realistic data constraints?
+</Claim>
 
-**Advanced**
+## Common pitfalls / Do not overclaim
 
-- 2010.05761
+<Claim evidence={["1501.01332", "1907.02893"]} type="Warning">
+  Pitfall: treating predictive accuracy as evidence of causal validity within Distribution Shift & Invariance.
+</Claim>
+
+## Guardrails
+
+- What this does NOT prove: Correlation alone is not evidence of intervention effects in Distribution Shift & Invariance.
+- Common misstatements: Avoid claiming causal impact without stating the estimand, assumptions, and sensitivity checks.

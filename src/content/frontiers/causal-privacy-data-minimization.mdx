@@ -1,0 +1,40 @@
+---
+title: "Causal + Privacy / Data Minimization"
+summary: "Causal inference under privacy constraints and data minimization requirements."
+topics: ["effect-estimation", "causal-fairness", "systems-tooling"]
+trends: ["causal-privacy-data-minimization"]
+evidence_arxiv: ["1705.08821", "1703.06856", "2011.04216", "1907.02893", "2002.11631", "2404.06349"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## What's emerging
+
+<Claim evidence={["1705.08821", "2011.04216", "2002.11631"]}>
+  There is growing interest in causal estimation pipelines that operate under privacy or data minimization constraints.
+</Claim>
+
+## What's still missing
+
+- Evidence that privacy-preserving causal estimators maintain identifiability.
+- Shared benchmarks that balance utility and disclosure risk.
+
+<Claim evidence={["1907.02893", "1703.06856", "2404.06349"]} type="Warning">
+  Fairness and privacy constraints can change the causal estimand, and are not interchangeable with standard metrics.
+</Claim>
+
+## Signals to watch
+
+- Interventional datasets with privacy-preserving releases.
+- Tooling that documents estimands and data minimization choices.
+
+## Related topics / trails
+
+- Causal fairness
+- Systems & tooling
+
+## Guardrails
+
+- What this does NOT prove: Emerging signals are not guarantees of impact.
+- Common misstatements: Avoid claiming deployment readiness without evidence-backed evaluation.
+

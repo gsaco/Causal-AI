@@ -1,0 +1,89 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { siteMeta } from "@lib/siteMeta";
+import { withBase } from "@utils/withBase";
+---
+<BaseLayout title={`About - ${siteMeta.title}`} description="Why Causal AI Futures exists and how it stays evidence-first.">
+  <section class="section hero">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h1>Why this field guide exists</h1>
+      <p class="subtitle">
+        Causal AI Futures is a researcher-built map of the intervention era. It is designed for readers who want
+        evidence, not hype: every claim is grounded in arXiv IDs, and every page links back to primary sources.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-grid">
+      <div class="card">
+        <h2>Mission</h2>
+        <p>
+          The goal is to make causal AI navigable without flattening the nuance. We surface signals, disagreements,
+          and open problems alongside the papers, so readers can see where the field is converging and where it is not.
+        </p>
+      </div>
+      <div class="card">
+        <h2>How evidence works</h2>
+        <p>
+          Claims are written in a <code>&lt;Claim&gt;</code> block with arXiv IDs. CI checks that evidence exists and
+          validates citation coverage. Tendencies must include foundational anchors, new-wave signals, and debates.
+        </p>
+        <a class="button secondary" href={withBase("/trust/citation-coverage")}>Review coverage</a>
+      </div>
+      <div class="card">
+        <h2>How updates work</h2>
+        <p>
+          Weekday refreshes ingest new arXiv snapshots. A weekly digest summarizes movement, and provenance logs record
+          harvest windows, query packs, and update history.
+        </p>
+        <a class="button secondary" href={withBase("/trust/update-log")}>See update log</a>
+      </div>
+      <div class="card">
+        <h2>About the author</h2>
+        <p>
+          {siteMeta.author} builds tools for evidence-first research navigation, with interests in causal inference,
+          representation learning, and evaluation.
+        </p>
+        <a class="button secondary" href={siteMeta.repoUrl} target="_blank" rel="noreferrer">Project repo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container disclaimer">
+      <h2>Disclaimer</h2>
+      <p>
+        This site is not affiliated with arXiv. arXiv remains the primary source, and every claim should be checked
+        against the original papers.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(2.4rem, 3vw, 3rem);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 60ch;
+      line-height: 1.6;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .disclaimer {
+      border-radius: var(--radius-4);
+      border: 1px dashed var(--border);
+      padding: var(--space-5);
+      background: color-mix(in srgb, var(--bg-elevated) 85%, transparent);
+    }
+  </style>
+</BaseLayout>

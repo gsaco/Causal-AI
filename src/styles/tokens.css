@@ -1,12 +1,13 @@
 :root {
   color-scheme: light dark;
-  --bg: #f5f2ec;
-  --bg-elevated: #fffaf3;
+  --bg: #f4f1ea;
+  --bg-elevated: #fff8ee;
   --text: #1f2328;
   --muted: #5b5f66;
   --border: #d9d2c6;
-  --accent: #0f766e;
+  --accent: #0e6f74;
   --accent-2: #d97706;
+  --accent-3: #415a77;
   --danger: #b42318;
   --success: #027a48;
   --surface: #f0ece5;
@@ -14,10 +15,13 @@
   --code-bg: #121826;
   --code-text: #e5e7eb;
   --grid: rgba(31, 41, 55, 0.08);
-  --grad-hero: radial-gradient(circle at top, rgba(15, 118, 110, 0.25), transparent 60%),
-    linear-gradient(120deg, rgba(217, 119, 6, 0.2), transparent 55%);
+  --grad-hero: radial-gradient(circle at top, rgba(14, 111, 116, 0.28), transparent 62%),
+    radial-gradient(circle at 10% 10%, rgba(65, 90, 119, 0.18), transparent 55%),
+    linear-gradient(120deg, rgba(217, 119, 6, 0.18), transparent 55%);
   --grad-radar: radial-gradient(circle at center, rgba(15, 118, 110, 0.2), transparent 70%);
   --grad-card: linear-gradient(135deg, rgba(15, 118, 110, 0.08), transparent 60%);
+  --grad-hero-grid: linear-gradient(transparent 39px, rgba(31, 41, 55, 0.06) 40px),
+    linear-gradient(90deg, transparent 39px, rgba(31, 41, 55, 0.06) 40px);
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -37,12 +41,13 @@
 
 :root[data-theme="dark"] {
   --bg: #0f1117;
-  --bg-elevated: #161a22;
+  --bg-elevated: #151a23;
   --text: #f2f4f8;
   --muted: #9aa3b2;
   --border: #2a3240;
-  --accent: #20c997;
-  --accent-2: #f59f00;
+  --accent: #2ad1c6;
+  --accent-2: #f4b000;
+  --accent-3: #8aa0c8;
   --danger: #ff6b6b;
   --success: #69db7c;
   --surface: #121720;
@@ -50,8 +55,11 @@
   --code-bg: #0b0f14;
   --code-text: #e6edf3;
   --grid: rgba(148, 163, 184, 0.12);
-  --grad-hero: radial-gradient(circle at top, rgba(32, 201, 151, 0.2), transparent 60%),
-    linear-gradient(120deg, rgba(245, 159, 0, 0.18), transparent 55%);
+  --grad-hero: radial-gradient(circle at top, rgba(42, 209, 198, 0.22), transparent 60%),
+    radial-gradient(circle at 15% 20%, rgba(138, 160, 200, 0.2), transparent 55%),
+    linear-gradient(120deg, rgba(244, 176, 0, 0.2), transparent 55%);
   --grad-radar: radial-gradient(circle at center, rgba(32, 201, 151, 0.16), transparent 70%);
   --grad-card: linear-gradient(135deg, rgba(32, 201, 151, 0.1), transparent 60%);
+  --grad-hero-grid: linear-gradient(transparent 39px, rgba(148, 163, 184, 0.14) 40px),
+    linear-gradient(90deg, transparent 39px, rgba(148, 163, 184, 0.14) 40px);
 }

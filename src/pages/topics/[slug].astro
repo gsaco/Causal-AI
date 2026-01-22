@@ -2,6 +2,7 @@
 import DocLayout from "@layouts/DocLayout.astro";
 import PaperCard from "@components/PaperCard.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
+import ContinueExploring from "@components/ContinueExploring.astro";
 import { getCollection } from "astro:content";
 import { readJson } from "@utils/data";
 
@@ -17,6 +18,12 @@ const build = await readJson("provenance/build.json");
 const feed = await readJson(`topic_feeds/${entry.slug}.json`);
 const index = await readJson("papers.index.json");
 const trails = await readJson("curation/paper_trails.json");
+const taxonomy = await readJson("taxonomy/topics.json");
+const currentTopic = taxonomy.find((topic) => topic.id === entry.slug);
+const relatedTopicIds = taxonomy
+  .filter((topic) => topic.group && topic.group === currentTopic?.group && topic.id !== entry.slug)
+  .slice(0, 2)
+  .map((topic) => topic.id);
 const relevantTrails = trails.filter((trail) =>
   trail.steps.some((step) => data.anchors.includes(step.arxiv_id))
 );
@@ -26,7 +33,7 @@ const trending = feed.trending.map((id) => paperMap.get(id)).filter(Boolean);
 const readingPath = data.reading_path ?? { beginner: data.anchors };
 ---
 <DocLayout
-  title={`${data.title} - Causal-AI`}
+  title={`${data.title} - Causal AI Futures`}
   description={data.scope}
   headings={headings}
   evidence={data.anchors}
@@ -93,6 +100,8 @@ const readingPath = data.reading_path ?? { beginner: data.anchors };
       ))}
     </div>
   </section>
+
+  <ContinueExploring currentType="topic" relatedTopicIds={relatedTopicIds} />
 
   <style>
     .topic-grid {

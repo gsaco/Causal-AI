@@ -9,8 +9,16 @@ const axes = [
 const size = 260;
 const center = size / 2;
 const radius = 90;
-const topicIds = topics.length ? topics : Object.keys(radar.topics ?? {});
+const topicEntries = topics.length
+  ? topics.map((topic) => ({
+      id: topic.id,
+      title: topic.title ?? topic.id,
+      group: topic.group ?? "Other"
+    }))
+  : Object.keys(radar.topics ?? {}).map((id) => ({ id, title: id, group: "Other" }));
+const topicIds = topicEntries.map((topic) => topic.id);
 const colors = ["var(--accent)", "var(--accent-2)", "#38bdf8", "#e879f9", "#22c55e", "#f97316"];
+const groups = Array.from(new Set(topicEntries.map((topic) => topic.group)));
 
 function polygonPoints(metrics) {
   return axes
@@ -26,11 +34,20 @@ function polygonPoints(metrics) {
 ---
 <div class="radar">
   <div class="radar-legend">
-    {topicIds.map((topicId, index) => (
-      <label>
-        <input type="checkbox" data-radar-toggle value={topicId} checked />
+    <div class="radar-controls">
+      <input type="search" placeholder="Search topic" data-radar-search />
+      <select data-radar-group>
+        <option value="all">All groups</option>
+        {groups.map((group) => (
+          <option value={group}>{group}</option>
+        ))}
+      </select>
+    </div>
+    {topicEntries.map((topic, index) => (
+      <label data-radar-item data-topic={topic.id} data-group={topic.group} data-title={topic.title.toLowerCase()}>
+        <input type="checkbox" data-radar-toggle value={topic.id} checked />
         <span class="swatch" style={`background:${colors[index % colors.length]}`}></span>
-        {topicId}
+        <span class="label">{topic.title}</span>
       </label>
     ))}
   </div>
@@ -74,11 +91,43 @@ function polygonPoints(metrics) {
       );
     })}
   </svg>
-  <div class="radar-note">Signals are normalized; higher values indicate stronger signals.</div>
+  <div class="radar-note">
+    Signals are normalized; higher values indicate stronger signals. This is NOT a measure of paper quality.
+  </div>
+  <div class="radar-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Momentum</th>
+          <th>Recency</th>
+          <th>Cross-list</th>
+          <th>Churn</th>
+        </tr>
+      </thead>
+      <tbody>
+        {topicEntries.map((topic) => {
+          const metrics = radar.topics?.[topic.id] ?? {};
+          return (
+            <tr>
+              <td>{topic.title}</td>
+              <td>{(metrics.momentum ?? 0).toFixed(2)}</td>
+              <td>{(metrics.recency_share ?? 0).toFixed(2)}</td>
+              <td>{(metrics.cross_list_breadth ?? 0).toFixed(2)}</td>
+              <td>{(metrics.revision_churn ?? 0).toFixed(2)}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <script is:inline>
   const toggles = Array.from(document.querySelectorAll("[data-radar-toggle]"));
+  const search = document.querySelector("[data-radar-search]");
+  const groupSelect = document.querySelector("[data-radar-group]");
+  const items = Array.from(document.querySelectorAll("[data-radar-item]"));
   toggles.forEach((toggle) => {
     toggle.addEventListener("change", () => {
       const topic = toggle.value;
@@ -87,6 +136,26 @@ function polygonPoints(metrics) {
       polygon.style.display = toggle.checked ? "" : "none";
     });
   });
+
+  function applyFilters() {
+    const query = (search?.value ?? \"\").toLowerCase();
+    const group = groupSelect?.value ?? \"all\";
+    items.forEach((item) => {
+      const matchesQuery = item.dataset.title?.includes(query) ?? true;
+      const matchesGroup = group === \"all\" || item.dataset.group === group;
+      const shouldShow = matchesQuery && matchesGroup;
+      item.style.display = shouldShow ? \"flex\" : \"none\";
+      const toggle = item.querySelector(\"[data-radar-toggle]\");
+      const topic = toggle?.value;
+      const polygon = topic ? document.querySelector(`[data-radar-topic='${topic}']`) : null;
+      if (polygon) {
+        polygon.style.display = shouldShow && toggle.checked ? \"\" : \"none\";
+      }
+    });
+  }
+
+  search?.addEventListener(\"input\", applyFilters);
+  groupSelect?.addEventListener(\"change\", applyFilters);
 </script>
 
 <style>
@@ -103,10 +172,35 @@ function polygonPoints(metrics) {
     font-size: 0.85rem;
   }
 
+  .radar-controls {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .radar-controls input,
+  .radar-controls select {
+    padding: 0.45rem 0.6rem;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text);
+  }
+
   .radar-legend label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.35rem 0.4rem;
+    border-radius: 8px;
+  }
+
+  .radar-legend label:hover {
+    background: var(--surface);
+  }
+
+  .label {
+    line-height: 1.2;
   }
 
   .radar-legend input {
@@ -131,9 +225,22 @@ function polygonPoints(metrics) {
     grid-column: 1 / -1;
   }
 
+  .radar-table {
+    display: none;
+    grid-column: 1 / -1;
+  }
+
   @media (max-width: 900px) {
     .radar {
       grid-template-columns: 1fr;
+    }
+
+    .radar-chart {
+      display: none;
+    }
+
+    .radar-table {
+      display: block;
     }
   }
 </style>

@@ -141,6 +141,22 @@ export async function validateCitations() {
         errors.push(`${file}:1 trend debates needs >=1 ID`);
       }
     }
+
+    if (file.includes("/applications/") || file.includes("/frontiers/")) {
+      const claimEvidence = [];
+      const claimTags = body.matchAll(/<Claim\b[\s\S]*?>/g);
+      for (const match of claimTags) {
+        const tag = match[0];
+        const evidenceMatch = tag.match(/evidence\s*=\s*\{([^}]+)\}/);
+        const evidenceIds = evidenceMatch ? extractIdsFromString(evidenceMatch[1]) : [];
+        claimEvidence.push(...evidenceIds);
+      }
+      const totalEvidence = new Set([...frontmatterIds, ...claimEvidence]);
+      if (totalEvidence.size < 6) {
+        const section = file.includes("/applications/") ? "application" : "frontier";
+        errors.push(`${file}:1 ${section} needs >=6 evidence IDs (frontmatter + claims)`);
+      }
+    }
   }
 
   const astroFiles = await listFiles(path.join("src"), [".astro"]);
@@ -185,6 +201,12 @@ export async function validateCitations() {
   }
   if ((coverage.sections.trends?.coverage ?? 1) < 1) {
     errors.push(`Trend citation coverage must be 100%`);
+  }
+  if ((coverage.sections.frontiers?.coverage ?? 1) < 0.95) {
+    errors.push(`Frontier citation coverage below threshold: ${coverage.sections.frontiers?.coverage}`);
+  }
+  if ((coverage.sections.applications?.coverage ?? 1) < 0.95) {
+    errors.push(`Application citation coverage below threshold: ${coverage.sections.applications?.coverage}`);
   }
 
   if (errors.length > 0) {

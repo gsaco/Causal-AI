@@ -1,0 +1,37 @@
+---
+title: "Biology, Genomics, and Drug Discovery"
+summary: "Causal reasoning for experimental design, target discovery, and intervention effects."
+topics: ["causal-discovery", "causal-generative-models", "counterfactuals"]
+trends: ["invariant-representations", "causality-for-science-health-climate"]
+evidence_arxiv: ["1803.01422", "1705.08821", "1501.01332", "1907.02893", "2305.10032", "2406.04598"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## The causal question
+
+Which interventions change biological outcomes, and how can we design experiments that identify causal mechanisms?
+
+## Common failure modes without causality
+
+- Confounding between measurement processes and biological signal.
+- Distribution shift across labs or assays.
+- Counterfactuals are claimed without causal identification.
+
+<Claim evidence={["1803.01422", "1705.08821", "1501.01332"]}>
+  Causal discovery and effect estimation are required to distinguish mechanism from correlation in biological data.
+</Claim>
+
+## Methods that show up a lot
+
+- Causal discovery with latent confounding
+- Generative models with intervention-aware constraints
+- Counterfactual evaluation for experiments
+
+<Claim evidence={["1907.02893", "2305.10032", "2406.04598"]} type="Signal">
+  Biology and genomics research increasingly stress robustness across assays and intervention-aware evaluation.
+</Claim>
+
+## Benchmarks / datasets
+
+- Use datasets with explicit intervention metadata and experimental controls.

@@ -1,6 +1,6 @@
 ---
 name: Mis-tag report
-about: Report an incorrect topic tag
+about: Report an incorrect topic tag on a paper
 ---
 
 ## arXiv ID
@@ -11,3 +11,4 @@ about: Report an incorrect topic tag
 
 ## Evidence (arXiv IDs)
 
+## Additional context

@@ -1,32 +1,52 @@
 ---
 title: "Causal Discovery"
-scope: "Recovering causal structure from observational or interventional data under explicit identifiability assumptions."
+scope: "Learning causal graphs from observational or interventional data, with explicit identifiability assumptions."
 anchors:
   - "1803.01422"
 last_reviewed: "2026-01-22"
+reading_path:
+  beginner:
+    - "1803.01422"
+  intermediate:
+    - "1907.02893"
+  advanced:
+    - "1705.08821"
 ---
 import Claim from "../../components/Claim.astro";
 
-<Claim evidence={["1803.01422"]} type="Debate">
-  Continuous optimization for DAG learning trades combinatorial search for a smooth acyclicity constraint, but still relies on faithfulness and noise assumptions.
+## Field guide
+
+<Claim evidence={["1803.01422", "1907.02893"]}>
+  Causal Discovery focuses on learning causal graphs from observational or interventional data, with explicit identifiability assumptions, and relies on explicit assumptions before interpreting effects.
 </Claim>
 
-## Reading path
+<Claim evidence={["1907.02893", "1705.08821"]} type="Signal">
+  Recent work in Causal Discovery emphasizes robustness checks and transparent reporting of causal assumptions.
+</Claim>
 
-**Beginner**
+<Claim evidence={["1803.01422", "1907.02893"]} type="Debate">
+  A recurring debate in Causal Discovery concerns how much identifiability can be claimed without interventions.
+</Claim>
 
-- 1803.01422
+## Evaluation cues
 
-**Intermediate**
-
-- 2305.10032
-
-**Advanced**
-
-- 2406.04598
+<Claim evidence={["1907.02893", "1705.08821"]} type="Metric">
+  Evaluation often uses synthetic interventions or held-out environments, which can miss deployment shifts in Causal Discovery.
+</Claim>
 
 ## Open problems
 
-<Claim evidence={["2305.10032", "1803.01422"]} type="Open Question">
-  What conditions are sufficient to identify non-linear causal structure when latent confounding is present but interventions are sparse?
+<Claim evidence={["1803.01422", "1907.02893"]} type="Open Question">
+  Open question: which minimal assumptions are sufficient to estimate effects in Causal Discovery under realistic data constraints?
 </Claim>
+
+## Common pitfalls / Do not overclaim
+
+<Claim evidence={["1803.01422", "1907.02893"]} type="Warning">
+  Pitfall: treating predictive accuracy as evidence of causal validity within Causal Discovery.
+</Claim>
+
+## Guardrails
+
+- What this does NOT prove: Correlation alone is not evidence of intervention effects in Causal Discovery.
+- Common misstatements: Avoid claiming causal impact without stating the estimand, assumptions, and sensitivity checks.

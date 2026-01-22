@@ -1,0 +1,36 @@
+---
+import { withBase } from "@utils/withBase";
+const { playlist } = Astro.props;
+---
+<article class="card playlist">
+  <div>
+    <h3>{playlist.title}</h3>
+    <p class="subtle">{playlist.description}</p>
+  </div>
+  <div class="playlist-items">
+    {playlist.items.map((item) => (
+      <a href={withBase(item.href)}>{item.label}</a>
+    ))}
+  </div>
+</article>
+
+<style>
+  .playlist {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .playlist-items {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .playlist-items a {
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .playlist-items a:hover {
+    background: var(--surface);
+  }
+</style>

@@ -13,6 +13,7 @@ export async function writeProvenance({
   records = 0,
   status = "ok",
   rankingConfigVersion = "",
+  queryPackVersion = "",
   commit = process.env.GITHUB_SHA ?? "local"
 } = {}) {
   const now = new Date();
@@ -26,7 +27,8 @@ export async function writeProvenance({
     updated_at: updatedAt,
     dataset,
     commit,
-    ranking_config_version: rankingConfigVersion || undefined
+    ranking_config_version: rankingConfigVersion || undefined,
+    query_pack_version: queryPackVersion || undefined
   };
 
   const buildPath = path.join(dataDir, "provenance", "build.json");
@@ -39,7 +41,8 @@ export async function writeProvenance({
     records,
     status,
     updated_at: updatedAt,
-    ranking_config_version: rankingConfigVersion || undefined
+    ranking_config_version: rankingConfigVersion || undefined,
+    query_pack_version: queryPackVersion || undefined
   };
 
   const logPath = path.join(dataDir, "provenance", "update-log.ndjson");

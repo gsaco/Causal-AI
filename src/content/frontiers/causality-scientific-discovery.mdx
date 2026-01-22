@@ -1,0 +1,40 @@
+---
+title: "Causality in Scientific Discovery"
+summary: "Causal methods for scientific discovery in biology, climate, and physics."
+topics: ["causal-discovery", "causal-generative-models", "counterfactuals"]
+trends: ["causality-for-science-health-climate"]
+evidence_arxiv: ["1803.01422", "1705.08821", "1501.01332", "1907.02893", "2305.10032", "2406.04598"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## What's emerging
+
+<Claim evidence={["1803.01422", "1705.08821", "2305.10032"]}>
+  Scientific discovery pipelines increasingly pair causal discovery with intervention-aware experiments.
+</Claim>
+
+## What's still missing
+
+- Benchmarks that connect causal structure to real-world interventions.
+- Shared standards for uncertainty in mechanistic claims.
+
+<Claim evidence={["1501.01332", "1907.02893", "2406.04598"]} type="Warning">
+  Robustness to distribution shift remains a major barrier to causal scientific claims.
+</Claim>
+
+## Signals to watch
+
+- Cross-domain benchmarks with intervention metadata.
+- Hybrid mechanistic + statistical causal models.
+
+## Related topics / trails
+
+- Causal generative models
+- Counterfactuals
+
+## Guardrails
+
+- What this does NOT prove: Emerging signals are not guarantees of impact.
+- Common misstatements: Avoid claiming deployment readiness without evidence-backed evaluation.
+

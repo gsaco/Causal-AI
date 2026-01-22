@@ -1,0 +1,50 @@
+---
+title: "Causality for Science (Health + Climate)"
+summary: "Scientific discovery pipelines are adopting causal reasoning to validate interventions."
+signals:
+  - "Science"
+  - "Interventions"
+  - "Robustness"
+foundational:
+  - "1803.01422"
+  - "1705.08821"
+new_wave:
+  - "2406.04598"
+  - "2305.10032"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "How can causal claims be validated when experiments are expensive or slow?"
+    evidence:
+      - "1705.08821"
+      - "1907.02893"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["1803.01422", "2305.10032"]} type="Claim">
+  Scientific workflows increasingly use causal discovery and effect estimation to prioritize interventions.
+</Claim>
+
+## What changed & why it matters
+
+Causal methods are now part of the evidence chain for scientific interventions, not just exploratory analysis.
+
+## Core ideas
+
+- Interventions must be tied to mechanistic hypotheses.
+- Robustness under shift is required before policy or clinical translation.
+
+## Evidence ledger
+
+**Foundational**: 1803.01422, 1705.08821
+
+**New wave**: 2406.04598, 2305.10032
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["1907.02893"]} type="Open Question">
+  What evidence thresholds should define causal claims in high-stakes scientific domains?
+</Claim>

@@ -8,10 +8,13 @@ import { tagTopics } from "./tag_topics.mjs";
 import { computeTopicMomentum } from "./metrics_topic_momentum.mjs";
 import { computeTrending } from "./trending.mjs";
 import { generateTopicFeeds } from "./generate_topic_feeds.mjs";
+import { generateApplicationFeeds } from "./generate_application_feeds.mjs";
 import { writeTopicTimeseries } from "./metrics_topic_timeseries.mjs";
 import { writeTrendRadar } from "./metrics_trend_radar.mjs";
 import { writeCrosslistHeatmap } from "./metrics_crosslist_heatmap.mjs";
 import { writeVersionChurn } from "./metrics_version_churn.mjs";
+import { writeEmergingClusters } from "./metrics_emerging_clusters.mjs";
+import { buildAtlasGraph } from "./build_atlas_graph.mjs";
 import { writeProvenance } from "./provenance.mjs";
 import { computeCoverage } from "../validate/compute_coverage.mjs";
 import { harvestOai } from "./oai_harvest.mjs";
@@ -114,6 +117,7 @@ export async function runPipeline() {
 
   const topics = await loadJson(path.join(dataDir, "taxonomy", "topics.json"));
   const rankingConfig = await loadJson(path.join(dataDir, "ranking", "config.json"));
+  const queryPack = await loadJson(path.join(dataDir, "editorial", "query-pack-version.json")).catch(() => ({ version: "" }));
 
   if (useOai && !offline) {
     await harvestOai({ dataDir });
@@ -148,10 +152,13 @@ export async function runPipeline() {
 
   if (!dryRun) {
     await generateTopicFeeds({ dataDir, limitLatest: 12, limitTrending: 12 });
+    await generateApplicationFeeds({ dataDir, windowDays, limitLatest: 12, limitTrending: 12 });
     await writeTopicTimeseries({ dataDir });
     await writeTrendRadar({ dataDir });
     await writeCrosslistHeatmap({ dataDir });
     await writeVersionChurn({ dataDir });
+    await writeEmergingClusters({ dataDir });
+    await buildAtlasGraph({ dataDir });
     await computeCoverage({ dataDir, writeOutput: true });
   }
 
@@ -165,7 +172,8 @@ export async function runPipeline() {
     source: "arxiv_api",
     dataset: offline ? "offline" : "prod",
     records,
-    rankingConfigVersion: rankingConfig.version
+    rankingConfigVersion: rankingConfig.version,
+    queryPackVersion: queryPack.version ?? ""
   });
 
   console.log(`Pipeline complete. Papers: ${records}`);

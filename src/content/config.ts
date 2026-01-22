@@ -67,4 +67,28 @@ const trends = defineCollection({
   })
 });
 
-export const collections = { topics, glossary, digests, trends };
+const applications = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    topics: z.array(z.string()).optional(),
+    trends: z.array(z.string()).optional(),
+    evidence_arxiv: z.array(z.string()).optional(),
+    last_reviewed: z.string()
+  })
+});
+
+const frontiers = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    topics: z.array(z.string()).optional(),
+    trends: z.array(z.string()).optional(),
+    evidence_arxiv: z.array(z.string()).optional(),
+    last_reviewed: z.string()
+  })
+});
+
+export const collections = { topics, glossary, digests, trends, applications, frontiers };

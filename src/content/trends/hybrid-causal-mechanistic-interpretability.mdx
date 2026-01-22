@@ -1,0 +1,50 @@
+---
+title: "Hybrid Causal + Mechanistic Interpretability"
+summary: "Mechanistic interpretability is starting to adopt causal framing for model behavior." 
+signals:
+  - "Interpretability"
+  - "Mechanisms"
+  - "Causality"
+foundational:
+  - "1705.08821"
+  - "1501.01332"
+new_wave:
+  - "2307.16405"
+  - "2305.10032"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "Can mechanistic explanations be validated as causal rather than descriptive?"
+    evidence:
+      - "2307.16405"
+      - "1705.08821"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2307.16405", "2305.10032"]} type="Claim">
+  Interpretability research is beginning to test causal hypotheses about model internals, not just correlations.
+</Claim>
+
+## What changed & why it matters
+
+Causal framing helps distinguish descriptive explanations from intervention-ready mechanisms.
+
+## Core ideas
+
+- Interventions on internal representations should match causal hypotheses.
+- Counterfactual tests help verify mechanistic claims.
+
+## Evidence ledger
+
+**Foundational**: 1705.08821, 1501.01332
+
+**New wave**: 2307.16405, 2305.10032
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["2307.16405"]} type="Open Question">
+  What benchmarks can validate causal interpretations of model components?
+</Claim>

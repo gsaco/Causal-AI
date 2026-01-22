@@ -1,0 +1,40 @@
+---
+title: "Causal World Models for Robotics"
+summary: "World models that support intervention planning and transfer across environments."
+topics: ["causal-world-models", "causal-rl", "causal-discovery"]
+trends: ["causal-world-models-robotics"]
+evidence_arxiv: ["2010.05761", "1803.01422", "1501.01332", "1907.02893", "2404.06349", "2511.22842"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## What's emerging
+
+<Claim evidence={["2010.05761", "1803.01422", "2511.22842"]}>
+  Robotics research is linking structure learning with world models to support intervention-aware planning.
+</Claim>
+
+## What's still missing
+
+- Strong safety guarantees for interventions in open-world settings.
+- Evaluation data that reflects real sensor and actuator failures.
+
+<Claim evidence={["1501.01332", "1907.02893", "2404.06349"]} type="Warning">
+  Distribution shifts between simulators and deployment remain a primary risk for causal world models.
+</Claim>
+
+## Signals to watch
+
+- Benchmarks with explicit intervention logs.
+- Hybrid causal + mechanistic world models.
+
+## Related topics / trails
+
+- Off-policy evaluation
+- Causal discovery
+
+## Guardrails
+
+- What this does NOT prove: Emerging signals are not guarantees of impact.
+- Common misstatements: Avoid claiming deployment readiness without evidence-backed evaluation.
+

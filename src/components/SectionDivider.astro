@@ -1,0 +1,31 @@
+---
+const { label = "" } = Astro.props;
+---
+<div class="section-divider" aria-hidden="true">
+  {label && <span>{label}</span>}
+</div>
+
+<style>
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    width: min(900px, 100%);
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .section-divider span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+  }
+</style>

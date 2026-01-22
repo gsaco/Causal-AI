@@ -1,0 +1,50 @@
+---
+title: "Causal World Models for Robotics"
+summary: "Robotics is adopting causal world models to plan interventions and transfer across environments."
+signals:
+  - "World models"
+  - "Robotics"
+  - "Planning"
+foundational:
+  - "2010.05761"
+  - "1705.08821"
+new_wave:
+  - "2404.06349"
+  - "2511.22842"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "How do we validate causal world models under real-world sensor failures?"
+    evidence:
+      - "2404.06349"
+      - "1907.02893"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2404.06349", "2511.22842"]} type="Claim">
+  Robotics research is increasingly combining causal discovery with world models to support intervention planning.
+</Claim>
+
+## What changed & why it matters
+
+World models must now support intervention reasoning, not only prediction, to meet safety demands in robotics.
+
+## Core ideas
+
+- Intervention-aware state transitions improve transfer.
+- Evaluation should include counterfactual failure analysis.
+
+## Evidence ledger
+
+**Foundational**: 2010.05761, 1705.08821
+
+**New wave**: 2404.06349, 2511.22842
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["2404.06349"]} type="Open Question">
+  What benchmarks can validate causal world models beyond simulation?
+</Claim>

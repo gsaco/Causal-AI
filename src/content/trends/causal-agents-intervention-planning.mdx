@@ -1,0 +1,50 @@
+---
+title: "Causal Agents + Intervention Planning"
+summary: "Agents are starting to plan interventions explicitly, not just maximize reward." 
+signals:
+  - "Agents"
+  - "Intervention planning"
+  - "Tool use"
+foundational:
+  - "2010.05761"
+  - "1705.08821"
+new_wave:
+  - "2511.22842"
+  - "2307.16405"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "How do we evaluate intervention safety for agentic systems under shift?"
+    evidence:
+      - "2511.22842"
+      - "1907.02893"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2511.22842", "2307.16405"]} type="Claim">
+  Agent research is moving toward explicit causal planning and tool-mediated interventions.
+</Claim>
+
+## What changed & why it matters
+
+Causal planning brings evaluation risk: interventions can be unsafe even when rewards look good.
+
+## Core ideas
+
+- Agents need causal models to plan safe actions.
+- Evaluation must include counterfactual failure analysis.
+
+## Evidence ledger
+
+**Foundational**: 2010.05761, 1705.08821
+
+**New wave**: 2511.22842, 2307.16405
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["2511.22842"]} type="Open Question">
+  What causal supervision is necessary to prevent unsafe intervention policies?
+</Claim>

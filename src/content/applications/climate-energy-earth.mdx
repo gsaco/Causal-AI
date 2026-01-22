@@ -1,0 +1,37 @@
+---
+title: "Climate, Energy, and Earth Systems"
+summary: "Intervention-aware modeling for policy, resilience, and long-horizon decision-making."
+topics: ["distribution-shift", "effect-estimation", "causal-discovery"]
+trends: ["discovery-at-scale", "causal-time-series-spatiotemporal"]
+evidence_arxiv: ["1907.02893", "1501.01332", "1705.08821", "1803.01422", "2002.02770", "2404.06349"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## The causal question
+
+Which interventions shift long-run outcomes in complex, non-stationary systems such as energy grids or climate processes?
+
+## Common failure modes without causality
+
+- Non-stationarity masquerades as causal effect.
+- Exogenous shocks invalidate learned policies.
+- Aggregated metrics hide local interventions.
+
+<Claim evidence={["1907.02893", "1501.01332", "1705.08821"]}>
+  Robust inference under distribution shift is essential before attributing policy impact in climate-scale systems.
+</Claim>
+
+## Methods that show up a lot
+
+- Invariant risk minimization and shift-aware estimation
+- Causal time series and spatiotemporal modeling
+- Counterfactual policy evaluation
+
+<Claim evidence={["2002.02770", "2404.06349", "1803.01422"]} type="Signal">
+  Recent work blends causal discovery with structured temporal modeling to support intervention analysis at scale.
+</Claim>
+
+## Benchmarks / datasets
+
+- Prefer public policy or climate intervention datasets with documented causal assumptions.

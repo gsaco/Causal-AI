@@ -1,4 +1,6 @@
 ---
+import { withBase } from "@utils/withBase";
+
 const { provenance } = Astro.props;
 if (!provenance) {
   throw new Error("ProvenancePanel requires provenance data");
@@ -29,7 +31,14 @@ if (!provenance) {
         <strong>{provenance.ranking_config_version}</strong>
       </div>
     )}
+    {provenance.query_pack_version && (
+      <div>
+        <span>Query pack</span>
+        <strong>{provenance.query_pack_version}</strong>
+      </div>
+    )}
   </div>
+  <a class="subtle provenance-link" href={withBase("/trust/update-log")}>View update log</a>
 </aside>
 
 <style>
@@ -64,5 +73,11 @@ if (!provenance) {
 
   .rows strong {
     font-size: 0.95rem;
+  }
+
+  .provenance-link {
+    display: inline-flex;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
   }
 </style>

@@ -1,0 +1,34 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { withBase } from "@utils/withBase";
+
+const frontiers = await getCollection("frontiers");
+---
+<BaseLayout wide title="Frontiers - Causal AI Futures" description="Future paths and open problems in causal AI.">
+  <section class="section hero">
+    <div class="container">
+      <p class="eyebrow">Frontiers</p>
+      <h1>Future paths in the intervention era</h1>
+      <p class="subtle">Signals, missing pieces, and evidence-backed open problems shaping causal AI.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card-grid">
+      {frontiers.map((frontier) => (
+        <a class="card" href={withBase(`/frontiers/${frontier.slug}`)}>
+          <h3>{frontier.data.title}</h3>
+          <p class="subtle">{frontier.data.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+  </style>
+</BaseLayout>

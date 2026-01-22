@@ -1,0 +1,41 @@
+---
+title: "Causal Agents: Intervention Planning + Tool Use"
+summary: "Agents that act on causal models to plan interventions, not just predict outcomes."
+topics: ["causal-agents", "causal-rl", "counterfactuals"]
+trends: ["causal-agents-intervention-planning"]
+evidence_arxiv: ["2010.05761", "1803.01422", "1705.08821", "1907.02893", "2307.16405", "2404.06349"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## What's emerging
+
+<Claim evidence={["2010.05761", "2307.16405", "1803.01422"]}>
+  Agentic systems are increasingly evaluated on counterfactual planning and intervention reliability, not only task
+  success under static policies.
+</Claim>
+
+## What's still missing
+
+- Strong evidence that agent policies generalize under real-world shifts.
+- Transparent evaluation protocols for intervention safety.
+
+<Claim evidence={["1907.02893", "1705.08821", "2404.06349"]} type="Warning">
+  Robustness under distribution shift remains a known gap for agentic interventions.
+</Claim>
+
+## Signals to watch
+
+- Papers combining causal discovery with tool-augmented planning.
+- Benchmarks that evaluate counterfactual reasoning with interventions.
+
+## Related topics / trails
+
+- Causal RL
+- Off-policy evaluation
+
+## Guardrails
+
+- What this does NOT prove: Emerging signals are not guarantees of impact.
+- Common misstatements: Avoid claiming deployment readiness without evidence-backed evaluation.
+

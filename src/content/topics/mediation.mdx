@@ -1,0 +1,52 @@
+---
+title: "Mediation & Path Effects"
+scope: "Decomposing causal pathways and reasoning about mediated effects."
+anchors:
+  - "2002.11631"
+last_reviewed: "2026-01-22"
+reading_path:
+  beginner:
+    - "2002.11631"
+  intermediate:
+    - "1803.01422"
+  advanced:
+    - "1907.02893"
+---
+import Claim from "../../components/Claim.astro";
+
+## Field guide
+
+<Claim evidence={["2002.11631", "1803.01422"]}>
+  Mediation & Path Effects focuses on decomposing causal pathways and reasoning about mediated effects, and relies on explicit assumptions before interpreting effects.
+</Claim>
+
+<Claim evidence={["1803.01422", "1907.02893"]} type="Signal">
+  Recent work in Mediation & Path Effects emphasizes robustness checks and transparent reporting of causal assumptions.
+</Claim>
+
+<Claim evidence={["2002.11631", "1803.01422"]} type="Debate">
+  A recurring debate in Mediation & Path Effects concerns how much identifiability can be claimed without interventions.
+</Claim>
+
+## Evaluation cues
+
+<Claim evidence={["1803.01422", "1907.02893"]} type="Metric">
+  Evaluation often uses synthetic interventions or held-out environments, which can miss deployment shifts in Mediation & Path Effects.
+</Claim>
+
+## Open problems
+
+<Claim evidence={["2002.11631", "1803.01422"]} type="Open Question">
+  Open question: which minimal assumptions are sufficient to estimate effects in Mediation & Path Effects under realistic data constraints?
+</Claim>
+
+## Common pitfalls / Do not overclaim
+
+<Claim evidence={["2002.11631", "1803.01422"]} type="Warning">
+  Pitfall: treating predictive accuracy as evidence of causal validity within Mediation & Path Effects.
+</Claim>
+
+## Guardrails
+
+- What this does NOT prove: Correlation alone is not evidence of intervention effects in Mediation & Path Effects.
+- Common misstatements: Avoid claiming causal impact without stating the estimand, assumptions, and sensitivity checks.

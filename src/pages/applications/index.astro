@@ -1,0 +1,34 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { withBase } from "@utils/withBase";
+
+const applications = await getCollection("applications");
+---
+<BaseLayout wide title="Applications - Causal AI Futures" description="Applied causal AI field notes grounded in evidence.">
+  <section class="section hero">
+    <div class="container">
+      <p class="eyebrow">Applications</p>
+      <h1>Real-world causal AI field notes</h1>
+      <p class="subtle">Where interventions matter most, grounded in arXiv evidence and open problems.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card-grid">
+      {applications.map((app) => (
+        <a class="card" href={withBase(`/applications/${app.slug}`)}>
+          <h3>{app.data.title}</h3>
+          <p class="subtle">{app.data.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+  </style>
+</BaseLayout>

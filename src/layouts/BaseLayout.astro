@@ -6,12 +6,16 @@ import SiteHeader from "@components/SiteHeader.astro";
 import SiteFooter from "@components/SiteFooter.astro";
 import CommandPalette from "@components/CommandPalette.astro";
 import { withBase } from "@utils/withBase";
+import { siteMeta } from "@lib/siteMeta";
 
 const {
-  title = "Causal-AI",
-  description = "An arXiv-grounded field guide and paper intelligence hub for causal AI.",
+  title = siteMeta.title,
+  description = siteMeta.description,
   wide = false
 } = Astro.props;
+
+const fullTitle = title === siteMeta.title ? `${siteMeta.title} - ${siteMeta.tagline}` : `${title}`;
+const canonicalUrl = `${siteMeta.siteUrl}${Astro.url.pathname}`;
 ---
 <!doctype html>
 <html lang="en" data-theme="">
@@ -19,8 +23,18 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="author" content={siteMeta.author} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={siteMeta.title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={withBase("/favicon.svg")} />
-    <title>{title}</title>
+    <title>{fullTitle}</title>
     <slot name="head" />
     <script is:inline>
       const storedTheme = localStorage.getItem("theme");

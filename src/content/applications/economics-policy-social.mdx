@@ -1,0 +1,37 @@
+---
+title: "Economics, Policy, and Social Science"
+summary: "Causal identification for policy impact, fairness, and long-term social outcomes."
+topics: ["instrumental-variables", "mediation", "causal-fairness"]
+trends: ["fairness-toolchains", "benchmarks-evaluation-maturity"]
+evidence_arxiv: ["1703.06856", "1705.08821", "1501.01332", "1907.02893", "2002.11631", "2406.04598"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## The causal question
+
+How do policies change outcomes when decisions are entangled with institutions, incentives, and latent confounding?
+
+## Common failure modes without causality
+
+- Omitted confounders distort policy conclusions.
+- Fairness metrics miss path-specific effects.
+- Observational correlations are mistaken for interventions.
+
+<Claim evidence={["1703.06856", "1705.08821", "1501.01332"]}>
+  Causal fairness and policy evaluation require explicit assumptions about pathways and confounders.
+</Claim>
+
+## Methods that show up a lot
+
+- Instrumental variables and mediation analysis
+- Causal fairness definitions and path-specific effects
+- Sensitivity analysis for hidden confounding
+
+<Claim evidence={["1907.02893", "2002.11631", "2406.04598"]} type="Signal">
+  Policy evaluation work increasingly combines fairness constraints with robustness checks under shift.
+</Claim>
+
+## Benchmarks / datasets
+
+- Use policy datasets with transparent collection pipelines and documented biases.

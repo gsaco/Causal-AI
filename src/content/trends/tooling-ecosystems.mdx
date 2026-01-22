@@ -1,0 +1,50 @@
+---
+title: "Tooling Ecosystems (PyWhy, DoWhy, EconML)"
+summary: "Causal tooling is maturing into reusable, auditable ecosystems."
+signals:
+  - "Tooling"
+  - "Ecosystems"
+  - "Reproducibility"
+foundational:
+  - "2011.04216"
+  - "1705.08821"
+new_wave:
+  - "1907.02893"
+  - "2305.10032"
+debates:
+  - "1501.01332"
+open_problems:
+  - prompt: "How can tooling encode causal assumptions without hiding them from practitioners?"
+    evidence:
+      - "2011.04216"
+      - "1705.08821"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2011.04216", "1705.08821"]} type="Claim">
+  Causal tooling ecosystems now prioritize auditability, evidence trails, and refutation workflows.
+</Claim>
+
+## What changed & why it matters
+
+Tooling reduces the friction of causal analysis but can obscure assumptions if not documented.
+
+## Core ideas
+
+- Toolkits encode estimands, assumptions, and sensitivity checks.
+- Reproducibility requires transparent provenance.
+
+## Evidence ledger
+
+**Foundational**: 2011.04216, 1705.08821
+
+**New wave**: 1907.02893, 2305.10032
+
+**Debates**: 1501.01332
+
+## Open problems
+
+<Claim evidence={["2011.04216"]} type="Open Question">
+  How should tooling communicate failure modes to non-experts?
+</Claim>

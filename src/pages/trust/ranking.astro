@@ -4,11 +4,12 @@ import { readJson } from "@utils/data";
 
 const config = await readJson("ranking/config.json");
 ---
-<BaseLayout wide title="Ranking Methodology - Causal-AI">
+<BaseLayout wide title="Ranking Methodology - Causal AI Futures">
   <section class="section hero">
     <div class="container">
-      <h1>Ranking Methodology</h1>
-      <p class="subtle">Trending is an attention signal derived from arXiv metadata, not a quality guarantee.</p>
+      <p class="eyebrow">Trust</p>
+      <h1>Ranking methodology</h1>
+      <p class="subtle">Trending is an activity signal derived from arXiv metadata, not a quality guarantee.</p>
     </div>
   </section>
 
@@ -29,6 +30,17 @@ trending_score = {config.weights.recency.toFixed(2)} * recency +
                  {config.weights.churn.toFixed(2)} * churn
       </pre>
       <p class="subtle">Weights are versioned ({config.version}) and changes are logged in the update log.</p>
+      <h2>Momentum windows</h2>
+      <p class="subtle">
+        Momentum compares a recent window ({config.momentum_window_days} days) against a baseline window
+        ({config.baseline_window_days} days). This highlights shifts, not quality.
+      </p>
+      <div class="callout card">
+        <strong>Activity != quality</strong>
+        <p class="subtle">
+          High momentum can reflect buzz, revisions, or cross-listing. It does not imply correctness or impact.
+        </p>
+      </div>
     </div>
   </section>
 

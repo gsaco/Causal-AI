@@ -1,0 +1,83 @@
+---
+import DocLayout from "@layouts/DocLayout.astro";
+import PaperCard from "@components/PaperCard.astro";
+import ProvenancePanel from "@components/ProvenancePanel.astro";
+import ContinueExploring from "@components/ContinueExploring.astro";
+import { getCollection } from "astro:content";
+import { readJson } from "@utils/data";
+import { withBase } from "@utils/withBase";
+
+export async function getStaticPaths() {
+  const frontiers = await getCollection("frontiers");
+  return frontiers.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+const { data } = entry;
+const index = await readJson("papers.index.json");
+const build = await readJson("provenance/build.json");
+const trending = [...index]
+  .sort((a, b) => (b.metrics.trending_score ?? 0) - (a.metrics.trending_score ?? 0))
+  .slice(0, 3);
+const evidence = data.evidence_arxiv ?? [];
+const topics = await readJson("taxonomy/topics.json");
+const relatedTopics = (data.topics ?? [])
+  .map((id) => topics.find((topic) => topic.id === id))
+  .filter(Boolean);
+const trends = await getCollection("trends");
+const relatedTrends = (data.trends ?? [])
+  .map((slug) => trends.find((trend) => trend.slug === slug))
+  .filter(Boolean);
+---
+<DocLayout title={`${data.title} - Frontiers`} description={data.summary} headings={headings} evidence={evidence}>
+  <span data-pagefind-filter="type:frontier" hidden></span>
+  <span data-pagefind-meta="type" hidden>frontier</span>
+  <span data-pagefind-meta="title" hidden>{data.title}</span>
+
+  <section class="card">
+    <Content />
+  </section>
+
+  {(relatedTopics.length > 0 || relatedTrends.length > 0) && (
+    <section class="card">
+      <h2>Related topics and tendencies</h2>
+      <div class="tag-row">
+        {relatedTopics.map((topic) => (
+          <a class="chip" href={withBase(`/topics/${topic.id}`)}>{topic.title}</a>
+        ))}
+        {relatedTrends.map((trend) => (
+          <a class="chip secondary" href={withBase(`/trends/${trend.slug}`)}>{trend.data.title}</a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="card">
+    <h2>Snapshot provenance</h2>
+    <ProvenancePanel provenance={build} />
+  </section>
+
+  <section>
+    <h2>Signals to watch</h2>
+    <div class="grid">
+      {trending.map((paper) => (
+        <PaperCard paper={paper} />
+      ))}
+    </div>
+  </section>
+
+  <ContinueExploring
+    currentType="frontier"
+    relatedTopicIds={(data.topics ?? []).slice(0, 2)}
+    relatedTrendSlugs={(data.trends ?? []).slice(0, 1)}
+  />
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+  </style>
+</DocLayout>

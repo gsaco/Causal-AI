@@ -1,0 +1,52 @@
+---
+title: "Causal Agents"
+scope: "Agentic systems that plan interventions or tool use with causal models."
+anchors:
+  - "2511.22842"
+last_reviewed: "2026-01-22"
+reading_path:
+  beginner:
+    - "2511.22842"
+  intermediate:
+    - "1803.01422"
+  advanced:
+    - "1907.02893"
+---
+import Claim from "../../components/Claim.astro";
+
+## Field guide
+
+<Claim evidence={["2511.22842", "1803.01422"]}>
+  Causal Agents focuses on agentic systems that plan interventions or tool use with causal models, and relies on explicit assumptions before interpreting effects.
+</Claim>
+
+<Claim evidence={["1803.01422", "1907.02893"]} type="Signal">
+  Recent work in Causal Agents emphasizes robustness checks and transparent reporting of causal assumptions.
+</Claim>
+
+<Claim evidence={["2511.22842", "1803.01422"]} type="Debate">
+  A recurring debate in Causal Agents concerns how much identifiability can be claimed without interventions.
+</Claim>
+
+## Evaluation cues
+
+<Claim evidence={["1803.01422", "1907.02893"]} type="Metric">
+  Evaluation often uses synthetic interventions or held-out environments, which can miss deployment shifts in Causal Agents.
+</Claim>
+
+## Open problems
+
+<Claim evidence={["2511.22842", "1803.01422"]} type="Open Question">
+  Open question: which minimal assumptions are sufficient to estimate effects in Causal Agents under realistic data constraints?
+</Claim>
+
+## Common pitfalls / Do not overclaim
+
+<Claim evidence={["2511.22842", "1803.01422"]} type="Warning">
+  Pitfall: treating predictive accuracy as evidence of causal validity within Causal Agents.
+</Claim>
+
+## Guardrails
+
+- What this does NOT prove: Correlation alone is not evidence of intervention effects in Causal Agents.
+- Common misstatements: Avoid claiming causal impact without stating the estimand, assumptions, and sensitivity checks.

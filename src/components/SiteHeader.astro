@@ -1,17 +1,36 @@
 ---
 import ThemeToggle from "@components/ThemeToggle.astro";
 import { withBase } from "@utils/withBase";
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/observatory", label: "Observatory" },
-  { href: "/trends", label: "Trends" },
-  { href: "/topics", label: "Topics" },
-  { href: "/papers", label: "Paper Explorer" },
-  { href: "/search", label: "Search" },
-  { href: "/digest", label: "Weekly Digest" },
-  { href: "/glossary", label: "Glossary" },
-  { href: "/benchmarks", label: "Benchmarks" },
-  { href: "/tools", label: "Tools" }
+import { siteMeta } from "@lib/siteMeta";
+
+const navGroups = [
+  {
+    label: "Explore",
+    links: [
+      { href: "/observatory", label: "Observatory" },
+      { href: "/trends", label: "Tendencies" },
+      { href: "/topics", label: "Topics" },
+      { href: "/atlas", label: "Atlas" },
+      { href: "/papers", label: "Papers" }
+    ]
+  },
+  {
+    label: "Learn",
+    links: [
+      { href: "/learn", label: "Start Here" },
+      { href: "/learn#playlists", label: "Playlists" },
+      { href: "/frontiers", label: "Frontiers" },
+      { href: "/glossary", label: "Glossary" }
+    ]
+  },
+  {
+    label: "Practice",
+    links: [
+      { href: "/applications", label: "Applications" },
+      { href: "/tools", label: "Tools" },
+      { href: "/benchmarks", label: "Benchmarks" }
+    ]
+  }
 ];
 const trustLinks = [
   { href: "/trust/editorial", label: "Editorial Policy" },
@@ -24,12 +43,17 @@ const trustLinks = [
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href={withBase("/")}>Causal-AI</a>
+    <a class="logo" href={withBase("/")}>{siteMeta.title}</a>
     <details class="mobile-menu">
       <summary>Menu</summary>
       <div class="mobile-panel">
-        {navLinks.map((link) => (
-          <a href={withBase(link.href)}>{link.label}</a>
+        {navGroups.map((group) => (
+          <div class="mobile-group">
+            <span>{group.label}</span>
+            {group.links.map((link) => (
+              <a href={withBase(link.href)}>{link.label}</a>
+            ))}
+          </div>
         ))}
         <div class="mobile-trust">
           <span>Trust</span>
@@ -41,8 +65,15 @@ const trustLinks = [
       </div>
     </details>
     <nav class="nav-links" aria-label="Primary">
-      {navLinks.map((link) => (
-        <a href={withBase(link.href)}>{link.label}</a>
+      {navGroups.map((group) => (
+        <details class="nav-group">
+          <summary>{group.label}</summary>
+          <div class="nav-panel">
+            {group.links.map((link) => (
+              <a href={withBase(link.href)}>{link.label}</a>
+            ))}
+          </div>
+        </details>
       ))}
       <details class="trust-menu">
         <summary>Trust</summary>
@@ -83,7 +114,7 @@ const trustLinks = [
 
   .logo {
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.02em;
   }
 
@@ -121,6 +152,20 @@ const trustLinks = [
   .mobile-panel a {
     padding: 0.35rem 0.5rem;
     border-radius: 8px;
+  }
+
+  .mobile-group {
+    display: grid;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.45rem;
+  }
+
+  .mobile-group span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
   }
 
   .mobile-trust {
@@ -163,6 +208,42 @@ const trustLinks = [
   .trust-menu summary {
     list-style: none;
     cursor: pointer;
+  }
+
+  .nav-group {
+    position: relative;
+  }
+
+  .nav-group summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .nav-group summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-panel {
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.6rem;
+    min-width: 200px;
+    display: grid;
+    gap: 0.2rem;
+    box-shadow: 0 16px 24px -20px var(--shadow);
+  }
+
+  .nav-panel a {
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+  }
+
+  .nav-panel a:hover {
+    background: var(--surface);
   }
 
   .trust-menu summary::-webkit-details-marker {

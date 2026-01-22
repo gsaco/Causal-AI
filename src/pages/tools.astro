@@ -1,54 +1,40 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import CitationChip from "@components/CitationChip.astro";
+import { readJson } from "@utils/data";
 
-const tools = [
-  {
-    name: "DoWhy",
-    summary: "End-to-end causal inference library with explicit identification and refutation steps.",
-    evidence: ["2011.04216"],
-    links: [
-      { label: "GitHub", url: "https://github.com/py-why/dowhy" }
-    ]
-  },
-  {
-    name: "CausalLearn",
-    summary: "Python toolbox for causal discovery and causal effect estimation.",
-    evidence: ["2307.16405"],
-    links: [
-      { label: "GitHub", url: "https://github.com/py-why/causal-learn" }
-    ]
-  },
-  {
-    name: "CausalML",
-    summary: "Uplift and heterogeneous treatment effect estimation toolkit.",
-    evidence: ["2002.11631"],
-    links: [
-      { label: "GitHub", url: "https://github.com/uber/causalml" }
-    ]
-  }
-];
+const groups = await readJson("tools/tools.json");
 ---
-<BaseLayout wide title="Tools - Causal-AI">
+<BaseLayout wide title="Tools - Causal AI Futures" description="Tooling ecosystems for causal AI, with evidence.">
   <section class="section hero">
     <div class="container">
-      <h1>Tools</h1>
-      <p class="subtle">Libraries and tooling with explicit causal grounding.</p>
+      <p class="eyebrow">Tools</p>
+      <h1>Tooling ecosystems</h1>
+      <p class="subtle">Grouped causal AI tooling with evidence anchors and clear source labeling.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container grid">
-      {tools.map((tool) => (
-        <div class="card">
-          <div class="term-head">
-            <h3>{tool.name}</h3>
-            <CitationChip evidence={tool.evidence} />
+    <div class="container tool-groups">
+      {groups.map((group) => (
+        <div class="tool-group">
+          <div class="section-header">
+            <h2>{group.group}</h2>
           </div>
-          <p class="tool-summary">{tool.summary}</p>
-          <div class="tag-row">
-            {tool.links.map((link) => (
-              <a class="chip secondary" href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
+          <div class="grid">
+            {group.items.map((tool) => (
+              <div class="card">
+                <div class="term-head">
+                  <h3>{tool.name}</h3>
+                  <CitationChip evidence={tool.evidence} />
+                </div>
+                <p class="tool-summary">{tool.summary}</p>
+                <div class="tag-row">
+                  {tool.links.map((link) => (
+                    <a class="chip secondary" href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -60,6 +46,11 @@ const tools = [
     h1 {
       margin: 0 0 0.6rem;
       font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .tool-groups {
+      display: grid;
+      gap: 2rem;
     }
 
     .grid {

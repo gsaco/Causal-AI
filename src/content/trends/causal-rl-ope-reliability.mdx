@@ -1,0 +1,50 @@
+---
+title: "Causal RL + Off-Policy Evaluation Reliability"
+summary: "Causal RL is emphasizing reliable off-policy evaluation and intervention safety."
+signals:
+  - "Causal RL"
+  - "Off-policy"
+  - "Reliability"
+foundational:
+  - "2010.05761"
+  - "1705.08821"
+new_wave:
+  - "1907.02893"
+  - "2404.06349"
+debates:
+  - "1501.01332"
+open_problems:
+  - prompt: "How do we audit policy shifts when logged data is biased by prior interventions?"
+    evidence:
+      - "2010.05761"
+      - "1907.02893"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2010.05761", "1705.08821"]} type="Claim">
+  Off-policy evaluation is becoming the gating step for causal RL deployments in high-stakes settings.
+</Claim>
+
+## What changed & why it matters
+
+As causal RL matures, reliability and shift-aware evaluation now matter more than raw performance gains.
+
+## Core ideas
+
+- Logged data encodes historical policies and confounding.
+- Robust estimators are required before any intervention is recommended.
+
+## Evidence ledger
+
+**Foundational**: 2010.05761, 1705.08821
+
+**New wave**: 1907.02893, 2404.06349
+
+**Debates**: 1501.01332
+
+## Open problems
+
+<Claim evidence={["2010.05761"]} type="Open Question">
+  What is the right intervention budget to validate causal policies under real-world shift?
+</Claim>

@@ -1,0 +1,131 @@
+---
+const { className = "" } = Astro.props;
+---
+<div class={`hero-graph ${className}`} aria-hidden="true">
+  <svg viewBox="0 0 520 360" role="presentation">
+    <defs>
+      <linearGradient id="graphGlow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="currentColor" stop-opacity="0.8" />
+        <stop offset="100%" stop-color="currentColor" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+    <g class="edges">
+      <path d="M60 290 L180 210 L300 260" />
+      <path d="M180 210 L240 110 L360 150" />
+      <path d="M240 110 L420 80" />
+      <path d="M300 260 L420 200" />
+      <path d="M120 120 L240 110" />
+      <path d="M120 120 L60 290" />
+    </g>
+    <g class="nodes">
+      <circle cx="60" cy="290" r="8" />
+      <circle cx="180" cy="210" r="10" />
+      <circle cx="300" cy="260" r="9" />
+      <circle cx="240" cy="110" r="10" />
+      <circle cx="360" cy="150" r="8" />
+      <circle cx="420" cy="80" r="7" />
+      <circle cx="420" cy="200" r="7" />
+      <circle cx="120" cy="120" r="8" />
+    </g>
+  </svg>
+</div>
+
+<style>
+  .hero-graph {
+    color: color-mix(in srgb, var(--accent) 70%, transparent);
+    filter: drop-shadow(0 18px 40px color-mix(in srgb, var(--accent) 20%, transparent));
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .edges path {
+    fill: none;
+    stroke: url(#graphGlow);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 160;
+    stroke-dashoffset: 160;
+    animation: draw 1.6s ease forwards;
+  }
+
+  .edges path:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .edges path:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .edges path:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  .edges path:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+
+  .edges path:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+
+  .nodes circle {
+    fill: color-mix(in srgb, var(--accent) 55%, var(--bg-elevated));
+    stroke: color-mix(in srgb, var(--accent) 70%, white);
+    stroke-width: 1.5;
+    opacity: 0;
+    animation: pop 0.8s ease forwards;
+  }
+
+  .nodes circle:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .nodes circle:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .nodes circle:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .nodes circle:nth-child(5) {
+    animation-delay: 0.7s;
+  }
+
+  .nodes circle:nth-child(6) {
+    animation-delay: 0.8s;
+  }
+
+  .nodes circle:nth-child(7) {
+    animation-delay: 0.9s;
+  }
+
+  .nodes circle:nth-child(8) {
+    animation-delay: 1s;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes pop {
+    to {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .edges path,
+    .nodes circle {
+      animation: none;
+      opacity: 1;
+      stroke-dashoffset: 0;
+    }
+  }
+</style>

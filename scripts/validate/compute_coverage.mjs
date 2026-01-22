@@ -56,6 +56,8 @@ export async function computeCoverage({ dataDir = "data", writeOutput = false } 
   const sections = {};
   sections.topics = await scanSection(path.join("src", "content", "topics"), [".mdx"]);
   sections.trends = await scanSection(path.join("src", "content", "trends"), [".mdx"]).catch(() => ({ claims: 0, withEvidence: 0, coverage: 1 }));
+  sections.applications = await scanSection(path.join("src", "content", "applications"), [".mdx"]).catch(() => ({ claims: 0, withEvidence: 0, coverage: 1 }));
+  sections.frontiers = await scanSection(path.join("src", "content", "frontiers"), [".mdx"]).catch(() => ({ claims: 0, withEvidence: 0, coverage: 1 }));
   sections.digests = await scanSection(path.join("src", "content", "digests"), [".mdx"]);
   sections.glossary = await scanSection(path.join("src", "content", "glossary"), [".mdx"]);
   sections.tools = await scanSection(path.join("src", "pages"), ["tools.astro"]);

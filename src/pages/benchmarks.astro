@@ -1,33 +1,16 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import CitationChip from "@components/CitationChip.astro";
+import { readJson } from "@utils/data";
 
-const benchmarks = [
-  {
-    name: "OCDB",
-    scope: "Observational Causal Discovery Benchmark",
-    evidence: ["2406.04598"],
-    focus: "Graph recovery under controlled distributional settings"
-  },
-  {
-    name: "CausalBench",
-    scope: "LLM causal reasoning evaluation",
-    evidence: ["2404.06349"],
-    focus: "Counterfactual and interventional reasoning in text"
-  },
-  {
-    name: "CausalProfiler",
-    scope: "Benchmarking causal discovery pipelines",
-    evidence: ["2511.22842"],
-    focus: "Pipeline robustness and reproducibility"
-  }
-];
+const benchmarks = await readJson("benchmarks/benchmarks.json");
 ---
-<BaseLayout wide title="Benchmarks & Reproducibility - Causal-AI">
+<BaseLayout wide title="Benchmarks - Causal AI Futures" description="Evaluation protocols and reproducibility standards anchored to evidence.">
   <section class="section hero">
     <div class="container">
-      <h1>Benchmarks & Reproducibility</h1>
-      <p class="subtle">Evaluation protocols and reproducibility standards anchored to evidence.</p>
+      <p class="eyebrow">Benchmarks</p>
+      <h1>Benchmarks & reproducibility</h1>
+      <p class="subtle">Evaluation protocols and replication signals anchored to evidence.</p>
     </div>
   </section>
 
@@ -41,7 +24,7 @@ const benchmarks = [
           </div>
           <p class="subtle">{benchmark.scope}</p>
           <p class="focus">{benchmark.focus}</p>
-          <div class="chip secondary">Replication status: Unknown</div>
+          <div class="chip secondary">{benchmark.replication}</div>
         </div>
       ))}
     </div>

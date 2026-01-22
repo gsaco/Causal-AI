@@ -1,0 +1,50 @@
+---
+title: "Benchmarks & Evaluation Maturity"
+summary: "Causal AI benchmarks are shifting from synthetic tasks to intervention-aware evaluation."
+signals:
+  - "Benchmarks"
+  - "Evaluation"
+  - "Reproducibility"
+foundational:
+  - "1705.08821"
+  - "1501.01332"
+new_wave:
+  - "2406.04598"
+  - "2305.10032"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "How do we measure causal validity across datasets with different interventions?"
+    evidence:
+      - "1705.08821"
+      - "1907.02893"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2406.04598", "2305.10032"]} type="Claim">
+  Evaluation frameworks increasingly emphasize intervention-aware metrics instead of purely predictive scores.
+</Claim>
+
+## What changed & why it matters
+
+As causal AI is deployed, benchmarks must capture intervention impact rather than static accuracy.
+
+## Core ideas
+
+- Evidence must be traceable to arXiv sources.
+- Benchmarks should report sensitivity and shift robustness.
+
+## Evidence ledger
+
+**Foundational**: 1705.08821, 1501.01332
+
+**New wave**: 2406.04598, 2305.10032
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["1705.08821"]} type="Open Question">
+  Which evaluation criteria distinguish causal insight from correlation-driven performance?
+</Claim>

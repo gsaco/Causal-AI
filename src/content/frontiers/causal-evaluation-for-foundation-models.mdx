@@ -1,0 +1,40 @@
+---
+title: "Causal Evaluation for Foundation Models"
+summary: "Evaluation protocols that test counterfactual and interventional reasoning in foundation models."
+topics: ["causal-llms", "counterfactuals", "effect-estimation"]
+trends: ["causal-llm-reasoning-counterfactual-eval"]
+evidence_arxiv: ["2305.10032", "2406.04598", "1705.08821", "1907.02893", "1501.01332", "2002.02770"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## What's emerging
+
+<Claim evidence={["2305.10032", "2406.04598", "2002.02770"]}>
+  New benchmarks probe whether foundation models answer counterfactual queries with causal consistency.
+</Claim>
+
+## What's still missing
+
+- Agreement on causal evaluation protocols across tasks.
+- Evidence that performance generalizes beyond curated datasets.
+
+<Claim evidence={["1705.08821", "1907.02893", "1501.01332"]} type="Warning">
+  Without causal identification, evaluation results can be misleading under distribution shift.
+</Claim>
+
+## Signals to watch
+
+- Counterfactual QA datasets with intervention annotations.
+- Model editing methods tested with causal probes.
+
+## Related topics / trails
+
+- Causal effect estimation
+- Causal LLM reasoning
+
+## Guardrails
+
+- What this does NOT prove: Emerging signals are not guarantees of impact.
+- Common misstatements: Avoid claiming deployment readiness without evidence-backed evaluation.
+

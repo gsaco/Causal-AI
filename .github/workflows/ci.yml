@@ -35,3 +35,6 @@ jobs:
 
       - name: Validate build artifacts
         run: node scripts/validate/validate_build_artifacts.mjs
+
+      - name: Performance budget
+        run: node scripts/validate/perf_budget.mjs

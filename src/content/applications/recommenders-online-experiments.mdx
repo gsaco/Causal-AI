@@ -1,0 +1,37 @@
+---
+title: "Recommender Systems & Online Experiments"
+summary: "Causal evaluation for interventions in personalization, ranking, and product experiments."
+topics: ["off-policy-evaluation", "effect-estimation", "causal-rl"]
+trends: ["causal-rl-ope-reliability", "causal-agents-intervention-planning"]
+evidence_arxiv: ["1705.08821", "2010.05761", "1907.02893", "1803.01422", "2011.04216", "2307.16405"]
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+## The causal question
+
+Which interventions improve user outcomes, and how robust are they under feedback loops and non-stationarity?
+
+## Common failure modes without causality
+
+- Feedback loops bias logged data.
+- Short-term metrics hide long-term causal effects.
+- Offline evaluation fails to predict online impact.
+
+<Claim evidence={["1705.08821", "2010.05761", "1907.02893"]}>
+  Off-policy evaluation and causal effect estimation are necessary when randomized experiments are limited or costly.
+</Claim>
+
+## Methods that show up a lot
+
+- Off-policy evaluation, counterfactual estimators
+- Causal bandits and reinforcement learning
+- Interventional evaluation protocols
+
+<Claim evidence={["1803.01422", "2011.04216", "2307.16405"]} type="Signal">
+  Modern recommender pipelines increasingly pair causal estimators with tooling for continuous experiment audits.
+</Claim>
+
+## Benchmarks / datasets
+
+- Track online experiment datasets that include logging policies and intervention metadata.

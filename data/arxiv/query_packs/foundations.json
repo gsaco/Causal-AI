@@ -1,0 +1,10 @@
+{
+  "version": "2026-01-22/v1",
+  "group": "Foundations",
+  "topics": ["foundations-scm", "identifiability-do-calculus", "counterfactuals"],
+  "queries": [
+    "ti:\"structural causal\" OR abs:\"structural causal\"",
+    "ti:identifiability OR abs:identifiability OR ti:\"do-calculus\"",
+    "ti:counterfactual OR abs:counterfactual"
+  ]
+}

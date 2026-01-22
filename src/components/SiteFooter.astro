@@ -1,23 +1,28 @@
 ---
 import { withBase } from "@utils/withBase";
+import { siteMeta } from "@lib/siteMeta";
 
 const links = [
-  { href: "/trust/editorial", label: "Editorial Policy" },
-  { href: "/trust/provenance", label: "Data Provenance" },
-  { href: "/trust/how-to-cite", label: "How to Cite" },
-  { href: "/contribute", label: "Contribute" }
+  { href: "/about", label: "About" },
+  { href: siteMeta.repoUrl, label: "GitHub", external: true },
+  { href: "/trust/how-to-cite", label: "Cite" }
 ];
 ---
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>
-      <strong>Causal-AI</strong>
-      <p class="subtle">An arXiv-grounded field guide for causal intelligence.</p>
+    <div class="footer-brand">
+      <strong>{siteMeta.title}</strong>
+      <p class="subtle">{siteMeta.tagline}</p>
+      <p class="subtle footer-credit">Built by {siteMeta.author}.</p>
     </div>
     <div class="footer-links">
-      {links.map((link) => (
-        <a href={withBase(link.href)}>{link.label}</a>
-      ))}
+      {links.map((link) =>
+        link.external ? (
+          <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+        ) : (
+          <a href={withBase(link.href)}>{link.label}</a>
+        )
+      )}
     </div>
   </div>
 </footer>
@@ -33,6 +38,15 @@ const links = [
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .footer-brand {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .footer-credit {
+    font-size: 0.85rem;
   }
 
   .footer-links {

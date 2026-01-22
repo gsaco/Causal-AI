@@ -1,0 +1,50 @@
+---
+title: "Causal Privacy & Data Minimization"
+summary: "Causal inference is adapting to privacy constraints and data minimization demands."
+signals:
+  - "Privacy"
+  - "Data minimization"
+  - "Compliance"
+foundational:
+  - "1705.08821"
+  - "1703.06856"
+new_wave:
+  - "2002.11631"
+  - "2011.04216"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "How do we preserve identifiability under privacy-preserving releases?"
+    evidence:
+      - "1705.08821"
+      - "2002.11631"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2002.11631", "2011.04216"]} type="Claim">
+  Privacy-aware causal pipelines must expose estimands and assumptions explicitly to avoid false guarantees.
+</Claim>
+
+## What changed & why it matters
+
+Regulatory pressure is forcing causal teams to operate with limited data access and higher transparency.
+
+## Core ideas
+
+- Data minimization changes the estimand.
+- Tooling must document privacy constraints alongside causal assumptions.
+
+## Evidence ledger
+
+**Foundational**: 1705.08821, 1703.06856
+
+**New wave**: 2002.11631, 2011.04216
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["2002.11631"]} type="Open Question">
+  Which privacy guarantees preserve causal validity without inflating uncertainty?
+</Claim>

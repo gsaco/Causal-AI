@@ -1,0 +1,52 @@
+---
+title: "{{title}}"
+scope: "{{scope}}"
+anchors:
+{{anchors}}
+last_reviewed: "{{last_reviewed}}"
+reading_path:
+  beginner:
+{{reading_beginner}}
+  intermediate:
+{{reading_intermediate}}
+  advanced:
+{{reading_advanced}}
+---
+import Claim from "../../components/Claim.astro";
+
+## Field guide
+
+<Claim evidence={{{claim_evidence_primary}}}>
+  {{claim_primary}}
+</Claim>
+
+<Claim evidence={{{claim_evidence_signal}}} type="Signal">
+  {{claim_signal}}
+</Claim>
+
+<Claim evidence={{{claim_evidence_debate}}} type="Debate">
+  {{claim_debate}}
+</Claim>
+
+## Evaluation cues
+
+<Claim evidence={{{claim_evidence_eval}}} type="Metric">
+  {{claim_eval}}
+</Claim>
+
+## Open problems
+
+<Claim evidence={{{claim_evidence_open}}} type="Open Question">
+  {{claim_open}}
+</Claim>
+
+## Common pitfalls / Do not overclaim
+
+<Claim evidence={{{claim_evidence_pitfall}}} type="Warning">
+  {{claim_pitfall}}
+</Claim>
+
+## Guardrails
+
+- What this does NOT prove: {{guardrail_not_prove}}
+- Common misstatements: {{guardrail_misstatements}}

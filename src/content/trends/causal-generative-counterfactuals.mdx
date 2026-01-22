@@ -1,0 +1,50 @@
+---
+title: "Causal Generative Modeling for Counterfactuals"
+summary: "Generative models are being constrained to produce intervention-consistent counterfactuals."
+signals:
+  - "Generative models"
+  - "Counterfactuals"
+  - "Constraints"
+foundational:
+  - "1705.08821"
+  - "1501.01332"
+new_wave:
+  - "2305.10032"
+  - "2406.04598"
+debates:
+  - "1907.02893"
+open_problems:
+  - prompt: "How do we validate counterfactual samples without ground-truth interventions?"
+    evidence:
+      - "2305.10032"
+      - "1705.08821"
+last_reviewed: "2026-01-22"
+---
+import Claim from "../../components/Claim.astro";
+
+<Claim evidence={["2305.10032", "2406.04598"]} type="Claim">
+  Counterfactual generation increasingly enforces causal constraints rather than purely statistical similarity.
+</Claim>
+
+## What changed & why it matters
+
+Causal generative models risk convincing outputs without causal validity, making evaluation crucial.
+
+## Core ideas
+
+- Structural constraints shape plausible counterfactuals.
+- Evaluation must test intervention-consistent outcomes.
+
+## Evidence ledger
+
+**Foundational**: 1705.08821, 1501.01332
+
+**New wave**: 2305.10032, 2406.04598
+
+**Debates**: 1907.02893
+
+## Open problems
+
+<Claim evidence={["2305.10032"]} type="Open Question">
+  What evaluation protocols distinguish causal counterfactuals from stylistic rewrites?
+</Claim>

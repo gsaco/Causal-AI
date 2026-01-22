@@ -1,31 +1,64 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import PlaylistCard from "@components/PlaylistCard.astro";
+import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
+
+const paths = await readJson("curation/learning_paths.json");
+const playlists = await readJson("curation/playlists.json");
 ---
-<BaseLayout wide title="Learn - Causal-AI" description="Learning paths through causal AI.">
+<BaseLayout wide title="Learn - Causal AI Futures" description="Learning paths and playlists for causal AI.">
   <section class="section hero">
     <div class="container">
-      <h1>Start Here</h1>
-      <p class="subtle">Three guided paths into causal AI, grounded in our topic field guides.</p>
+      <p class="eyebrow">Start here</p>
+      <h1>Learning paths, not just lists</h1>
+      <p class="subtle">Evidence-first routes for students, researchers, and builders.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container grid">
-      <div class="card">
-        <h2>Foundations</h2>
-        <p class="subtle">Causal graphs, identifiability, and core estimation.</p>
-        <a class="button" href={withBase("/topics/causal-discovery")}>Begin</a>
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Paths</p>
+        <h2>Choose a learning path</h2>
+        <p>Each path links to topics, tendencies, and applications with arXiv-backed anchors.</p>
       </div>
-      <div class="card">
-        <h2>Robustness & Shift</h2>
-        <p class="subtle">Invariant predictors and distribution shift.</p>
-        <a class="button" href={withBase("/topics/distribution-shift")}>Explore</a>
+      <div class="card-grid">
+        {paths.map((path) => (
+          <article class="card path-card" id={path.id}>
+            <div>
+              <h3>{path.title}</h3>
+              <p class="subtle">{path.summary}</p>
+            </div>
+            <div class="path-sections">
+              {path.sections.map((section) => (
+                <div>
+                  <strong>{section.label}</strong>
+                  <ul>
+                    {section.items.map((item) => (
+                      <li><a href={withBase(item.href)}>{item.label}</a></li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
-      <div class="card">
-        <h2>Applied Systems</h2>
-        <p class="subtle">Tooling, fairness, and deployment signals.</p>
-        <a class="button" href={withBase("/topics/systems-tooling")}>Go</a>
+    </div>
+  </section>
+
+  <section class="section" id="playlists">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Playlists</p>
+        <h2>Reading time playlists</h2>
+        <p>Use these for quick skims, deep reads, or paper trail sessions.</p>
+      </div>
+      <div class="card-grid">
+        {playlists.map((playlist) => (
+          <PlaylistCard playlist={playlist} />
+        ))}
       </div>
     </div>
   </section>
@@ -36,10 +69,20 @@ import { withBase } from "@utils/withBase";
       font-size: clamp(2rem, 3vw, 2.8rem);
     }
 
-    .grid {
+    .path-card {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .path-sections {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .path-sections ul {
+      margin: 0.4rem 0 0;
+      padding-left: 1.2rem;
+      line-height: 1.5;
     }
   </style>
 </BaseLayout>
