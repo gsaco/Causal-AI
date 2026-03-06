@@ -1,0 +1,97 @@
+{
+  "arxiv_id": "2602.04718",
+  "canonical_url": "https://arxiv.org/abs/2602.04718v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.04718v1",
+  "title": "Identifying Intervenable and Interpretable Features via Orthogonality Regularization",
+  "abstract": "With recent progress on fine-tuning language models around a fixed sparse autoencoder, we disentangle the decoder matrix into almost orthogonal features. This reduces interference and superposition between the features, while keeping performance on the target dataset essentially unchanged. Our orthogonality penalty leads to identifiable features, ensuring the uniqueness of the decomposition. Further, we find that the distance between embedded feature explanations increases with stricter orthogonality penalty, a desirable property for interpretability. Invoking the $\\textit{Independent Causal Mechanisms}$ principle, we argue that orthogonality promotes modular representations amenable to causal intervention. We empirically show that these increasingly orthogonalized features allow for isolated interventions. Our code is available under $\\texttt{https://github.com/mrtzmllr/sae-icm}$.",
+  "authors": [
+    {
+      "name": "Moritz Miller"
+    },
+    {
+      "name": "Florent Draye"
+    },
+    {
+      "name": "Bernhard Schölkopf"
+    }
+  ],
+  "submitted_at": "2026-02-04",
+  "updated_at": "2026-02-04",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6464,
+    "recent_score": 0.4294,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.557
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-04"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.04718v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.04718v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:disentanglement AND abs:causal AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

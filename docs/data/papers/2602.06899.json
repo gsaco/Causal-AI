@@ -1,0 +1,141 @@
+{
+  "arxiv_id": "2602.06899",
+  "canonical_url": "https://arxiv.org/abs/2602.06899v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.06899v1",
+  "title": "Sample Complexity of Causal Identification with Temporal Heterogeneity",
+  "abstract": "Recovering a unique causal graph from observational data is an ill-posed problem because multiple generating mechanisms can lead to the same observational distribution. This problem becomes solvable only by exploiting specific structural or distributional assumptions. While recent work has separately utilized time-series dynamics or multi-environment heterogeneity to constrain this problem, we integrate both as complementary sources of heterogeneity. This integration yields unified necessary identifiability conditions and enables a rigorous analysis of the statistical limits of recovery under thin versus heavy-tailed noise. In particular, temporal structure is shown to effectively substitute for missing environmental diversity, possibly achieving identifiability even under insufficient heterogeneity. Extending this analysis to heavy-tailed (Student's t) distributions, we demonstrate that while geometric identifiability conditions remain invariant, the sample complexity diverges significantly from the Gaussian baseline. Explicit information-theoretic bounds quantify this cost of robustness, establishing the fundamental limits of covariance-based causal graph recovery methods in realistic non-stationary systems. This work shifts the focus from whether causal structure is identifiable to whether it is statistically recoverable in practice.",
+  "authors": [
+    {
+      "name": "Ameya Rathod"
+    },
+    {
+      "name": "Sujay Belsare"
+    },
+    {
+      "name": "Salvik Krishna Nautiyal"
+    },
+    {
+      "name": "Dhruv Laad"
+    },
+    {
+      "name": "Ponnurangam Kumaraguru"
+    }
+  ],
+  "submitted_at": "2026-02-06",
+  "updated_at": "2026-02-06",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.624,
+    "recent_score": 0.454,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.5152
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-06"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.06899v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.06899v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,132 @@
+{
+  "arxiv_id": "2510.14623",
+  "canonical_url": "https://arxiv.org/abs/2510.14623v3",
+  "pdf_url": "https://arxiv.org/pdf/2510.14623v3",
+  "title": "LeapFactual: Reliable Visual Counterfactual Explanation Using Conditional Flow Matching",
+  "abstract": "The growing integration of machine learning (ML) and artificial intelligence (AI) models into high-stakes domains such as healthcare and scientific research calls for models that are not only accurate but also interpretable. Among the existing explainable methods, counterfactual explanations offer interpretability by identifying minimal changes to inputs that would alter a model's prediction, thus providing deeper insights. However, current counterfactual generation methods suffer from critical limitations, including gradient vanishing, discontinuous latent spaces, and an overreliance on the alignment between learned and true decision boundaries. To overcome these limitations, we propose LeapFactual, a novel counterfactual explanation algorithm based on conditional flow matching. LeapFactual generates reliable and informative counterfactuals, even when true and learned decision boundaries diverge. Following a model-agnostic approach, LeapFactual is not limited to models with differentiable loss functions. It can even handle human-in-the-loop systems, expanding the scope of counterfactual explanations to domains that require the participation of human annotators, such as citizen science. We provide extensive experiments on benchmark and real-world datasets showing that LeapFactual generates accurate and in-distribution counterfactual explanations that offer actionable insights. We observe, for instance, that our reliable counterfactual samples with labels aligning to ground truth can be beneficially used as new training data to enhance the model. The proposed method is broadly applicable and enhances both scientific knowledge discovery and non-expert interpretability.",
+  "authors": [
+    {
+      "name": "Zhuo Cao"
+    },
+    {
+      "name": "Xuan Zhao"
+    },
+    {
+      "name": "Lena Krieger"
+    },
+    {
+      "name": "Hanno Scharr"
+    },
+    {
+      "name": "Ira Assent"
+    }
+  ],
+  "submitted_at": "2025-10-16",
+  "updated_at": "2025-10-22",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4186,
+    "recent_score": 0.0251,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2533
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v3",
+      "updated_at": "2025-10-22"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.14623v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.14623v3"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

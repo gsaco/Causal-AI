@@ -1,0 +1,128 @@
+{
+  "arxiv_id": "2602.09389",
+  "canonical_url": "https://arxiv.org/abs/2602.09389v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.09389v1",
+  "title": "TVTSyn: Content-Synchronous Time-Varying Timbre for Streaming Voice Conversion and Anonymization",
+  "abstract": "Real-time voice conversion and speaker anonymization require causal, low-latency synthesis without sacrificing intelligibility or naturalness. Current systems have a core representational mismatch: content is time-varying, while speaker identity is injected as a static global embedding. We introduce a streamable speech synthesizer that aligns the temporal granularity of identity and content via a content-synchronous, time-varying timbre (TVT) representation. A Global Timbre Memory expands a global timbre instance into multiple compact facets; frame-level content attends to this memory, a gate regulates variation, and spherical interpolation preserves identity geometry while enabling smooth local changes. In addition, a factorized vector-quantized bottleneck regularizes content to reduce residual speaker leakage. The resulting system is streamable end-to-end, with <80 ms GPU latency. Experiments show improvements in naturalness, speaker transfer, and anonymization compared to SOTA streaming baselines, establishing TVT as a scalable approach for privacy-preserving and expressive speech synthesis under strict latency budgets.",
+  "authors": [
+    {
+      "name": "Waris Quamer"
+    },
+    {
+      "name": "Mu-Ruei Tseng"
+    },
+    {
+      "name": "Ghady Nasrallah"
+    },
+    {
+      "name": "Ricardo Gutierrez-Osuna"
+    }
+  ],
+  "submitted_at": "2026-02-10",
+  "updated_at": "2026-02-10",
+  "primary_category": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.CL",
+    "cs.LG",
+    "cs.SD"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.6283,
+    "recent_score": 0.5076,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.5674
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-10"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.09389v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.09389v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

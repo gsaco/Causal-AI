@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2602.02601",
+  "canonical_url": "https://arxiv.org/abs/2602.02601v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02601v1",
+  "title": "CaST: Causal Discovery via Spatio-Temporal Graphs in Disaster Tweets",
+  "abstract": "Understanding causality between real-world events from social media is essential for situational awareness, yet existing causal discovery methods often overlook the interplay between semantic, spatial, and temporal contexts. We propose CaST: Causal Discovery via Spatio-Temporal Graphs, a unified framework for causal discovery in disaster domain that integrates semantic similarity and spatio-temporal proximity using Large Language Models (LLMs) pretrained on disaster datasets. CaST constructs an event graph for each window of tweets. Each event extracted from tweets is represented as a node embedding enriched with its contextual semantics, geographic coordinates, and temporal features. These event nodes are then connected to form a spatio-temporal event graph, which is processed using a multi-head Graph Attention Network (GAT) \\cite{gat} to learn directed causal relationships. We construct an in-house dataset of approximately 167K disaster-related tweets collected during Hurricane Harvey and annotated following the MAVEN-ERE schema. Experimental results show that CaST achieves superior performance over both traditional and state-of-the-art methods. Ablation studies further confirm that incorporating spatial and temporal signals substantially improves both recall and stability during training. Overall, CaST demonstrates that integrating spatio-temporal reasoning into event graphs enables more robust and interpretable causal discovery in disaster-related social media text.",
+  "authors": [
+    {
+      "name": "Hieu Duong"
+    },
+    {
+      "name": "Eugene Levin"
+    },
+    {
+      "name": "Todd Gary"
+    },
+    {
+      "name": "Long Nguyen"
+    }
+  ],
+  "submitted_at": "2026-02-01",
+  "updated_at": "2026-02-01",
+  "primary_category": "cs.SI",
+  "categories": [
+    "cs.SI",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5941,
+    "recent_score": 0.395,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.4978
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02601v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02601v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

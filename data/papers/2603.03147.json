@@ -1,0 +1,104 @@
+{
+  "arxiv_id": "2603.03147",
+  "canonical_url": "https://arxiv.org/abs/2603.03147v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.03147v1",
+  "title": "Agentic AI-based Coverage Closure for Formal Verification",
+  "abstract": "Coverage closure is a critical requirement in Integrated Chip (IC) development process and key metric for verification sign-off. However, traditional exhaustive approaches often fail to achieve full coverage within project timelines. This study presents an agentic AI-driven workflow that utilizes Large Language Model (LLM)-enabled Generative AI (GenAI) to automate coverage analysis for formal verification, identify coverage gaps, and generate the required formal properties. The framework accelerates verification efficiency by systematically addressing coverage holes. Benchmarking open-source and internal designs reveals a measurable increase in coverage metrics, with improvements correlated to the complexity of the design. Comparative analysis validates the effectiveness of this approach. These results highlight the potential of agentic AI-based techniques to improve formal verification productivity and support comprehensive coverage closure.",
+  "authors": [
+    {
+      "name": "Sivaram Pothireddypalli"
+    },
+    {
+      "name": "Ashish Raman"
+    },
+    {
+      "name": "Deepak Narayan Gadde"
+    },
+    {
+      "name": "Aman Kumar"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.8272,
+    "recent_score": 0.9181,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.7981
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.03147v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.03147v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "representation",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

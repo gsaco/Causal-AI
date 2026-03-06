@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2602.06262",
+  "canonical_url": "https://arxiv.org/abs/2602.06262v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.06262v1",
+  "title": "Latent variation in pathogen strain-specific effects under multiple-versions-of-treatment theory",
+  "abstract": "Evidence-informed policy on infections requires estimates of their effects on health. However, pathogenic variation, whereby occurrence of adverse outcomes depends on the infecting strain, might complicate the study of many infectious agents. Here, we consider the interpretation of epidemiologic studies on effects of infections on health when there is heterogeneity in strain-specific effects and information on strain composition is unavailable. We use potential outcomes and causal inference theory for analyses in the presence of multiple versions of treatment to argue that oft-reported quantities in these studies have a causal interpretation that depends on population frequencies of infecting strains. Moreover, as in other contexts where the treatment-variation-irrelevance assumption might be violated, transportability requires additional considerations, beyond those needed for non-compound exposures. This discussion, that considers potential heterogeneity in strain-specific effects, will facilitate interpretation of these studies, and for the reasons mentioned above, also highlights the value of pathogen subtype data.",
+  "authors": [
+    {
+      "name": "Bronner P. Gonçalves"
+    }
+  ],
+  "submitted_at": "2026-02-05",
+  "updated_at": "2026-02-05",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6015,
+    "recent_score": 0.4415,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5197
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-05"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.06262v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.06262v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

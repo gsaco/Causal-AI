@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2302.08854",
+  "canonical_url": "https://arxiv.org/abs/2302.08854v5",
+  "pdf_url": "https://arxiv.org/pdf/2302.08854v5",
+  "title": "Post Reinforcement Learning Inference",
+  "abstract": "We study estimation and inference using data collected by reinforcement learning (RL) algorithms. These algorithms adaptively experiment by interacting with individual units over multiple stages, updating their strategies based on past outcomes. Our goal is to evaluate a counterfactual policy after data collection and estimate structural parameters, such as dynamic treatment effects, that support credit assignment and quantify the impact of early actions on final outcomes. These parameters can often be defined as solutions to moment equations, motivating moment-based estimation methods developed for static data. In RL settings, however, data are often collected adaptively under nonstationary behavior policies. As a result, standard estimators fail to achieve asymptotic normality due to time-varying variance. We propose a weighted generalized method of moments (GMM) approach that uses adaptive weights to stabilize this variance. We characterize weighting schemes that ensure consistency and asymptotic normality of the weighted GMM estimators, enabling valid hypothesis testing and uniform confidence region construction. Key applications include dynamic treatment effect estimation and dynamic off-policy evaluation.",
+  "authors": [
+    {
+      "name": "Vasilis Syrgkanis"
+    },
+    {
+      "name": "Ruohan Zhan"
+    }
+  ],
+  "submitted_at": "2023-02-17",
+  "updated_at": "2025-10-03",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.4297,
+    "recent_score": 0.0128,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2561
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v5",
+      "updated_at": "2025-10-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2302.08854v5",
+    "arxiv_pdf": "https://arxiv.org/pdf/2302.08854v5"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

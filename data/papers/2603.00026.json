@@ -1,0 +1,158 @@
+{
+  "arxiv_id": "2603.00026",
+  "canonical_url": "https://arxiv.org/abs/2603.00026v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.00026v1",
+  "title": "ActMem: Bridging the Gap Between Memory Retrieval and Reasoning in LLM Agents",
+  "abstract": "Effective memory management is essential for large language model (LLM) agents handling long-term interactions. Current memory frameworks typically treat agents as passive \"recorders\" and retrieve information without understanding its deeper implications. They may fail in scenarios requiring conflict detection and complex decision-making. To bridge this critical gap, we propose a novel actionable memory framework called ActMem that integrates memory retrieval with active causal reasoning. ActMem transforms unstructured dialogue history into a structured causal and semantic graph. By leveraging counterfactual reasoning and commonsense completion, it enables agents to deduce implicit constraints and resolve potential conflicts between past states and current intentions. Furthermore, we introduce a comprehensive dataset ActMemEval to evaluate agent reasoning capabilities in logic-driven scenarios, moving beyond the fact-retrieval focus of existing memory benchmarks. Experiments demonstrate that ActMem significantly outperforms state-of-the-art baselines in handling complex, memory-dependent tasks, paving the way for more consistent and reliable intelligent assistants.",
+  "authors": [
+    {
+      "name": "Xiaohui Zhang"
+    },
+    {
+      "name": "Zequn Sun"
+    },
+    {
+      "name": "Chengyuan Yang"
+    },
+    {
+      "name": "Yaqin Jin"
+    },
+    {
+      "name": "Yazhong Zhang"
+    },
+    {
+      "name": "Wei Hu"
+    }
+  ],
+  "submitted_at": "2026-02-04",
+  "updated_at": "2026-02-04",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6744,
+    "recent_score": 0.4294,
+    "canonical_score": 0.9865,
+    "max_topic_confidence": 0.97,
+    "rising_score": 0.5704
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.97,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-04"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.00026v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.00026v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

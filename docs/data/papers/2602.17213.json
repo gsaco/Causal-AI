@@ -1,0 +1,114 @@
+{
+  "arxiv_id": "2602.17213",
+  "canonical_url": "https://arxiv.org/abs/2602.17213v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.17213v1",
+  "title": "Extending quantum theory with AI-assisted deterministic game theory",
+  "abstract": "We present an AI-assisted framework for predicting individual runs of complex quantum experiments, including contextuality and causality (adaptive measurements), within our long-term programme of discovering a local hidden-variable theory that extends quantum theory. In order to circumvent impossibility theorems, we replace the assumption of free choice (measurement independence and parameter independence) with a weaker, compatibilistic version called contingent free choice. Our framework is based on interpreting complex quantum experiments as a Chess-like game between observers and the universe, which is seen as an economic agent minimizing action. The game structures corresponding to generic experiments such as fixed-causal-order process matrices or causal contextuality scenarios, together with a deterministic non-Nashian resolution algorithm that abandons unilateral deviation assumptions (free choice) and assumes Perfect Prediction instead, were described in previous work. In this new research, we learn the reward functions of the game, which contain a hidden variable, using neural networks. The cost function is the Kullback-Leibler divergence between the frequency histograms obtained through many deterministic runs of the game and the predictions of the extended Born rule. Using our framework on the specific case of the EPR 2-2-2 experiment acts as a proof-of-concept and a toy local-realist hidden-variable model that non-Nashian quantum theory is a promising avenue towards a local hidden-variable theory. Our framework constitutes a solid foundation, which can be further expanded in order to fully discover a complete quantum theory.",
+  "authors": [
+    {
+      "name": "Florian Pauschitz"
+    },
+    {
+      "name": "Ben Moseley"
+    },
+    {
+      "name": "Ghislain Fourny"
+    }
+  ],
+  "submitted_at": "2026-02-19",
+  "updated_at": "2026-02-19",
+  "primary_category": "quant-ph",
+  "categories": [
+    "quant-ph",
+    "cs.AI",
+    "cs.GT"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.7556,
+    "recent_score": 0.6535,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.7371
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-19"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.17213v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.17213v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal) AND (ti:agent OR abs:agent) AND (abs:intervention OR abs:planning OR abs:tool use)) AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

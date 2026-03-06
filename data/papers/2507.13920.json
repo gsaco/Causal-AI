@@ -1,0 +1,137 @@
+{
+  "arxiv_id": "2507.13920",
+  "canonical_url": "https://arxiv.org/abs/2507.13920v1",
+  "pdf_url": "https://arxiv.org/pdf/2507.13920v1",
+  "title": "Reframing attention as a reinforcement learning problem for causal discovery",
+  "abstract": "Formal frameworks of causality have operated largely parallel to modern trends in deep reinforcement learning (RL). However, there has been a revival of interest in formally grounding the representations learned by neural networks in causal concepts. Yet, most attempts at neural models of causality assume static causal graphs and ignore the dynamic nature of causal interactions. In this work, we introduce Causal Process framework as a novel theory for representing dynamic hypotheses about causal structure. Furthermore, we present Causal Process Model as an implementation of this framework. This allows us to reformulate the attention mechanism popularized by Transformer networks within an RL setting with the goal to infer interpretable causal processes from visual observations. Here, causal inference corresponds to constructing a causal graph hypothesis which itself becomes an RL task nested within the original RL problem. To create an instance of such hypothesis, we employ RL agents. These agents establish links between units similar to the original Transformer attention mechanism. We demonstrate the effectiveness of our approach in an RL environment where we outperform current alternatives in causal representation learning and agent performance, and uniquely recover graphs of dynamic causal processes.",
+  "authors": [
+    {
+      "name": "Turan Orujlu"
+    },
+    {
+      "name": "Christian Gumbsch"
+    },
+    {
+      "name": "Martin V. Butz"
+    },
+    {
+      "name": "Charley M Wu"
+    }
+  ],
+  "submitted_at": "2025-07-18",
+  "updated_at": "2025-07-18",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4249,
+    "recent_score": 0.0024,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2617
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-07-18"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2507.13920v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2507.13920v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

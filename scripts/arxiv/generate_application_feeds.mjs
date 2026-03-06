@@ -22,16 +22,22 @@ function byTrendingDesc(a, b) {
   return (b.metrics?.trending_score ?? 0) - (a.metrics?.trending_score ?? 0);
 }
 
-export async function generateApplicationFeeds({ dataDir = "data", windowDays = 30, limitLatest = 12, limitTrending = 12 } = {}) {
+export async function generateApplicationFeeds({
+  dataDir = "data",
+  windowDays = 30,
+  limitLatest = 12,
+  limitTrending = 12,
+  papers
+} = {}) {
   const registryPath = path.join(dataDir, "applications", "registry.json");
   const indexPath = path.join(dataDir, "papers.index.json");
 
-  const [registryRaw, indexRaw] = await Promise.all([
+  const [registryRaw, indexPayload] = await Promise.all([
     fs.readFile(registryPath, "utf-8"),
-    fs.readFile(indexPath, "utf-8")
+    papers ? Promise.resolve(JSON.stringify(papers)) : fs.readFile(indexPath, "utf-8")
   ]);
   const registry = JSON.parse(registryRaw);
-  const papers = JSON.parse(indexRaw);
+  const papersData = JSON.parse(indexPayload);
 
   const windowStart = formatDate(new Date(Date.now() - windowDays * 24 * 60 * 60 * 1000));
   const windowEnd = formatDate(new Date());
@@ -40,8 +46,9 @@ export async function generateApplicationFeeds({ dataDir = "data", windowDays = 
   await fs.mkdir(path.join(dataDir, "applications"), { recursive: true });
 
   for (const entry of registry) {
-    const latest = [...papers].sort(byUpdatedAtDesc).slice(0, limitLatest).map((paper) => paper.arxiv_id);
-    const trending = [...papers].sort(byTrendingDesc).slice(0, limitTrending).map((paper) => paper.arxiv_id);
+    const matching = papersData.filter((paper) => (paper.application_tags ?? []).includes(entry.slug));
+    const latest = [...matching].sort(byUpdatedAtDesc).slice(0, limitLatest).map((paper) => paper.arxiv_id);
+    const trending = [...matching].sort(byTrendingDesc).slice(0, limitTrending).map((paper) => paper.arxiv_id);
 
     const output = {
       latest,

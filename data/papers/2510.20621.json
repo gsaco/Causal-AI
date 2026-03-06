@@ -1,0 +1,140 @@
+{
+  "arxiv_id": "2510.20621",
+  "canonical_url": "https://arxiv.org/abs/2510.20621v2",
+  "pdf_url": "https://arxiv.org/pdf/2510.20621v2",
+  "title": "Towards the Formalization of a Trustworthy AI for Mining Interpretable Models explOiting Sophisticated Algorithms",
+  "abstract": "Interpretable-by-design models are crucial for fostering trust, accountability, and safe adoption of automated decision-making models in real-world applications. In this paper we formalize the ground for the MIMOSA (Mining Interpretable Models explOiting Sophisticated Algorithms) framework, a comprehensive methodology for generating predictive models that balance interpretability with performance while embedding key ethical properties. We formally define here the supervised learning setting across diverse decision-making tasks and data types, including tabular data, time series, images, text, transactions, and trajectories. We characterize three major families of interpretable models: feature importance, rule, and instance based models. For each family, we analyze their interpretability dimensions, reasoning mechanisms, and complexity. Beyond interpretability, we formalize three critical ethical properties, namely causality, fairness, and privacy, providing formal definitions, evaluation metrics, and verification procedures for each. We then examine the inherent trade-offs between these properties and discuss how privacy requirements, fairness constraints, and causal reasoning can be embedded within interpretable pipelines. By evaluating ethical measures during model generation, this framework establishes the theoretical foundations for developing AI systems that are not only accurate and interpretable but also fair, privacy-preserving, and causally aware, i.e., trustworthy.",
+  "authors": [
+    {
+      "name": "Riccardo Guidotti"
+    },
+    {
+      "name": "Martina Cinquini"
+    },
+    {
+      "name": "Marta Marchiori Manerba"
+    },
+    {
+      "name": "Mattia Setzu"
+    },
+    {
+      "name": "Francesco Spinnato"
+    }
+  ],
+  "submitted_at": "2025-10-23",
+  "updated_at": "2025-10-30",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4223,
+    "recent_score": 0.0305,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.2702
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-10-30"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.20621v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.20621v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

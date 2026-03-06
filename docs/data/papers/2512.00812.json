@@ -1,0 +1,154 @@
+{
+  "arxiv_id": "2512.00812",
+  "canonical_url": "https://arxiv.org/abs/2512.00812v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.00812v1",
+  "title": "Causal Invariance and Counterfactual Learning Driven Cooperative Game for Multi-Label Classification",
+  "abstract": "Multi-label classification (MLC) remains vulnerable to label imbalance, spurious correlations, and distribution shifts, challenges that are particularly detrimental to rare label prediction. To address these limitations, we introduce the Causal Cooperative Game (CCG) framework, which conceptualizes MLC as a cooperative multi-player interaction. CCG unifies explicit causal discovery via Neural Structural Equation Models with a counterfactual curiosity reward to drive robust feature learning. Furthermore, it incorporates a causal invariance loss to ensure generalization across diverse environments, complemented by a specialized enhancement strategy for rare labels. Extensive benchmarking demonstrates that CCG substantially outperforms strong baselines in both rare label prediction and overall robustness. Through rigorous ablation studies and qualitative analysis, we validate the efficacy and interpretability of our components, underscoring the potential of synergizing causal inference with cooperative game theory for advancing multi-label learning.",
+  "authors": [
+    {
+      "name": "Yijia Fan"
+    },
+    {
+      "name": "Jusheng Zhang"
+    },
+    {
+      "name": "Kaitong Cai"
+    },
+    {
+      "name": "Jing Yang"
+    },
+    {
+      "name": "Keze Wang"
+    }
+  ],
+  "submitted_at": "2025-11-30",
+  "updated_at": "2025-11-30",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5373,
+    "recent_score": 0.0721,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.3995
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-11-30"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.00812v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.00812v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

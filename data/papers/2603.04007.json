@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2603.04007",
+  "canonical_url": "https://arxiv.org/abs/2603.04007v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.04007v1",
+  "title": "Fixed-Budget Constrained Best Arm Identification in Grouped Bandits",
+  "abstract": "We study fixed budget constrained best-arm identification in grouped bandits, where each arm consists of multiple independent attributes with stochastic rewards. An arm is considered feasible only if all its attributes' means are above a given threshold. The aim is to find the feasible arm with the largest overall mean. We first derive a lower bound on the error probability for any algorithm on this setting. We then propose Feasibility Constrained Successive Rejects (FCSR), a novel algorithm that identifies the best arm while ensuring feasibility. We show it attains optimal dependence on problem parameters up to constant factors in the exponent. Empirically, FCSR outperforms natural baselines while preserving feasibility guarantees.",
+  "authors": [
+    {
+      "name": "Raunak Mukherjee"
+    },
+    {
+      "name": "Sharayu Moharir"
+    }
+  ],
+  "submitted_at": "2026-03-04",
+  "updated_at": "2026-03-04",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7789,
+    "recent_score": 0.9447,
+    "canonical_score": 0.5118,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.8679
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-04"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.04007v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.04007v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

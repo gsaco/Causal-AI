@@ -3,7 +3,11 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
 
-const topics = await readJson("taxonomy/topics.json");
+const [topics, facets] = await Promise.all([
+  readJson("taxonomy/topics.json"),
+  readJson("navigator/facets.json")
+]);
+
 const groupOrder = [
   "Foundations",
   "Discovery",
@@ -22,66 +26,102 @@ const grouped = groupOrder.map((group) => ({
     .filter((topic) => topic.group === group)
     .sort((a, b) => (a.priority ?? 3) - (b.priority ?? 3))
 }));
-const ungrouped = topics.filter((topic) => !groupOrder.includes(topic.group));
 ---
-<BaseLayout wide title="Topics - Causal AI Futures" description="Navigate the causal AI taxonomy and reading paths.">
-  <section class="section hero">
-    <div class="container">
-      <p class="eyebrow">Topics</p>
-      <h1>The causal AI map</h1>
-      <p class="subtle">Grouped field guide entries with anchor papers and evidence-first reading paths.</p>
+<BaseLayout wide title="Topics - Causal AI Futures" description="Navigate the causal AI atlas by topic, from foundations to frontier systems.">
+  <section class="section hero hero-ambient">
+    <div class="container topics-hero">
+      <div>
+        <p class="eyebrow">Topic Dossiers</p>
+        <h1>The causal AI map, grouped by the actual research questions.</h1>
+        <p class="subtle hero-copy">
+          Every topic page now acts like a dossier: thesis, canonical papers, rising work, live feeds, tools, and open
+          questions in one place.
+        </p>
+      </div>
+      <div class="card stats-card">
+        <div>
+          <span>Topics</span>
+          <strong>{topics.length}</strong>
+        </div>
+        <div>
+          <span>Corpus</span>
+          <strong>{facets.counts.papers} papers</strong>
+        </div>
+        <div>
+          <span>Groups</span>
+          <strong>{groupOrder.length}</strong>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container topic-groups">
       {grouped.map(({ group, topics }) => (
-        <div class="topic-group">
+        <section class="topic-group">
           <div class="section-header">
+            <p class="eyebrow">{group}</p>
             <h2>{group}</h2>
           </div>
-          <div class="grid">
+          <div class="topic-grid">
             {topics.map((topic) => (
-              <a class="card" href={withBase(`/topics/${topic.id}`)}>
+              <a class="card topic-card" href={withBase(`/topics/${topic.id}`)}>
+                <span class="topic-count">{facets.counts.topics?.[topic.id] ?? 0} papers</span>
                 <h3>{topic.title}</h3>
                 <p class="subtle">{topic.scope}</p>
                 <div class="tag-row">
-                  {topic.anchors.map((anchor) => (
+                  {topic.anchors.slice(0, 2).map((anchor) => (
                     <span class="chip">{anchor}</span>
                   ))}
                 </div>
               </a>
             ))}
           </div>
-        </div>
+        </section>
       ))}
-      {ungrouped.length > 0 && (
-        <div class="topic-group">
-          <div class="section-header">
-            <h2>Other</h2>
-          </div>
-          <div class="grid">
-            {ungrouped.map((topic) => (
-              <a class="card" href={withBase(`/topics/${topic.id}`)}>
-                <h3>{topic.title}</h3>
-                <p class="subtle">{topic.scope}</p>
-                <div class="tag-row">
-                  {topic.anchors.map((anchor) => (
-                    <span class="chip">{anchor}</span>
-                  ))}
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   </section>
 
   <style>
     h1 {
-      margin: 0 0 0.6rem;
-      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0;
+      font-size: clamp(2.8rem, 4.4vw, 4.6rem);
+      line-height: 1.02;
+      max-width: 12ch;
+    }
+
+    .topics-hero {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      max-width: 58ch;
+      line-height: 1.7;
+    }
+
+    .stats-card {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .stats-card span,
+    .topic-count {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    .stats-card strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-top: 0.35rem;
     }
 
     .topic-groups {
@@ -89,15 +129,28 @@ const ungrouped = topics.filter((topic) => !groupOrder.includes(topic.group));
       gap: 2.5rem;
     }
 
-    .topic-group {
+    .topic-grid {
       display: grid;
       gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .grid {
+    .topic-card {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.8rem;
+      min-height: 100%;
+    }
+
+    .topic-card h3 {
+      margin: 0;
+      font-size: 1.35rem;
+    }
+
+    @media (max-width: 980px) {
+      .topics-hero,
+      .stats-card {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </BaseLayout>

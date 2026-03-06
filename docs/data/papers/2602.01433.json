@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2602.01433",
+  "canonical_url": "https://arxiv.org/abs/2602.01433v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.01433v1",
+  "title": "DCD: Decomposition-based Causal Discovery from Autocorrelated and Non-Stationary Temporal Data",
+  "abstract": "Multivariate time series in domains such as finance, climate science, and healthcare often exhibit long-term trends, seasonal patterns, and short-term fluctuations, complicating causal inference under non-stationarity and autocorrelation. Existing causal discovery methods typically operate on raw observations, making them vulnerable to spurious edges and misattributed temporal dependencies. We introduce a decomposition-based causal discovery framework that separates each time series into trend, seasonal, and residual components and performs component-specific causal analysis. Trend components are assessed using stationarity tests, seasonal components using kernel-based dependence measures, and residual components using constraint-based causal discovery. The resulting component-level graphs are integrated into a unified multi-scale causal structure. This approach isolates long- and short-range causal effects, reduces spurious associations, and improves interpretability. Across extensive synthetic benchmarks and real-world climate data, our framework more accurately recovers ground-truth causal structure than state-of-the-art baselines, particularly under strong non-stationarity and temporal autocorrelation.",
+  "authors": [
+    {
+      "name": "Muhammad Hasan Ferdous"
+    },
+    {
+      "name": "Md Osman Gani"
+    }
+  ],
+  "submitted_at": "2026-02-01",
+  "updated_at": "2026-02-01",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6548,
+    "recent_score": 0.395,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5682
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.01433v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.01433v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "climate-energy-earth"
+  ]
+}

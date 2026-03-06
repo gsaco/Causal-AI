@@ -1,0 +1,144 @@
+{
+  "arxiv_id": "2602.12972",
+  "canonical_url": "https://arxiv.org/abs/2602.12972v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.12972v1",
+  "title": "Jointly Optimizing Debiased CTR and Uplift for Coupons Marketing: A Unified Causal Framework",
+  "abstract": "In online advertising, marketing interventions such as coupons introduce significant confounding bias into Click-Through Rate (CTR) prediction. Observed clicks reflect a mixture of users' intrinsic preferences and the uplift induced by these interventions. This causes conventional models to miscalibrate base CTRs, which distorts downstream ranking and billing decisions. Furthermore, marketing interventions often operate as multi-valued treatments with varying magnitudes, introducing additional complexity to CTR prediction. To address these issues, we propose the \\textbf{Uni}fied \\textbf{M}ulti-\\textbf{V}alued \\textbf{T}reatment Network (UniMVT). Specifically, UniMVT disentangles confounding factors from treatment-sensitive representations, enabling a full-space counterfactual inference module to jointly reconstruct the debiased base CTR and intensity-response curves. To handle the complexity of multi-valued treatments, UniMVT employs an auxiliary intensity estimation task to capture treatment propensities and devise a unit uplift objective that normalizes the intervention effect. This ensures comparable estimation across the continuous coupon-value spectrum. UniMVT simultaneously achieves debiased CTR prediction for accurate system calibration and precise uplift estimation for incentive allocation. Extensive experiments on synthetic and industrial datasets demonstrate UniMVT's superiority in both predictive accuracy and calibration. Furthermore, real-world A/B tests confirm that UniMVT significantly improves business metrics through more effective coupon distribution.",
+  "authors": [
+    {
+      "name": "Siyun Yang"
+    },
+    {
+      "name": "Shixiao Yang"
+    },
+    {
+      "name": "Jian Wang"
+    },
+    {
+      "name": "Di Fan"
+    },
+    {
+      "name": "Kehe Cai"
+    },
+    {
+      "name": "Haoyan Fu"
+    },
+    {
+      "name": "Jiaming Zhang"
+    },
+    {
+      "name": "Wenjin Wu"
+    },
+    {
+      "name": "Peng Jiang"
+    }
+  ],
+  "submitted_at": "2026-02-13",
+  "updated_at": "2026-02-13",
+  "primary_category": "cs.SI",
+  "categories": [
+    "cs.SI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6105,
+    "recent_score": 0.5521,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.5197
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "uplift"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-13"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.12972v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.12972v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

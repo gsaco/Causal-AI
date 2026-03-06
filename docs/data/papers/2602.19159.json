@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2602.19159",
+  "canonical_url": "https://arxiv.org/abs/2602.19159v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.19159v1",
+  "title": "Beyond Behavioural Trade-Offs: Mechanistic Tracing of Pain-Pleasure Decisions in an LLM",
+  "abstract": "Prior behavioural work suggests that some LLMs alter choices when options are framed as causing pain or pleasure, and that such deviations can scale with stated intensity. To bridge behavioural evidence (what the model does) with mechanistic interpretability (what computations support it), we investigate how valence-related information is represented and where it is causally used inside a transformer. Using Gemma-2-9B-it and a minimalist decision task modelled on prior work, we (i) map representational availability with layer-wise linear probing across streams, (ii) test causal contribution with activation interventions (steering; patching/ablation), and (iii) quantify dose-response effects over an epsilon grid, reading out both the 2-3 logit margin and digit-pair-normalised choice probabilities. We find that (a) valence sign (pain vs. pleasure) is perfectly linearly separable across stream families from very early layers (L0-L1), while a lexical baseline retains substantial signal; (b) graded intensity is strongly decodable, with peaks in mid-to-late layers and especially in attention/MLP outputs, and decision alignment is highest slightly before the final token; (c) additive steering along a data-derived valence direction causally modulates the 2-3 margin at late sites, with the largest effects observed in late-layer attention outputs (attn_out L14); and (d) head-level patching/ablation suggests that these effects are distributed across multiple heads rather than concentrated in a single unit. Together, these results link behavioural sensitivity to identifiable internal representations and intervention-sensitive sites, providing concrete mechanistic targets for more stringent counterfactual tests and broader replication. This work supports a more evidence-driven (a) debate on AI sentience and welfare, and (b) governance when setting policy, auditing standards, and safety safeguards.",
+  "authors": [
+    {
+      "name": "Francesca Bianco"
+    },
+    {
+      "name": "Derek Shiller"
+    }
+  ],
+  "submitted_at": "2026-02-22",
+  "updated_at": "2026-02-22",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.7186,
+    "recent_score": 0.7112,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.6413
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-22"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.19159v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.19159v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "economics-policy-social",
+    "recommenders-online-experiments"
+  ]
+}

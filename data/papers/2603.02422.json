@@ -1,0 +1,110 @@
+{
+  "arxiv_id": "2603.02422",
+  "canonical_url": "https://arxiv.org/abs/2603.02422v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02422v1",
+  "title": "A Directed Graph Model and Experimental Framework for Design and Study of Time-Dependent Text Visualisation",
+  "abstract": "Exponential growth in the quantity of digital news, social media, and other textual sources makes it difficult for humans to keep up with rapidly evolving narratives about world events. Various visualisation techniques have been touted to help people to understand such discourse by exposing relationships between texts (such as news articles) as topics and themes evolve over time. Arguably, the understandability of such visualisations hinges on the assumption that people will be able to easily interpret the relationships in such visual network structures. To test this assumption, we begin by defining an abstract model of time-dependent text visualisation based on directed graph structures. From this model we distill motifs that capture the set of possible ways that texts can be linked across changes in time. We also develop a controlled synthetic text generation methodology that leverages the power of modern LLMs to create fictional, yet structured sets of time-dependent texts that fit each of our patterns. Therefore, we create a clean user study environment (n=30) for participants to identify patterns that best represent a given set of synthetic articles. We find that it is a challenging task for the user to identify and recover the predefined motif. We analyse qualitative data to map an unexpectedly rich variety of user rationales when divergences from expected interpretation occur. A deeper analysis also points to unexpected complexities inherent in the formation of synthetic datasets with LLMs that undermine the study control in some cases. Furthermore, analysis of individual decision-making in our study hints at a future where text discourse visualisation may need to dispense with a one-size-fits-all approach and, instead, should be more adaptable to the specific user who is exploring the visualisation in front of them.",
+  "authors": [
+    {
+      "name": "Songhai Fan"
+    },
+    {
+      "name": "Simon Angus"
+    },
+    {
+      "name": "Tim Dwyer"
+    },
+    {
+      "name": "Ying Yang"
+    },
+    {
+      "name": "Sarah Goodwin"
+    },
+    {
+      "name": "Helen Purchase"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "cs.HC",
+  "categories": [
+    "cs.HC",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.8125,
+    "recent_score": 0.8924,
+    "canonical_score": 0.7193,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.8435
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02422v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02422v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

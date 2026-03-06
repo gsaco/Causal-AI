@@ -45,7 +45,7 @@ const canonicalUrl = `${siteMeta.siteUrl}${Astro.url.pathname}`;
   </head>
   <body>
     <SiteHeader />
-    <main class={wide ? "" : "reading-width"}>
+    <main class={wide ? "site-main" : "site-main reading-width"} data-pagefind-body>
       <slot />
     </main>
     <SiteFooter />
@@ -63,3 +63,44 @@ const canonicalUrl = `${siteMeta.siteUrl}${Astro.url.pathname}`;
     </script>
   </body>
 </html>
+
+<style>
+  .site-main {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .site-main::before,
+  .site-main::after {
+    content: "";
+    position: fixed;
+    inset: auto;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(70px);
+    opacity: 0.32;
+    z-index: -1;
+  }
+
+  .site-main::before {
+    top: 14vh;
+    left: -10rem;
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+
+  .site-main::after {
+    right: -8rem;
+    bottom: 10vh;
+    background: color-mix(in srgb, var(--accent-2) 26%, transparent);
+  }
+
+  @media (max-width: 900px) {
+    .site-main::before,
+    .site-main::after {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+</style>

@@ -1,0 +1,147 @@
+{
+  "arxiv_id": "2512.13692",
+  "canonical_url": "https://arxiv.org/abs/2512.13692v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.13692v1",
+  "title": "Quantum oracles give an advantage for identifying classical counterfactuals",
+  "abstract": "We show that quantum oracles provide an advantage over classical oracles for answering classical counterfactual questions in causal models, or equivalently, for identifying unknown causal parameters such as distributions over functional dependences. In structural causal models with discrete classical variables, observational data and even ideal interventions generally fail to answer all counterfactual questions, since different causal parameters can reproduce the same observational and interventional data while disagreeing on counterfactuals. Using a simple binary example, we demonstrate that if the classical variables of interest are encoded in quantum systems and the causal dependence among them is encoded in a quantum oracle, coherently querying the oracle enables the identification of all causal parameters -- hence all classical counterfactuals. We generalize this to arbitrary finite cardinalities and prove that coherent probing 1) allows the identification of all two-way joint counterfactuals p(Y_x=y, Y_{x'}=y'), which is not possible with any number of queries to a classical oracle, and 2) provides tighter bounds on higher-order multi-way counterfactuals than with a classical oracle. This work can also be viewed as an extension to traditional quantum oracle problems such as Deutsch--Jozsa to identifying more causal parameters beyond just, e.g., whether a function is constant or balanced. Finally, we raise the question of whether this quantum advantage relies on uniquely non-classical features like contextuality. We provide some evidence against this by showing that in the binary case, oracles in some classically-explainable theories like Spekkens' toy theory also give rise to a counterfactual identifiability advantage over strictly classical oracles.",
+  "authors": [
+    {
+      "name": "Ciarán M. Gilligan-Lee"
+    },
+    {
+      "name": "Yìlè Yīng"
+    },
+    {
+      "name": "Jonathan Richens"
+    },
+    {
+      "name": "David Schmid"
+    }
+  ],
+  "submitted_at": "2025-12-15",
+  "updated_at": "2025-12-15",
+  "primary_category": "quant-ph",
+  "categories": [
+    "quant-ph",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4974,
+    "recent_score": 0.1072,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.3808
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-15"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.13692v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.13692v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

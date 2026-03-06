@@ -1,0 +1,141 @@
+{
+  "arxiv_id": "2602.15546",
+  "canonical_url": "https://arxiv.org/abs/2602.15546v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.15546v1",
+  "title": "CEPAE: Conditional Entropy-Penalized Autoencoders for Time Series Counterfactuals",
+  "abstract": "The ability to accurately perform counterfactual inference on time series is crucial for decision-making in fields like finance, healthcare, and marketing, as it allows us to understand the impact of events or treatments on outcomes over time. In this paper, we introduce a new counterfactual inference approach tailored to time series data impacted by market events, which is motivated by an industrial application. Utilizing the abduction-action-prediction procedure and the Structural Causal Model framework, we first adapt methods based on variational autoencoders and adversarial autoencoders, both previously used in counterfactual literature although not in time series settings. Then, we present the Conditional Entropy-Penalized Autoencoder (CEPAE), a novel autoencoder-based approach for counterfactual inference, which employs an entropy penalization loss over the latent space to encourage disentangled data representations. We validate our approach both theoretically and experimentally on synthetic, semi-synthetic, and real-world datasets, showing that CEPAE generally outperforms the other approaches in the evaluated metrics.",
+  "authors": [
+    {
+      "name": "Tomàs Garriga"
+    },
+    {
+      "name": "Gerard Sanz"
+    },
+    {
+      "name": "Eduard Serrahima de Cambra"
+    },
+    {
+      "name": "Axel Brando"
+    }
+  ],
+  "submitted_at": "2026-02-17",
+  "updated_at": "2026-02-17",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6704,
+    "recent_score": 0.6177,
+    "rising_score": 0.589,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.15546v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.15546v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)",
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "(abs:disentanglement AND abs:causal AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

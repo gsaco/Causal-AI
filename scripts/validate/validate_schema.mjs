@@ -12,6 +12,11 @@ import {
   MetricsTopicTimeseries,
   MetricsTrendRadar,
   MetricsVersionChurn,
+  NavigatorCatalog,
+  NavigatorFacets,
+  NavigatorFeatured,
+  NavigatorLenses,
+  NavigatorPages,
   OaiState,
   Paper,
   PaperIndexEntry,
@@ -56,6 +61,11 @@ function getSchemaForPath(relativePath) {
   if (relativePath === "metrics/crosslist_heatmap.json") return MetricsCrosslistHeatmap;
   if (relativePath === "metrics/version_churn.json") return MetricsVersionChurn;
   if (relativePath === "metrics/citation_coverage.json") return MetricsCitationCoverage;
+  if (relativePath === "navigator/catalog.json") return NavigatorCatalog;
+  if (relativePath === "navigator/facets.json") return NavigatorFacets;
+  if (relativePath === "navigator/lenses.json") return NavigatorLenses;
+  if (relativePath === "navigator/featured.json") return NavigatorFeatured;
+  if (relativePath === "navigator/pages.json") return NavigatorPages;
   if (relativePath === "ranking/config.json") return RankingConfig;
   if (relativePath === "curation/paper_trails.json") return PaperTrails;
   if (relativePath === "provenance/oai_state.json") return OaiState;

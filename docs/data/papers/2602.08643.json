@@ -1,0 +1,112 @@
+{
+  "arxiv_id": "2602.08643",
+  "canonical_url": "https://arxiv.org/abs/2602.08643v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.08643v1",
+  "title": "State policy heterogeneity analyses: considerations and proposals",
+  "abstract": "State-level policy studies often conduct heterogeneity analyses that quantify how treatment effects vary across state characteristics. These analyses may be used to inform state-specific policy decisions, or to infer how the effect of a policy changes in combination with other state characteristics. However, in state-level settings with varied contexts and policy landscapes, multiple versions of similar policies, and differential policy implementation, the causal quantities targeted by these analyses may not align with the inferential goals. This paper clarifies these issues by distinguishing several causal estimands relevant to heterogeneity analyses in state-policy settings, including state-specific treatment effects (ITE), conditional average treatment effects (CATE), and controlled direct effects (CDE). We argue that the CATE is often the easiest to identify and estimate, but may not be the most policy relevant target of inference. Moreover, the widespread practice of coarsening distinct policies or implementations into a single indicator further complicates the interpretation of these analyses. Motivated by these limitations, we propose bounding ITEs as an alternative inferential goal, yielding ranges for each state's policy effect under explicit assumptions that quantify deviations from the ideal identifying conditions. These bounds target a well-defined and policy-relevant quantity, the effect for specific states. We develop this approach within a difference-in-differences framework and discuss how sensitivity parameters may be informed using pre-treatment data. Through simulations we demonstrate that bounding state-specific effects can more reliably determine the sign of the ITEs than CATE estimates. We then illustrate this method to examine the effect of the Affordable Care Act Medicaid expansion on high-volume buprenorphine prescribing.",
+  "authors": [
+    {
+      "name": "Max Rubinstein"
+    },
+    {
+      "name": "Megan S. Schuler"
+    },
+    {
+      "name": "Elizabeth A. Stuart"
+    },
+    {
+      "name": "Bradley D. Stein"
+    },
+    {
+      "name": "Max Griswold"
+    },
+    {
+      "name": "Elizabeth M. Stone"
+    },
+    {
+      "name": "Beth Ann Griffin"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-09",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6239,
+    "recent_score": 0.4936,
+    "canonical_score": 0.7913,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.5681
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.08643v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.08643v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

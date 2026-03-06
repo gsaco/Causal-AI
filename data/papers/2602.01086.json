@@ -1,0 +1,147 @@
+{
+  "arxiv_id": "2602.01086",
+  "canonical_url": "https://arxiv.org/abs/2602.01086v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.01086v1",
+  "title": "MedBeads: An Agent-Native, Immutable Data Substrate for Trustworthy Medical AI",
+  "abstract": "Background: As of 2026, Large Language Models (LLMs) demonstrate expert-level medical knowledge. However, deploying them as autonomous \"Clinical Agents\" remains limited. Current Electronic Medical Records (EMRs) and standards like FHIR are designed for human review, creating a \"Context Mismatch\": AI agents receive fragmented data and must rely on probabilistic inference (e.g., RAG) to reconstruct patient history. This approach causes hallucinations and hinders auditability. Methods: We propose MedBeads, an agent-native data infrastructure where clinical events are immutable \"Beads\"--nodes in a Merkle Directed Acyclic Graph (DAG)--cryptographically referencing causal predecessors. This \"write-once, read-many\" architecture makes tampering mathematically detectable. We implemented a prototype with a Go Core Engine, Python middleware for LLM integration, and a React-based visualization interface. Results: We successfully implemented the workflow using synthetic data. The FHIR-to-DAG conversion transformed flat resources into a causally-linked graph. Our Breadth-First Search (BFS) Context Retrieval algorithm traverses relevant subgraphs with O(V+E) complexity, enabling real-time decision support. Tamper-evidence is guaranteed by design: any modification breaks the cryptographic chain. The visualization aids clinician understanding through explicit causal links. Conclusion: MedBeads addresses the \"Context Mismatch\" by shifting from probabilistic search to deterministic graph traversal, and from mutable records to immutable chains, providing the substrate for \"Trustworthy Medical AI.\" It guarantees the context the AI receives is deterministic and tamper-evident, while the LLM determines interpretation. The structured Bead format serves as a token-efficient \"AI-native language.\" We release MedBeads as open-source software to accelerate agent-native data standards.",
+  "authors": [
+    {
+      "name": "Takahito Nakajima"
+    }
+  ],
+  "submitted_at": "2026-02-01",
+  "updated_at": "2026-02-01",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CR",
+    "cs.DB",
+    "cs.DC",
+    "cs.SE"
+  ],
+  "metrics": {
+    "cross_list_count": 4,
+    "version_count": 1,
+    "trending_score": 0.8279,
+    "recent_score": 0.395,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.787
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "software"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.01086v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.01086v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal) AND (ti:agent OR abs:agent) AND (abs:intervention OR abs:planning OR abs:tool use)) AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "recommenders-online-experiments",
+    "robotics-autonomy"
+  ]
+}

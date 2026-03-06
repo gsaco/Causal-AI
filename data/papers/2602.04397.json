@@ -1,0 +1,117 @@
+{
+  "arxiv_id": "2602.04397",
+  "canonical_url": "https://arxiv.org/abs/2602.04397v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.04397v1",
+  "title": "Optimal Rates for Feasible Payoff Set Estimation in Games",
+  "abstract": "We study a setting in which two players play a (possibly approximate) Nash equilibrium of a bimatrix game, while a learner observes only their actions and has no knowledge of the equilibrium or the underlying game. A natural question is whether the learner can rationalize the observed behavior by inferring the players' payoff functions. Rather than producing a single payoff estimate, inverse game theory aims to identify the entire set of payoffs consistent with observed behavior, enabling downstream use in, e.g., counterfactual analysis and mechanism design across applications like auctions, pricing, and security games. We focus on the problem of estimating the set of feasible payoffs with high probability and up to precision $ε$ on the Hausdorff metric. We provide the first minimax-optimal rates for both exact and approximate equilibrium play, in zero-sum as well as general-sum games. Our results provide learning-theoretic foundations for set-valued payoff inference in multi-agent environments.",
+  "authors": [
+    {
+      "name": "Annalisa Barbara"
+    },
+    {
+      "name": "Riccardo Poiani"
+    },
+    {
+      "name": "Martino Bernasconi"
+    },
+    {
+      "name": "Andrea Celli"
+    }
+  ],
+  "submitted_at": "2026-02-04",
+  "updated_at": "2026-02-04",
+  "primary_category": "cs.GT",
+  "categories": [
+    "cs.GT",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5878,
+    "recent_score": 0.4294,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5014
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-04"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.04397v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.04397v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

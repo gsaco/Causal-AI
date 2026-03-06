@@ -1,0 +1,124 @@
+{
+  "arxiv_id": "2602.18733",
+  "canonical_url": "https://arxiv.org/abs/2602.18733v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.18733v1",
+  "title": "Prior Aware Memorization: An Efficient Metric for Distinguishing Memorization from Generalization in Large Language Models",
+  "abstract": "Training data leakage from Large Language Models (LLMs) raises serious concerns related to privacy, security, and copyright compliance. A central challenge in assessing this risk is distinguishing genuine memorization of training data from the generation of statistically common sequences. Existing approaches to measuring memorization often conflate these phenomena, labeling outputs as memorized even when they arise from generalization over common patterns. Counterfactual Memorization provides a principled solution by comparing models trained with and without a target sequence, but its reliance on retraining multiple baseline models makes it computationally expensive and impractical at scale. This work introduces Prior-Aware Memorization, a theoretically grounded, lightweight and training-free criterion for identifying genuine memorization in LLMs. The key idea is to evaluate whether a candidate suffix is strongly associated with its specific training prefix or whether it appears with high probability across many unrelated prompts due to statistical commonality. We evaluate this metric on text from the training corpora of two pre-trained models, LLaMA and OPT, using both long sequences (to simulate copyright risks) and named entities (to simulate PII leakage). Our results show that between 55% and 90% of sequences previously labeled as memorized are in fact statistically common. Similar findings hold for the SATML training data extraction challenge dataset, where roughly 40% of sequences exhibit common-pattern behavior despite appearing only once in the training data. These results demonstrate that low frequency alone is insufficient evidence of memorization and highlight the importance of accounting for model priors when assessing leakage.",
+  "authors": [
+    {
+      "name": "Trishita Tiwari"
+    },
+    {
+      "name": "Ari Trachtenberg"
+    },
+    {
+      "name": "G. Edward Suh"
+    }
+  ],
+  "submitted_at": "2026-02-21",
+  "updated_at": "2026-02-21",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5837,
+    "recent_score": 0.6914,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4615
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.18733v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.18733v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

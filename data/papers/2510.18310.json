@@ -1,0 +1,159 @@
+{
+  "arxiv_id": "2510.18310",
+  "canonical_url": "https://arxiv.org/abs/2510.18310v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.18310v1",
+  "title": "Towards Identifiability of Hierarchical Temporal Causal Representation Learning",
+  "abstract": "Modeling hierarchical latent dynamics behind time series data is critical for capturing temporal dependencies across multiple levels of abstraction in real-world tasks. However, existing temporal causal representation learning methods fail to capture such dynamics, as they fail to recover the joint distribution of hierarchical latent variables from \\textit{single-timestep observed variables}. Interestingly, we find that the joint distribution of hierarchical latent variables can be uniquely determined using three conditionally independent observations. Building on this insight, we propose a Causally Hierarchical Latent Dynamic (CHiLD) identification framework. Our approach first employs temporal contextual observed variables to identify the joint distribution of multi-layer latent variables. Sequentially, we exploit the natural sparsity of the hierarchical structure among latent variables to identify latent variables within each layer. Guided by the theoretical results, we develop a time series generative model grounded in variational inference. This model incorporates a contextual encoder to reconstruct multi-layer latent variables and normalize flow-based hierarchical prior networks to impose the independent noise condition of hierarchical latent dynamics. Empirical evaluations on both synthetic and real-world datasets validate our theoretical claims and demonstrate the effectiveness of CHiLD in modeling hierarchical latent dynamics.",
+  "authors": [
+    {
+      "name": "Zijian Li"
+    },
+    {
+      "name": "Minghao Fu"
+    },
+    {
+      "name": "Junxian Huang"
+    },
+    {
+      "name": "Yifan Shen"
+    },
+    {
+      "name": "Ruichu Cai"
+    },
+    {
+      "name": "Yuewen Sun"
+    },
+    {
+      "name": "Guangyi Chen"
+    },
+    {
+      "name": "Kun Zhang"
+    }
+  ],
+  "submitted_at": "2025-10-21",
+  "updated_at": "2025-10-21",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3682,
+    "recent_score": 0.0256,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.1981
+  },
+  "topic_tags": [
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "latent variable"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.18310v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.18310v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

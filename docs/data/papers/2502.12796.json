@@ -1,0 +1,153 @@
+{
+  "arxiv_id": "2502.12796",
+  "canonical_url": "https://arxiv.org/abs/2502.12796v2",
+  "pdf_url": "https://arxiv.org/pdf/2502.12796v2",
+  "title": "Learning Counterfactually Fair Models via Improved Generation with Neural Causal Models",
+  "abstract": "One of the main concerns while deploying machine learning models in real-world applications is fairness. Counterfactual fairness has emerged as an intuitive and natural definition of fairness. However, existing methodologies for enforcing counterfactual fairness seem to have two limitations: (i) generating counterfactual samples faithful to the underlying causal graph, and (ii) as we argue in this paper, existing regularizers are mere proxies and do not directly enforce the exact definition of counterfactual fairness. In this work, our aim is to mitigate both issues. Firstly, we propose employing Neural Causal Models (NCMs) for generating the counterfactual samples. For implementing the abduction step in NCMs, the posteriors of the exogenous variables need to be estimated given a counterfactual query, as they are not readily available. As a consequence, $\\mathcal{L}_3$ consistency with respect to the underlying causal graph cannot be guaranteed in practice due to the estimation errors involved. To mitigate this issue, we propose a novel kernel least squares loss term that enforces the $\\mathcal{L}_3$ constraints explicitly. Thus, we obtain an improved counterfactual generation suitable for the counterfactual fairness task. Secondly, we propose a new MMD-based regularizer term that explicitly enforces the counterfactual fairness conditions into the base model while training. We show an improved trade-off between counterfactual fairness and generalization over existing baselines on synthetic and benchmark datasets.",
+  "authors": [
+    {
+      "name": "Krishn Vishwas Kher"
+    },
+    {
+      "name": "Saksham Mittal"
+    },
+    {
+      "name": "Aditya Varun"
+    },
+    {
+      "name": "Shantanu Das"
+    },
+    {
+      "name": "SakethaNath Jagarlapudi"
+    }
+  ],
+  "submitted_at": "2025-02-18",
+  "updated_at": "2025-09-05",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.398,
+    "recent_score": 0.0067,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2138
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-09-05"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2502.12796v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2502.12796v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

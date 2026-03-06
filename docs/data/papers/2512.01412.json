@@ -1,0 +1,137 @@
+{
+  "arxiv_id": "2512.01412",
+  "canonical_url": "https://arxiv.org/abs/2512.01412v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.01412v1",
+  "title": "A Self-explainable Model of Long Time Series by Extracting Informative Structured Causal Patterns",
+  "abstract": "Explainability is essential for neural networks that model long time series, yet most existing explainable AI methods only produce point-wise importance scores and fail to capture temporal structures such as trends, cycles, and regime changes. This limitation weakens human interpretability and trust in long-horizon models. To address these issues, we identify four key requirements for interpretable time-series modeling: temporal continuity, pattern-centric explanation, causal disentanglement, and faithfulness to the model's inference process. We propose EXCAP, a unified framework that satisfies all four requirements. EXCAP combines an attention-based segmenter that extracts coherent temporal patterns, a causally structured decoder guided by a pre-trained causal graph, and a latent aggregation mechanism that enforces representation stability. Our theoretical analysis shows that EXCAP provides smooth and stable explanations over time and is robust to perturbations in causal masks. Extensive experiments on classification and forecasting benchmarks demonstrate that EXCAP achieves strong predictive accuracy while generating coherent and causally grounded explanations. These results show that EXCAP offers a principled and scalable approach to interpretable modeling of long time series with relevance to high-stakes domains such as healthcare and finance.",
+  "authors": [
+    {
+      "name": "Ziqian Wang"
+    },
+    {
+      "name": "Yuxiao Cheng"
+    },
+    {
+      "name": "Jinli Suo"
+    }
+  ],
+  "submitted_at": "2025-12-01",
+  "updated_at": "2025-12-01",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4511,
+    "recent_score": 0.074,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2966
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.01412v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.01412v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

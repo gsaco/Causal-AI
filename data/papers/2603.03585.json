@@ -1,0 +1,130 @@
+{
+  "arxiv_id": "2603.03585",
+  "canonical_url": "https://arxiv.org/abs/2603.03585v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.03585v1",
+  "title": "Belief-Sim: Towards Belief-Driven Simulation of Demographic Misinformation Susceptibility",
+  "abstract": "Misinformation is a growing societal threat, and susceptibility to misinformative claims varies across demographic groups due to differences in underlying beliefs. As Large Language Models (LLMs) are increasingly used to simulate human behaviors, we investigate whether they can simulate demographic misinformation susceptibility, treating beliefs as a primary driving factor. We introduce BeliefSim, a simulation framework that constructs demographic belief profiles using psychology-informed taxonomies and survey priors. We study prompt-based conditioning and post-training adaptation, and conduct a multi-fold evaluation using: (i) susceptibility accuracy and (ii) counterfactual demographic sensitivity. Across both datasets and modeling strategies, we show that beliefs provide a strong prior for simulating misinformation susceptibility, with accuracy up to 92%.",
+  "authors": [
+    {
+      "name": "Angana Borah"
+    },
+    {
+      "name": "Zohaib Khan"
+    },
+    {
+      "name": "Rada Mihalcea"
+    },
+    {
+      "name": "Verónica Pérez-Rosas"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7739,
+    "recent_score": 0.9181,
+    "rising_score": 0.715,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.03585v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.03585v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)",
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "foundations",
+      "llms-agents",
+      "representation",
+      "sequential",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,131 @@
+{
+  "arxiv_id": "2602.13936",
+  "canonical_url": "https://arxiv.org/abs/2602.13936v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.13936v1",
+  "title": "A Generalizable Physics-guided Causal Model for Trajectory Prediction in Autonomous Driving",
+  "abstract": "Trajectory prediction for traffic agents is critical for safe autonomous driving. However, achieving effective zero-shot generalization in previously unseen domains remains a significant challenge. Motivated by the consistent nature of kinematics across diverse domains, we aim to incorporate domain-invariant knowledge to enhance zero-shot trajectory prediction capabilities. The key challenges include: 1) effectively extracting domain-invariant scene representations, and 2) integrating invariant features with kinematic models to enable generalized predictions. To address these challenges, we propose a novel generalizable Physics-guided Causal Model (PCM), which comprises two core components: a Disentangled Scene Encoder, which adopts intervention-based disentanglement to extract domain-invariant features from scenes, and a CausalODE Decoder, which employs a causal attention mechanism to effectively integrate kinematic models with meaningful contextual information. Extensive experiments on real-world autonomous driving datasets demonstrate our method's superior zero-shot generalization performance in unseen cities, significantly outperforming competitive baselines. The source code is released at https://github.com/ZY-Zong/Physics-guided-Causal-Model.",
+  "authors": [
+    {
+      "name": "Zhenyu Zong"
+    },
+    {
+      "name": "Yuchen Wang"
+    },
+    {
+      "name": "Haohong Lin"
+    },
+    {
+      "name": "Lu Gan"
+    },
+    {
+      "name": "Huajie Shao"
+    }
+  ],
+  "submitted_at": "2026-02-15",
+  "updated_at": "2026-02-15",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5999,
+    "recent_score": 0.5839,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.507
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-15"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.13936v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.13936v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal) AND (ti:agent OR abs:agent) AND (abs:intervention OR abs:planning OR abs:tool use)) AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

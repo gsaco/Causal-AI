@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2512.00366",
+  "canonical_url": "https://arxiv.org/abs/2512.00366v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.00366v1",
+  "title": "S^2-KD: Semantic-Spectral Knowledge Distillation Spatiotemporal Forecasting",
+  "abstract": "Spatiotemporal forecasting often relies on computationally intensive models to capture complex dynamics. Knowledge distillation (KD) has emerged as a key technique for creating lightweight student models, with recent advances like frequency-aware KD successfully preserving spectral properties (i.e., high-frequency details and low-frequency trends). However, these methods are fundamentally constrained by operating on pixel-level signals, leaving them blind to the rich semantic and causal context behind the visual patterns. To overcome this limitation, we introduce S^2-KD, a novel framework that unifies Semantic priors with Spectral representations for distillation. Our approach begins by training a privileged, multimodal teacher model. This teacher leverages textual narratives from a Large Multimodal Model (LMM) to reason about the underlying causes of events, while its architecture simultaneously decouples spectral components in its latent space. The core of our framework is a new distillation objective that transfers this unified semantic-spectral knowledge into a lightweight, vision-only student. Consequently, the student learns to make predictions that are not only spectrally accurate but also semantically coherent, without requiring any textual input or architectural overhead at inference. Extensive experiments on benchmarks like WeatherBench and TaxiBJ+ show that S^2-KD significantly boosts the performance of simple student models, enabling them to outperform state-of-the-art methods, particularly in long-horizon and complex non-stationary scenarios.",
+  "authors": [
+    {
+      "name": "Wenshuo Wang"
+    },
+    {
+      "name": "Yaomin Shen"
+    },
+    {
+      "name": "Yingjie Tan"
+    },
+    {
+      "name": "Yihao Chen"
+    }
+  ],
+  "submitted_at": "2025-11-29",
+  "updated_at": "2025-11-29",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4974,
+    "recent_score": 0.0702,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3584
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-11-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.00366v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.00366v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

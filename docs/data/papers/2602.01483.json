@@ -1,0 +1,130 @@
+{
+  "arxiv_id": "2602.01483",
+  "canonical_url": "https://arxiv.org/abs/2602.01483v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.01483v1",
+  "title": "Causal Preference Elicitation",
+  "abstract": "We propose causal preference elicitation, a Bayesian framework for expert-in-the-loop causal discovery that actively queries local edge relations to concentrate a posterior over directed acyclic graphs (DAGs). From any black-box observational posterior, we model noisy expert judgments with a three-way likelihood over edge existence and direction. Posterior inference uses a flexible particle approximation, and queries are selected by an efficient expected information gain criterion on the expert's categorical response. Experiments on synthetic graphs, protein signaling data, and a human gene perturbation benchmark show faster posterior concentration and improved recovery of directed effects under tight query budgets.",
+  "authors": [
+    {
+      "name": "Edwin V. Bonilla"
+    },
+    {
+      "name": "He Zhao"
+    },
+    {
+      "name": "Daniel M. Steinberg"
+    }
+  ],
+  "submitted_at": "2026-02-01",
+  "updated_at": "2026-02-01",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.745,
+    "recent_score": 0.395,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.6765
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.01483v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.01483v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "biology-genomics-drug-discovery"
+  ]
+}

@@ -2,250 +2,232 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PaperCard from "@components/PaperCard.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
-import SectionDivider from "@components/SectionDivider.astro";
 import HeroCausalGraph from "@components/viz/HeroCausalGraph.astro";
 import CoverageBadge from "@components/CoverageBadge.astro";
 import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
 import { getCollection } from "astro:content";
 
-const papers = await readJson("papers.index.json");
-const build = await readJson("provenance/build.json");
-const coverage = await readJson("metrics/citation_coverage.json");
-const topics = await readJson("taxonomy/topics.json");
-const digests = await getCollection("digests");
-const applications = await getCollection("applications");
+const [papers, build, coverage, topics, digests, applications, featured, facets] = await Promise.all([
+  readJson("papers.index.json"),
+  readJson("provenance/build.json"),
+  readJson("metrics/citation_coverage.json"),
+  readJson("taxonomy/topics.json"),
+  getCollection("digests"),
+  getCollection("applications"),
+  readJson("navigator/featured.json"),
+  readJson("navigator/facets.json")
+]);
 
-const trending = [...papers]
-  .sort((a, b) => (b.metrics.trending_score ?? 0) - (a.metrics.trending_score ?? 0))
-  .slice(0, 3);
-
+const paperMap = new Map(papers.map((paper) => [paper.arxiv_id, paper]));
+const canonicalHighlights = featured.featured.canonical.map((id) => paperMap.get(id)).filter(Boolean).slice(0, 3);
+const risingHighlights = featured.featured.rising.map((id) => paperMap.get(id)).filter(Boolean).slice(0, 3);
+const mixedHighlights = featured.featured.mixed.map((id) => paperMap.get(id)).filter(Boolean).slice(0, 4);
 const latestDigest = [...digests].sort((a, b) => (a.data.week < b.data.week ? 1 : -1))[0];
-const appPreview = applications.slice(0, 3);
 const featuredTopics = topics.filter((topic) => (topic.priority ?? 3) <= 2).slice(0, 6);
+const featuredApplications = applications.slice(0, 4);
 ---
-<BaseLayout wide title="Causal AI Futures" description="Causal AI Futures is a field guide to the intervention era: evidence-first tendencies, topics, and applications grounded in arXiv.">
-  <section class="section hero hero-ambient">
+<BaseLayout wide title="Causal AI Futures" description="Causal AI Futures is a premium atlas for causal AI: editorial guidance, arXiv navigation, and transparent provenance in one place.">
+  <section class="section hero hero-ambient atlas-hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="chip">Snapshot {build.snapshot}</p>
-        <h1>Causal AI is the step from pattern recognition to intervention-aware intelligence.</h1>
-        <p class="subtitle">
-          Causal AI Futures is a field guide to the intervention era: evidence-first tendencies, applications, and
-          open problems with transparent provenance and arXiv-backed claims.
+        <p class="eyebrow">Research Atlas</p>
+        <h1>The field guide for causal AI, built around real papers instead of slogans.</h1>
+        <p class="hero-text">
+          Navigate structural causality, discovery, counterfactual evaluation, causal agents, and intervention-aware systems
+          through a living arXiv-first atlas that blends canonical landmarks with the newest rising work.
         </p>
         <div class="hero-actions">
-          <a class="button" href={withBase("/observatory")}>Enter the Observatory</a>
-          <a class="button secondary" href={withBase("/learn")}>Start learning</a>
+          <a class="button" href={withBase("/papers")}>Open Paper Navigator</a>
+          <a class="button secondary" href={withBase("/topics")}>Browse Topic Dossiers</a>
         </div>
-        <div class="hero-meta">
-          <div class="hero-stat">
-            <span class="label">Coverage</span>
-            <CoverageBadge value={Math.round((coverage.overall.coverage ?? 0) * 100)} />
+        <div class="hero-strip">
+          <div>
+            <span>Corpus</span>
+            <strong>{facets.counts.papers} papers</strong>
           </div>
-          <div class="hero-stat">
-            <span class="label">Harvest window</span>
-            <span class="value">{build.harvest_window}</span>
+          <div>
+            <span>Topics</span>
+            <strong>{Object.keys(facets.counts.topics).length}</strong>
+          </div>
+          <div>
+            <span>Coverage</span>
+            <CoverageBadge value={Math.round((coverage.overall.coverage ?? 0) * 100)} />
           </div>
         </div>
       </div>
-      <div class="hero-visual">
-        <HeroCausalGraph />
+
+      <div class="hero-side">
+        <div class="hero-canvas card">
+          <HeroCausalGraph />
+        </div>
         <div class="hero-provenance card">
-          <h3>Latest provenance</h3>
+          <div class="hero-provenance-head">
+            <div>
+              <p class="eyebrow">Snapshot</p>
+              <h3>{build.snapshot}</h3>
+            </div>
+            <span class="chip">Harvest {build.harvest_window}</span>
+          </div>
           <ProvenancePanel provenance={build} />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Why it matters</p>
-        <h2>Three reasons causal AI is moving fast</h2>
-        <p>These are signals, not guarantees. Each reflects real shifts in research focus and evaluation practice.</p>
+  <section class="section section-band">
+    <div class="container state-band">
+      <div>
+        <p class="eyebrow">Field State</p>
+        <h2>Canonical ideas are solidifying while new evaluation and agentic work accelerates.</h2>
       </div>
-      <div class="card-grid">
+      <div class="state-cards">
         <div class="card">
-          <h3>Interventions beat correlations</h3>
-          <p class="subtle">Teams need models that survive policy changes, not just benchmarks.</p>
+          <span>Canonical lens</span>
+          <strong>Landmarks stay visible</strong>
+          <p class="subtle">Classic papers are pinned alongside fresh work so the site stays useful to both newcomers and researchers.</p>
         </div>
         <div class="card">
-          <h3>Evaluation is catching up</h3>
-          <p class="subtle">New benchmarks and counterfactual tests are surfacing weak spots earlier.</p>
-        </div>
-        <div class="card">
-          <h3>Tooling is finally usable</h3>
-          <p class="subtle">Libraries are maturing, and reproducible pipelines are more common.</p>
+          <span>Rising lens</span>
+          <strong>Momentum is explicit</strong>
+          <p class="subtle">Recent submissions, topic momentum, cross-listing, and revision churn surface what is actually moving now.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <SectionDivider label="Counterfactuals" />
+  <section class="section">
+    <div class="container split-section">
+      <div class="section-header">
+        <p class="eyebrow">Featured Mix</p>
+        <h2>Canonical + rising papers, together</h2>
+        <p>The homepage defaults to a blended lens so users get both the foundations and the frontier.</p>
+      </div>
+      <div class="mixed-grid">
+        {mixedHighlights.map((paper) => (
+          <PaperCard paper={paper} />
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section class="section">
-    <div class="container split-grid">
+    <div class="container editorial-grid">
       <div>
         <div class="section-header">
-          <p class="eyebrow">What if?</p>
-          <h2>Questions the field is now willing to ask</h2>
-          <p>These are the interventions that separate a causal model from a predictive one.</p>
+          <p class="eyebrow">Canonical Papers</p>
+          <h2>Landmarks that still organize the field</h2>
         </div>
-        <ul class="question-list">
-          <li>What happens if we intervene on a variable we cannot observe directly?</li>
-          <li>Which policies are robust under distribution shift, not just average-case?</li>
-          <li>Can a model explain why its counterfactuals are plausible?</li>
-        </ul>
+        <div class="stack">
+          {canonicalHighlights.map((paper) => (
+            <PaperCard paper={paper} />
+          ))}
+        </div>
       </div>
-      <div class="card callout-card">
-        <h3>Tendency Radar</h3>
-        <p class="subtle">Explore momentum, cross-listing, and revision churn across 20+ topics.</p>
-        <a class="button" href={withBase("/observatory")}>Open the radar</a>
-      </div>
-    </div>
-  </section>
-
-  <SectionDivider label="Applications" />
-
-  <section class="section">
-    <div class="container callout-grid">
-      <div class="card callout-card">
-        <h3>Atlas: the methods map</h3>
-        <p class="subtle">A visual map of topics, motifs, and similarity signals across causal AI.</p>
-        <a class="button secondary" href={withBase("/atlas")}>Open the Atlas</a>
-      </div>
-      <div class="card">
-        <h3>Frontiers & future paths</h3>
-        <p class="subtle">Signals, missing pieces, and evidence-backed open problems.</p>
-        <a class="button secondary" href={withBase("/frontiers")}>Explore frontiers</a>
+      <div>
+        <div class="section-header">
+          <p class="eyebrow">Rising Papers</p>
+          <h2>New work worth reading now</h2>
+        </div>
+        <div class="stack">
+          {risingHighlights.map((paper) => (
+            <PaperCard paper={paper} />
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
+    <div class="container topic-spotlights">
       <div class="section-header">
-        <p class="eyebrow">Applications</p>
-        <h2>Where causal AI becomes real</h2>
-        <p>Focused field notes on domains where interventions matter most.</p>
+        <p class="eyebrow">Topic Dossiers</p>
+        <h2>The causal AI map, organized by questions that matter</h2>
+        <p>Each topic page combines editorial framing, canonical papers, rising work, tools, benchmarks, and a live arXiv feed.</p>
       </div>
       <div class="card-grid">
-        {appPreview.map((app) => (
+        {featuredTopics.map((topic) => (
+          <a class="card spotlight-card" href={withBase(`/topics/${topic.id}`)}>
+            <span class="spotlight-group">{topic.group}</span>
+            <h3>{topic.title}</h3>
+            <p class="subtle">{topic.scope}</p>
+            <div class="tag-row">
+              {topic.anchors.slice(0, 2).map((anchor) => (
+                <span class="chip">{anchor}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container application-grid">
+      <div class="section-header">
+        <p class="eyebrow">Applications</p>
+        <h2>Where intervention-aware modeling becomes operational</h2>
+      </div>
+      <div class="card-grid">
+        {featuredApplications.map((app) => (
           <a class="card" href={withBase(`/applications/${app.slug}`)}>
             <h3>{app.data.title}</h3>
             <p class="subtle">{app.data.summary}</p>
           </a>
         ))}
       </div>
-      <div class="section-actions">
-        <a class="button secondary" href={withBase("/applications")}>View all applications</a>
-      </div>
     </div>
   </section>
 
-  <SectionDivider label="Paths" />
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Choose a path</p>
-        <h2>Start from your context</h2>
-        <p>Learning paths for students, researchers, and builders who want evidence fast.</p>
-      </div>
-      <div class="card-grid">
-        <a class="card" href={withBase("/learn#student")}> 
-          <h3>Student</h3>
-          <p class="subtle">Foundations -> experiments -> reading trails.</p>
-        </a>
-        <a class="card" href={withBase("/learn#researcher")}> 
-          <h3>Researcher</h3>
-          <p class="subtle">Frontiers, open problems, and methodology shifts.</p>
-        </a>
-        <a class="card" href={withBase("/learn#builder")}> 
-          <h3>Builder</h3>
-          <p class="subtle">Applications, tooling, and evaluation guardrails.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <SectionDivider label="Snapshot" />
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">This snapshot</p>
-        <h2>Trending papers and the weekly digest</h2>
-        <p>Evidence-first highlights from the latest harvest window.</p>
-      </div>
-      <div class="grid">
-        {trending.map((paper) => (
-          <PaperCard paper={paper} />
-        ))}
-      </div>
-      {latestDigest && (
-        <div class="digest-preview card">
-          <div>
-            <p class="chip secondary">{latestDigest.data.week}</p>
-            <h3>{latestDigest.data.title}</h3>
-            <p class="subtle">{latestDigest.data.summary}</p>
-          </div>
-          <a class="button" href={withBase(`/digest/weekly/${latestDigest.data.week}`)}>Read digest</a>
+  {latestDigest && (
+    <section class="section">
+      <div class="container digest-band card">
+        <div>
+          <p class="eyebrow">Weekly Digest</p>
+          <h2>{latestDigest.data.title}</h2>
+          <p class="subtle">{latestDigest.data.summary}</p>
         </div>
-      )}
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Keep exploring</p>
-        <h2>Start with topics and trails</h2>
-        <p>Explore the taxonomy or jump straight into curated paper trails.</p>
+        <a class="button" href={withBase(`/digest/weekly/${latestDigest.data.week}`)}>Read digest</a>
       </div>
-      <div class="card-grid">
-        {featuredTopics.map((topic) => (
-          <a class="card" href={withBase(`/topics/${topic.id}`)}>
-            <h3>{topic.title}</h3>
-            <p class="subtle">{topic.scope}</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <style>
     h1 {
-      font-size: clamp(2.4rem, 4vw, 3.6rem);
-      margin: 0 0 1rem;
+      font-size: clamp(3rem, 5.4vw, 5.2rem);
+      line-height: 0.98;
+      margin: 0;
+      max-width: 11ch;
     }
 
-    .subtitle {
-      font-size: 1.05rem;
-      max-width: 56ch;
-      color: var(--muted);
-      line-height: 1.6;
+    h2 {
+      margin: 0;
+    }
+
+    .atlas-hero {
+      padding-top: var(--space-9);
     }
 
     .hero-grid {
       display: grid;
       gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.95fr);
       align-items: start;
       position: relative;
       z-index: 1;
     }
 
-    .hero-copy {
+    .hero-copy,
+    .hero-side {
       display: grid;
       gap: 1.2rem;
     }
 
-    .hero-visual {
-      display: grid;
-      gap: 1.2rem;
+    .hero-text {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+      max-width: 58ch;
     }
 
     .hero-actions {
@@ -254,73 +236,115 @@ const featuredTopics = topics.filter((topic) => (topic.priority ?? 3) <= 2).slic
       flex-wrap: wrap;
     }
 
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.5rem;
     }
 
-    .hero-stat {
+    .hero-strip div {
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--bg-elevated) 84%, white);
       display: grid;
       gap: 0.3rem;
-      font-size: 0.9rem;
     }
 
-    .hero-stat .label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .hero-strip span {
       color: var(--muted);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
     }
 
-    .hero-provenance {
-      background: color-mix(in srgb, var(--bg-elevated) 92%, transparent);
-    }
-
-    .split-grid {
+    .hero-canvas {
+      min-height: 280px;
       display: grid;
-      gap: 2rem;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      place-items: center;
+    }
+
+    .hero-provenance-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-provenance-head h3 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .state-band {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
       align-items: start;
     }
 
-    .question-list {
+    .state-cards {
       display: grid;
-      gap: 0.8rem;
-      padding-left: 1.2rem;
-      margin: 0;
-      font-size: 1rem;
+      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .section-actions {
-      margin-top: 1.5rem;
+    .state-cards span,
+    .spotlight-group {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
     }
 
-    .callout-grid {
+    .state-cards strong {
+      font-size: 1.2rem;
+    }
+
+    .mixed-grid {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .editorial-grid {
       display: grid;
       gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .grid {
+    .stack {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
     }
 
-    .digest-preview {
-      margin-top: 2rem;
+    .spotlight-card {
+      min-height: 100%;
+    }
+
+    .digest-band {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
 
-    @media (max-width: 900px) {
-      .split-grid {
+    @media (max-width: 980px) {
+      .hero-grid,
+      .state-band,
+      .editorial-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-strip,
+      .state-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .digest-band {
+        display: grid;
       }
     }
   </style>

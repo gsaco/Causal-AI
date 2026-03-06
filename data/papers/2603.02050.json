@@ -1,0 +1,107 @@
+{
+  "arxiv_id": "2603.02050",
+  "canonical_url": "https://arxiv.org/abs/2603.02050v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02050v1",
+  "title": "\"When to Hand Off, When to Work Together\": Expanding Human-Agent Co-Creative Collaboration through Concurrent Interaction",
+  "abstract": "Human collaborators coordinate dynamically through process visibility and workspace awareness, yet AI agents typically either provide only final outputs or expose read-only execution processes (e.g., planning, reasoning) without interpreting concurrent user actions on shared artifacts. Building on mixed-initiative interaction principles, we explore whether agents can achieve collaborative context awareness -- interpreting concurrent user actions on shared artifacts and adapting in real-time. Study 1 (N=10 professional designers) revealed that process visibility enabled reasoning about agent actions but exposed conflicts when agents could not distinguish feedback from independent work. We developed CLEO, which interprets collaborative intent and adapts in real-time. Study 2 (N=10, two-day with stimulated recall interviews) analyzed 214 turns, identifying five action patterns, six triggers, and four enabling factors explaining when designers choose delegation (70.1%), direction (28.5%), or concurrent work (31.8%). We present a decision model with six interaction loops, design implications, and an annotated dataset.",
+  "authors": [
+    {
+      "name": "Kihoon Son"
+    },
+    {
+      "name": "Hyewon Lee"
+    },
+    {
+      "name": "DaEun Choi"
+    },
+    {
+      "name": "Yoonsu Kim"
+    },
+    {
+      "name": "Tae Soo Kim"
+    },
+    {
+      "name": "Yoonjoo Lee"
+    },
+    {
+      "name": "John Joon Young Chung"
+    },
+    {
+      "name": "HyunJoon Jung"
+    },
+    {
+      "name": "Juho Kim"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "cs.HC",
+  "categories": [
+    "cs.HC",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.8396,
+    "recent_score": 0.8924,
+    "canonical_score": 0.7193,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.8797
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02050v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02050v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

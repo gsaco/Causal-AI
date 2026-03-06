@@ -2,65 +2,173 @@
 import { withBase } from "@utils/withBase";
 import { siteMeta } from "@lib/siteMeta";
 
-const links = [
-  { href: "/about", label: "About" },
-  { href: siteMeta.repoUrl, label: "GitHub", external: true },
-  { href: "/trust/how-to-cite", label: "Cite" }
+const atlasLinks = [
+  { href: "/papers", label: "Paper Navigator" },
+  { href: "/topics", label: "Topic Dossiers" },
+  { href: "/observatory", label: "Signals" },
+  { href: "/applications", label: "Applications" }
 ];
+
+const trustLinks = [
+  { href: "/trust/provenance", label: "Provenance" },
+  { href: "/trust/ranking", label: "Ranking Logic" },
+  { href: "/trust/citation-coverage", label: "Coverage" },
+  { href: "/trust/how-to-cite", label: "How to Cite" }
+];
+
 const authorName = siteMeta.author || "Gabriel Saco";
 ---
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <strong>{siteMeta.title}</strong>
-      <p class="subtle">{siteMeta.tagline}</p>
-      <p class="subtle footer-credit">Built by {authorName}.</p>
+  <div class="container footer-shell">
+    <div class="footer-intro">
+      <span class="footer-mark">C</span>
+      <div>
+        <p class="eyebrow">Causal AI Futures</p>
+        <h2>{siteMeta.tagline}</h2>
+        <p class="subtle">
+          An arXiv-first atlas for causal AI research, built to make intervention-aware work legible without hiding the
+          assumptions underneath it.
+        </p>
+      </div>
     </div>
-    <div class="footer-links">
-      {links.map((link) =>
-        link.external ? (
-          <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-        ) : (
-          <a href={withBase(link.href)}>{link.label}</a>
-        )
-      )}
+
+    <div class="footer-grid">
+      <div>
+        <h3>Atlas</h3>
+        <div class="footer-links">
+          {atlasLinks.map((link) => (
+            <a href={withBase(link.href)}>{link.label}</a>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3>Trust</h3>
+        <div class="footer-links">
+          {trustLinks.map((link) => (
+            <a href={withBase(link.href)}>{link.label}</a>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3>Project</h3>
+        <div class="footer-links">
+          <a href={withBase("/about")}>About</a>
+          <a href={withBase("/contribute")}>Contribute</a>
+          <a href={siteMeta.repoUrl} target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-meta">
+      <p class="subtle">Built by {authorName}. Static-first, evidence-first, and designed to stay inspectable.</p>
+      <p class="subtle">Primary source: arXiv. Always verify important claims against the original papers.</p>
     </div>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-    padding: 2.5rem 0;
+    position: relative;
+    margin-top: var(--space-9);
+    padding: var(--space-9) 0 var(--space-8);
+    border-top: 1px solid var(--paper-line);
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--surface) 70%, transparent), color-mix(in srgb, var(--bg-elevated) 95%, white)),
+      radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 42%),
+      radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--accent-2) 16%, transparent), transparent 35%);
+    overflow: hidden;
   }
 
-  .footer-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(transparent 31px, color-mix(in srgb, var(--border) 28%, transparent) 32px),
+      linear-gradient(90deg, transparent 31px, color-mix(in srgb, var(--border) 24%, transparent) 32px);
+    background-size: 32px 32px;
+    opacity: 0.18;
+    pointer-events: none;
   }
 
-  .footer-brand {
+  .footer-shell {
+    position: relative;
+    z-index: 1;
     display: grid;
-    gap: 0.3rem;
+    gap: 2rem;
   }
 
-  .footer-credit {
-    font-size: 0.85rem;
+  .footer-intro {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .footer-mark {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    background: linear-gradient(140deg, var(--accent), color-mix(in srgb, var(--accent-2) 56%, white));
+    color: white;
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    box-shadow: 0 18px 36px -24px var(--shadow);
+  }
+
+  .footer-intro h2 {
+    margin: 0 0 0.4rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-grid h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1rem;
   }
 
   .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 0.9rem;
+    display: grid;
+    gap: 0.55rem;
   }
 
-  @media (min-width: 768px) {
-    .footer-inner {
-      flex-direction: row;
-      justify-content: space-between;
+  .footer-links a {
+    color: var(--muted);
+  }
+
+  .footer-links a:hover {
+    color: var(--text);
+  }
+
+  .footer-meta {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  }
+
+  .footer-meta p {
+    margin: 0;
+    max-width: 45ch;
+  }
+
+  @media (max-width: 900px) {
+    .footer-intro,
+    .footer-grid,
+    .footer-meta {
+      grid-template-columns: 1fr;
+      display: grid;
     }
   }
 </style>

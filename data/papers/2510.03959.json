@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2510.03959",
+  "canonical_url": "https://arxiv.org/abs/2510.03959v4",
+  "pdf_url": "https://arxiv.org/pdf/2510.03959v4",
+  "title": "Operational early warning of thunderstorm-driven power outages from open data: a two-stage machine learning approach",
+  "abstract": "Thunderstorm-driven power outages are difficult to predict because most storms do not cause damage, convective processes occur rapidly and chaotically, and the available public data are noisy and incomplete. Severe convective storms now account for a large and rising share of U.S. weather losses, yet thunderstorm-induced outages remain understudied. We develop a 48-hour early-warning model for summer thunderstorm-related outages in Michigan using only open-source outage (EAGLE-I) and weather (METAR) data. Relative to prior work, we (i) rely solely on public data, (ii) preserve convective extremes from a sparse station network via parameter-specific kriging and causal spatiotemporal features, and (iii) use a multi-level LSTM-based architecture evaluated on event-centric peak metrics. The pipeline builds rolling and k-NN inverse-distance aggregates to capture moisture advection, wind shifts, and pressure drops. A two-stage design uses a logistic gate followed by a long short-term memory (LSTM) regressor to filter routine periods and limit noise exposure. Evaluation focuses on state-level peaks of at least 50,000 customers without power, using hits, misses, false alarms, and peak-conditional MASE (cMASE) within 48-hour windows, with uncertainty quantified by block bootstrapping. On the test sample, the Two-Stage model detects more peaks with only one additional false alarm and reduces cMASE near peaks, providing event-focused early warnings without the utility-specific data.",
+  "authors": [
+    {
+      "name": "Iryna Stanishevska"
+    },
+    {
+      "name": "Seth Guikema"
+    }
+  ],
+  "submitted_at": "2025-10-04",
+  "updated_at": "2026-01-07",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5363,
+    "recent_score": 0.1214,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4103
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v4",
+      "updated_at": "2026-01-07"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.03959v4",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.03959v4"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

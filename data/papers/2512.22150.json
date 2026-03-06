@@ -1,0 +1,141 @@
+{
+  "arxiv_id": "2512.22150",
+  "canonical_url": "https://arxiv.org/abs/2512.22150v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.22150v1",
+  "title": "Towards Unsupervised Causal Representation Learning via Latent Additive Noise Model Causal Autoencoders",
+  "abstract": "Unsupervised representation learning seeks to recover latent generative factors, yet standard methods relying on statistical independence often fail to capture causal dependencies. A central challenge is identifiability: as established in disentangled representation learning and nonlinear ICA literature, disentangling causal variables from observational data is impossible without supervision, auxiliary signals, or strong inductive biases. In this work, we propose the Latent Additive Noise Model Causal Autoencoder (LANCA) to operationalize the Additive Noise Model (ANM) as a strong inductive bias for unsupervised discovery. Theoretically, we prove that while the ANM constraint does not guarantee unique identifiability in the general mixing case, it resolves component-wise indeterminacy by restricting the admissible transformations from arbitrary diffeomorphisms to the affine class. Methodologically, arguing that the stochastic encoding inherent to VAEs obscures the structural residuals required for latent causal discovery, LANCA employs a deterministic Wasserstein Auto-Encoder (WAE) coupled with a differentiable ANM Layer. This architecture transforms residual independence from a passive assumption into an explicit optimization objective. Empirically, LANCA outperforms state-of-the-art baselines on synthetic physics benchmarks (Pendulum, Flow), and on photorealistic environments (CANDLE), where it demonstrates superior robustness to spurious correlations arising from complex background scenes.",
+  "authors": [
+    {
+      "name": "Hans Jarett J. Ong"
+    },
+    {
+      "name": "Brian Godwin S. Lim"
+    },
+    {
+      "name": "Dominic Dayta"
+    },
+    {
+      "name": "Renzo Roel P. Tan"
+    },
+    {
+      "name": "Kazushi Ikeda"
+    }
+  ],
+  "submitted_at": "2025-12-15",
+  "updated_at": "2025-12-15",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4497,
+    "recent_score": 0.1072,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2948
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-15"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.22150v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.22150v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

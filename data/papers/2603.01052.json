@@ -1,0 +1,122 @@
+{
+  "arxiv_id": "2603.01052",
+  "canonical_url": "https://arxiv.org/abs/2603.01052v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.01052v1",
+  "title": "No More Maybe-Arrows: Resolving Causal Uncertainty by Breaking Symmetries",
+  "abstract": "The recent works on causal discovery have followed a similar trend of learning partial ancestral graphs (PAGs) since observational data constrain the true causal directed acyclic graph (DAG) only up to a Markov equivalence class. This limits their application in the majority of downstream tasks, as uncertainty in causal relations remains unresolved. We propose a new refinement framework, CausalSAGE, for converting PAGs to DAGs while respecting the underlying causal relations. The framework expands discrete variables into state-level representations, constrains the search space using structural knowledge and soft priors, and applies a unified differentiable objective for joint optimization. The final DAG is obtained by aggregating the optimized structures and enforcing acyclicity when necessary. Our experimental evaluations show that the obtained DAGs preserve the underlying causal relations while also being efficient to obtain.",
+  "authors": [
+    {
+      "name": "Tingrui Huang"
+    },
+    {
+      "name": "Devendra Singh Dhami"
+    }
+  ],
+  "submitted_at": "2026-03-01",
+  "updated_at": "2026-03-01",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.8295,
+    "recent_score": 0.8673,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.7891
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.01052v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.01052v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

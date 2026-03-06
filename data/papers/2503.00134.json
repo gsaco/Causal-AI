@@ -1,0 +1,129 @@
+{
+  "arxiv_id": "2503.00134",
+  "canonical_url": "https://arxiv.org/abs/2503.00134v3",
+  "pdf_url": "https://arxiv.org/pdf/2503.00134v3",
+  "title": "Personalized Causal Graph Reasoning for LLMs: An Implementation for Dietary Recommendations",
+  "abstract": "Large Language Models (LLMs) excel at general-purpose reasoning by leveraging broad commonsense knowledge, but they remain limited in tasks requiring personalized reasoning over multifactorial personal data. This limitation constrains their applicability in domains such as healthcare, where decisions must adapt to individual contexts. We introduce Personalized Causal Graph Reasoning, a framework that enables LLMs to reason over individual-specific causal graphs constructed from longitudinal data. Each graph encodes how user-specific factors influence targeted outcomes. In response to a query, the LLM traverses the graph to identify relevant causal pathways, rank them by estimated impact, simulate potential outcomes, and generate tailored responses. We implement this framework in the context of nutrient-oriented dietary recommendations, where variability in metabolic responses demands personalized reasoning. Using counterfactual evaluation, we assess the effectiveness of LLM-generated food suggestions for glucose control. Our method reduces postprandial glucose iAUC across three time windows compared to prior approaches. Additional LLM-as-a-judge evaluations further confirm improvements in personalization quality.",
+  "authors": [
+    {
+      "name": "Zhongqi Yang"
+    },
+    {
+      "name": "Amir Rahmani"
+    }
+  ],
+  "submitted_at": "2025-02-28",
+  "updated_at": "2025-09-01",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4293,
+    "recent_score": 0.0061,
+    "canonical_score": 0.9865,
+    "max_topic_confidence": 0.97,
+    "rising_score": 0.2436
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.97,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v3",
+      "updated_at": "2025-09-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2503.00134v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/2503.00134v3"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"counterfactual evaluation\" OR abs:\"counterfactual benchmark\" OR abs:\"causal benchmark\") AND (abs:\"language model\" OR abs:llm))"
+    ],
+    "query_packs": [
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2603.01471",
+  "canonical_url": "https://arxiv.org/abs/2603.01471v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.01471v1",
+  "title": "Reconstructing Content via Collaborative Attention to Improve Multimodal Embedding Quality",
+  "abstract": "Multimodal embedding models, rooted in multimodal large language models (MLLMs), have yielded significant performance improvements across diverse tasks such as retrieval and classification. However, most existing approaches rely heavily on large-scale contrastive learning, with limited exploration of how the architectural and training paradigms of MLLMs affect embedding quality. While effective for generation, the causal attention and next-token prediction paradigm of MLLMs does not explicitly encourage the formation of globally compact representations, limiting their effectiveness as multimodal embedding backbones. To address this, we propose CoCoA, a Content reconstruction pre-training paradigm based on Collaborative Attention for multimodal embedding optimization. Specifically, we restructure the attention flow and introduce an EOS-based reconstruction task, encouraging the model to reconstruct input from the corresponding <EOS> embeddings. This drives the multimodal model to compress the semantic information of the input into the <EOS> token, laying the foundations for subsequent contrastive learning. Extensive experiments on MMEB-V1 demonstrate that CoCoA built upon Qwen2-VL and Qwen2.5-VL significantly improves embedding quality. Results validate that content reconstruction serves as an effective strategy to maximize the value of existing data, enabling multimodal embedding models generate compact and informative representations, raising their performance ceiling.",
+  "authors": [
+    {
+      "name": "Jiahan Chen"
+    },
+    {
+      "name": "Da Li"
+    },
+    {
+      "name": "Hengran Zhang"
+    },
+    {
+      "name": "Yinqiong Cai"
+    },
+    {
+      "name": "Lixin Su"
+    },
+    {
+      "name": "Jiafeng Guo"
+    },
+    {
+      "name": "Daiting Shi"
+    },
+    {
+      "name": "Dawei Yin"
+    },
+    {
+      "name": "Keping Bi"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "cs.IR",
+  "categories": [
+    "cs.IR",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7814,
+    "recent_score": 0.8924,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.7476
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.01471v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.01471v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

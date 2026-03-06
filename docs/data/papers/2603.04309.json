@@ -1,0 +1,115 @@
+{
+  "arxiv_id": "2603.04309",
+  "canonical_url": "https://arxiv.org/abs/2603.04309v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.04309v1",
+  "title": "CRESTomics: Analyzing Carotid Plaques in the CREST-2 Trial with a New Additive Classification Model",
+  "abstract": "Accurate characterization of carotid plaques is critical for stroke prevention in patients with carotid stenosis. We analyze 500 plaques from CREST-2, a multi-center clinical trial, to identify radiomics-based markers from B-mode ultrasound images linked with high-risk. We propose a new kernel-based additive model, combining coherence loss with group-sparse regularization for nonlinear classification. Group-wise additive effects of each feature group are visualized using partial dependence plots. Results indicate our method accurately and interpretably assesses plaques, revealing a strong association between plaque texture and clinical risk.",
+  "authors": [
+    {
+      "name": "Pranav Kulkarni"
+    },
+    {
+      "name": "Brajesh K. Lal"
+    },
+    {
+      "name": "Georges Jreij"
+    },
+    {
+      "name": "Sai Vallamchetla"
+    },
+    {
+      "name": "Langford Green"
+    },
+    {
+      "name": "Jenifer Voeks"
+    },
+    {
+      "name": "John Huston"
+    },
+    {
+      "name": "Lloyd Edwards"
+    },
+    {
+      "name": "George Howard"
+    },
+    {
+      "name": "Bradley A. Maron"
+    },
+    {
+      "name": "Thomas G. Brott"
+    },
+    {
+      "name": "James F. Meschia"
+    },
+    {
+      "name": "Florence X. Doo"
+    },
+    {
+      "name": "Heng Huang"
+    }
+  ],
+  "submitted_at": "2026-03-04",
+  "updated_at": "2026-03-04",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.8361,
+    "recent_score": 0.9447,
+    "canonical_score": 0.6395,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.9017
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-04"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.04309v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.04309v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2510.05962",
+  "canonical_url": "https://arxiv.org/abs/2510.05962v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.05962v1",
+  "title": "MatheMagic: Generating Dynamic Mathematics Benchmarks Robust to Memorization",
+  "abstract": "Conducting contamination-free evaluation of mathematical capabilities can be difficult for two reasons: models may memorize a test set once it is made public, and current mathematical benchmarks are prone to overfitting due to having limited diversity of symbols and rules, coupled with closed-ended answers. This paper proposes a method to leverage these shortcomings as useful features to a construct dynamic, counterfactual benchmark, which can be used to both reveal overfitting and measure true reasoning. We demonstrate this via MatheMagic, which generates math test instances with the interpretations of numbers and operators altered, yet has automatically verifiable answers. Test instances are randomly seeded and constructed at test time to evaluate a model's induction or deduction capability, offering stability, extensibility, comparability, and robustness to overfitting. Our experiments find that models solve deduction more easily than induction, but they revert to standard math. Further analysis reveals that math-adapted models fail to exhibit a general \"skill\" of reasoning, and fine-tuning on induction tasks generalizes poorly.",
+  "authors": [
+    {
+      "name": "Dayyán O'Brien"
+    },
+    {
+      "name": "Barry Haddow"
+    },
+    {
+      "name": "Emily Allaway"
+    },
+    {
+      "name": "Pinzhen Chen"
+    }
+  ],
+  "submitted_at": "2025-10-07",
+  "updated_at": "2025-10-07",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4291,
+    "recent_score": 0.018,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.2793
+  },
+  "topic_tags": [
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-07"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.05962v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.05962v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

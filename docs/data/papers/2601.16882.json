@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2601.16882",
+  "canonical_url": "https://arxiv.org/abs/2601.16882v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.16882v2",
+  "title": "Explaining Group Recommendations via Counterfactuals",
+  "abstract": "Group recommender systems help users make collective choices but often lack transparency, leaving group members uncertain about why items are suggested. Existing explanation methods focus on individuals, offering limited support for groups where multiple preferences interact. In this paper, we propose a framework for group counterfactual explanations, which reveal how removing specific past interactions would change a group recommendation. We formalize this concept, introduce utility and fairness measures tailored to groups, and design heuristic algorithms, such as Pareto-based filtering and grow-and-prune strategies, for efficient explanation discovery. Experiments on MovieLens and Amazon datasets show clear trade-offs: low-cost methods produce larger, less fair explanations, while other approaches yield concise and balanced results at higher cost. Furthermore, the Pareto-filtering heuristic demonstrates significant efficiency improvements in sparse settings.",
+  "authors": [
+    {
+      "name": "Maria Stratigi"
+    },
+    {
+      "name": "Nikos Bikakis"
+    },
+    {
+      "name": "Kostas Stefanidis"
+    }
+  ],
+  "submitted_at": "2026-01-23",
+  "updated_at": "2026-01-26",
+  "primary_category": "cs.IR",
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5302,
+    "recent_score": 0.3203,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4246
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-01-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.16882v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.16882v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

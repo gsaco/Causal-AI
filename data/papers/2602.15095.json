@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2602.15095",
+  "canonical_url": "https://arxiv.org/abs/2602.15095v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.15095v1",
+  "title": "Natural direct effects of vaccines and post-vaccination behaviour",
+  "abstract": "Knowledge of the protection afforded by vaccines might, in some circumstances, modify a vaccinated individual's behaviour, potentially increasing exposure to pathogens and hindering effectiveness. Although vaccine studies typically do not explicitly account for this possibility in their analyses, we argue that natural direct effects might represent appropriate causal estimands when an objective is to quantify the effect of vaccination on disease while blocking its influence on behaviour. There are, however, complications of a practical nature for the estimation of natural direct effects in this context. Here, we discuss some of these issues, including exposure-outcome and mediator-outcome confounding by healthcare seeking behaviour, and possible approaches to facilitate estimates of these effects. This work highlights the importance of data collection on behaviour, of assessing whether vaccination induces riskier behaviour, and of understanding the potential effects of interventions on vaccination that could turn off vaccine's influence on behaviour.",
+  "authors": [
+    {
+      "name": "Bronner P. Gonçalves"
+    },
+    {
+      "name": "Piero L. Olliaro"
+    },
+    {
+      "name": "Sheena G. Sullivan"
+    },
+    {
+      "name": "Benjamin J. Cowling"
+    }
+  ],
+  "submitted_at": "2026-02-16",
+  "updated_at": "2026-02-16",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6421,
+    "recent_score": 0.6006,
+    "canonical_score": 0.7193,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.6163
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-16"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.15095v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.15095v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

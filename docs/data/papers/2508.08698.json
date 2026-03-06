@@ -1,0 +1,132 @@
+{
+  "arxiv_id": "2508.08698",
+  "canonical_url": "https://arxiv.org/abs/2508.08698v1",
+  "pdf_url": "https://arxiv.org/pdf/2508.08698v1",
+  "title": "DiffVolume: Diffusion Models for Volume Generation in Limit Order Books",
+  "abstract": "Modeling limit order books (LOBs) dynamics is a fundamental problem in market microstructure research. In particular, generating high-dimensional volume snapshots with strong temporal and liquidity-dependent patterns remains a challenging task, despite recent work exploring the application of Generative Adversarial Networks to LOBs. In this work, we propose a conditional \\textbf{Diff}usion model for the generation of future LOB \\textbf{Volume} snapshots (\\textbf{DiffVolume}). We evaluate our model across three axes: (1) \\textit{Realism}, where we show that DiffVolume, conditioned on past volume history and time of day, better reproduces statistical properties such as marginal distribution, spatial correlation, and autocorrelation decay; (2) \\textit{Counterfactual generation}, allowing for controllable generation under hypothetical liquidity scenarios by additionally conditioning on a target future liquidity profile; and (3) \\textit{Downstream prediction}, where we show that the synthetic counterfactual data from our model improves the performance of future liquidity forecasting models. Together, these results suggest that DiffVolume provides a powerful and flexible framework for realistic and controllable LOB volume generation.",
+  "authors": [
+    {
+      "name": "Zhuohan Wang"
+    },
+    {
+      "name": "Carmine Ventre"
+    }
+  ],
+  "submitted_at": "2025-08-12",
+  "updated_at": "2025-08-12",
+  "primary_category": "q-fin.TR",
+  "categories": [
+    "q-fin.TR",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3957,
+    "recent_score": 0.0045,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.2452
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-08-12"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2508.08698v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2508.08698v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

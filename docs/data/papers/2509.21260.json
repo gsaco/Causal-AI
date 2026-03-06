@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2509.21260",
+  "canonical_url": "https://arxiv.org/abs/2509.21260v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.21260v1",
+  "title": "A Causality-Aware Spatiotemporal Model for Multi-Region and Multi-Pollutant Air Quality Forecasting",
+  "abstract": "Air pollution, a pressing global problem, threatens public health, environmental sustainability, and climate stability. Achieving accurate and scalable forecasting across spatially distributed monitoring stations is challenging due to intricate multi-pollutant interactions, evolving meteorological conditions, and region specific spatial heterogeneity. To address this challenge, we propose AirPCM, a novel deep spatiotemporal forecasting model that integrates multi-region, multi-pollutant dynamics with explicit meteorology-pollutant causality modeling. Unlike existing methods limited to single pollutants or localized regions, AirPCM employs a unified architecture to jointly capture cross-station spatial correlations, temporal auto-correlations, and meteorology-pollutant dynamic causality. This empowers fine-grained, interpretable multi-pollutant forecasting across varying geographic and temporal scales, including sudden pollution episodes. Extensive evaluations on multi-scale real-world datasets demonstrate that AirPCM consistently surpasses state-of-the-art baselines in both predictive accuracy and generalization capability. Moreover, the long-term forecasting capability of AirPCM provides actionable insights into future air quality trends and potential high-risk windows, offering timely support for evidence-based environmental governance and carbon mitigation planning.",
+  "authors": [
+    {
+      "name": "Junxin Lu"
+    },
+    {
+      "name": "Shiliang Sun"
+    }
+  ],
+  "submitted_at": "2025-09-25",
+  "updated_at": "2025-09-25",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4884,
+    "recent_score": 0.0133,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3464
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.21260v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.21260v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

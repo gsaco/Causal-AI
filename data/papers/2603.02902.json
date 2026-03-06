@@ -1,0 +1,121 @@
+{
+  "arxiv_id": "2603.02902",
+  "canonical_url": "https://arxiv.org/abs/2603.02902v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02902v1",
+  "title": "Distributed Dynamic Invariant Causal Prediction in Environmental Time Series",
+  "abstract": "The extraction of invariant causal relationships from time series data with environmental attributes is critical for robust decision-making in domains such as climate science and environmental monitoring. However, existing methods either emphasize dynamic causal analysis without leveraging environmental contexts or focus on static invariant causal inference, leaving a gap in distributed temporal settings. In this paper, we propose Distributed Dynamic Invariant Causal Prediction in Time-series (DisDy-ICPT), a novel framework that learns dynamic causal relationships over time while mitigating spatial confounding variables without requiring data communication. We theoretically prove that DisDy-ICPT recovers stable causal predictors within a bounded number of communication rounds under standard sampling assumptions. Empirical evaluations on synthetic benchmarks and environment-segmented real-world datasets show that DisDy-ICPT achieves superior predictive stability and accuracy compared to baseline methods A and B. Our approach offers promising applications in carbon monitoring and weather forecasting. Future work will extend DisDy-ICPT to online learning scenarios.",
+  "authors": [
+    {
+      "name": "Ziruo Hao"
+    },
+    {
+      "name": "Tao Yang"
+    },
+    {
+      "name": "Xiaofeng Wu"
+    },
+    {
+      "name": "Bo Hu"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.755,
+    "recent_score": 0.9181,
+    "rising_score": 0.6899,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02902v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02902v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))",
+      "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

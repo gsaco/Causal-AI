@@ -1,0 +1,178 @@
+{
+  "arxiv_id": "2206.15475",
+  "canonical_url": "https://arxiv.org/abs/2206.15475v2",
+  "pdf_url": "https://arxiv.org/pdf/2206.15475v2",
+  "title": "Causal Machine Learning: A Survey and Open Problems",
+  "abstract": "Causal Machine Learning (CausalML) is an umbrella term for machine learning methods that formalize the data-generation process as a structural causal model (SCM). This perspective enables us to reason about the effects of changes to this process (interventions) and what would have happened in hindsight (counterfactuals). We categorize work in CausalML into five groups according to the problems they address: (1) causal supervised learning, (2) causal generative modeling, (3) causal explanations, (4) causal fairness, and (5) causal reinforcement learning. We systematically compare the methods in each category and point out open problems. Further, we review data-modality-specific applications in computer vision, natural language processing, and graph representation learning. Finally, we provide an overview of causal benchmarks and a critical discussion of the state of this nascent field, including recommendations for future work.",
+  "authors": [
+    {
+      "name": "Jean Kaddour"
+    },
+    {
+      "name": "Aengus Lynch"
+    },
+    {
+      "name": "Qi Liu"
+    },
+    {
+      "name": "Matt J. Kusner"
+    },
+    {
+      "name": "Ricardo Silva"
+    }
+  ],
+  "submitted_at": "2022-06-30",
+  "updated_at": "2022-07-21",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4653,
+    "recent_score": 0,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.3036
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "SCM"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal generative"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2022-07-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2206.15475v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2206.15475v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

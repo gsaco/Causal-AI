@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2512.07528",
+  "canonical_url": "https://arxiv.org/abs/2512.07528v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.07528v1",
+  "title": "Model-Based Reinforcement Learning Under Confounding",
+  "abstract": "We investigate model-based reinforcement learning in contextual Markov decision processes (C-MDPs) in which the context is unobserved and induces confounding in the offline dataset. In such settings, conventional model-learning methods are fundamentally inconsistent, as the transition and reward mechanisms generated under a behavioral policy do not correspond to the interventional quantities required for evaluating a state-based policy. To address this issue, we adapt a proximal off-policy evaluation approach that identifies the confounded reward expectation using only observable state-action-reward trajectories under mild invertibility conditions on proxy variables. When combined with a behavior-averaged transition model, this construction yields a surrogate MDP whose Bellman operator is well defined and consistent for state-based policies, and which integrates seamlessly with the maximum causal entropy (MaxCausalEnt) model-learning framework. The proposed formulation enables principled model learning and planning in confounded environments where contextual information is unobserved, unavailable, or impractical to collect.",
+  "authors": [
+    {
+      "name": "Nishanth Venkatesh"
+    },
+    {
+      "name": "Andreas A. Malikopoulos"
+    }
+  ],
+  "submitted_at": "2025-12-08",
+  "updated_at": "2025-12-08",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3977,
+    "recent_score": 0.089,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2254
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-08"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.07528v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.07528v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

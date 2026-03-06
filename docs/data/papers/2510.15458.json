@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2510.15458",
+  "canonical_url": "https://arxiv.org/abs/2510.15458v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.15458v1",
+  "title": "Robust Optimization in Causal Models and G-Causal Normalizing Flows",
+  "abstract": "In this paper, we show that interventionally robust optimization problems in causal models are continuous under the $G$-causal Wasserstein distance, but may be discontinuous under the standard Wasserstein distance. This highlights the importance of using generative models that respect the causal structure when augmenting data for such tasks. To this end, we propose a new normalizing flow architecture that satisfies a universal approximation property for causal structural models and can be efficiently trained to minimize the $G$-causal Wasserstein distance. Empirically, we demonstrate that our model outperforms standard (non-causal) generative models in data augmentation for causal regression and mean-variance portfolio optimization in causal factor models.",
+  "authors": [
+    {
+      "name": "Gabriele Visentin"
+    },
+    {
+      "name": "Patrick Cheridito"
+    }
+  ],
+  "submitted_at": "2025-10-17",
+  "updated_at": "2025-10-17",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "q-fin.PM"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.5709,
+    "recent_score": 0.0231,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4564
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.15458v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.15458v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

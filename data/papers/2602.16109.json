@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2602.16109",
+  "canonical_url": "https://arxiv.org/abs/2602.16109v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.16109v1",
+  "title": "Federated Graph AGI for Cross-Border Insider Threat Intelligence in Government Financial Schemes",
+  "abstract": "Cross-border insider threats pose a critical challenge to government financial schemes, particularly when dealing with distributed, privacy-sensitive data across multiple jurisdictions. Existing approaches face fundamental limitations: they cannot effectively share intelligence across borders due to privacy constraints, lack reasoning capabilities to understand complex multi-step attack patterns, and fail to capture intricate graph-structured relationships in financial networks. We introduce FedGraph-AGI, a novel federated learning framework integrating Artificial General Intelligence (AGI) reasoning with graph neural networks for privacy-preserving cross-border insider threat detection. Our approach combines: (1) federated graph neural networks preserving data sovereignty; (2) Mixture-of-Experts (MoE) aggregation for heterogeneous jurisdictions; and (3) AGI-powered reasoning via Large Action Models (LAM) performing causal inference over graph data. Through experiments on a 50,000-transaction dataset across 10 jurisdictions, FedGraph-AGI achieves 92.3% accuracy, significantly outperforming federated baselines (86.1%) and centralized approaches (84.7%). Our ablation studies reveal AGI reasoning contributes 6.8% improvement, while MoE adds 4.4%. The system maintains epsilon = 1.0 differential privacy while achieving near-optimal performance and scales efficiently to 50+ clients. This represents the first integration of AGI reasoning with federated graph learning for insider threat detection, opening new directions for privacy-preserving cross-border intelligence sharing.",
+  "authors": [
+    {
+      "name": "Srikumar Nayak"
+    },
+    {
+      "name": "James Walmesley"
+    }
+  ],
+  "submitted_at": "2026-02-18",
+  "updated_at": "2026-02-18",
+  "primary_category": "cs.CR",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.CE"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6706,
+    "recent_score": 0.6353,
+    "rising_score": 0.6013,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-18"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.16109v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.16109v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)",
+      "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

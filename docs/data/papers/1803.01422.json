@@ -1,53 +1,98 @@
 {
   "arxiv_id": "1803.01422",
-  "canonical_url": "https://arxiv.org/abs/1803.01422",
-  "pdf_url": "https://arxiv.org/pdf/1803.01422.pdf",
+  "canonical_url": "https://arxiv.org/abs/1803.01422v2",
+  "pdf_url": "https://arxiv.org/pdf/1803.01422v2",
   "title": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
-  "abstract": "A continuous optimization approach to learning directed acyclic graphs that replaces combinatorial search with a smooth constraint.",
+  "abstract": "Estimating the structure of directed acyclic graphs (DAGs, also known as Bayesian networks) is a challenging problem since the search space of DAGs is combinatorial and scales superexponentially with the number of nodes. Existing approaches rely on various local heuristics for enforcing the acyclicity constraint. In this paper, we introduce a fundamentally different strategy: We formulate the structure learning problem as a purely \\emph{continuous} optimization problem over real matrices that avoids this combinatorial constraint entirely. This is achieved by a novel characterization of acyclicity that is not only smooth but also exact. The resulting problem can be efficiently solved by standard numerical algorithms, which also makes implementation effortless. The proposed method outperforms existing ones, without imposing any structural assumptions on the graph such as bounded treewidth or in-degree. Code implementing the proposed algorithm is open-source and publicly available at https://github.com/xunzheng/notears.",
   "authors": [
-    { "name": "Xun Zheng" },
-    { "name": "Bryan Aragam" },
-    { "name": "Pradeep Ravikumar" },
-    { "name": "Eric Xing" }
+    {
+      "name": "Xun Zheng"
+    },
+    {
+      "name": "Bryon Aragam"
+    },
+    {
+      "name": "Pradeep Ravikumar"
+    },
+    {
+      "name": "Eric P. Xing"
+    }
   ],
   "submitted_at": "2018-03-05",
-  "updated_at": "2018-06-12",
+  "updated_at": "2018-11-03",
   "primary_category": "stat.ML",
-  "categories": ["stat.ML", "cs.LG"],
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "cs.AI",
+    "stat.ME"
+  ],
   "metrics": {
-    "cross_list_count": 1,
+    "cross_list_count": 3,
     "version_count": 2,
-    "trending_score": 0.42
+    "trending_score": 0.7548,
+    "recent_score": 0,
+    "rising_score": 0.6731,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.89
   },
   "topic_tags": [
     {
       "topic_id": "causal-discovery",
-      "confidence": 0.92,
+      "confidence": 0.89,
       "rationale": {
-        "matched_keywords": ["structure learning", "DAG"],
-        "rules_version": "v0.1"
+        "matched_keywords": [
+          "structure learning",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
       }
     }
   ],
   "versions": [
-    { "version": "v1", "updated_at": "2018-03-05" },
-    { "version": "v2", "updated_at": "2018-06-12" }
+    {
+      "version": "v1",
+      "updated_at": "2018-03-05"
+    },
+    {
+      "version": "v2",
+      "updated_at": "2018-11-03"
+    }
   ],
   "links": {
-    "arxiv_abs": "https://arxiv.org/abs/1803.01422",
-    "arxiv_pdf": "https://arxiv.org/pdf/1803.01422.pdf",
-    "code": [
-      {
-        "url": "https://github.com/xunzheng/notears",
-        "label": "official",
-        "evidence": "paper_mentioned"
-      }
-    ]
+    "arxiv_abs": "https://arxiv.org/abs/1803.01422v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/1803.01422v2"
   },
   "provenance": {
     "source": "arxiv_api",
-    "harvested_at": "2026-01-22T02:10:00Z",
-    "harvest_run_id": "demo-2026-01-22",
-    "queries": ["ti:\"DAGs\" AND abs:\"structure learning\""]
-  }
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "seed-papers-2026-03-05",
+    "queries": [
+      "ti:\"DAGs\" AND abs:\"structure learning\"",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216"
+    ],
+    "query_packs": []
+  },
+  "application_tags": []
 }

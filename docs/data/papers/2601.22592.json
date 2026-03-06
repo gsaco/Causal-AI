@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2601.22592",
+  "canonical_url": "https://arxiv.org/abs/2601.22592v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.22592v2",
+  "title": "Quadruply robust methods for causal mediation analysis",
+  "abstract": "Estimating natural effects is a core task in causal mediation analysis. Existing triply robust (TR) frameworks (Tchetgen Tchetgen & Shpitser 2012) and their extensions have been developed to estimate the natural effects. In this work, we introduce a new quadruply robust (QR) framework that enlarges the model class for unbiased identification. We study two modeling strategies. The first is a nonparametric modeling approach, under which we propose a general QR estimator that supports the use of machine learning methods for nuisance estimation. We also study high-dimensional settings, where the dimensions of covariates and mediators may both be large. In these settings, we adopt a parametric modeling strategy and develop a model quadruply robust (MQR) estimator to limit the impact of model misspecification. Simulation studies and a real data application demonstrate the finite-sample performance of the proposed methods.",
+  "authors": [
+    {
+      "name": "Zhen Qi"
+    },
+    {
+      "name": "Yuqian Zhang"
+    }
+  ],
+  "submitted_at": "2026-01-30",
+  "updated_at": "2026-02-13",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.536,
+    "recent_score": 0.4503,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4629
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-13"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.22592v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.22592v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,153 @@
+{
+  "arxiv_id": "2512.18135",
+  "canonical_url": "https://arxiv.org/abs/2512.18135v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.18135v1",
+  "title": "Unifying Causal Reinforcement Learning: Survey, Taxonomy, Algorithms and Applications",
+  "abstract": "Integrating causal inference (CI) with reinforcement learning (RL) has emerged as a powerful paradigm to address critical limitations in classical RL, including low explainability, lack of robustness and generalization failures. Traditional RL techniques, which typically rely on correlation-driven decision-making, struggle when faced with distribution shifts, confounding variables, and dynamic environments. Causal reinforcement learning (CRL), leveraging the foundational principles of causal inference, offers promising solutions to these challenges by explicitly modeling cause-and-effect relationships. In this survey, we systematically review recent advancements at the intersection of causal inference and RL. We categorize existing approaches into causal representation learning, counterfactual policy optimization, offline causal RL, causal transfer learning, and causal explainability. Through this structured analysis, we identify prevailing challenges, highlight empirical successes in practical applications, and discuss open problems. Finally, we provide future research directions, underscoring the potential of CRL for developing robust, generalizable, and interpretable artificial intelligence systems.",
+  "authors": [
+    {
+      "name": "Cristiano da Costa Cunha"
+    },
+    {
+      "name": "Wei Liu"
+    },
+    {
+      "name": "Tim French"
+    },
+    {
+      "name": "Ajmal Mian"
+    }
+  ],
+  "submitted_at": "2025-12-19",
+  "updated_at": "2025-12-19",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3699,
+    "recent_score": 0.1193,
+    "rising_score": 0.1884,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal rl",
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-19"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.18135v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.18135v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))",
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "representation",
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,109 @@
+{
+  "arxiv_id": "2602.07233",
+  "canonical_url": "https://arxiv.org/abs/2602.07233v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.07233v1",
+  "title": "Extracting Root-Causal Brain Activity Driving Psychopathology from Resting State fMRI",
+  "abstract": "Neuroimaging studies of psychiatric disorders often correlate imaging patterns with diagnostic labels or composite symptom scores, yielding diffuse associations that obscure underlying mechanisms. We instead seek to identify root-causal maps -- localized BOLD disturbances that initiate pathological cascades -- and to link them selectively to symptom dimensions. We introduce a bilevel structural causal model that connects between-subject symptom structure to within-subject resting-state fMRI via independent latent sources with localized direct effects. Based on this model, we develop SOURCE (Symptom-Oriented Uncovering of Root-Causal Elements), a procedure that links interpretable symptom axes to a parsimonious set of localized drivers. Experiments show that SOURCE recovers localized maps consistent with root-causal BOLD drivers and increases interpretability and anatomical specificity relative to existing comparators.",
+  "authors": [
+    {
+      "name": "Eric V. Strobl"
+    }
+  ],
+  "submitted_at": "2026-02-06",
+  "updated_at": "2026-02-06",
+  "primary_category": "eess.IV",
+  "categories": [
+    "eess.IV",
+    "cs.CV",
+    "cs.LG",
+    "q-bio.NC"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.7736,
+    "recent_score": 0.454,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.7611
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-06"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.07233v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.07233v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

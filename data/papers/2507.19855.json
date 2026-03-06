@@ -1,0 +1,124 @@
+{
+  "arxiv_id": "2507.19855",
+  "canonical_url": "https://arxiv.org/abs/2507.19855v4",
+  "pdf_url": "https://arxiv.org/pdf/2507.19855v4",
+  "title": "Inducing Causal World Models in LLMs for Zero-Shot Physical Reasoning",
+  "abstract": "Large Language Models (LLMs), despite their advanced linguistic capabilities, fundamentally lack an intuitive understanding of physical dynamics, which limits their effectiveness in real-world scenarios that require causal reasoning. In this paper, we introduce Causal World Model Induction (CWMI), a novel framework designed to embed an explicit model of causal physics within an LLM. Our approach incorporates a dedicated Causal Physics Module (CPM) and a new training objective called Causal Intervention Loss, encouraging the model to learn cause-and-effect relationships from multimodal data. By training the model to predict the outcomes of hypothetical interventions instead of merely capturing statistical correlations, CWMI develops a robust internal representation of physical laws. Experimental results show that CWMI significantly outperforms state-of-the-art LLMs on zero-shot physical reasoning tasks, including the PIQA benchmark and our newly proposed PhysiCa-Bench dataset. These findings demonstrate that inducing a causal world model is a critical step toward more reliable and generalizable AI systems.",
+  "authors": [
+    {
+      "name": "Aditya Sharma"
+    },
+    {
+      "name": "Ananya Gupta"
+    },
+    {
+      "name": "Chengyu Wang"
+    },
+    {
+      "name": "Chiamaka Adebayo"
+    },
+    {
+      "name": "Jakub Kowalski"
+    }
+  ],
+  "submitted_at": "2025-07-26",
+  "updated_at": "2025-12-26",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.HC"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5955,
+    "recent_score": 0.0896,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4771
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-world-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "world model"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v4",
+      "updated_at": "2025-12-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2507.19855v4",
+    "arxiv_pdf": "https://arxiv.org/pdf/2507.19855v4"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

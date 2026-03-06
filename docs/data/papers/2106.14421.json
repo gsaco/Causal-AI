@@ -1,0 +1,146 @@
+{
+  "arxiv_id": "2106.14421",
+  "canonical_url": "https://arxiv.org/abs/2106.14421v1",
+  "pdf_url": "https://arxiv.org/pdf/2106.14421v1",
+  "title": "Causal Reinforcement Learning using Observational and Interventional Data",
+  "abstract": "Learning efficiently a causal model of the environment is a key challenge of model-based RL agents operating in POMDPs. We consider here a scenario where the learning agent has the ability to collect online experiences through direct interactions with the environment (interventional data), but has also access to a large collection of offline experiences, obtained by observing another agent interacting with the environment (observational data). A key ingredient, that makes this situation non-trivial, is that we allow the observed agent to interact with the environment based on hidden information, which is not observed by the learning agent. We then ask the following questions: can the online and offline experiences be safely combined for learning a causal model ? And can we expect the offline experiences to improve the agent's performances ? To answer these questions, we import ideas from the well-established causal framework of do-calculus, and we express model-based reinforcement learning as a causal inference problem. Then, we propose a general yet simple methodology for leveraging offline data during learning. In a nutshell, the method relies on learning a latent-based causal transition model that explains both the interventional and observational regimes, and then using the recovered latent variable to infer the standard POMDP transition model via deconfounding. We prove our method is correct and efficient in the sense that it attains better generalization guarantees due to the offline data (in the asymptotic case), and we illustrate its effectiveness empirically on synthetic toy problems. Our contribution aims at bridging the gap between the fields of reinforcement learning and causality.",
+  "authors": [
+    {
+      "name": "Maxime Gasse"
+    },
+    {
+      "name": "Damien Grasset"
+    },
+    {
+      "name": "Guillaume Gaudron"
+    },
+    {
+      "name": "Pierre-Yves Oudeyer"
+    }
+  ],
+  "submitted_at": "2021-06-28",
+  "updated_at": "2021-06-28",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3765,
+    "recent_score": 0,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.2092
+  },
+  "topic_tags": [
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "latent variable"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "do-calculus"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2021-06-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2106.14421v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2106.14421v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

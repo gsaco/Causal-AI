@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2603.01070",
+  "canonical_url": "https://arxiv.org/abs/2603.01070v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.01070v1",
+  "title": "How RL Unlocks the Aha Moment in Geometric Interleaved Reasoning",
+  "abstract": "Solving complex geometric problems inherently requires interleaved reasoning: a tight alternation between constructing diagrams and performing logical deductions. Although recent Multimodal Large Language Models (MLLMs) have demonstrated strong capabilities in visual generation and plotting, we identify a counter-intuitive and underexplored phenomenon. Naively applying Supervised Fine-Tuning (SFT) on interleaved plot-solution data leads to a substantial degradation in reasoning performance compared to text-only baselines. We argue that this failure stems from a fundamental limitation of SFT, which primarily induces distributional alignment: the model learns to reproduce the surface format of interleaved plotting but fails to internalize the causal dependency between the generated plot and reasoning steps. To overcome this limitation, we propose Faire (Functional alignment for interleaved reasoning), a reinforcement learning framework that enforces three casual constraints to move beyond superficial imitation toward functional alignment. Extensive experiments show that Faire induces a qualitative shift in model behavior in which the plotting is effectively internalized, yielding competitive performance on challenging geometric reasoning benchmarks.",
+  "authors": [
+    {
+      "name": "Xiangxiang Zhang"
+    },
+    {
+      "name": "Caijun Jia"
+    },
+    {
+      "name": "Siyuan Li"
+    },
+    {
+      "name": "Dingyu He"
+    },
+    {
+      "name": "Xiya Xiong"
+    },
+    {
+      "name": "Zheng Sun"
+    },
+    {
+      "name": "Honghao He"
+    },
+    {
+      "name": "Yuchen Wu"
+    },
+    {
+      "name": "Bihui Yu"
+    },
+    {
+      "name": "Linzhuang Sun"
+    },
+    {
+      "name": "Cheng Tan"
+    },
+    {
+      "name": "Jingxuan Wei"
+    }
+  ],
+  "submitted_at": "2026-03-01",
+  "updated_at": "2026-03-01",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.7294,
+    "recent_score": 0.8673,
+    "canonical_score": 0.8588,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.6863
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.01070v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.01070v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

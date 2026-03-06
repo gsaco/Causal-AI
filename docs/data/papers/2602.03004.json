@@ -1,0 +1,135 @@
+{
+  "arxiv_id": "2602.03004",
+  "canonical_url": "https://arxiv.org/abs/2602.03004v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.03004v1",
+  "title": "Causal Graph Spatial-Temporal Autoencoder for Reliable and Interpretable Process Monitoring",
+  "abstract": "To improve the reliability and interpretability of industrial process monitoring, this article proposes a Causal Graph Spatial-Temporal Autoencoder (CGSTAE). The network architecture of CGSTAE combines two components: a correlation graph structure learning module based on spatial self-attention mechanism (SSAM) and a spatial-temporal encoder-decoder module utilizing graph convolutional long-short term memory (GCLSTM). The SSAM learns correlation graphs by capturing dynamic relationships between variables, while a novel three-step causal graph structure learning algorithm is introduced to derive a causal graph from these correlation graphs. The algorithm leverages a reverse perspective of causal invariance principle to uncover the invariant causal graph from varying correlations. The spatial-temporal encoder-decoder, built with GCLSTM units, reconstructs time-series process data within a sequence-to-sequence framework. The proposed CGSTAE enables effective process monitoring and fault detection through two statistics in the feature space and residual space. Finally, we validate the effectiveness of CGSTAE in process monitoring through the Tennessee Eastman process and a real-world air separation process.",
+  "authors": [
+    {
+      "name": "Xiangrui Zhang"
+    },
+    {
+      "name": "Chunyue Song"
+    },
+    {
+      "name": "Wei Dai"
+    },
+    {
+      "name": "Zheng Zhang"
+    },
+    {
+      "name": "Kaihua Gao"
+    },
+    {
+      "name": "Furong Gao"
+    }
+  ],
+  "submitted_at": "2026-02-03",
+  "updated_at": "2026-02-03",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6249,
+    "recent_score": 0.4176,
+    "rising_score": 0.5284,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structure learning",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.03004v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.03004v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))",
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

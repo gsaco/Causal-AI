@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2603.02961",
+  "canonical_url": "https://arxiv.org/abs/2603.02961v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02961v1",
+  "title": "Delegation and Verification Under AI",
+  "abstract": "As AI systems enter institutional workflows, workers must decide whether to delegate task execution to AI and how much effort to invest in verifying AI outputs, while institutions evaluate workers using outcome-based standards that may misalign with workers' private costs. We model delegation and verification as the solution to a rational worker's optimization problem, and define worker quality by evaluating an institution-centered utility (distinct from the worker's objective) at the resulting optimal action. We formally characterize optimal worker workflows and show that AI induces *phase transitions*, where arbitrarily small differences in verification ability lead to sharply different behaviors. As a result, AI can amplify workers with strong verification reliability while degrading institutional worker quality for others who rationally over-delegate and reduce oversight, even when baseline task success improves and no behavioral biases are present. These results identify a structural mechanism by which AI reshapes institutional worker quality and amplifies quality disparities between workers with different verification reliability.",
+  "authors": [
+    {
+      "name": "Lingxiao Huang"
+    },
+    {
+      "name": "Wenyang Xiao"
+    },
+    {
+      "name": "Nisheeth K. Vishnoi"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "cs.GT",
+  "categories": [
+    "cs.GT",
+    "cs.AI",
+    "cs.CY",
+    "econ.TH"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.8388,
+    "recent_score": 0.9181,
+    "canonical_score": 0.536,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.9398
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02961v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02961v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

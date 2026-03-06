@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2603.02594",
+  "canonical_url": "https://arxiv.org/abs/2603.02594v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02594v1",
+  "title": "Low-Degree Method Fails to Predict Robust Subspace Recovery",
+  "abstract": "The low-degree polynomial framework has been highly successful in predicting computational versus statistical gaps for high-dimensional problems in average-case analysis and machine learning. This success has led to the low-degree conjecture, which posits that this method captures the power and limitations of efficient algorithms for a wide class of high-dimensional statistical problems. We identify a natural and basic hypothesis testing problem in $\\mathbb{R}^n$ which is polynomial time solvable, but for which the low-degree polynomial method fails to predict its computational tractability even up to degree $k=n^{Ω(1)}$. Moreover, the low-degree moments match exactly up to degree $k=O(\\sqrt{\\log n/\\log\\log n})$. Our problem is a special case of the well-studied robust subspace recovery problem. The lower bounds suggest that there is no polynomial time algorithm for this problem. In contrast, we give a simple and robust polynomial time algorithm that solves the problem (and noisy variants of it), leveraging anti-concentration properties of the distribution. Our results suggest that the low-degree method and low-degree moments fail to capture algorithms based on anti-concentration, challenging their universality as a predictor of computational barriers.",
+  "authors": [
+    {
+      "name": "He Jia"
+    },
+    {
+      "name": "Aravindan Vijayaraghavan"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.CC",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.7862,
+    "recent_score": 0.9181,
+    "canonical_score": 0.6035,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.8471
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02594v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02594v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

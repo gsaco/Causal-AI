@@ -1,0 +1,128 @@
+{
+  "arxiv_id": "2601.22871",
+  "canonical_url": "https://arxiv.org/abs/2601.22871v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.22871v2",
+  "title": "Eroding the Truth-Default: A Causal Analysis of Human Susceptibility to Foundation Model Hallucinations and Disinformation in the Wild",
+  "abstract": "As foundation models (FMs) approach human-level fluency, distinguishing synthetic from organic content has become a key challenge for Trustworthy Web Intelligence. This paper presents JudgeGPT and RogueGPT, a dual-axis framework that decouples \"authenticity\" from \"attribution\" to investigate the mechanisms of human susceptibility. Analyzing 918 evaluations across five FMs (including GPT-4 and Llama-2), we employ Structural Causal Models (SCMs) as a principal framework for formulating testable causal hypotheses about detection accuracy. Contrary to partisan narratives, we find that political orientation shows a negligible association with detection performance ($r=-0.10$). Instead, \"fake news familiarity\" emerges as a candidate mediator ($r=0.35$), suggesting that exposure may function as adversarial training for human discriminators. We identify a \"fluency trap\" where GPT-4 outputs (HumanMachineScore: 0.20) bypass Source Monitoring mechanisms, rendering them indistinguishable from human text. These findings suggest that \"pre-bunking\" interventions should target cognitive source monitoring rather than demographic segmentation to ensure trustworthy information ecosystems.",
+  "authors": [
+    {
+      "name": "Alexander Loth"
+    },
+    {
+      "name": "Martin Kappes"
+    },
+    {
+      "name": "Marc-Oliver Pahl"
+    }
+  ],
+  "submitted_at": "2026-01-30",
+  "updated_at": "2026-02-12",
+  "primary_category": "cs.CY",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.CL",
+    "cs.HC"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.7732,
+    "recent_score": 0.444,
+    "rising_score": 0.7486,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "SCM"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-12"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.22871v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.22871v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)",
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

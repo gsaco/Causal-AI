@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2602.07799",
+  "canonical_url": "https://arxiv.org/abs/2602.07799v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.07799v1",
+  "title": "Fairness Aware Reward Optimization",
+  "abstract": "Demographic skews in human preference data propagate systematic unfairness through reward models into aligned LLMs. We introduce Fairness Aware Reward Optimization (Faro), an in-processing framework that trains reward models under demographic parity, equalized odds, or counterfactual fairness constraints. We provide the first theoretical analysis of reward-level fairness in LLM alignment, establishing: (i) provable fairness certificates for Faro-trained rewards with controllable slack; a (ii) formal characterization of the accuracy-fairness trade-off induced by KL-regularized fine-tuning, proving fairness transfers from reward to policy; and the (iii) existence of a non-empty Pareto frontier. Unlike pre- and post-processing methods, Faro ensures reward models are simultaneously ordinal (ranking correctly), cardinal (calibrated), and fair. Across multiple LLMs and benchmarks, Faro significantly reduces bias and harmful generations while maintaining or improving model quality.",
+  "authors": [
+    {
+      "name": "Ching Lam Choi"
+    },
+    {
+      "name": "Vighnesh Subramaniam"
+    },
+    {
+      "name": "Phillip Isola"
+    },
+    {
+      "name": "Antonio Torralba"
+    },
+    {
+      "name": "Stefanie Jegelka"
+    }
+  ],
+  "submitted_at": "2026-02-08",
+  "updated_at": "2026-02-08",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6048,
+    "recent_score": 0.48,
+    "rising_score": 0.4896,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-08"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.07799v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.07799v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)",
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

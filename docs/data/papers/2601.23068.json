@@ -1,0 +1,121 @@
+{
+  "arxiv_id": "2601.23068",
+  "canonical_url": "https://arxiv.org/abs/2601.23068v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.23068v1",
+  "title": "ExplainerPFN: Towards tabular foundation models for model-free zero-shot feature importance estimations",
+  "abstract": "Computing the importance of features in supervised classification tasks is critical for model interpretability. Shapley values are a widely used approach for explaining model predictions, but require direct access to the underlying model, an assumption frequently violated in real-world deployments. Further, even when model access is possible, their exact computation may be prohibitively expensive. We investigate whether meaningful Shapley value estimations can be obtained in a zero-shot setting, using only the input data distribution and no evaluations of the target model. To this end, we introduce ExplainerPFN, a tabular foundation model built on TabPFN that is pretrained on synthetic datasets generated from random structural causal models and supervised using exact or near-exact Shapley values. Once trained, ExplainerPFN predicts feature attributions for unseen tabular datasets without model access, gradients, or example explanations. Our contributions are fourfold: (1) we show that few-shot learning-based explanations can achieve high fidelity to SHAP values with as few as two reference observations; (2) we propose ExplainerPFN, the first zero-shot method for estimating Shapley values without access to the underlying model or reference explanations; (3) we provide an open-source implementation of ExplainerPFN, including the full training pipeline and synthetic data generator; and (4) through extensive experiments on real and synthetic datasets, we show that ExplainerPFN achieves performance competitive with few-shot surrogate explainers that rely on 2-10 SHAP examples.",
+  "authors": [
+    {
+      "name": "Joao Fonseca"
+    },
+    {
+      "name": "Julia Stoyanovich"
+    }
+  ],
+  "submitted_at": "2026-01-30",
+  "updated_at": "2026-01-30",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7313,
+    "recent_score": 0.3737,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.6822
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-30"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.23068v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.23068v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

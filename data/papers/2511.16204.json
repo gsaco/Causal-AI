@@ -1,0 +1,151 @@
+{
+  "arxiv_id": "2511.16204",
+  "canonical_url": "https://arxiv.org/abs/2511.16204v1",
+  "pdf_url": "https://arxiv.org/pdf/2511.16204v1",
+  "title": "Causal Synthetic Data Generation in Recruitment",
+  "abstract": "The importance of Synthetic Data Generation (SDG) has increased significantly in domains where data quality is poor or access is limited due to privacy and regulatory constraints. One such domain is recruitment, where publicly available datasets are scarce due to the sensitive nature of information typically found in curricula vitae, such as gender, disability status, or age. This lack of accessible, representative data presents a significant obstacle to the development of fair and transparent machine learning models, particularly ranking algorithms that require large volumes of data to effectively learn how to recommend candidates. In the absence of such data, these models are prone to poor generalisation and may fail to perform reliably in real-world scenarios. Recent advances in Causal Generative Models (CGMs) offer a promising solution. CGMs enable the generation of synthetic datasets that preserve the underlying causal relationships within the data, providing greater control over fairness and interpretability in the data generation process. In this study, we present a specialised SDG method involving two CGMs: one modelling job offers and the other modelling curricula. Each model is structured according to a causal graph informed by domain expertise. We use these models to generate synthetic datasets and evaluate the fairness of candidate rankings under controlled scenarios that introduce specific biases.",
+  "authors": [
+    {
+      "name": "Andrea Iommi"
+    },
+    {
+      "name": "Antonio Mastropietro"
+    },
+    {
+      "name": "Riccardo Guidotti"
+    },
+    {
+      "name": "Anna Monreale"
+    },
+    {
+      "name": "Salvatore Ruggieri"
+    }
+  ],
+  "submitted_at": "2025-11-20",
+  "updated_at": "2025-11-20",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4074,
+    "recent_score": 0.0555,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.2504
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal generative"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-11-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2511.16204v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2511.16204v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2602.04907",
+  "canonical_url": "https://arxiv.org/abs/2602.04907v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.04907v1",
+  "title": "Physics as the Inductive Bias for Causal Discovery",
+  "abstract": "Causal discovery is often a data-driven paradigm to analyze complex real-world systems. In parallel, physics-based models such as ordinary differential equations (ODEs) provide mechanistic structure for many dynamical processes. Integrating these paradigms potentially allows physical knowledge to act as an inductive bias, improving identifiability, stability, and robustness of causal discovery in dynamical systems. However, such integration remains challenging: real dynamical systems often exhibit feedback, cyclic interactions, and non-stationary data trend, while many widely used causal discovery methods are formulated under acyclicity or equilibrium-based assumptions. In this work, we propose an integrative causal discovery framework for dynamical systems that leverages partial physical knowledge as an inductive bias. Specifically, we model system evolution as a stochastic differential equation (SDE), where the drift term encodes known ODE dynamics and the diffusion term corresponds to unknown causal couplings beyond the prescribed physics. We develop a scalable sparsity-inducing MLE algorithm that exploits causal graph structure for efficient parameter estimation. Under mild conditions, we establish guarantees to recover the causal graph. Experiments on dynamical systems with diverse causal structures show that our approach improves causal graph recovery and produces more stable, physically consistent estimates than purely data-driven state-of-the-art baselines.",
+  "authors": [
+    {
+      "name": "Jianhong Chen"
+    },
+    {
+      "name": "Naichen Shi"
+    },
+    {
+      "name": "Xubo Yue"
+    }
+  ],
+  "submitted_at": "2026-02-03",
+  "updated_at": "2026-02-03",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6478,
+    "recent_score": 0.4176,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5589
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.04907v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.04907v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

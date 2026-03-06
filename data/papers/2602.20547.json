@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2602.20547",
+  "canonical_url": "https://arxiv.org/abs/2602.20547v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.20547v1",
+  "title": "What Drives Students' Use of AI Chatbots? Technology Acceptance in Conversational AI",
+  "abstract": "Conversational AI tools have been rapidly adopted by students and are becoming part of their learning routines. To understand what drives this adoption, we draw on the Technology Acceptance Model (TAM) and examine how perceived usefulness and perceived ease of use relate to students' behavioral intention to use conversational AI that generates responses for learning tasks. We extend TAM by incorporating trust, perceived enjoyment, and subjective norms as additional factors that capture social and affective influences and uncertainty around AI outputs. Using partial least squares structural equation modeling, we find perceived usefulness remains the strongest predictor of students' intention to use conversational AI. However, perceived ease of use does not exert a significant direct effect on behavioral intention once other factors are considered, operating instead indirectly through perceived usefulness. Trust and subjective norms significantly influence perceptions of usefulness, while perceived enjoyment exerts both a direct and indirect effect on usage intentions. These findings suggest that adoption decisions for conversational AI systems are influenced less by effort-related considerations and more by confidence in system outputs, affective engagement, and social context. Future research is needed to further examine how these acceptance relationships generalize across different conversational systems and usage contexts.",
+  "authors": [
+    {
+      "name": "Griffin Pitts"
+    },
+    {
+      "name": "Sanaz Motamedi"
+    }
+  ],
+  "submitted_at": "2026-02-24",
+  "updated_at": "2026-02-24",
+  "primary_category": "cs.HC",
+  "categories": [
+    "cs.HC",
+    "cs.AI",
+    "cs.CY",
+    "cs.ET"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.9242,
+    "recent_score": 0.7526,
+    "canonical_score": 0.6277,
+    "max_topic_confidence": 0.58,
+    "rising_score": 1.0231
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.20547v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.20547v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

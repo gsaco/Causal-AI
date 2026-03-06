@@ -1,0 +1,145 @@
+{
+  "arxiv_id": "2509.19058",
+  "canonical_url": "https://arxiv.org/abs/2509.19058v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.19058v1",
+  "title": "Towards Causal Representation Learning with Observable Sources as Auxiliaries",
+  "abstract": "Causal representation learning seeks to recover latent factors that generate observational data through a mixing function. Needing assumptions on latent structures or relationships to achieve identifiability in general, prior works often build upon conditional independence given known auxiliary variables. However, prior frameworks limit the scope of auxiliary variables to be external to the mixing function. Yet, in some cases, system-driving latent factors can be easily observed or extracted from data, possibly facilitating identification. In this paper, we introduce a framework of observable sources being auxiliaries, serving as effective conditioning variables. Our main results show that one can identify entire latent variables up to subspace-wise transformations and permutations using volume-preserving encoders. Moreover, when multiple known auxiliary variables are available, we offer a variable-selection scheme to choose those that maximize recoverability of the latent factors given knowledge of the latent causal graph. Finally, we demonstrate the effectiveness of our framework through experiments on synthetic graph and image data, thereby extending the boundaries of current approaches.",
+  "authors": [
+    {
+      "name": "Kwonho Kim"
+    },
+    {
+      "name": "Heejeong Nam"
+    },
+    {
+      "name": "Inwoo Hwang"
+    },
+    {
+      "name": "Sanghack Lee"
+    }
+  ],
+  "submitted_at": "2025-09-23",
+  "updated_at": "2025-09-23",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3411,
+    "recent_score": 0.0126,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.162
+  },
+  "topic_tags": [
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "latent variable"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.19058v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.19058v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

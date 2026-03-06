@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2506.07049",
+  "canonical_url": "https://arxiv.org/abs/2506.07049v1",
+  "pdf_url": "https://arxiv.org/pdf/2506.07049v1",
+  "title": "FairPFN: A Tabular Foundation Model for Causal Fairness",
+  "abstract": "Machine learning (ML) systems are utilized in critical sectors, such as healthcare, law enforcement, and finance. However, these systems are often trained on historical data that contains demographic biases, leading to ML decisions that perpetuate or exacerbate existing social inequalities. Causal fairness provides a transparent, human-in-the-loop framework to mitigate algorithmic discrimination, aligning closely with legal doctrines of direct and indirect discrimination. However, current causal fairness frameworks hold a key limitation in that they assume prior knowledge of the correct causal model, restricting their applicability in complex fairness scenarios where causal models are unknown or difficult to identify. To bridge this gap, we propose FairPFN, a tabular foundation model pre-trained on synthetic causal fairness data to identify and mitigate the causal effects of protected attributes in its predictions. FairPFN's key contribution is that it requires no knowledge of the causal model and still demonstrates strong performance in identifying and removing protected causal effects across a diverse set of hand-crafted and real-world scenarios relative to robust baseline methods. FairPFN paves the way for promising future research, making causal fairness more accessible to a wider variety of complex fairness problems.",
+  "authors": [
+    {
+      "name": "Jake Robertson"
+    },
+    {
+      "name": "Noah Hollmann"
+    },
+    {
+      "name": "Samuel Müller"
+    },
+    {
+      "name": "Noor Awad"
+    },
+    {
+      "name": "Frank Hutter"
+    }
+  ],
+  "submitted_at": "2025-06-08",
+  "updated_at": "2025-06-08",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CY"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4731,
+    "recent_score": 0.0009,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.326
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal fairness",
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-06-08"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2506.07049v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2506.07049v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

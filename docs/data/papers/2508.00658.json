@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2508.00658",
+  "canonical_url": "https://arxiv.org/abs/2508.00658v1",
+  "pdf_url": "https://arxiv.org/pdf/2508.00658v1",
+  "title": "Multi-Band Variable-Lag Granger Causality: A Unified Framework for Causal Time Series Inference across Frequencies",
+  "abstract": "Understanding causal relationships in time series is fundamental to many domains, including neuroscience, economics, and behavioral science. Granger causality is one of the well-known techniques for inferring causality in time series. Typically, Granger causality frameworks have a strong fix-lag assumption between cause and effect, which is often unrealistic in complex systems. While recent work on variable-lag Granger causality (VLGC) addresses this limitation by allowing a cause to influence an effect with different time lags at each time point, it fails to account for the fact that causal interactions may vary not only in time delay but also across frequency bands. For example, in brain signals, alpha-band activity may influence another region with a shorter delay than slower delta-band oscillations. In this work, we formalize Multi-Band Variable-Lag Granger Causality (MB-VLGC) and propose a novel framework that generalizes traditional VLGC by explicitly modeling frequency-dependent causal delays. We provide a formal definition of MB-VLGC, demonstrate its theoretical soundness, and propose an efficient inference pipeline. Extensive experiments across multiple domains demonstrate that our framework significantly outperforms existing methods on both synthetic and real-world datasets, confirming its broad applicability to any type of time series data. Code and datasets are publicly available.",
+  "authors": [
+    {
+      "name": "Chakattrai Sookkongwaree"
+    },
+    {
+      "name": "Tattep Lakmuang"
+    },
+    {
+      "name": "Chainarong Amornbunchornvej"
+    }
+  ],
+  "submitted_at": "2025-08-01",
+  "updated_at": "2025-08-01",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "econ.EM",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.6,
+    "recent_score": 0.0034,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.5072
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal time series"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-08-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2508.00658v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2508.00658v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "economics-policy-social"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "arxiv_id": "2603.00206",
+  "canonical_url": "https://arxiv.org/abs/2603.00206v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.00206v1",
+  "title": "TACIT Benchmark: A Programmatic Visual Reasoning Benchmark for Generative and Discriminative Models",
+  "abstract": "Existing visual reasoning benchmarks predominantly rely on natural language prompts, evaluate narrow reasoning modalities, or depend on subjective scoring procedures such as LLM-as-judge. We introduce the TACIT Benchmark, a programmatic visual reasoning benchmark comprising 10 tasks across 6 reasoning domains: spatial navigation, abstract pattern completion, causal simulation, logical constraint satisfaction, graph theory, and topology. The benchmark provides dual-track evaluation: a generative track in which models must produce solution images verified through deterministic computer-vision pipelines, and a discriminative track offering five-way multiple choice with structurally plausible near-miss distractors. Each distractor violates exactly one structural constraint, requiring models to reason about fine-grained visual differences rather than exploit superficial cues. Version 0.1.0 distributes 6,000 puzzles (108,000 PNG images across three resolutions) with fully deterministic seeded generation and reproducible verification. The dataset, generation code, and evaluation harness are released under the Apache 2.0 license on HuggingFace (DOI: 10.57967/hf/7904).",
+  "authors": [
+    {
+      "name": "Daniel Nobrega Medeiros"
+    }
+  ],
+  "submitted_at": "2026-02-27",
+  "updated_at": "2026-02-27",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.8124,
+    "recent_score": 0.8194,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.8009
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.00206v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.00206v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

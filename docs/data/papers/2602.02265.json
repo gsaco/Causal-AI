@@ -1,0 +1,107 @@
+{
+  "arxiv_id": "2602.02265",
+  "canonical_url": "https://arxiv.org/abs/2602.02265v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02265v1",
+  "title": "Nonparametric Inference with an Instrumental Variable under a Separable Binary Treatment Choice Model",
+  "abstract": "Instrumental variable (IV) methods are widely used to infer treatment effects in the presence of unmeasured confounding. In this paper, we study nonparametric inference with an IV under a separable binary treatment choice model, which posits that the odds of the probability of taking the treatment, conditional on the instrument and the treatment-free potential outcome, factor into separable components for each variable. While nonparametric identification of smooth functionals of the treatment-free potential outcome among the treated, such as the average treatment effect on the treated, has been established under this model, corresponding nonparametric efficient estimation has proven elusive due to variationally dependent nuisance parameters defined in terms of counterfactual quantities. To address this challenge, we introduce a new variationally independent parameterization based on nuisance functions defined directly from the observed data. This parameterization, coupled with a novel fixed-point argument, enables the use of modern machine learning methods for nuisance function estimation. We characterize the semiparametric efficiency bound for any smooth functional of the treatment-free potential outcome among the treated and construct a corresponding semiparametric efficient estimator without imposing any unnecessary restriction on nuisance functions. Furthermore, we describe a straightforward generative model justifying our identifying assumptions and characterize empirically falsifiable implications of the framework to evaluate our assumptions in practical settings. Our approach seamlessly extends to nonlinear treatment effects, population-level effects, and nonignorable missing data settings. We illustrate our methods through simulation studies and an application to the Job Corps study.",
+  "authors": [
+    {
+      "name": "Chan Park"
+    },
+    {
+      "name": "Eric Tchetgen Tchetgen"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-02",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5307,
+    "recent_score": 0.4062,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.4132
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02265v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02265v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

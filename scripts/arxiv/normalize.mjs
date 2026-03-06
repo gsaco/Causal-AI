@@ -9,7 +9,7 @@ function toDateString(value) {
   return date.toISOString().slice(0, 10);
 }
 
-export function normalizeEntry(entry, { query, harvestedAt, harvestRunId } = {}) {
+export function normalizeEntry(entry, { query, queryPackId, harvestedAt, harvestRunId } = {}) {
   const submitted = toDateString(entry.published);
   const updated = toDateString(entry.updated || entry.published);
   const categories = entry.categories?.length ? entry.categories : [entry.primary_category].filter(Boolean);
@@ -45,7 +45,8 @@ export function normalizeEntry(entry, { query, harvestedAt, harvestRunId } = {})
       source: "arxiv_api",
       harvested_at: harvestedAt ?? new Date().toISOString(),
       harvest_run_id: harvestRunId ?? "manual",
-      queries: query ? [query] : []
+      queries: query ? [query] : [],
+      query_packs: queryPackId ? [queryPackId] : []
     }
   };
 }

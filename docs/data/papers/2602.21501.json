@@ -1,0 +1,111 @@
+{
+  "arxiv_id": "2602.21501",
+  "canonical_url": "https://arxiv.org/abs/2602.21501v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.21501v2",
+  "title": "A Researcher's Guide to Empirical Risk Minimization",
+  "abstract": "This guide provides a reference for high-probability regret bounds in empirical risk minimization (ERM). The presentation is modular: we begin with intuition and general proof strategies, then state broadly applicable guarantees under high-level conditions and provide tools for verifying them for specific losses and function classes. We emphasize that many ERM rate derivations can be organized around a three-step recipe -- a basic inequality, a uniform local concentration bound, and a fixed-point argument -- which yields regret bounds in terms of a critical radius, defined via localized Rademacher complexity, under a mild Bernstein-type variance-risk condition. To make these bounds concrete, we upper bound the critical radius using local maximal inequalities and metric-entropy integrals, thereby recovering familiar rates for VC-subgraph, Sobolev/Hölder, and bounded-variation classes. We also study ERM with nuisance components -- including weighted ERM and Neyman-orthogonal losses -- as they arise in causal inference, missing data, and domain adaptation. Following the orthogonal statistical learning framework, we highlight that these problems often admit regret-transfer bounds linking regret under an estimated loss to population regret under the target loss. These bounds typically decompose the regret into (i) statistical error under the estimated loss and (ii) approximation error due to nuisance estimation. Under sample splitting or cross-fitting, the first term can be controlled using standard fixed-loss ERM regret bounds, while the second depends only on nuisance-estimation accuracy. As a novel contribution, we also treat the in-sample regime, in which the nuisances and the ERM are fit on the same data, deriving regret bounds and showing that fast oracle rates remain attainable under suitable smoothness and Donsker-type conditions.",
+  "authors": [
+    {
+      "name": "Lars van der Laan"
+    }
+  ],
+  "submitted_at": "2026-02-25",
+  "updated_at": "2026-03-03",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.8057,
+    "recent_score": 0.8286,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.7814
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.21501v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.21501v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

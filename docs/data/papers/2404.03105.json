@@ -1,0 +1,118 @@
+{
+  "arxiv_id": "2404.03105",
+  "canonical_url": "https://arxiv.org/abs/2404.03105v2",
+  "pdf_url": "https://arxiv.org/pdf/2404.03105v2",
+  "title": "Methodology for Interpretable Reinforcement Learning for Optimizing Mechanical Ventilation",
+  "abstract": "Mechanical ventilation is a critical life support intervention that delivers controlled air and oxygen to a patient's lungs, assisting or replacing spontaneous breathing. While several data-driven approaches have been proposed to optimize ventilator control strategies, they often lack interpretability and alignment with domain knowledge, hindering clinical adoption. This paper presents a methodology for interpretable reinforcement learning (RL) aimed at improving mechanical ventilation control as part of connected health systems. Using a causal, nonparametric model-based off-policy evaluation, we assess RL policies for their ability to enhance patient-specific outcomes-specifically, increasing blood oxygen levels (SpO2), while avoiding aggressive ventilator settings that may cause ventilator-induced lung injuries and other complications. Through numerical experiments on real-world ICU data from the MIMIC-III database, we demonstrate that our interpretable decision tree policy achieves performance comparable to state-of-the-art deep RL methods while outperforming standard behavior cloning approaches. The results highlight the potential of interpretable, data-driven decision support systems to improve safety and efficiency in personalized ventilation strategies, paving the way for seamless integration into connected healthcare environments.",
+  "authors": [
+    {
+      "name": "Joo Seung Lee"
+    },
+    {
+      "name": "Malini Mahendra"
+    },
+    {
+      "name": "Anil Aswani"
+    }
+  ],
+  "submitted_at": "2024-04-03",
+  "updated_at": "2025-01-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4062,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-01-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2404.03105v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2404.03105v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "robotics-autonomy"
+  ]
+}

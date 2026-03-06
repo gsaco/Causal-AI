@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2602.02240",
+  "canonical_url": "https://arxiv.org/abs/2602.02240v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02240v1",
+  "title": "Causal Inference for Preprocessed Outcomes with an Application to Functional Connectivity",
+  "abstract": "In biomedical research, repeated measurements within each subject are often processed to remove artifacts and unwanted sources of variation. The resulting data are used to construct derived outcomes that act as proxies for scientific outcomes that are not directly observable. Although intra-subject processing is widely used, its impact on inter-subject statistical inference has not been systematically studied, and a principled framework for causal analysis in this setting is lacking. In this article, we propose a semiparametric framework for causal inference with derived outcomes obtained after intra-subject processing. This framework applies to settings with a modular structure, where intra-subject analyses are conducted independently across subjects and are followed by inter-subject analyses based on parameters from the intra-subject stage. We develop multiply robust estimators of causal parameters under rate conditions on both intra-subject and inter-subject models, which allows the use of flexible machine learning. We specialize the framework to a mediation setting and focus on the natural direct effect. For high dimensional inference, we employ a step-down procedure that controls the exceedance rate of the false discovery proportion. Simulation studies demonstrate the superior performance of the proposed approach. We apply our method to estimate the impact of stimulant medication on brain connectivity in children with autism spectrum disorder.",
+  "authors": [
+    {
+      "name": "Zihang Wang"
+    },
+    {
+      "name": "Razieh Nabi"
+    },
+    {
+      "name": "Benjamin B. Risk"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-02",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6014,
+    "recent_score": 0.4062,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5196
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02240v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02240v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

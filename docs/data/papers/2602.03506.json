@@ -1,0 +1,102 @@
+{
+  "arxiv_id": "2602.03506",
+  "canonical_url": "https://arxiv.org/abs/2602.03506v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.03506v1",
+  "title": "Explaining the Explainer: Understanding the Inner Workings of Transformer-based Symbolic Regression Models",
+  "abstract": "Following their success across many domains, transformers have also proven effective for symbolic regression (SR); however, the internal mechanisms underlying their generation of mathematical operators remain largely unexplored. Although mechanistic interpretability has successfully identified circuits in language and vision models, it has not yet been applied to SR. In this article, we introduce PATCHES, an evolutionary circuit discovery algorithm that identifies compact and correct circuits for SR. Using PATCHES, we isolate 28 circuits, providing the first circuit-level characterisation of an SR transformer. We validate these findings through a robust causal evaluation framework based on key notions such as faithfulness, completeness, and minimality. Our analysis shows that mean patching with performance-based evaluation most reliably isolates functionally correct circuits. In contrast, we demonstrate that direct logit attribution and probing classifiers primarily capture correlational features rather than causal ones, limiting their utility for circuit discovery. Overall, these results establish SR as a high-potential application domain for mechanistic interpretability and propose a principled methodology for circuit discovery.",
+  "authors": [
+    {
+      "name": "Arco van Breda"
+    },
+    {
+      "name": "Erman Acar"
+    }
+  ],
+  "submitted_at": "2026-02-03",
+  "updated_at": "2026-02-03",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.629,
+    "recent_score": 0.4176,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5339
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.03506v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.03506v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

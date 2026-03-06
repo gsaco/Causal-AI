@@ -1,0 +1,118 @@
+{
+  "arxiv_id": "2602.08315",
+  "canonical_url": "https://arxiv.org/abs/2602.08315v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.08315v1",
+  "title": "Fast Flow Matching based Conditional Independence Tests for Causal Discovery",
+  "abstract": "Constraint-based causal discovery methods require a large number of conditional independence (CI) tests, which severely limits their practical applicability due to high computational complexity. Therefore, it is crucial to design an algorithm that accelerates each individual test. To this end, we propose the Flow Matching-based Conditional Independence Test (FMCIT). The proposed test leverages the high computational efficiency of flow matching and requires the model to be trained only once throughout the entire causal discovery procedure, substantially accelerating causal discovery. According to numerical experiments, FMCIT effectively controls type-I error and maintains high testing power under the alternative hypothesis, even in the presence of high-dimensional conditioning sets. In addition, we further integrate FMCIT into a two-stage guided PC skeleton learning framework, termed GPC-FMCIT, which combines fast screening with guided, budgeted refinement using FMCIT. This design yields explicit bounds on the number of CI queries while maintaining high statistical power. Experiments on synthetic and real-world causal discovery tasks demonstrate favorable accuracy-efficiency trade-offs over existing CI testing methods and PC variants.",
+  "authors": [
+    {
+      "name": "Shunyu Zhao"
+    },
+    {
+      "name": "Yanfeng Yang"
+    },
+    {
+      "name": "Shuai Li"
+    },
+    {
+      "name": "Kenji Fukumizu"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6552,
+    "recent_score": 0.4936,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.5807
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.08315v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.08315v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

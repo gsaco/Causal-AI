@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2601.19700",
+  "canonical_url": "https://arxiv.org/abs/2601.19700v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.19700v2",
+  "title": "Generalizable Multimodal Large Language Model Editing via Invariant Trajectory Learning",
+  "abstract": "Knowledge editing emerges as a crucial technique for efficiently correcting incorrect or outdated knowledge in large language models (LLM). Existing editing methods rely on a rigid mapping from parameter or module modifications to output, which causes the generalization limitation in Multimodal LLM (MLLM). In this paper, we reformulate MLLM editing as an out-of-distribution (OOD) generalization problem, where the goal is to discern semantic shift with factual shift and thus achieve robust editing among diverse cross-modal prompting. The key challenge of this OOD problem lies in identifying invariant causal trajectories that generalize accurately while suppressing spurious correlations. To address it, we propose ODEdit, a plug-and-play invariant learning based framework that optimizes the tripartite OOD risk objective to simultaneously enhance editing reliability, locality, and generality.We further introduce an edit trajectory invariant learning method, which integrates a total variation penalty into the risk minimization objective to stabilize edit trajectories against environmental variations. Theoretical analysis and extensive experiments demonstrate the effectiveness of ODEdit.",
+  "authors": [
+    {
+      "name": "Jiajie Su"
+    },
+    {
+      "name": "Haoyuan Wang"
+    },
+    {
+      "name": "Xiaohua Feng"
+    },
+    {
+      "name": "Yunshan Ma"
+    },
+    {
+      "name": "Xiaobo Xia"
+    },
+    {
+      "name": "Yuyuan Li"
+    },
+    {
+      "name": "Xiaolin Zheng"
+    },
+    {
+      "name": "Jianmao Xiao"
+    },
+    {
+      "name": "Chaochao Chen"
+    }
+  ],
+  "submitted_at": "2026-01-27",
+  "updated_at": "2026-01-30",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6177,
+    "recent_score": 0.3574,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.5068
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-01-30"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.19700v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.19700v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

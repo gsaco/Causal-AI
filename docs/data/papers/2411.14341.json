@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2411.14341",
+  "canonical_url": "https://arxiv.org/abs/2411.14341v1",
+  "pdf_url": "https://arxiv.org/pdf/2411.14341v1",
+  "title": "Logarithmic Neyman Regret for Adaptive Estimation of the Average Treatment Effect",
+  "abstract": "Estimation of the Average Treatment Effect (ATE) is a core problem in causal inference with strong connections to Off-Policy Evaluation in Reinforcement Learning. This paper considers the problem of adaptively selecting the treatment allocation probability in order to improve estimation of the ATE. The majority of prior work on adaptive ATE estimation focus on asymptotic guarantees, and in turn overlooks important practical considerations such as the difficulty of learning the optimal treatment allocation as well as hyper-parameter selection. Existing non-asymptotic methods are limited by poor empirical performance and exponential scaling of the Neyman regret with respect to problem parameters. In order to address these gaps, we propose and analyze the Clipped Second Moment Tracking (ClipSMT) algorithm, a variant of an existing algorithm with strong asymptotic optimality guarantees, and provide finite sample bounds on its Neyman regret. Our analysis shows that ClipSMT achieves exponential improvements in Neyman regret on two fronts: improving the dependence on $T$ from $O(\\sqrt{T})$ to $O(\\log T)$, as well as reducing the exponential dependence on problem parameters to a polynomial dependence. Finally, we conclude with simulations which show the marked improvement of ClipSMT over existing approaches.",
+  "authors": [
+    {
+      "name": "Ojash Neopane"
+    },
+    {
+      "name": "Aaditya Ramdas"
+    },
+    {
+      "name": "Aarti Singh"
+    }
+  ],
+  "submitted_at": "2024-11-21",
+  "updated_at": "2024-11-21",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4062,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-11-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2411.14341v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2411.14341v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

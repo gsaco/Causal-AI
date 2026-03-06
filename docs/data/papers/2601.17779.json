@@ -1,0 +1,98 @@
+{
+  "arxiv_id": "2601.17779",
+  "canonical_url": "https://arxiv.org/abs/2601.17779v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.17779v1",
+  "title": "Sensitivity analysis for incremental effects, with application to a study of victimization & offending",
+  "abstract": "Sensitivity analysis for unmeasured confounding under incremental propensity score interventions remains relatively underdeveloped. Incremental interventions define stochastic treatment regimes by multiplying the odds of treatment, offering a flexible framework for causal effect estimation. To study incremental effects when there are unobserved confounders, we adopt Rosenbaum's sensitivity model in single time point settings, and propose a doubly robust estimator for the resulting effect bounds. The bound estimators are asymptotically normal under mild conditions on nuisance function estimation. We show that incremental effect bounds can be narrower or wider than those for mean potential outcomes, and that the bounds must lie between the expected minimum and maximum of the conditional bounds on E(Y^0|X) and E(Y^1|X). For time-varying treatments, we consider the marginal sensitivity model. Although sharp bounds for incremental effects are identifiable from longitudinal data under this model, practical estimators have not yet been established; we discuss this challenge and provide partial results toward implementation. Finally, we apply our methods to study the effect of victimization on subsequent offending using data from the National Longitudinal Study of Adolescent to Adult Health (Add Health), illustrating the robustness of our findings in an empirical setting.",
+  "authors": [
+    {
+      "name": "Shuying Shen"
+    },
+    {
+      "name": "Valerio Bacak"
+    },
+    {
+      "name": "Edward H. Kennedy"
+    }
+  ],
+  "submitted_at": "2026-01-25",
+  "updated_at": "2026-01-25",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4592,
+    "recent_score": 0.3255,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.3605
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.17779v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.17779v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

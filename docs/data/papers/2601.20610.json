@@ -1,0 +1,115 @@
+{
+  "arxiv_id": "2601.20610",
+  "canonical_url": "https://arxiv.org/abs/2601.20610v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.20610v1",
+  "title": "Causal Inference in Biomedical Imaging via Functional Linear Structural Equation Models",
+  "abstract": "Understanding the causal effects of organ-specific features from medical imaging on clinical outcomes is essential for biomedical research and patient care. We propose a novel Functional Linear Structural Equation Model (FLSEM) to capture the relationships among clinical outcomes, functional imaging exposures, and scalar covariates like genetics, sex, and age. Traditional methods struggle with the infinite-dimensional nature of exposures and complex covariates. Our FLSEM overcomes these challenges by establishing identifiable conditions using scalar instrumental variables. We develop the Functional Group Support Detection and Root Finding (FGS-DAR) algorithm for efficient variable selection, supported by rigorous theoretical guarantees, including selection consistency and accurate parameter estimation. We further propose a test statistic to test the nullity of the functional coefficient, establishing its null limit distribution. Our approach is validated through extensive simulations and applied to UK Biobank data, demonstrating robust performance in detecting causal relationships from medical imaging.",
+  "authors": [
+    {
+      "name": "Ting Li"
+    },
+    {
+      "name": "Ethan Fan"
+    },
+    {
+      "name": "Tengfei Li"
+    },
+    {
+      "name": "Hongtu Zhu"
+    }
+  ],
+  "submitted_at": "2026-01-28",
+  "updated_at": "2026-01-28",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6737,
+    "recent_score": 0.3536,
+    "rising_score": 0.6159,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.20610v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.20610v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)",
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

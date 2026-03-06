@@ -1,0 +1,137 @@
+{
+  "arxiv_id": "2511.22842",
+  "canonical_url": "https://arxiv.org/abs/2511.22842v2",
+  "pdf_url": "https://arxiv.org/pdf/2511.22842v2",
+  "title": "CausalProfiler: Generating Synthetic Benchmarks for Rigorous and Transparent Evaluation of Causal Machine Learning",
+  "abstract": "Causal machine learning (Causal ML) aims to answer \"what if\" questions using machine learning algorithms, making it a promising tool for high-stakes decision-making. Yet, empirical evaluation practices in Causal ML remain limited. Existing benchmarks often rely on a handful of hand-crafted or semi-synthetic datasets, leading to brittle, non-generalizable conclusions. To bridge this gap, we introduce CausalProfiler, a synthetic benchmark generator for Causal ML methods. Based on a set of explicit design choices about the class of causal models, queries, and data considered, the CausalProfiler randomly samples causal models, data, queries, and ground truths constituting the synthetic causal benchmarks. In this way, Causal ML methods can be rigorously and transparently evaluated under a variety of conditions. This work offers the first random generator of synthetic causal benchmarks with coverage guarantees and transparent assumptions operating on the three levels of causal reasoning: observation, intervention, and counterfactual. We demonstrate its utility by evaluating several state-of-the-art methods under diverse conditions and assumptions, both in and out of the identification regime, illustrating the types of analyses and insights the CausalProfiler enables.",
+  "authors": [
+    {
+      "name": "Panayiotis Panayiotou"
+    },
+    {
+      "name": "Audrey Poinsot"
+    },
+    {
+      "name": "Alessandro Leite"
+    },
+    {
+      "name": "Nicolas Chesneau"
+    },
+    {
+      "name": "Marc Schoenauer"
+    },
+    {
+      "name": "Özgür Şimşek"
+    }
+  ],
+  "submitted_at": "2025-11-28",
+  "updated_at": "2026-01-07",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5005,
+    "recent_score": 0.1395,
+    "rising_score": 0.334,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-01-07"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2511.22842v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2511.22842v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "id_list:2305.10032,2406.04598,2002.02770,2404.06349,2002.11631,2010.05761,2307.16405,2511.22842",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216",
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

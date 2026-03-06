@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2602.10370",
+  "canonical_url": "https://arxiv.org/abs/2602.10370v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.10370v1",
+  "title": "Causal Effect Estimation with Learned Instrument Representations",
+  "abstract": "Instrumental variable (IV) methods mitigate bias from unobserved confounding in observational causal inference but rely on the availability of a valid instrument, which can often be difficult or infeasible to identify in practice. In this paper, we propose a representation learning approach that constructs instrumental representations from observed covariates, which enable IV-based estimation even in the absence of an explicit instrument. Our model (ZNet) achieves this through an architecture that mirrors the structural causal model of IVs; it decomposes the ambient feature space into confounding and instrumental components, and is trained by enforcing empirical moment conditions corresponding to the defining properties of valid instruments (i.e., relevance, exclusion restriction, and instrumental unconfoundedness). Importantly, ZNet is compatible with a wide range of downstream two-stage IV estimators of causal effects. Our experiments demonstrate that ZNet can (i) recover ground-truth instruments when they already exist in the ambient feature space and (ii) construct latent instruments in the embedding space when no explicit IVs are available. This suggests that ZNet can be used as a ``plug-and-play'' module for causal inference in general observational settings, regardless of whether the (untestable) assumption of unconfoundedness is satisfied.",
+  "authors": [
+    {
+      "name": "Frances Dean"
+    },
+    {
+      "name": "Jenna Fields"
+    },
+    {
+      "name": "Radhika Bhalerao"
+    },
+    {
+      "name": "Marie Charpignon"
+    },
+    {
+      "name": "Ahmed Alaa"
+    }
+  ],
+  "submitted_at": "2026-02-10",
+  "updated_at": "2026-02-10",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.78,
+    "recent_score": 0.5076,
+    "rising_score": 0.7352,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-10"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.10370v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.10370v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)",
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

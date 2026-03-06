@@ -1,11 +1,46 @@
 {
-  "version": "2026-01-22/v1",
+  "id": "sequential",
+  "version": "2026-03-05/v2",
   "group": "Sequential",
+  "title": "Sequential Decision-Making and Dynamics",
+  "enabled": true,
+  "priority": 4,
   "topics": ["causal-rl", "off-policy-evaluation", "causal-time-series", "causal-world-models"],
-  "queries": [
-    "ti:\"causal reinforcement\" OR abs:\"causal reinforcement\"",
-    "ti:\"off-policy\" OR abs:\"off-policy\"",
-    "ti:\"causal time series\" OR abs:spatiotemporal",
-    "ti:\"world model\" AND ti:causal"
+  "category_allowlist": ["cs.AI", "cs.LG", "stat.ML"],
+  "required_keywords_any": ["causal", "counterfactual", "intervention", "policy evaluation", "world model"],
+  "exclude_keywords": ["static word embeddings", "permutation-invariant codes"],
+  "seed_papers": ["2010.05761", "2404.06349"],
+  "per_pack_cap": 60,
+  "candidate_queries": [
+    {
+      "id": "sequential-rl",
+      "query": "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)",
+      "max_results": 35,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "sequential-ope",
+      "query": "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)",
+      "max_results": 35,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "sequential-dynamics",
+      "query": "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))",
+      "max_results": 35,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ],
+  "precision_queries": [
+    {
+      "id": "sequential-spatiotemporal",
+      "query": "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))",
+      "max_results": 25,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
   ]
 }

@@ -1,3 +1,9 @@
 {"snapshot":"2026-01-22","harvest_window":"2025-12-23 to 2026-01-21","records":6,"status":"ok","updated_at":"2026-01-22T02:10:00Z"}
 {"snapshot":"2026-01-22","harvest_window":"2025-12-23 to 2026-01-21","records":6,"status":"ok","updated_at":"2026-01-22T12:00:00Z","ranking_config_version":"2026-01-22/v1"}
 {"snapshot": "2026-01-22", "harvest_window": "2025-12-23 to 2026-01-21", "records": 6, "status": "ok", "updated_at": "2026-01-22T12:30:00Z", "ranking_config_version": "2026-01-22/v1", "query_pack_version": "2026-01-22/v1"}
+{"snapshot":"2026-03-05","harvest_window":"2025-11-05 to 2026-03-05","records":661,"status":"ok","updated_at":"2026-03-05T23:48:16.207Z","ranking_config_version":"2026-01-22/v1","query_pack_version":"2026-03-05/v2"}
+{"snapshot":"2026-03-05","harvest_window":"2025-11-05 to 2026-03-05","records":592,"status":"ok","updated_at":"2026-03-05T23:49:28.037Z","ranking_config_version":"2026-01-22/v1","query_pack_version":"2026-03-05/v2"}
+{"snapshot":"2026-03-05","harvest_window":"2025-11-05 to 2026-03-05","records":592,"status":"ok","updated_at":"2026-03-05T23:50:11.580Z","ranking_config_version":"2026-01-22/v1","query_pack_version":"2026-03-05/v2"}
+{"snapshot":"2026-03-05","harvest_window":"2025-11-05 to 2026-03-05","records":592,"status":"ok","updated_at":"2026-03-05T23:50:31.388Z","ranking_config_version":"2026-01-22/v1","query_pack_version":"2026-03-05/v2"}
+{"snapshot":"2026-03-05","harvest_window":"2025-11-05 to 2026-03-05","records":592,"status":"ok","updated_at":"2026-03-05T23:50:46.406Z","ranking_config_version":"2026-01-22/v1","query_pack_version":"2026-03-05/v2"}
+{"snapshot":"2026-03-05","harvest_window":"2025-11-05 to 2026-03-05","records":661,"status":"ok","updated_at":"2026-03-05T23:54:05.953Z","ranking_config_version":"2026-01-22/v1","query_pack_version":"2026-03-05/v2"}

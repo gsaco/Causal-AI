@@ -1,0 +1,154 @@
+{
+  "arxiv_id": "2603.00540",
+  "canonical_url": "https://arxiv.org/abs/2603.00540v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.00540v1",
+  "title": "LOGIGEN: Logic-Driven Generation of Verifiable Agentic Tasks",
+  "abstract": "The evolution of Large Language Models (LLMs) from static instruction-followers to autonomous agents necessitates operating within complex, stateful environments to achieve precise state-transition objectives. However, this paradigm is bottlenecked by data scarcity, as existing tool-centric reverse-synthesis pipelines fail to capture the rigorous logic of real-world applications. We introduce \\textbf{LOGIGEN}, a logic-driven framework that synthesizes verifiable training data based on three core pillars: \\textbf{Hard-Compiled Policy Grounding}, \\textbf{Logic-Driven Forward Synthesis}, and \\textbf{Deterministic State Verification}. Specifically, a Triple-Agent Orchestration is employed: the \\textbf{Architect} compiles natural-language policy into database constraints to enforce hard rules; the \\textbf{Set Designer} initializes boundary-adjacent states to trigger critical policy conflicts; and the \\textbf{Explorer} searches this environment to discover causal solution paths. This framework yields a dataset of 20,000 complex tasks across 8 domains, where validity is strictly guaranteed by checking exact state equivalence. Furthermore, we propose a verification-based training protocol where Supervised Fine-Tuning (SFT) on verifiable trajectories establishes compliance with hard-compiled policy, while Reinforcement Learning (RL) guided by dense state-rewards refines long-horizon goal achievement. On $τ^2$-Bench, LOGIGEN-32B(RL) achieves a \\textbf{79.5\\% success rate}, substantially outperforming the base model (40.7\\%). These results demonstrate that logic-driven synthesis combined with verification-based training effectively constructs the causally valid trajectories needed for next-generation agents.",
+  "authors": [
+    {
+      "name": "Yucheng Zeng"
+    },
+    {
+      "name": "Weipeng Lu"
+    },
+    {
+      "name": "Linyun Liu"
+    },
+    {
+      "name": "Shupeng Li"
+    },
+    {
+      "name": "Zitian Qu"
+    },
+    {
+      "name": "Chenghao Zhu"
+    },
+    {
+      "name": "Shaofei Li"
+    },
+    {
+      "name": "Zhengdong Tan"
+    },
+    {
+      "name": "Mengyue Liu"
+    },
+    {
+      "name": "Haotian Zhao"
+    },
+    {
+      "name": "Zhe Zhou"
+    },
+    {
+      "name": "Jianmin Wu"
+    }
+  ],
+  "submitted_at": "2026-02-28",
+  "updated_at": "2026-02-28",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.8303,
+    "recent_score": 0.843,
+    "rising_score": 0.7902,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.00540v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.00540v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)",
+      "((ti:causal OR abs:causal) AND (ti:agent OR abs:agent) AND (abs:intervention OR abs:planning OR abs:tool use)) AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

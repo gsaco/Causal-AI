@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2602.23993",
+  "canonical_url": "https://arxiv.org/abs/2602.23993v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.23993v1",
+  "title": "The GRADIEND Python Package: An End-to-End System for Gradient-Based Feature Learning",
+  "abstract": "We present gradiend, an open-source Python package that operationalizes the GRADIEND method for learning feature directions from factual-counterfactual MLM and CLM gradients in language models. The package provides a unified workflow for feature-related data creation, training, evaluation, visualization, persistent model rewriting via controlled weight updates, and multi-feature comparison. We demonstrate GRADIEND on an English pronoun paradigm and on a large-scale feature comparison that reproduces prior use cases.",
+  "authors": [
+    {
+      "name": "Jonathan Drechsel"
+    },
+    {
+      "name": "Steffen Herbold"
+    }
+  ],
+  "submitted_at": "2026-02-27",
+  "updated_at": "2026-02-27",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6246,
+    "recent_score": 0.8194,
+    "canonical_score": 0.8228,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5586
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.23993v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.23993v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,132 @@
+{
+  "arxiv_id": "2602.00063",
+  "canonical_url": "https://arxiv.org/abs/2602.00063v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.00063v1",
+  "title": "The Impact of Machine Learning Uncertainty on the Robustness of Counterfactual Explanations",
+  "abstract": "Counterfactual explanations are widely used to interpret machine learning predictions by identifying minimal changes to input features that would alter a model's decision. However, most existing counterfactual methods have not been tested when model and data uncertainty change, resulting in explanations that may be unstable or invalid under real-world variability. In this work, we investigate the robustness of common combinations of machine learning models and counterfactual generation algorithms in the presence of both aleatoric and epistemic uncertainty. Through experiments on synthetic and real-world tabular datasets, we show that counterfactual explanations are highly sensitive to model uncertainty. In particular, we find that even small reductions in model accuracy - caused by increased noise or limited data - can lead to large variations in the generated counterfactuals on average and on individual instances. These findings underscore the need for uncertainty-aware explanation methods in domains such as finance and the social sciences.",
+  "authors": [
+    {
+      "name": "Leonidas Christodoulou"
+    },
+    {
+      "name": "Chang Sun"
+    }
+  ],
+  "submitted_at": "2026-01-20",
+  "updated_at": "2026-01-20",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5041,
+    "recent_score": 0.2837,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3673
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.00063v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.00063v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "economics-policy-social"
+  ]
+}

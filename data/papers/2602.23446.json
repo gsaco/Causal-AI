@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2602.23446",
+  "canonical_url": "https://arxiv.org/abs/2602.23446v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.23446v1",
+  "title": "Human Supervision as an Information Bottleneck: A Unified Theory of Error Floors in Human-Guided Learning",
+  "abstract": "Large language models are trained primarily on human-generated data and feedback, yet they exhibit persistent errors arising from annotation noise, subjective preferences, and the limited expressive bandwidth of natural language. We argue that these limitations reflect structural properties of the supervision channel rather than model scale or optimization. We develop a unified theory showing that whenever the human supervision channel is not sufficient for a latent evaluation target, it acts as an information-reducing channel that induces a strictly positive excess-risk floor for any learner dominated by it. We formalize this Human-Bounded Intelligence limit and show that across six complementary frameworks (operator theory, PAC-Bayes, information theory, causal inference, category theory, and game-theoretic analyses of reinforcement learning from human feedback), non-sufficiency yields strictly positive lower bounds arising from the same structural decomposition into annotation noise, preference distortion, and semantic compression. The theory explains why scaling alone cannot eliminate persistent human-aligned errors and characterizes conditions under which auxiliary non-human signals (e.g., retrieval, program execution, tools) increase effective supervision capacity and collapse the floor by restoring information about the latent target. Experiments on real preference data, synthetic known-target tasks, and externally verifiable benchmarks confirm the predicted structural signatures: human-only supervision exhibits a persistent floor, while sufficiently informative auxiliary channels strictly reduce or eliminate excess error.",
+  "authors": [
+    {
+      "name": "Alejandro Rodriguez Dominguez"
+    }
+  ],
+  "submitted_at": "2026-02-26",
+  "updated_at": "2026-02-26",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7569,
+    "recent_score": 0.7965,
+    "rising_score": 0.7044,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.23446v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.23446v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)",
+      "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

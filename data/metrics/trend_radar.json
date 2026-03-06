@@ -1,35 +1,125 @@
 {
-  "generated_at": "2026-01-22",
+  "generated_at": "2026-03-05",
   "topics": {
-    "causal-discovery": {
-      "momentum": 0.6,
-      "recency_share": 0.5,
-      "cross_list_breadth": 0.7,
-      "revision_churn": 0.4
+    "foundations-scm": {
+      "momentum": 1,
+      "recency_share": 0.08540925266903915,
+      "cross_list_breadth": 0.9021260997067448,
+      "revision_churn": 4.8576279591475455e-30
     },
-    "distribution-shift": {
-      "momentum": 0.75,
-      "recency_share": 0.6,
-      "cross_list_breadth": 0.8,
-      "revision_churn": 0.5
+    "identifiability-do-calculus": {
+      "momentum": 0.6665,
+      "recency_share": 0.05693950177935943,
+      "cross_list_breadth": 0.7103637611530542,
+      "revision_churn": 0
+    },
+    "counterfactuals": {
+      "momentum": 0.565,
+      "recency_share": 0.20640569395017794,
+      "cross_list_breadth": 0.6765836536854422,
+      "revision_churn": 1.8979159509137596e-32
+    },
+    "causal-discovery": {
+      "momentum": 1,
+      "recency_share": 0.2526690391459075,
+      "cross_list_breadth": 0.8669354838709677,
+      "revision_churn": 2.323213374826096e-30
+    },
+    "latent-confounding-discovery": {
+      "momentum": 0.25,
+      "recency_share": 0.02491103202846975,
+      "cross_list_breadth": 0.712258064516129,
+      "revision_churn": 3.986009217877964e-33
     },
     "effect-estimation": {
-      "momentum": 0.55,
-      "recency_share": 0.4,
-      "cross_list_breadth": 0.6,
-      "revision_churn": 0.35
+      "momentum": 1,
+      "recency_share": 1,
+      "cross_list_breadth": 0.7915516981889329,
+      "revision_churn": 1.7427598339267947e-25
+    },
+    "instrumental-variables": {
+      "momentum": 1,
+      "recency_share": 0.9537366548042705,
+      "cross_list_breadth": 0.7946680885097308,
+      "revision_churn": 1.6471112470570097e-34
+    },
+    "mediation": {
+      "momentum": 1,
+      "recency_share": 0.03914590747330961,
+      "cross_list_breadth": 0.453405017921147,
+      "revision_churn": 0
+    },
+    "causal-representation-learning": {
+      "momentum": 0,
+      "recency_share": 0.03202846975088968,
+      "cross_list_breadth": 0.6801075268817204,
+      "revision_churn": 0
+    },
+    "causal-generative-models": {
+      "momentum": 0.5,
+      "recency_share": 0.0035587188612099642,
+      "cross_list_breadth": 0.6182795698924731,
+      "revision_churn": 0
+    },
+    "causal-world-models": {
+      "momentum": 1,
+      "recency_share": 0.02491103202846975,
+      "cross_list_breadth": 0.811491935483871,
+      "revision_churn": 0
+    },
+    "causal-time-series": {
+      "momentum": 0.9,
+      "recency_share": 0.08540925266903915,
+      "cross_list_breadth": 0.7968936678614099,
+      "revision_churn": 0
+    },
+    "causal-rl": {
+      "momentum": 0.5,
+      "recency_share": 0,
+      "cross_list_breadth": 0.870967741935484,
+      "revision_churn": 0
+    },
+    "off-policy-evaluation": {
+      "momentum": 0,
+      "recency_share": 0.028469750889679714,
+      "cross_list_breadth": 0.9952793076317861,
+      "revision_churn": 0
+    },
+    "causal-llms": {
+      "momentum": 1,
+      "recency_share": 0.8825622775800712,
+      "cross_list_breadth": 0.7869381279746166,
+      "revision_churn": 3.202254475466446e-22
+    },
+    "causal-agents": {
+      "momentum": 1,
+      "recency_share": 0.20284697508896798,
+      "cross_list_breadth": 0.7864516129032258,
+      "revision_churn": 0
+    },
+    "distribution-shift": {
+      "momentum": 0.8505,
+      "recency_share": 0.7935943060498221,
+      "cross_list_breadth": 0.7959195955705344,
+      "revision_churn": 3.6443567724524854e-22
     },
     "causal-fairness": {
-      "momentum": 0.4,
-      "recency_share": 0.3,
-      "cross_list_breadth": 0.45,
-      "revision_churn": 0.25
+      "momentum": 0.722,
+      "recency_share": 0.18861209964412812,
+      "cross_list_breadth": 0.7223075610172384,
+      "revision_churn": 1.9380834842664317e-32
+    },
+    "causal-privacy": {
+      "momentum": 0,
+      "recency_share": 0.028469750889679714,
+      "cross_list_breadth": 1,
+      "revision_churn": 0
     },
     "systems-tooling": {
-      "momentum": 0.5,
-      "recency_share": 0.35,
-      "cross_list_breadth": 0.5,
-      "revision_churn": 0.3
+      "momentum": 1,
+      "recency_share": 0.09252669039145907,
+      "cross_list_breadth": 0.9787234042553191,
+      "revision_churn": 4.1537332760341064e-21
     }
   }
 }

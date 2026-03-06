@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2602.09128",
+  "canonical_url": "https://arxiv.org/abs/2602.09128v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.09128v1",
+  "title": "Counterfactual Maps: What They Are and How to Find Them",
+  "abstract": "Counterfactual explanations are a central tool in interpretable machine learning, yet computing them exactly for complex models remains challenging. For tree ensembles, predictions are piecewise constant over a large collection of axis-aligned hyperrectangles, implying that an optimal counterfactual for a point corresponds to its projection onto the nearest rectangle with an alternative label under a chosen metric. Existing methods largely overlook this geometric structure, relying either on heuristics with no optimality guarantees or on mixed-integer programming formulations that do not scale to interactive use. In this work, we revisit counterfactual generation through the lens of nearest-region search and introduce counterfactual maps, a global representation of recourse for tree ensembles. Leveraging the fact that any tree ensemble can be compressed into an equivalent partition of labeled hyperrectangles, we cast counterfactual search as the problem of identifying the generalized Voronoi cell associated with the nearest rectangle of an alternative label. This leads to an exact, amortized algorithm based on volumetric k-dimensional (KD) trees, which performs branch-and-bound nearest-region queries with explicit optimality certificates and sublinear average query time after a one-time preprocessing phase. Our experimental analyses on several real datasets drawn from high-stakes application domains show that this approach delivers globally optimal counterfactual explanations with millisecond-level latency, achieving query times that are orders of magnitude faster than existing exact, cold-start optimization methods.",
+  "authors": [
+    {
+      "name": "Awa Khouna"
+    },
+    {
+      "name": "Julien Ferry"
+    },
+    {
+      "name": "Thibaut Vidal"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5483,
+    "recent_score": 0.4936,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4142
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.09128v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.09128v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments",
+    "biology-genomics-drug-discovery"
+  ]
+}

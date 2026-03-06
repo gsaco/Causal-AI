@@ -1,0 +1,135 @@
+{
+  "arxiv_id": "2505.19430",
+  "canonical_url": "https://arxiv.org/abs/2505.19430v3",
+  "pdf_url": "https://arxiv.org/pdf/2505.19430v3",
+  "title": "Deriving Strategic Market Insights with Large Language Models: A Benchmark for Forward Counterfactual Generation",
+  "abstract": "Counterfactual reasoning typically involves considering alternatives to actual events. While often applied to understand past events, a distinct form-forward counterfactual reasoning-focuses on anticipating plausible future developments. This type of reasoning is invaluable in dynamic financial markets, where anticipating market developments can powerfully unveil potential risks and opportunities for stakeholders, guiding their decision-making. However, performing this at scale is challenging due to the cognitive demands involved, underscoring the need for automated solutions. LLMs offer promise, but remain unexplored for this application. To address this gap, we introduce a novel benchmark, FIN-FORCE-FINancial FORward Counterfactual Evaluation. By curating financial news headlines and providing structured evaluation, FIN-FORCE supports LLM based forward counterfactual generation. This paves the way for scalable and automated solutions for exploring and anticipating future market developments, thereby providing structured insights for decision-making. Through experiments on FIN-FORCE, we evaluate state-of-the-art LLMs and counterfactual generation methods, analyzing their limitations and proposing insights for future research. We release the benchmark, supplementary data and all experimental codes at the following link: https://github.com/keanepotato/fin_force",
+  "authors": [
+    {
+      "name": "Keane Ong"
+    },
+    {
+      "name": "Rui Mao"
+    },
+    {
+      "name": "Deeksha Varshney"
+    },
+    {
+      "name": "Paul Pu Liang"
+    },
+    {
+      "name": "Erik Cambria"
+    },
+    {
+      "name": "Gianmarco Mengaldo"
+    }
+  ],
+  "submitted_at": "2025-05-26",
+  "updated_at": "2025-10-01",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4233,
+    "recent_score": 0.0123,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2476
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v3",
+      "updated_at": "2025-10-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2505.19430v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/2505.19430v3"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"counterfactual evaluation\" OR abs:\"counterfactual benchmark\" OR abs:\"causal benchmark\") AND (abs:\"language model\" OR abs:llm))"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "representation",
+      "sequential",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

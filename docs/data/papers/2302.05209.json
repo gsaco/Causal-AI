@@ -1,0 +1,121 @@
+{
+  "arxiv_id": "2302.05209",
+  "canonical_url": "https://arxiv.org/abs/2302.05209v3",
+  "pdf_url": "https://arxiv.org/pdf/2302.05209v3",
+  "title": "A Survey on Causal Reinforcement Learning",
+  "abstract": "While Reinforcement Learning (RL) achieves tremendous success in sequential decision-making problems of many domains, it still faces key challenges of data inefficiency and the lack of interpretability. Interestingly, many researchers have leveraged insights from the causality literature recently, bringing forth flourishing works to unify the merits of causality and address well the challenges from RL. As such, it is of great necessity and significance to collate these Causal Reinforcement Learning (CRL) works, offer a review of CRL methods, and investigate the potential functionality from causality toward RL. In particular, we divide existing CRL approaches into two categories according to whether their causality-based information is given in advance or not. We further analyze each category in terms of the formalization of different models, ranging from the Markov Decision Process (MDP), Partially Observed Markov Decision Process (POMDP), Multi-Arm Bandits (MAB), and Dynamic Treatment Regime (DTR). Moreover, we summarize the evaluation matrices and open sources while we discuss emerging applications, along with promising prospects for the future development of CRL.",
+  "authors": [
+    {
+      "name": "Yan Zeng"
+    },
+    {
+      "name": "Ruichu Cai"
+    },
+    {
+      "name": "Fuchun Sun"
+    },
+    {
+      "name": "Libo Huang"
+    },
+    {
+      "name": "Zhifeng Hao"
+    }
+  ],
+  "submitted_at": "2023-02-10",
+  "updated_at": "2023-06-01",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4347,
+    "recent_score": 0,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.2868
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v3",
+      "updated_at": "2023-06-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2302.05209v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/2302.05209v3"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

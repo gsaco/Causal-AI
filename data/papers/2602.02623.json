@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2602.02623",
+  "canonical_url": "https://arxiv.org/abs/2602.02623v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02623v1",
+  "title": "Learning Consistent Causal Abstraction Networks",
+  "abstract": "Causal artificial intelligence aims to enhance explainability, trustworthiness, and robustness in AI by leveraging structural causal models (SCMs). In this pursuit, recent advances formalize network sheaves and cosheaves of causal knowledge. Pushing in the same direction, we tackle the learning of consistent causal abstraction network (CAN), a sheaf-theoretic framework where (i) SCMs are Gaussian, (ii) restriction maps are transposes of constructive linear causal abstractions (CAs) adhering to the semantic embedding principle, and (iii) edge stalks correspond--up to permutation--to the node stalks of more detailed SCMs. Our problem formulation separates into edge-specific local Riemannian problems and avoids nonconvex objectives. We propose an efficient search procedure, solving the local problems with SPECTRAL, our iterative method with closed-form updates and suitable for positive definite and semidefinite covariance matrices. Experiments on synthetic data show competitive performance in the CA learning task, and successful recovery of diverse CAN structures.",
+  "authors": [
+    {
+      "name": "Gabriele D'Acunto"
+    },
+    {
+      "name": "Paolo Di Lorenzo"
+    },
+    {
+      "name": "Sergio Barbarossa"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-02",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SP"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.7458,
+    "recent_score": 0.4062,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.6896
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "SCM"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02623v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02623v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

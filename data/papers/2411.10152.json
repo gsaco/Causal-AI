@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2411.10152",
+  "canonical_url": "https://arxiv.org/abs/2411.10152v1",
+  "pdf_url": "https://arxiv.org/pdf/2411.10152v1",
+  "title": "Causal Time-Series Synchronization for Multi-Dimensional Forecasting",
+  "abstract": "The process industry's high expectations for Digital Twins require modeling approaches that can generalize across tasks and diverse domains with potentially different data dimensions and distributional shifts i.e., Foundational Models. Despite success in natural language processing and computer vision, transfer learning with (self-) supervised signals for pre-training general-purpose models is largely unexplored in the context of Digital Twins in the process industry due to challenges posed by multi-dimensional time-series data, lagged cause-effect dependencies, complex causal structures, and varying number of (exogenous) variables. We propose a novel channel-dependent pre-training strategy that leverages synchronized cause-effect pairs to overcome these challenges by breaking down the multi-dimensional time-series data into pairs of cause-effect variables. Our approach focuses on: (i) identifying highly lagged causal relationships using data-driven methods, (ii) synchronizing cause-effect pairs to generate training samples for channel-dependent pre-training, and (iii) evaluating the effectiveness of this approach in channel-dependent forecasting. Our experimental results demonstrate significant improvements in forecasting accuracy and generalization capability compared to traditional training methods.",
+  "authors": [
+    {
+      "name": "Michael Mayr"
+    },
+    {
+      "name": "Georgios C. Chasparis"
+    },
+    {
+      "name": "Josef Küng"
+    }
+  ],
+  "submitted_at": "2024-11-15",
+  "updated_at": "2024-11-15",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4791,
+    "recent_score": 0,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.346
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-11-15"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2411.10152v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2411.10152v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

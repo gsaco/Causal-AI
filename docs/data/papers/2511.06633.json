@@ -1,0 +1,139 @@
+{
+  "arxiv_id": "2511.06633",
+  "canonical_url": "https://arxiv.org/abs/2511.06633v2",
+  "pdf_url": "https://arxiv.org/pdf/2511.06633v2",
+  "title": "Dual-branch Spatial-Temporal Self-supervised Representation for Enhanced Road Network Learning",
+  "abstract": "Road network representation learning (RNRL) has attracted increasing attention from both researchers and practitioners as various spatiotemporal tasks are emerging. Recent advanced methods leverage Graph Neural Networks (GNNs) and contrastive learning to characterize the spatial structure of road segments in a self-supervised paradigm. However, spatial heterogeneity and temporal dynamics of road networks raise severe challenges to the neighborhood smoothing mechanism of self-supervised GNNs. To address these issues, we propose a $\\textbf{D}$ual-branch $\\textbf{S}$patial-$\\textbf{T}$emporal self-supervised representation framework for enhanced road representations, termed as DST. On one hand, DST designs a mix-hop transition matrix for graph convolution to incorporate dynamic relations of roads from trajectories. Besides, DST contrasts road representations of the vanilla road network against that of the hypergraph in a spatial self-supervised way. The hypergraph is newly built based on three types of hyperedges to capture long-range relations. On the other hand, DST performs next token prediction as the temporal self-supervised task on the sequences of traffic dynamics based on a causal Transformer, which is further regularized by differentiating traffic modes of weekdays from those of weekends. Extensive experiments against state-of-the-art methods verify the superiority of our proposed framework. Moreover, the comprehensive spatiotemporal modeling facilitates DST to excel in zero-shot learning scenarios.",
+  "authors": [
+    {
+      "name": "Qinghong Guo"
+    },
+    {
+      "name": "Yu Wang"
+    },
+    {
+      "name": "Ji Cao"
+    },
+    {
+      "name": "Tongya Zheng"
+    },
+    {
+      "name": "Junshu Dai"
+    },
+    {
+      "name": "Bingde Hu"
+    },
+    {
+      "name": "Shunyu Liu"
+    },
+    {
+      "name": "Canghong Jin"
+    }
+  ],
+  "submitted_at": "2025-11-10",
+  "updated_at": "2025-11-25",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4652,
+    "recent_score": 0.0556,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3155
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-11-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2511.06633v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2511.06633v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

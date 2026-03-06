@@ -1,0 +1,115 @@
+{
+  "arxiv_id": "2509.15199",
+  "canonical_url": "https://arxiv.org/abs/2509.15199v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.15199v1",
+  "title": "CausalPre: Scalable and Effective Data Pre-processing for Causal Fairness",
+  "abstract": "Causal fairness in databases is crucial to preventing biased and inaccurate outcomes in downstream tasks. While most prior work assumes a known causal model, recent efforts relax this assumption by enforcing additional constraints. However, these approaches often fail to capture broader attribute relationships that are critical to maintaining utility. This raises a fundamental question: Can we harness the benefits of causal reasoning to design efficient and effective fairness solutions without relying on strong assumptions about the underlying causal model? In this paper, we seek to answer this question by introducing CausalPre, a scalable and effective causality-guided data pre-processing framework that guarantees justifiable fairness, a strong causal notion of fairness. CausalPre extracts causally fair relationships by reformulating the originally complex and computationally infeasible extraction task into a tailored distribution estimation problem. To ensure scalability, CausalPre adopts a carefully crafted variant of low-dimensional marginal factorization to approximate the joint distribution, complemented by a heuristic algorithm that efficiently tackles the associated computational challenge. Extensive experiments on benchmark datasets demonstrate that CausalPre is both effective and scalable, challenging the conventional belief that achieving causal fairness requires trading off relationship coverage for relaxed model assumptions.",
+  "authors": [
+    {
+      "name": "Ying Zheng"
+    },
+    {
+      "name": "Yangfan Jiang"
+    },
+    {
+      "name": "Kian-Lee Tan"
+    }
+  ],
+  "submitted_at": "2025-09-18",
+  "updated_at": "2025-09-18",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DB"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4641,
+    "recent_score": 0.0111,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.314
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal fairness",
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-18"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.15199v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.15199v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

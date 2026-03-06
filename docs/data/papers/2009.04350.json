@@ -1,0 +1,117 @@
+{
+  "arxiv_id": "2009.04350",
+  "canonical_url": "https://arxiv.org/abs/2009.04350v3",
+  "pdf_url": "https://arxiv.org/pdf/2009.04350v3",
+  "title": "Reinforcement Learning in Non-Stationary Discrete-Time Linear-Quadratic Mean-Field Games",
+  "abstract": "In this paper, we study large population multi-agent reinforcement learning (RL) in the context of discrete-time linear-quadratic mean-field games (LQ-MFGs). Our setting differs from most existing work on RL for MFGs, in that we consider a non-stationary MFG over an infinite horizon. We propose an actor-critic algorithm to iteratively compute the mean-field equilibrium (MFE) of the LQ-MFG. There are two primary challenges: i) the non-stationarity of the MFG induces a linear-quadratic tracking problem, which requires solving a backwards-in-time (non-causal) equation that cannot be solved by standard (causal) RL algorithms; ii) Many RL algorithms assume that the states are sampled from the stationary distribution of a Markov chain (MC), that is, the chain is already mixed, an assumption that is not satisfied for real data sources. We first identify that the mean-field trajectory follows linear dynamics, allowing the problem to be reformulated as a linear quadratic Gaussian problem. Under this reformulation, we propose an actor-critic algorithm that allows samples to be drawn from an unmixed MC. Finite-sample convergence guarantees for the algorithm are then provided. To characterize the performance of our algorithm in multi-agent RL, we have developed an error bound with respect to the Nash equilibrium of the finite-population game.",
+  "authors": [
+    {
+      "name": "Muhammad Aneeq uz Zaman"
+    },
+    {
+      "name": "Kaiqing Zhang"
+    },
+    {
+      "name": "Erik Miehling"
+    },
+    {
+      "name": "Tamer Başar"
+    }
+  ],
+  "submitted_at": "2020-09-09",
+  "updated_at": "2020-10-01",
+  "primary_category": "eess.SY",
+  "categories": [
+    "eess.SY",
+    "cs.GT",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.535,
+    "recent_score": 0,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.443
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v3",
+      "updated_at": "2020-10-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2009.04350v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/2009.04350v3"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

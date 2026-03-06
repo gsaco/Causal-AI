@@ -1,0 +1,119 @@
+{
+  "arxiv_id": "2601.17695",
+  "canonical_url": "https://arxiv.org/abs/2601.17695v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.17695v1",
+  "title": "Bidirectional causal inference for binary outcomes in the presence of unmeasured confounding",
+  "abstract": "Bidirectional causal relationships arising from mutual interactions between variables are commonly observed within biomedical, econometrical, and social science contexts. When such relationships are further complicated by unobserved factors, identifying causal effects in both directions becomes especially challenging. For continuous variables, methods that utilize two instrumental variables from both directions have been proposed to explore bidirectional causal effects in linear models. However, the existing techniques are not applicable when the key variables of interest are binary. To address these issues, we propose a structural equation modeling approach that links observed binary variables to continuous latent variables through a constrained mapping. We further establish identification results for bidirectional causal effects using a pair of instrumental variables. Additionally, we develop an estimation method for the corresponding causal parameters. We also conduct sensitivity analysis under scenarios where certain identification conditions are violated. Finally, we apply our approach to investigate the bidirectional causal relationship between heart disease and diabetes, demonstrating its practical utility in biomedical research.",
+  "authors": [
+    {
+      "name": "Yafang Deng"
+    },
+    {
+      "name": "Kang Shuai"
+    },
+    {
+      "name": "Shanshan Luo"
+    }
+  ],
+  "submitted_at": "2026-01-25",
+  "updated_at": "2026-01-25",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5602,
+    "recent_score": 0.3255,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4646
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "latent variable"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.17695v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.17695v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

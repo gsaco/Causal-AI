@@ -1,0 +1,135 @@
+{
+  "arxiv_id": "2503.17803",
+  "canonical_url": "https://arxiv.org/abs/2503.17803v1",
+  "pdf_url": "https://arxiv.org/pdf/2503.17803v1",
+  "title": "A Roadmap Towards Improving Multi-Agent Reinforcement Learning With Causal Discovery And Inference",
+  "abstract": "Causal reasoning is increasingly used in Reinforcement Learning (RL) to improve the learning process in several dimensions: efficacy of learned policies, efficiency of convergence, generalisation capabilities, safety and interpretability of behaviour. However, applications of causal reasoning to Multi-Agent RL (MARL) are still mostly unexplored. In this paper, we take the first step in investigating the opportunities and challenges of applying causal reasoning in MARL. We measure the impact of a simple form of causal augmentation in state-of-the-art MARL scenarios increasingly requiring cooperation, and with state-of-the-art MARL algorithms exploiting various degrees of collaboration between agents. Then, we discuss the positive as well as negative results achieved, giving us the chance to outline the areas where further research may help to successfully transfer causal RL to the multi-agent setting.",
+  "authors": [
+    {
+      "name": "Giovanni Briglia"
+    },
+    {
+      "name": "Stefano Mariani"
+    },
+    {
+      "name": "Franco Zambonelli"
+    }
+  ],
+  "submitted_at": "2025-03-22",
+  "updated_at": "2025-03-22",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.MA",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.5544,
+    "recent_score": 0.0001,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.4463
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal rl"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-03-22"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2503.17803v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2503.17803v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

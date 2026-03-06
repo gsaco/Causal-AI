@@ -1,0 +1,105 @@
+{
+  "arxiv_id": "2602.18502",
+  "canonical_url": "https://arxiv.org/abs/2602.18502v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.18502v1",
+  "title": "Mitigating Shortcut Learning via Feature Disentanglement in Medical Imaging: A Benchmark Study",
+  "abstract": "Although deep learning models in medical imaging often achieve excellent classification performance, they can rely on shortcut learning, exploiting spurious correlations or confounding factors that are not causally related to the target task. This poses risks in clinical settings, where models must generalize across institutions, populations, and acquisition conditions. Feature disentanglement is a promising approach to mitigate shortcut learning by separating task-relevant information from confounder-related features in latent representations. In this study, we systematically evaluated feature disentanglement methods for mitigating shortcuts in medical imaging, including adversarial learning and latent space splitting based on dependence minimization. We assessed classification performance and disentanglement quality using latent space analyses across one artificial and two medical datasets with natural and synthetic confounders. We also examined robustness under varying levels of confounding and compared computational efficiency across methods. We found that shortcut mitigation methods improved classification performance under strong spurious correlations during training. Latent space analyses revealed differences in representation quality not captured by classification metrics, highlighting the strengths and limitations of each method. Model reliance on shortcuts depended on the degree of confounding in the training data. The best-performing models combine data-centric rebalancing with model-centric disentanglement, achieving stronger and more robust shortcut mitigation than rebalancing alone while maintaining similar computational efficiency.",
+  "authors": [
+    {
+      "name": "Sarah Müller"
+    },
+    {
+      "name": "Philipp Berens"
+    }
+  ],
+  "submitted_at": "2026-02-17",
+  "updated_at": "2026-02-17",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5592,
+    "recent_score": 0.6177,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4633
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.18502v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.18502v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:disentanglement AND abs:causal AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "biology-genomics-drug-discovery"
+  ]
+}

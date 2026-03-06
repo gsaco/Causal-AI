@@ -1,0 +1,111 @@
+{
+  "arxiv_id": "2602.20681",
+  "canonical_url": "https://arxiv.org/abs/2602.20681v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.20681v1",
+  "title": "Statistical Inference in Causal Partial Identification with Smooth Densities",
+  "abstract": "Many causal quantities are only partially identifiable due to the inherent missingness of potential outcomes, and the associated partial identification (PI) sets can be obtained by solving an optimal transport (OT) problem. Covariates often provide additional information about the potential outcomes and thus yield tighter PI sets, which can be obtained via conditional optimal transport (COT). However, COT-based PI set estimators are susceptible to the curse of dimensionality in the covariates and outcomes, which precludes the asymptotic normality and hinders statistical inference. In this paper, we exploit smoothness in the marginal densities of covariates and potential outcomes and develop a wavelet-based primal method for COT with multivariate outcomes and covariates. Moreover, for quadratic cost functions, we establish a stability result for COT and prove asymptotic normality of the proposed estimator. This characterization of the asymptotic distribution enables valid statistical inference for the partial identification set. Empirically, we validate the estimation and inference performance of our approach through numerical experiments in comparison with existing benchmarks.",
+  "authors": [
+    {
+      "name": "Sirui Lin"
+    },
+    {
+      "name": "Zijun Gao"
+    },
+    {
+      "name": "Jose Blanchet"
+    },
+    {
+      "name": "Peter Glynn"
+    }
+  ],
+  "submitted_at": "2026-02-24",
+  "updated_at": "2026-02-24",
+  "primary_category": "math.ST",
+  "categories": [
+    "math.ST"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6392,
+    "recent_score": 0.7526,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.582
+  },
+  "topic_tags": [
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.20681v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.20681v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

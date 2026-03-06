@@ -1,0 +1,136 @@
+{
+  "arxiv_id": "2602.08535",
+  "canonical_url": "https://arxiv.org/abs/2602.08535v4",
+  "pdf_url": "https://arxiv.org/pdf/2602.08535v4",
+  "title": "Causal Schrödinger Bridges: Constrained Optimal Transport on Structural Manifolds",
+  "abstract": "Generative modeling typically seeks the path of least action via deterministic flows (ODE). While effective for in-distribution tasks, we argue that these deterministic paths become brittle under causal interventions, which often require transporting probability mass across low-density regions (\"off-manifold\") where the vector field is ill-defined. This leads to numerical instability and the pathology of anticipatory control. In this work, we introduce the Causal Schrodinger Bridge (CSB), a framework that reformulates counterfactual inference as Entropic Optimal Transport. By leveraging diffusion processes (SDEs), CSB enables probability mass to robustly \"tunnel\" through support mismatches while strictly enforcing structural admissibility. We prove the Structural Decomposition Theorem, showing that the global high-dimensional bridge factorizes exactly into local, robust transitions. This theorem provides a principled resolution to the Information Bottleneck that plagues monolithic architectures in high dimensions. We empirically validate CSB on a full-rank causal system (d=10^5, intrinsic rank 10^5), where standard structure-blind MLPs fail to converge (MSE ~0.31). By physically implementing the structural decomposition, CSB achieves high-fidelity transport (MSE ~0.06) in just 73.73 seconds on a single GPU. This stands in stark contrast to structure-agnostic O(d^3) baselines, estimated to require over 6 years. Our results demonstrate that CSB breaks the Curse of Dimensionality through structural intelligence, offering a scalable foundation for high-stakes causal discovery in 10^5-node systems. Code is available at: https://github.com/cochran1/causal-schrodinger-bridge",
+  "authors": [
+    {
+      "name": "Rui Wu"
+    },
+    {
+      "name": "Li YongJun"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-23",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6084,
+    "recent_score": 0.5901,
+    "rising_score": 0.5064,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v4",
+      "updated_at": "2026-02-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.08535v4",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.08535v4"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))",
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments",
+    "robotics-autonomy"
+  ]
+}

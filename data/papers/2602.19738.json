@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2602.19738",
+  "canonical_url": "https://arxiv.org/abs/2602.19738v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.19738v1",
+  "title": "Individualized Causal Effects under Network Interference with Combinatorial Treatments",
+  "abstract": "Modern causal decision-making increasingly demands individualized treatment-effect estimation in networks where interventions are high-dimensional, combinatorial vectors. While network interference, effect heterogeneity, and multi-dimensional treatments have been studied separately, their intersection yields an exponentially large intervention space that makes standard identification tools and low-dimensional exposure mappings untenable. We bridge this gap with a unified framework that constructs a \\emph{global potential-outcome emulator} for unit-level inference. Our method combines (1) rooted network configurations to leverage local smoothness, (2) doubly robust orthogonalization to mitigate confounding from network position and covariates, and (3) sparse spectral learning to efficiently estimate response surfaces over the $2^p$-dimensional treatment space. We also decompose networked effects into own-treatment, structural, and interaction components, and provide finite-sample error bounds and asymptotic consistency guarantees. Overall, we show that individualized causal inference remains feasible in high-dimensional networked settings without collapsing the intervention space.",
+  "authors": [
+    {
+      "name": "Yunping Lu"
+    },
+    {
+      "name": "Haoang Chi"
+    },
+    {
+      "name": "Qirui Hu"
+    },
+    {
+      "name": "Zhiheng Zhang"
+    }
+  ],
+  "submitted_at": "2026-02-23",
+  "updated_at": "2026-02-23",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6577,
+    "recent_score": 0.7316,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.6252
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.19738v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.19738v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

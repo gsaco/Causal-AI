@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2602.14914",
+  "canonical_url": "https://arxiv.org/abs/2602.14914v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.14914v1",
+  "title": "Additive Control Variates Dominate Self-Normalisation in Off-Policy Evaluation",
+  "abstract": "Off-policy evaluation (OPE) is essential for assessing ranking and recommendation systems without costly online interventions. Self-Normalised Inverse Propensity Scoring (SNIPS) is a standard tool for variance reduction in OPE, leveraging a multiplicative control variate. Recent advances in off-policy learning suggest that additive control variates (baseline corrections) may offer superior performance, yet theoretical guarantees for evaluation are lacking. This paper provides a definitive answer: we prove that $β^\\star$-IPS, an estimator with an optimal additive baseline, asymptotically dominates SNIPS in Mean Squared Error. By analytically decomposing the variance gap, we show that SNIPS is asymptotically equivalent to using a specific -- but generally sub-optimal -- additive baseline. Our results theoretically justify shifting from self-normalisation to optimal baseline corrections for both ranking and recommendation.",
+  "authors": [
+    {
+      "name": "Olivier Jeunen"
+    },
+    {
+      "name": "Shashank Gupta"
+    }
+  ],
+  "submitted_at": "2026-02-16",
+  "updated_at": "2026-02-16",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IR"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5946,
+    "recent_score": 0.6006,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.488
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-16"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.14914v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.14914v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments",
+    "robotics-autonomy"
+  ]
+}

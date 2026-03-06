@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2406.18022",
+  "canonical_url": "https://arxiv.org/abs/2406.18022v2",
+  "pdf_url": "https://arxiv.org/pdf/2406.18022v2",
+  "title": "Automated Off-Policy Estimator Selection via Supervised Learning",
+  "abstract": "The Off-Policy Evaluation (OPE) problem consists of evaluating the performance of counterfactual policies with data collected by another one. To solve the OPE problem, we resort to estimators, which aim to estimate in the most accurate way possible the performance that the counterfactual policies would have had if they were deployed in place of the logging policy. In the literature, several estimators have been developed, all with different characteristics and theoretical guarantees. Therefore, there is no dominant estimator and each estimator may be the best for different OPE problems, depending on the characteristics of the dataset at hand. Although the selection of the estimator is a crucial choice for an accurate OPE, this problem has been widely overlooked in the literature. We propose an automated data-driven OPE estimator selection method based on supervised learning. In particular, the core idea we propose in this paper is to create several synthetic OPE tasks and use a machine learning model trained to predict the best estimator for those synthetic tasks. We empirically show how our method is able to perform a better estimator selection compared to a baseline method on several real-world datasets, with a computational cost significantly lower than the one of the baseline.",
+  "authors": [
+    {
+      "name": "Nicolò Felicioni"
+    },
+    {
+      "name": "Michael Benigni"
+    },
+    {
+      "name": "Maurizio Ferrari Dacrema"
+    }
+  ],
+  "submitted_at": "2024-06-26",
+  "updated_at": "2024-11-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3789,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2004
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2024-11-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2406.18022v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2406.18022v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

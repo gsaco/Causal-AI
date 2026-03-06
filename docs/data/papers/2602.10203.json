@@ -1,0 +1,99 @@
+{
+  "arxiv_id": "2602.10203",
+  "canonical_url": "https://arxiv.org/abs/2602.10203v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.10203v1",
+  "title": "Cosmological Expansion Induces Interference Between Communication and Entanglement Harvesting",
+  "abstract": "We investigate the interplay between genuine entanglement harvesting and communication mediated correlations for local particle detectors in expanding cosmological spacetimes. Focusing on a conformally coupled scalar field in de Sitter spacetime, we analyze how spacetime expansion induces interference between these two sources of entanglement when the detectors are in causal contact. We compare two physically distinct detector models: detectors whose spatial profile expands with the Universe, and detectors whose proper size remains fixed despite cosmological expansion. We find that the lack of time-reversal symmetry in cosmological settings generically leads to constructive or destructive interference between communication mediated correlations and harvested field correlations, dramatically affecting the entanglement that detectors can acquire. In particular, rapid expansion can suppress entanglement entirely for expanding detectors through destructive interference, even when both communication and field correlations are individually large, whereas detectors that maintain a fixed proper size remain capable of acquiring significant entanglement. Our results show that cosmological expansion qualitatively reshapes the balance between communication and harvesting, and that the detector internal cohesion (whether it expands with the Universe or not) plays a crucial role in determining whether detectors' entanglement can survive in rapidly expanding universes.",
+  "authors": [
+    {
+      "name": "Matheus H. Zambianco"
+    },
+    {
+      "name": "Adam Teixidó-Bonfill"
+    },
+    {
+      "name": "Eduardo Martín-Martínez"
+    }
+  ],
+  "submitted_at": "2026-02-10",
+  "updated_at": "2026-02-10",
+  "primary_category": "quant-ph",
+  "categories": [
+    "quant-ph",
+    "gr-qc",
+    "hep-th"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6481,
+    "recent_score": 0.5076,
+    "canonical_score": 0.7193,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.6244
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-10"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.10203v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.10203v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

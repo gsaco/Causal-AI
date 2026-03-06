@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2602.10457",
+  "canonical_url": "https://arxiv.org/abs/2602.10457v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.10457v1",
+  "title": "Analyzing Fairness of Neural Network Prediction via Counterfactual Dataset Generation",
+  "abstract": "Interpreting the inference-time behavior of deep neural networks remains a challenging problem. Existing approaches to counterfactual explanation typically ask: What is the closest alternative input that would alter the model's prediction in a desired way? In contrast, we explore counterfactual datasets. Rather than perturbing the input, our method efficiently finds the closest alternative training dataset, one that differs from the original dataset by changing a few labels. Training a new model on this altered dataset can then lead to a different prediction of a given test instance. This perspective provides a new way to assess fairness by directly analyzing the influence of label bias on training and inference. Our approach can be characterized as probing whether a given prediction depends on biased labels. Since exhaustively enumerating all possible alternate datasets is infeasible, we develop analysis techniques that trace how bias in the training data may propagate through the learning algorithm to the trained network. Our method heuristically ranks and modifies the labels of a bounded number of training examples to construct a counterfactual dataset, retrains the model, and checks whether its prediction on a chosen test case changes. We evaluate our approach on feedforward neural networks across over 1100 test cases from 7 widely-used fairness datasets. Results show that it modifies only a small subset of training labels, highlighting its ability to pinpoint the critical training examples that drive prediction changes. Finally, we demonstrate how our counterfactual datasets reveal connections between training examples and test cases, offering an interpretable way to probe dataset bias.",
+  "authors": [
+    {
+      "name": "Brian Hyeongseok Kim"
+    },
+    {
+      "name": "Jacqueline L. Mitchell"
+    },
+    {
+      "name": "Chao Wang"
+    }
+  ],
+  "submitted_at": "2026-02-11",
+  "updated_at": "2026-02-11",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5777,
+    "recent_score": 0.522,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4654
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-11"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.10457v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.10457v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,112 @@
+{
+  "arxiv_id": "2510.21719",
+  "canonical_url": "https://arxiv.org/abs/2510.21719v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.21719v1",
+  "title": "GAMER PAT: Research as a Serious Game",
+  "abstract": "As generative AI increasingly outperforms students in producing academic writing, a critical question arises: how can we preserve the motivation, creativity, and intellectual growth of novice researchers in an age of automated academic achievement? This paper introduces GAMER PAT (GAme MastER, Paper Authoring Tutor), a prompt-engineered AI chatbot that reframes research paper writing as a serious game. Through role-playing mechanics, users interact with a co-author NPC and anonymous reviewer NPCs, turning feedback into \"missions\" and advancing through a narrative-driven writing process. Our study reports on 26+ gameplay chat logs, including both autoethnography and use by graduate students under supervision. Using qualitative log analysis with SCAT (Steps for Coding and Theorization), we identified an emergent four-phase scaffolding pattern: (1) question posing, (2) meta-perspective, (3) structuring, and (4) recursive reflection. These results suggest that GAMER PAT supports not only the structural development of research writing but also reflective and motivational aspects. We present this work as a descriptive account of concept and process, not a causal evaluation. We also include a speculative outlook envisioning how humans may continue to cultivate curiosity and agency alongside AI-driven research. This arXiv version thus provides both a descriptive report of design and usage, and a forward-looking provocation for future empirical studies.",
+  "authors": [
+    {
+      "name": "Kenji Saito"
+    },
+    {
+      "name": "Rei Tadika"
+    }
+  ],
+  "submitted_at": "2025-09-16",
+  "updated_at": "2025-09-16",
+  "primary_category": "cs.HC",
+  "categories": [
+    "cs.HC",
+    "cs.AI",
+    "cs.CY"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.5127,
+    "recent_score": 0.0106,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.4133
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-16"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.21719v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.21719v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

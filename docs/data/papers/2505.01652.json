@@ -1,0 +1,141 @@
+{
+  "arxiv_id": "2505.01652",
+  "canonical_url": "https://arxiv.org/abs/2505.01652v1",
+  "pdf_url": "https://arxiv.org/pdf/2505.01652v1",
+  "title": "Causally Fair Node Classification on Non-IID Graph Data",
+  "abstract": "Fair machine learning seeks to identify and mitigate biases in predictions against unfavorable populations characterized by demographic attributes, such as race and gender. Recently, a few works have extended fairness to graph data, such as social networks, but most of them neglect the causal relationships among data instances. This paper addresses the prevalent challenge in fairness-aware ML algorithms, which typically assume Independent and Identically Distributed (IID) data. We tackle the overlooked domain of non-IID, graph-based settings where data instances are interconnected, influencing the outcomes of fairness interventions. We base our research on the Network Structural Causal Model (NSCM) framework and posit two main assumptions: Decomposability and Graph Independence, which enable the computation of interventional distributions in non-IID settings using the $do$-calculus. Based on that, we develop the Message Passing Variational Autoencoder for Causal Inference (MPVA) to compute interventional distributions and facilitate causally fair node classification through estimated interventional distributions. Empirical evaluations on semi-synthetic and real-world datasets demonstrate that MPVA outperforms conventional methods by effectively approximating interventional distributions and mitigating bias. The implications of our findings underscore the potential of causality-based fairness in complex ML applications, setting the stage for further research into relaxing the initial assumptions to enhance model fairness.",
+  "authors": [
+    {
+      "name": "Yucong Dai"
+    },
+    {
+      "name": "Lu Zhang"
+    },
+    {
+      "name": "Yaowei Hu"
+    },
+    {
+      "name": "Susan Gauch"
+    },
+    {
+      "name": "Yongkai Wu"
+    }
+  ],
+  "submitted_at": "2025-05-03",
+  "updated_at": "2025-05-03",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5345,
+    "recent_score": 0.0004,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4079
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "SCM"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-05-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2505.01652v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2505.01652v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

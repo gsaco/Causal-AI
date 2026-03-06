@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2010.05761",
+  "canonical_url": "https://arxiv.org/abs/2010.05761v2",
+  "pdf_url": "https://arxiv.org/pdf/2010.05761v2",
+  "title": "The Risks of Invariant Risk Minimization",
+  "abstract": "Invariant Causal Prediction (Peters et al., 2016) is a technique for out-of-distribution generalization which assumes that some aspects of the data distribution vary across the training set but that the underlying causal mechanisms remain constant. Recently, Arjovsky et al. (2019) proposed Invariant Risk Minimization (IRM), an objective based on this idea for learning deep, invariant features of data which are a complex function of latent variables; many alternatives have subsequently been suggested. However, formal guarantees for all of these works are severely lacking. In this paper, we present the first analysis of classification under the IRM objective--as well as these recently proposed alternatives--under a fairly natural and general model. In the linear case, we show simple conditions under which the optimal solution succeeds or, more often, fails to recover the optimal invariant predictor. We furthermore present the very first results in the non-linear regime: we demonstrate that IRM can fail catastrophically unless the test data are sufficiently similar to the training distribution--this is precisely the issue that it was intended to solve. Thus, in this setting we find that IRM and its alternatives fundamentally do not improve over standard Empirical Risk Minimization.",
+  "authors": [
+    {
+      "name": "Elan Rosenfeld"
+    },
+    {
+      "name": "Pradeep Ravikumar"
+    },
+    {
+      "name": "Andrej Risteski"
+    }
+  ],
+  "submitted_at": "2020-10-12",
+  "updated_at": "2021-03-27",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.4839,
+    "recent_score": 0,
+    "rising_score": 0.3118,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "latent variable"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2021-03-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2010.05761v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2010.05761v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "seed-papers-2026-03-05",
+    "queries": [
+      "id_list:2305.10032,2406.04598,2002.02770,2404.06349,2002.11631,2010.05761,2307.16405,2511.22842",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

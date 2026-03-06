@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2601.17160",
+  "canonical_url": "https://arxiv.org/abs/2601.17160v3",
+  "pdf_url": "https://arxiv.org/pdf/2601.17160v3",
+  "title": "Information-Theoretic Causal Bounds under Unmeasured Confounding",
+  "abstract": "We develop a data-driven information-theoretic framework for sharp partial identification of causal effects under unmeasured confounding. Existing approaches often rely on restrictive assumptions, such as bounded or discrete outcomes; require external inputs (for example, instrumental variables, proxies, or user-specified sensitivity parameters); necessitate full structural causal model specifications; or focus solely on population-level averages while neglecting covariate-conditional effects. We overcome all four limitations simultaneously by establishing novel information-theoretic, data-driven divergence bounds. Our key theoretical contribution shows that the f-divergence between the observational distribution P(Y | A = a, X = x) and the interventional distribution P(Y | do(A = a), X = x) is upper bounded by a function of the propensity score alone. This result enables sharp partial identification of conditional causal effects directly from observational data, without requiring external sensitivity parameters, auxiliary variables, full structural specifications, or outcome boundedness assumptions. For practical implementation, we develop a semiparametric estimator satisfying Neyman orthogonality (Chernozhukov et al., 2018), which ensures root-n consistent inference even when nuisance functions are estimated via flexible machine learning methods. Simulation studies and real-world data applications, implemented in the GitHub repository (https://github.com/yonghanjung/Information-Theretic-Bounds), demonstrate that our framework provides tight and valid causal bounds across a wide range of data-generating processes.",
+  "authors": [
+    {
+      "name": "Yonghan Jung"
+    },
+    {
+      "name": "Bogyeong Kang"
+    }
+  ],
+  "submitted_at": "2026-01-23",
+  "updated_at": "2026-02-20",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.8025,
+    "recent_score": 0.4632,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.7652
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v3",
+      "updated_at": "2026-02-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.17160v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.17160v3"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

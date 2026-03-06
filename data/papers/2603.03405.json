@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2603.03405",
+  "canonical_url": "https://arxiv.org/abs/2603.03405v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.03405v1",
+  "title": "Surprisal-Rényi Free Energy",
+  "abstract": "The forward and reverse Kullback-Leibler (KL) divergences arise as limiting objectives in learning and inference yet induce markedly different inductive biases that cannot be explained at the level of expectations alone. In this work, we introduce the Surprisal-Rényi Free Energy (SRFE), a log-moment-based functional of the likelihood ratio that lies outside the class of $f$-divergences. We show that SRFE recovers forward and reverse KL divergences as singular endpoint limits and derive local expansions around both limits in which the variance of the log-likelihood ratio appears as a first-order correction. This reveals an explicit mean-variance tradeoff governing departures from KL-dominated regimes. We further establish a Gibbs-type variational characterization of SRFE as the unique minimizer of a weighted sum of KL divergences and prove that SRFE directly controls large deviations of excess code-length via Chernoff-type bounds, yielding a precise Minimum Description Length interpretation. Together, these results identify SRFE as a variance- and tail-sensitive free-energy functional that clarifies the geometric and large-deviation structure underlying forward and reverse KL limits, without unifying or subsuming distinct learning frameworks.",
+  "authors": [
+    {
+      "name": "Shion Matsumoto"
+    },
+    {
+      "name": "Raul Castillo"
+    },
+    {
+      "name": "Benjamin Prada"
+    },
+    {
+      "name": "Ankur Arjun Mali"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7807,
+    "recent_score": 0.9181,
+    "canonical_score": 0.6035,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.8398
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.03405v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.03405v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

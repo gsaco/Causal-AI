@@ -1,0 +1,99 @@
+{
+  "arxiv_id": "2603.01243",
+  "canonical_url": "https://arxiv.org/abs/2603.01243v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.01243v1",
+  "title": "Suffix-Constrained Greedy Search Algorithms for Causal Language Models",
+  "abstract": "Large language models (LLMs) are powerful tools that have found applications beyond human-machine interfaces and chatbots. In particular, their ability to generate reasoning traces motivated their use in many prediction tasks like math question answering. Unfortunately, extracting the final answer in an LLM free-form output is difficult, as it is an information extraction problem on its own. In this work, we introduce suffix-constrained generation, that aims to produce well-formed LLM responses in which final answers follow strict templates and are guaranteed to be trivially parseable. To this end, we introduce several algorithms that are based on greedy search procedures. We experiment on several datasets, and show that our approach allows to guarantee trivial deterministic extraction of the final answer from an LLM output without having a negative impact on results, and even improving them.",
+  "authors": [
+    {
+      "name": "Ayoub Hammal"
+    },
+    {
+      "name": "Pierre Zweigenbaum"
+    },
+    {
+      "name": "Caio Corro"
+    }
+  ],
+  "submitted_at": "2026-03-01",
+  "updated_at": "2026-03-01",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.7294,
+    "recent_score": 0.8673,
+    "canonical_score": 0.8588,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.6863
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.01243v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.01243v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

@@ -6,6 +6,8 @@ const internalUrl = withBase(`/papers/${paper.arxiv_id}`);
 const authorNames = paper.authors.map((author) =>
   typeof author === "string" ? author : author.name
 );
+const isCanonical = Number(paper.metrics?.canonical_score ?? 0) >= 0.82;
+const isRising = Number(paper.metrics?.rising_score ?? 0) >= 0.42;
 ---
 <article class="paper-card card">
   <div class="paper-head">
@@ -15,12 +17,17 @@ const authorNames = paper.authors.map((author) =>
   <p class="abstract">{paper.abstract}</p>
   <div class="meta">
     <ArxivIdChip id={paper.arxiv_id} />
+    {isCanonical && <span class="chip">Canonical</span>}
+    {isRising && <span class="chip secondary">Rising</span>}
     <span class="chip secondary">Updated {paper.updated_at}</span>
     <span class="chip">v{paper.metrics.version_count}</span>
   </div>
   <div class="tag-row">
     {(paper.topic_tags ?? []).map((tag) => (
       <span class="chip secondary">{tag.topic_id}</span>
+    ))}
+    {(paper.application_tags ?? []).slice(0, 2).map((tag) => (
+      <span class="chip secondary">{tag.replace(/-/g, " ")}</span>
     ))}
   </div>
 </article>
@@ -35,6 +42,10 @@ const authorNames = paper.authors.map((author) =>
     font-family: var(--font-serif);
     color: var(--muted);
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .meta {

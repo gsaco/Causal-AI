@@ -1,0 +1,141 @@
+{
+  "arxiv_id": "2602.19131",
+  "canonical_url": "https://arxiv.org/abs/2602.19131v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.19131v1",
+  "title": "Test-Time Learning of Causal Structure from Interventional Data",
+  "abstract": "Supervised causal learning has shown promise in causal discovery, yet it often struggles with generalization across diverse interventional settings, particularly when intervention targets are unknown. To address this, we propose TICL (Test-time Interventional Causal Learning), a novel method that synergizes Test-Time Training with Joint Causal Inference. Specifically, we design a self-augmentation strategy to generate instance-specific training data at test time, effectively avoiding distribution shifts. Furthermore, by integrating joint causal inference, we developed a PC-inspired two-phase supervised learning scheme, which effectively leverages self-augmented training data while ensuring theoretical identifiability. Extensive experiments on bnlearn benchmarks demonstrate TICL's superiority in multiple aspects of causal discovery and intervention target detection.",
+  "authors": [
+    {
+      "name": "Wei Chen"
+    },
+    {
+      "name": "Rui Ding"
+    },
+    {
+      "name": "Bojun Huang"
+    },
+    {
+      "name": "Yang Zhang"
+    },
+    {
+      "name": "Qiang Fu"
+    },
+    {
+      "name": "Yuxuan Liang"
+    },
+    {
+      "name": "Han Shi"
+    },
+    {
+      "name": "Dongmei Zhang"
+    }
+  ],
+  "submitted_at": "2026-02-22",
+  "updated_at": "2026-02-22",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7094,
+    "recent_score": 0.7112,
+    "rising_score": 0.641,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-22"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.19131v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.19131v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))",
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

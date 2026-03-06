@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2602.22021",
+  "canonical_url": "https://arxiv.org/abs/2602.22021v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.22021v1",
+  "title": "Budgeted Active Experimentation for Treatment Effect Estimation from Observational and Randomized Data",
+  "abstract": "Estimating heterogeneous treatment effects is central to data-driven decision-making, yet industrial applications often face a fundamental tension between limited randomized controlled trial (RCT) budgets and abundant but biased observational data collected under historical targeting policies. Although observational logs offer the advantage of scale, they inherently suffer from severe policyinduced imbalance and overlap violations, rendering standalone estimation unreliable. We propose a budgeted active experimentation framework that iteratively enhances model training for causal effect estimation via active sampling. By leveraging observational priors, we develop an acquisition function targeting uplift estimation uncertainty, overlap deficits, and domain discrepancy to select the most informative units for randomized experiments. We establish finite-sample deviation bounds, asymptotic normality via martingale Central Limit Theorems (CLTs), and minimax lower bounds to prove information-theoretic optimality. Extensive experiments on industrial datasets demonstrate that our approach significantly outperforms standard randomized baselines in cost-constrained settings.",
+  "authors": [
+    {
+      "name": "Jiacan Gao"
+    },
+    {
+      "name": "Xinyan Su"
+    },
+    {
+      "name": "Mingyuan Ma"
+    },
+    {
+      "name": "Yiyan Huang"
+    },
+    {
+      "name": "Xiao Xu"
+    },
+    {
+      "name": "Xinrui Wan"
+    },
+    {
+      "name": "Tianqi Gu"
+    },
+    {
+      "name": "Enyun Yu"
+    },
+    {
+      "name": "Jiecheng Guo"
+    },
+    {
+      "name": "Zhiheng Zhang"
+    }
+  ],
+  "submitted_at": "2026-02-25",
+  "updated_at": "2026-02-25",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6811,
+    "recent_score": 0.7743,
+    "canonical_score": 0.7913,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.6444
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "uplift"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.22021v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.22021v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

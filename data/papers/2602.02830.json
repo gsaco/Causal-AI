@@ -1,0 +1,136 @@
+{
+  "arxiv_id": "2602.02830",
+  "canonical_url": "https://arxiv.org/abs/2602.02830v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.02830v2",
+  "title": "SC3D: Dynamic and Differentiable Causal Discovery for Temporal and Instantaneous Graphs",
+  "abstract": "Discovering causal structures from multivariate time series is a key problem because interactions span across multiple lags and possibly involve instantaneous dependencies. Additionally, the search space of the dynamic graphs is combinatorial in nature. In this study, we propose \\textit{Stable Causal Dynamic Differentiable Discovery (SC3D)}, a two-stage differentiable framework that jointly learns lag-specific adjacency matrices and, if present, an instantaneous directed acyclic graph (DAG). In Stage 1, SC3D performs edge preselection through node-wise prediction to obtain masks for lagged and instantaneous edges, whereas Stage 2 refines these masks by optimizing a likelihood with sparsity along with enforcing acyclicity on the instantaneous block. Numerical results across synthetic and benchmark dynamical systems demonstrate that SC3D achieves improved stability and more accurate recovery of both lagged and instantaneous causal structures compared to existing temporal baselines.",
+  "authors": [
+    {
+      "name": "Sourajit Das"
+    },
+    {
+      "name": "Dibyajyoti Chakraborty"
+    },
+    {
+      "name": "Romit Maulik"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-05",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6952,
+    "recent_score": 0.4216,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.6101
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-05"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02830v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02830v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

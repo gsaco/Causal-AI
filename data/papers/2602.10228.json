@@ -1,0 +1,129 @@
+{
+  "arxiv_id": "2602.10228",
+  "canonical_url": "https://arxiv.org/abs/2602.10228v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.10228v1",
+  "title": "PRISM: Differentially Private Synthetic Data with Structure-Aware Budget Allocation for Prediction",
+  "abstract": "Differential privacy (DP) provides a mathematical guarantee limiting what an adversary can learn about any individual from released data. However, achieving this protection typically requires adding noise, and noise can accumulate when many statistics are measured. Existing DP synthetic data methods treat all features symmetrically, spreading noise uniformly even when the data will serve a specific prediction task. We develop a prediction-centric approach operating in three regimes depending on available structural knowledge. In the causal regime, when the causal parents of $Y$ are known and distribution shift is expected, we target the parents for robustness. In the graphical regime, when a Bayesian network structure is available and the distribution is stable, the Markov blanket of $Y$ provides a sufficient feature set for optimal prediction. In the predictive regime, when no structural knowledge exists, we select features via differentially private methods without claiming to recover causal or graphical structure. We formalize this as PRISM, a mechanism that (i) identifies a predictive feature subset according to the appropriate regime, (ii) constructs targeted summary statistics, (iii) allocates budget to minimize an upper bound on prediction error, and (iv) synthesizes data via graphical-model inference. We prove end-to-end privacy guarantees and risk bounds. Empirically, task-aware allocation improves prediction accuracy compared to generic synthesizers. Under distribution shift, targeting causal parents achieves AUC $\\approx 0.73$ while correlation-based selection collapses to chance ($\\approx 0.49$).",
+  "authors": [
+    {
+      "name": "Amir Asiaee"
+    },
+    {
+      "name": "Chao Yan"
+    },
+    {
+      "name": "Zachary B. Abrams"
+    },
+    {
+      "name": "Bradley A. Malin"
+    }
+  ],
+  "submitted_at": "2026-02-10",
+  "updated_at": "2026-02-10",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5706,
+    "recent_score": 0.5076,
+    "rising_score": 0.4439,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-10"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.10228v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.10228v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))",
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

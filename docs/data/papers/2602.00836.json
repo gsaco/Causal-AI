@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2602.00836",
+  "canonical_url": "https://arxiv.org/abs/2602.00836v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.00836v1",
+  "title": "Dynamic causal inference with time series data",
+  "abstract": "We generalize the potential outcome framework to time series with an intervention by defining causal effects on stochastic processes. Interventions in dynamic systems alter not only outcome levels but also evolutionary dynamics -- changing persistence and transition laws. Our framework treats potential outcomes as entire trajectories, enabling causal estimands, identification conditions, and estimators to be formulated directly on path space. The resulting Dynamic Average Treatment Effect (DATE) characterizes how causal effects evolve through time and reduces to the classical average treatment effect under one period of time. For observational data, we derive a dynamic inverse-probability weighting estimator that is unbiased under dynamic ignorability and positivity. When treated units are scarce, we show that conditional mean trajectories underlying the DATE admit a linear state-space representation, yielding a dynamic linear model implementation. Simulations demonstrate that modeling time as intrinsic to the causal mechanism exposes dynamic effects that static methods systematically misestimate. An empirical study of COVID-19 lockdowns illustrates the framework's practical value for estimating and decomposing treatment effects.",
+  "authors": [
+    {
+      "name": "Tanique Schaffe-Odeleye"
+    },
+    {
+      "name": "Kōsaku Takanashi"
+    },
+    {
+      "name": "Vishesh Karwa"
+    },
+    {
+      "name": "Edoardo M. Airoldi"
+    },
+    {
+      "name": "Kenichiro McAlinn"
+    }
+  ],
+  "submitted_at": "2026-01-31",
+  "updated_at": "2026-01-31",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5614,
+    "recent_score": 0.3842,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4662
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-31"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.00836v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.00836v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

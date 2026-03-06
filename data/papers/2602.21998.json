@@ -1,0 +1,114 @@
+{
+  "arxiv_id": "2602.21998",
+  "canonical_url": "https://arxiv.org/abs/2602.21998v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.21998v1",
+  "title": "Design-based theory for causal inference from adaptive experiments",
+  "abstract": "Adaptive designs dynamically update treatment probabilities using information accumulated during the experiment. Existing theory for causal inference from adaptive experiments primarily assumes the superpopulation framework with independent and identically distributed units, and may not apply when the distribution of units evolves over time. This paper makes two contributions. First, we extend the literature to the finite-population framework, which allows for possibly nonexchangeable units, and establish the design-based theory for causal inference under general adaptive designs using inverse-propensity-weighted (IPW) and augmented IPW (AIPW) estimators. Our theory accommodates nonexchangeable units, both nonconverging and vanishing treatment probabilities, and nonconverging outcome estimators, thereby justifying inference using AIPW estimators with black-box outcome models that integrate advances from machine learning methods. To alleviate the conservativeness inherent in variance estimation under finite-population inference, we also introduce a covariance estimator for the AIPW estimator that becomes sharp when the residuals from the adaptive regression of potential outcomes on covariates are additive across units. Our framework encompasses widely used adaptive designs, such as multi-armed bandits, covariate-adaptive randomization, and sequential rerandomization, advancing the design-based theory for causal inference in these specific settings. Second, as a methodological contribution, we propose an adaptive covariate adjustment approach for analyzing even nonadaptive designs. The martingale structure induced by adaptive adjustment enables valid inference with black-box outcome estimators that would otherwise require strong assumptions under standard nonadaptive analysis.",
+  "authors": [
+    {
+      "name": "Xinran Li"
+    },
+    {
+      "name": "Anqi Zhao"
+    }
+  ],
+  "submitted_at": "2026-02-25",
+  "updated_at": "2026-02-25",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6266,
+    "recent_score": 0.7743,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.5651
+  },
+  "topic_tags": [
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "adjustment"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.21998v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.21998v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

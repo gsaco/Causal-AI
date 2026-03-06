@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2602.18955",
+  "canonical_url": "https://arxiv.org/abs/2602.18955v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.18955v1",
+  "title": "Incremental Transformer Neural Processes",
+  "abstract": "Neural Processes (NPs), and specifically Transformer Neural Processes (TNPs), have demonstrated remarkable performance across tasks ranging from spatiotemporal forecasting to tabular data modelling. However, many of these applications are inherently sequential, involving continuous data streams such as real-time sensor readings or database updates. In such settings, models should support cheap, incremental updates rather than recomputing internal representations from scratch for every new observation -- a capability existing TNP variants lack. Drawing inspiration from Large Language Models, we introduce the Incremental TNP (incTNP). By leveraging causal masking, Key-Value (KV) caching, and a data-efficient autoregressive training strategy, incTNP matches the predictive performance of standard TNPs while reducing the computational cost of updates from quadratic to linear time complexity. We empirically evaluate our model on a range of synthetic and real-world tasks, including tabular regression and temperature prediction. Our results show that, surprisingly, incTNP delivers performance comparable to -- or better than -- non-causal TNPs while unlocking orders-of-magnitude speedups for sequential inference. Finally, we assess the consistency of the model's updates -- by adapting a metric of ``implicit Bayesianness\", we show that incTNP retains a prediction rule as implicitly Bayesian as standard non-causal TNPs, demonstrating that incTNP achieves the computational benefits of causal masking without sacrificing the consistency required for streaming inference.",
+  "authors": [
+    {
+      "name": "Philip Mortimer"
+    },
+    {
+      "name": "Cristiana Diaconu"
+    },
+    {
+      "name": "Tommy Rochussen"
+    },
+    {
+      "name": "Bruno Mlodozeniec"
+    },
+    {
+      "name": "Richard E. Turner"
+    }
+  ],
+  "submitted_at": "2026-02-21",
+  "updated_at": "2026-02-21",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6695,
+    "recent_score": 0.6914,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5879
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.18955v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.18955v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

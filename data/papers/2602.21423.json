@@ -1,0 +1,111 @@
+{
+  "arxiv_id": "2602.21423",
+  "canonical_url": "https://arxiv.org/abs/2602.21423v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.21423v1",
+  "title": "Causal Inference with High-Dimensional Treatments",
+  "abstract": "In this work, we consider causal inference in various high-dimensional treatment settings, including for single multi-valued treatments and vector treatments with binary or continuous components, when the number of treatments can be comparable to or even larger than the number of observations. These settings bring unique challenges: first, the treatment effects of interest are a high-dimensional vector rather than a low-dimensional scalar; second, positivity violations are often unavoidable; and third, estimation can be based on a smaller effective sample size. We first discuss fundamental limits of estimating effects here, showing that consistent estimation is impossible without further assumptions. We go on to propose a novel sparse pseudo-outcome regression framework for arbitrary high-dimensional statistical functionals, which includes generic constrained regression estimators and error guarantees. We use the framework to derive new doubly robust estimators for mean potential outcomes of high-dimensional treatments, though it can also be applied to other scenarios. We analyze the proposed estimators under exact and approximate sparsity assumptions, giving finite-sample risk bounds. Finally, we derive minimax lower bounds to characterize optimal rates of convergence and show our risk bounds are unimprovable.",
+  "authors": [
+    {
+      "name": "Patrick Kramer"
+    },
+    {
+      "name": "Edward H. Kennedy"
+    },
+    {
+      "name": "Isaac M. Opper"
+    }
+  ],
+  "submitted_at": "2026-02-24",
+  "updated_at": "2026-02-24",
+  "primary_category": "math.ST",
+  "categories": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6857,
+    "recent_score": 0.7526,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.632
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.21423v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.21423v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

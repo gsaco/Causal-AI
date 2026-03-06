@@ -1,0 +1,134 @@
+{
+  "arxiv_id": "2601.09841",
+  "canonical_url": "https://arxiv.org/abs/2601.09841v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.09841v2",
+  "title": "A pipeline for enabling path-specific causal fairness in observational health data",
+  "abstract": "When training machine learning (ML) models for potential deployment in a healthcare setting, it is essential to ensure that they do not replicate or exacerbate existing healthcare biases. Although many definitions of fairness exist, we focus on path-specific causal fairness, which allows us to better consider the social and medical contexts in which biases occur (e.g., direct discrimination by a clinician or model versus bias due to differential access to the healthcare system) and to characterize how these biases may appear in learned models. In this work, we map the structural fairness model to the observational healthcare setting and create a generalizable pipeline for training causally fair models. The pipeline explicitly considers specific healthcare context and disparities to define a target \"fair\" model. Our work fills two major gaps: first, we expand on characterizations of the \"fairness-accuracy\" tradeoff by detangling direct and indirect sources of bias and jointly presenting these fairness considerations alongside considerations of accuracy in the context of broadly known biases. Second, we demonstrate how a foundation model trained without fairness constraints on observational health data can be leveraged to generate causally fair downstream predictions in tasks with known social and medical disparities. This work presents a model-agnostic pipeline for training causally fair machine learning models that address both direct and indirect forms of healthcare bias.",
+  "authors": [
+    {
+      "name": "Aparajita Kashyap"
+    },
+    {
+      "name": "Sara Matijevic"
+    },
+    {
+      "name": "Noémie Elhadad"
+    },
+    {
+      "name": "Steven A. Kushner"
+    },
+    {
+      "name": "Shalmali Joshi"
+    }
+  ],
+  "submitted_at": "2026-01-14",
+  "updated_at": "2026-01-17",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5885,
+    "recent_score": 0.2506,
+    "rising_score": 0.4798,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal fairness",
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "path-specific"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-01-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.09841v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.09841v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)",
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

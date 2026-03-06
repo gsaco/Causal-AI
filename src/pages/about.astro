@@ -1,17 +1,105 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { siteMeta } from "@lib/siteMeta";
+import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
+
+const [build, coverage, facets] = await Promise.all([
+  readJson("provenance/build.json"),
+  readJson("metrics/citation_coverage.json"),
+  readJson("navigator/facets.json")
+]);
+
+const coveragePct = Math.round((coverage.overall.coverage ?? 0) * 100);
 ---
 <BaseLayout title={`About - ${siteMeta.title}`} description="Why Causal AI Futures exists and how it stays evidence-first.">
-  <section class="section hero">
-    <div class="container">
-      <p class="eyebrow">About</p>
-      <h1>Why this field guide exists</h1>
-      <p class="subtitle">
-        Causal AI Futures is a researcher-built map of the intervention era. It is designed for readers who want
-        evidence, not hype: every claim is grounded in arXiv IDs, and every page links back to primary sources.
-      </p>
+  <section class="section hero hero-ambient">
+    <div class="container about-hero">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1>Built for people who want causal AI explained with sources, not vibes.</h1>
+        <p class="subtitle">
+          Causal AI Futures is a research atlas for the intervention era. It is designed for readers who want a clean
+          map of the field, transparent evidence, and enough context to tell canonical work from fast-moving noise.
+        </p>
+      </div>
+
+      <div class="card about-stats">
+        <div>
+          <span>Snapshot</span>
+          <strong>{build.snapshot}</strong>
+        </div>
+        <div>
+          <span>Corpus</span>
+          <strong>{facets.counts.papers} papers</strong>
+        </div>
+        <div>
+          <span>Coverage</span>
+          <strong>{coveragePct}% cited</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container values-grid">
+      <article class="card manifesto-card">
+        <p class="eyebrow">Editorial stance</p>
+        <h2>The site optimizes for legibility, not maximal volume.</h2>
+        <p>
+          The goal is to make causal AI navigable without pretending the field is settled. We surface assumptions,
+          disagreements, and open questions alongside the papers so readers can see where the field is strong and where
+          it is still unstable.
+        </p>
+      </article>
+
+      <article class="card principle-card">
+        <h2>Evidence first</h2>
+        <p>Claims are anchored to arXiv IDs, with provenance and coverage exposed rather than hidden in the build.</p>
+      </article>
+
+      <article class="card principle-card">
+        <h2>Canonical plus rising</h2>
+        <p>Landmarks stay visible while the navigator highlights recent momentum instead of flattening everything into one feed.</p>
+      </article>
+
+      <article class="card principle-card">
+        <h2>Static and inspectable</h2>
+        <p>The site is built for static hosting, so the data products that power ranking and faceting remain easy to inspect.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-band">
+    <div class="container system-grid">
+      <div class="section-header">
+        <p class="eyebrow">About</p>
+        <h2>How the evidence pipeline works</h2>
+        <p>The system is opinionated by design: broad arXiv ingestion first, then relevance gates, rankings, and editorial framing.</p>
+      </div>
+
+      <div class="pipeline">
+        <article class="card pipeline-step">
+          <span>01</span>
+          <h3>Harvest</h3>
+          <p>Query packs sweep the field through arXiv-first retrieval instead of a single topic query per page.</p>
+        </article>
+        <article class="card pipeline-step">
+          <span>02</span>
+          <h3>Filter</h3>
+          <p>Off-topic papers are removed before persistence, and application feeds are built separately instead of mirroring the global corpus.</p>
+        </article>
+        <article class="card pipeline-step">
+          <span>03</span>
+          <h3>Rank</h3>
+          <p>Canonical, rising, and recent scores give the navigator multiple lenses instead of a default recency sort.</p>
+        </article>
+        <article class="card pipeline-step">
+          <span>04</span>
+          <h3>Explain</h3>
+          <p>Topic dossiers, trend pages, and application briefs translate the corpus into a field guide that can actually be read.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -64,13 +152,78 @@ import { withBase } from "@utils/withBase";
   <style>
     h1 {
       margin: 0 0 0.8rem;
-      font-size: clamp(2.4rem, 3vw, 3rem);
+      font-size: clamp(2.8rem, 4.5vw, 4.6rem);
+      line-height: 0.98;
+      max-width: 11ch;
     }
 
     .subtitle {
       color: var(--muted);
       max-width: 60ch;
-      line-height: 1.6;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .about-hero {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-stats {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .about-stats span,
+    .pipeline-step span {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    .about-stats strong {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 1.45rem;
+    }
+
+    .values-grid {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
+    }
+
+    .manifesto-card,
+    .principle-card {
+      min-height: 100%;
+    }
+
+    .manifesto-card h2,
+    .principle-card h2,
+    .pipeline-step h3 {
+      margin: 0 0 0.6rem;
+    }
+
+    .system-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .pipeline {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .pipeline-step {
+      display: grid;
+      gap: 0.45rem;
     }
 
     .about-grid {
@@ -84,6 +237,29 @@ import { withBase } from "@utils/withBase";
       border: 1px dashed var(--border);
       padding: var(--space-5);
       background: color-mix(in srgb, var(--bg-elevated) 85%, transparent);
+    }
+
+    @media (max-width: 1100px) {
+      .values-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .manifesto-card {
+        grid-column: 1 / -1;
+      }
+
+      .pipeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about-hero,
+      .about-stats,
+      .values-grid,
+      .pipeline {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </BaseLayout>

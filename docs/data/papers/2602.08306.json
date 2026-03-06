@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2602.08306",
+  "canonical_url": "https://arxiv.org/abs/2602.08306v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.08306v1",
+  "title": "TextResNet: Decoupling and Routing Optimization Signals in Compound AI Systems via Deep Residual Tuning",
+  "abstract": "Textual Gradient-style optimizers (TextGrad) enable gradient-like feedback propagation through compound AI systems. However, they do not work well for deep chains. The root cause of this limitation stems from the Semantic Entanglement problem in these extended workflows. In standard textual backpropagation, feedback signals mix local critiques with upstream contexts, leading to Attribution Ambiguity. To address this challenge, we propose TextResNet, a framework that reformulates the optimization process to achieve precise signal routing via four key innovations. Firstly, in the forward pass, it enforces Additive Semantic Deltas to preserve an Identity Highway for gradient flow. Secondly, in the backward pass, it introduces Semantic Gradient Decomposition via a Semantic Projector to disentangle feedback into causally independent subspaces. Thirdly, it implements Causal Routing, which routes projected signals to their specific components. Finally, it performs Density-Aware Optimization Scheduling to leverage the disentangled signals to dynamically allocate resources to key system bottlenecks. Our results show that TextResNet not only achieves superior performance compared to TextGrad, but also exhibits remarkable stability for agentic tasks in compound AI systems where baselines collapse. Code is available at https://github.com/JeanDiable/TextResNet.",
+  "authors": [
+    {
+      "name": "Suizhi Huang"
+    },
+    {
+      "name": "Mei Li"
+    },
+    {
+      "name": "Han Yu"
+    },
+    {
+      "name": "Xiaoxiao Li"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6525,
+    "recent_score": 0.4936,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5652
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.08306v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.08306v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:disentanglement AND abs:causal AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

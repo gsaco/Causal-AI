@@ -1,0 +1,110 @@
+{
+  "arxiv_id": "2505.17341",
+  "canonical_url": "https://arxiv.org/abs/2505.17341v2",
+  "pdf_url": "https://arxiv.org/pdf/2505.17341v2",
+  "title": "TI-DeepONet: Learnable Time Integration for Stable Long-Term Extrapolation",
+  "abstract": "Accurate temporal extrapolation remains a fundamental challenge for neural operators modeling dynamical systems, where predictions must extend far beyond the training horizon. Conventional DeepONet approaches rely on two limited paradigms: fixed-horizon rollouts, which predict full spatiotemporal solutions while ignoring temporal causality, and autoregressive schemes, which accumulate errors through sequential prediction. We introduce TI-DeepONet, a framework that integrates neural operators with adaptive numerical time-stepping to preserve the Markovian structure of dynamical systems while mitigating long-term error growth. Our method shifts the learning objective from direct state prediction to approximating instantaneous time-derivative fields, which are then integrated using standard numerical solvers. This naturally enables continuous-time prediction and allows the use of higher-order integrators at inference than those used in training, improving both efficiency and accuracy. We further propose TI(L)-DeepONet, which incorporates learnable coefficients for intermediate slopes in multi-stage integration, adapting to solution-specific dynamics and enhancing fidelity. Across four canonical PDEs featuring chaotic, dissipative, dispersive, and high-dimensional behavior, TI(L)-DeepONet slightly outperforms TI-DeepONet, and both achieve major reductions in relative L2 extrapolation error: about 81% compared to autoregressive methods and 70% compared to fixed-horizon approaches. Notably, both models maintain stable predictions over temporal domains nearly twice the training interval. This work establishes a physics-aware operator learning framework that bridges neural approximation with numerical analysis principles, addressing a key gap in long-term forecasting of complex physical systems.",
+  "authors": [
+    {
+      "name": "Dibyajyoti Nayak"
+    },
+    {
+      "name": "Somdatta Goswami"
+    }
+  ],
+  "submitted_at": "2025-05-22",
+  "updated_at": "2025-11-19",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.449,
+    "recent_score": 0.038,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2939
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-11-19"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2505.17341v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2505.17341v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

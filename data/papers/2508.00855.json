@@ -1,0 +1,122 @@
+{
+  "arxiv_id": "2508.00855",
+  "canonical_url": "https://arxiv.org/abs/2508.00855v1",
+  "pdf_url": "https://arxiv.org/pdf/2508.00855v1",
+  "title": "A Residual Guided strategy with Generative Adversarial Networks in training Physics-Informed Transformer Networks",
+  "abstract": "Nonlinear partial differential equations (PDEs) are pivotal in modeling complex physical systems, yet traditional Physics-Informed Neural Networks (PINNs) often struggle with unresolved residuals in critical spatiotemporal regions and violations of temporal causality. To address these limitations, we propose a novel Residual Guided Training strategy for Physics-Informed Transformer via Generative Adversarial Networks (GAN). Our framework integrates a decoder-only Transformer to inherently capture temporal correlations through autoregressive processing, coupled with a residual-aware GAN that dynamically identifies and prioritizes high-residual regions. By introducing a causal penalty term and an adaptive sampling mechanism, the method enforces temporal causality while refining accuracy in problematic domains. Extensive numerical experiments on the Allen-Cahn, Klein-Gordon, and Navier-Stokes equations demonstrate significant improvements, achieving relative MSE reductions of up to three orders of magnitude compared to baseline methods. This work bridges the gap between deep learning and physics-driven modeling, offering a robust solution for multiscale and time-dependent PDE systems.",
+  "authors": [
+    {
+      "name": "Ziyang Zhang"
+    },
+    {
+      "name": "Feifan Zhang"
+    },
+    {
+      "name": "Weidong Tang"
+    },
+    {
+      "name": "Lei Shi"
+    },
+    {
+      "name": "Tailai Chen"
+    }
+  ],
+  "submitted_at": "2025-07-15",
+  "updated_at": "2025-07-15",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CE",
+    "physics.flu-dyn"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.512,
+    "recent_score": 0.0023,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3778
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-07-15"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2508.00855v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2508.00855v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

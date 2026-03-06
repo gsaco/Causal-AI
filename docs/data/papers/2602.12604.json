@@ -1,0 +1,122 @@
+{
+  "arxiv_id": "2602.12604",
+  "canonical_url": "https://arxiv.org/abs/2602.12604v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.12604v1",
+  "title": "Differentially Private Two-Stage Empirical Risk Minimization and Applications to Individualized Treatment Rule",
+  "abstract": "Differential Privacy (DP) provides a rigorous framework for deriving privacy-preserving estimators by injecting calibrated noise to mask individual contributions while preserving population-level insights. Its central challenge lies in the privacy-utility trade-off: calibrating noise levels to ensure robust protection without compromising statistical performance. Standard DP methods struggle with a particular class of two-stage problems prevalent in individualized treatment rules (ITRs) and causal inference. In these settings, data-dependent weights are first computed to satisfy distributional constraints, such as covariate balance, before the final parameter of interest is estimated. Current DP approaches often privatize stages independently, which either degrades weight efficacy-leading to biased and inconsistent estimates-or introduces excessive noise to account for worst-case scenarios. To address these challenges, we propose the Differentially Private Two-Stage Empirical Risk Minimization (DP-2ERM), a framework that injects a carefully calibrated noise only into the second stage while maintaining privacy for the entire pipeline and preserving the integrity of the first stage weights. Our theoretical contributions include deterministic bounds on weight perturbations across various widely used weighting methods, and probabilistic bounds on sensitivity for the final estimator. Simulations and real-world applications in ITR demonstrate that DP-2ERM significantly enhances utility over existing methods while providing rigorous privacy guarantees.",
+  "authors": [
+    {
+      "name": "Joowon Lee"
+    },
+    {
+      "name": "Guanhua Chen"
+    }
+  ],
+  "submitted_at": "2026-02-13",
+  "updated_at": "2026-02-13",
+  "primary_category": "math.ST",
+  "categories": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6461,
+    "recent_score": 0.5521,
+    "rising_score": 0.5791,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-privacy",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "privacy"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-13"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.12604v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.12604v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)",
+      "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential"
+    ]
+  },
+  "application_tags": []
+}

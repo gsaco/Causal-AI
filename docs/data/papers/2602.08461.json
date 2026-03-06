@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2602.08461",
+  "canonical_url": "https://arxiv.org/abs/2602.08461v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.08461v1",
+  "title": "Estimating Aleatoric Uncertainty in the Causal Treatment Effect",
+  "abstract": "Previous work on causal inference has primarily focused on averages and conditional averages of treatment effects, with significantly less attention on variability and uncertainty in individual treatment responses. In this paper, we introduce the variance of the treatment effect (VTE) and conditional variance of treatment effect (CVTE) as the natural measure of aleatoric uncertainty inherent in treatment responses, and we demonstrate that these quantities are identifiable from observed data under mild assumptions, even in the presence of unobserved confounders. We further propose nonparametric kernel-based estimators for VTE and CVTE, and our theoretical analysis establishes their convergence. We also test the performance of our method through extensive empirical experiments on both synthetic and semi-simulated datasets, where it demonstrates superior or comparable performance to naive baselines.",
+  "authors": [
+    {
+      "name": "Liyuan Xu"
+    },
+    {
+      "name": "Bijan Mazaheri"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6172,
+    "recent_score": 0.4936,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5181
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.08461v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.08461v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2509.09128",
+  "canonical_url": "https://arxiv.org/abs/2509.09128v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.09128v1",
+  "title": "Learning What Matters: Causal Time Series Modeling for Arctic Sea Ice Prediction",
+  "abstract": "Conventional machine learning and deep learning models typically rely on correlation-based learning, which often fails to distinguish genuine causal relationships from spurious associations, limiting their robustness, interpretability, and ability to generalize. To overcome these limitations, we introduce a causality-aware deep learning framework that integrates Multivariate Granger Causality (MVGC) and PCMCI+ for causal feature selection within a hybrid neural architecture. Leveraging 43 years (1979-2021) of Arctic Sea Ice Extent (SIE) data and associated ocean-atmospheric variables at daily and monthly resolutions, the proposed method identifies causally influential predictors, prioritizes direct causes of SIE dynamics, reduces unnecessary features, and enhances computational efficiency. Experimental results show that incorporating causal inputs leads to improved prediction accuracy and interpretability across varying lead times. While demonstrated on Arctic SIE forecasting, the framework is broadly applicable to other dynamic, high-dimensional domains, offering a scalable approach that advances both the theoretical foundations and practical performance of causality-informed predictive modeling.",
+  "authors": [
+    {
+      "name": "Emam Hossain"
+    },
+    {
+      "name": "Md Osman Gani"
+    }
+  ],
+  "submitted_at": "2025-09-11",
+  "updated_at": "2025-09-11",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4394,
+    "recent_score": 0.0094,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.281
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal time series"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-11"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.09128v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.09128v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth",
+    "recommenders-online-experiments"
+  ]
+}

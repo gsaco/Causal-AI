@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2002.11631",
+  "canonical_url": "https://arxiv.org/abs/2002.11631v2",
+  "pdf_url": "https://arxiv.org/pdf/2002.11631v2",
+  "title": "CausalML: Python Package for Causal Machine Learning",
+  "abstract": "CausalML is a Python implementation of algorithms related to causal inference and machine learning. Algorithms combining causal inference and machine learning have been a trending topic in recent years. This package tries to bridge the gap between theoretical work on methodology and practical applications by making a collection of methods in this field available in Python. This paper introduces the key concepts, scope, and use cases of this package.",
+  "authors": [
+    {
+      "name": "Huigang Chen"
+    },
+    {
+      "name": "Totte Harinen"
+    },
+    {
+      "name": "Jeong-Yoon Lee"
+    },
+    {
+      "name": "Mike Yung"
+    },
+    {
+      "name": "Zhenyu Zhao"
+    }
+  ],
+  "submitted_at": "2020-02-25",
+  "updated_at": "2020-03-02",
+  "primary_category": "cs.CY",
+  "categories": [
+    "cs.CY",
+    "cs.LG",
+    "stat.CO",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.5603,
+    "recent_score": 0,
+    "rising_score": 0.4137,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.58
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2020-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2002.11631v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2002.11631v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "seed-papers-2026-03-05",
+    "queries": [
+      "id_list:2305.10032,2406.04598,2002.02770,2404.06349,2002.11631,2010.05761,2307.16405,2511.22842",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

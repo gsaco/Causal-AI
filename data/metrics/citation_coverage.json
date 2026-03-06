@@ -1,49 +1,49 @@
 {
-  "generated_at": "2026-01-22",
+  "generated_at": "2026-03-05",
   "overall": {
     "claims": 173,
-    "with_evidence": 173,
-    "coverage": 1.0
+    "withEvidence": 173,
+    "coverage": 1
   },
   "sections": {
     "topics": {
       "claims": 120,
-      "with_evidence": 120,
-      "coverage": 1.0
+      "withEvidence": 120,
+      "coverage": 1
     },
     "trends": {
       "claims": 28,
-      "with_evidence": 28,
-      "coverage": 1.0
+      "withEvidence": 28,
+      "coverage": 1
     },
     "applications": {
       "claims": 12,
-      "with_evidence": 12,
-      "coverage": 1.0
+      "withEvidence": 12,
+      "coverage": 1
     },
     "frontiers": {
       "claims": 12,
-      "with_evidence": 12,
-      "coverage": 1.0
+      "withEvidence": 12,
+      "coverage": 1
     },
     "digests": {
       "claims": 1,
-      "with_evidence": 1,
-      "coverage": 1.0
+      "withEvidence": 1,
+      "coverage": 1
     },
     "glossary": {
       "claims": 0,
-      "with_evidence": 0,
+      "withEvidence": 0,
       "coverage": 1
     },
     "tools": {
       "claims": 0,
-      "with_evidence": 0,
+      "withEvidence": 0,
       "coverage": 1
     },
     "benchmarks": {
       "claims": 0,
-      "with_evidence": 0,
+      "withEvidence": 0,
       "coverage": 1
     }
   }

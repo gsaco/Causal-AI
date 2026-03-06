@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2510.06637",
+  "canonical_url": "https://arxiv.org/abs/2510.06637v2",
+  "pdf_url": "https://arxiv.org/pdf/2510.06637v2",
+  "title": "Control-Augmented Autoregressive Diffusion for Data Assimilation",
+  "abstract": "Despite recent advances in test-time scaling and finetuning of diffusion models, guidance in Auto-Regressive Diffusion Models (ARDMs) remains underexplored. We introduce an amortized framework that augments a pretrained ARDM with a lightweight controller network, trained offline by previewing future rollouts to output stepwise controls that anticipate upcoming observations under a terminal-cost objective. Our approach is motivated by viewing guided generation as an entropy-regularized stochastic optimal control problem over ARDM trajectories: we learn a reusable policy that injects small control corrections inside each denoising sub-step while remaining anchored to the pretrained dynamics. We evaluate this framework in the context of data assimilation (DA) for chaotic spatiotemporal partial differential equations (PDEs), where existing methods can be computationally prohibitive and prone to forecast drift under sparse observations. At inference, DA reduces to a single causal forward rollout with on-the-fly corrections, requiring neither adjoint computations nor gradient-based optimization, and yields an order-of-magnitude speedup over strong diffusion-based DA baselines. Across two canonical PDEs and six observation regimes, our method consistently improves stability, accuracy, and physics-aware fidelity over state-of-the-art baselines. We will release code and checkpoints publicly.",
+  "authors": [
+    {
+      "name": "Prakhar Srivastava"
+    },
+    {
+      "name": "Farrin Marouf Sofian"
+    },
+    {
+      "name": "Francesco Immorlano"
+    },
+    {
+      "name": "Kushagra Pandey"
+    },
+    {
+      "name": "Stephan Mandt"
+    }
+  ],
+  "submitted_at": "2025-10-08",
+  "updated_at": "2025-12-17",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.5371,
+    "recent_score": 0.0766,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4113
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-12-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.06637v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.06637v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

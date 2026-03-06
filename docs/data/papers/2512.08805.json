@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2512.08805",
+  "canonical_url": "https://arxiv.org/abs/2512.08805v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.08805v1",
+  "title": "Identifying counterfactual probabilities using bivariate distributions and uplift modeling",
+  "abstract": "Uplift modeling estimates the causal effect of an intervention as the difference between potential outcomes under treatment and control, whereas counterfactual identification aims to recover the joint distribution of these potential outcomes (e.g., \"Would this customer still have churned had we given them a marketing offer?\"). This joint counterfactual distribution provides richer information than the uplift but is harder to estimate. However, the two approaches are synergistic: uplift models can be leveraged for counterfactual estimation. We propose a counterfactual estimator that fits a bivariate beta distribution to predicted uplift scores, yielding posterior distributions over counterfactual outcomes. Our approach requires no causal assumptions beyond those of uplift modeling. Simulations show the efficacy of the approach, which can be applied, for example, to the problem of customer churn in telecom, where it reveals insights unavailable to standard ML or uplift models alone.",
+  "authors": [
+    {
+      "name": "Théo Verhelst"
+    },
+    {
+      "name": "Gianluca Bontempi"
+    }
+  ],
+  "submitted_at": "2025-12-09",
+  "updated_at": "2025-12-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4344,
+    "recent_score": 0.0914,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2624
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "uplift"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.08805v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.08805v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

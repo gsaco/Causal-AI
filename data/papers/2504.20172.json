@@ -1,0 +1,145 @@
+{
+  "arxiv_id": "2504.20172",
+  "canonical_url": "https://arxiv.org/abs/2504.20172v1",
+  "pdf_url": "https://arxiv.org/pdf/2504.20172v1",
+  "title": "Causal Identification in Time Series Models",
+  "abstract": "In this paper, we analyze the applicability of the Causal Identification algorithm to causal time series graphs with latent confounders. Since these graphs extend over infinitely many time steps, deciding whether causal effects across arbitrary time intervals are identifiable appears to require computation on graph segments of unbounded size. Even for deciding the identifiability of intervention effects on variables that are close in time, no bound is known on how many time steps in the past need to be considered. We give a first bound of this kind that only depends on the number of variables per time step and the maximum time lag of any direct or latent causal effect. More generally, we show that applying the Causal Identification algorithm to a constant-size segment of the time series graph is sufficient to decide identifiability of causal effects, even across unbounded time intervals.",
+  "authors": [
+    {
+      "name": "Erik Jahn"
+    },
+    {
+      "name": "Karthik Karnik"
+    },
+    {
+      "name": "Leonard J. Schulman"
+    }
+  ],
+  "submitted_at": "2025-04-28",
+  "updated_at": "2025-04-28",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.4917,
+    "recent_score": 0.0004,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.3628
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "latent confound"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal time series"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-04-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2504.20172v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2504.20172v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

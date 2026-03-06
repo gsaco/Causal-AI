@@ -1,0 +1,287 @@
+{
+  "arxiv_id": "2602.20159",
+  "canonical_url": "https://arxiv.org/abs/2602.20159v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.20159v2",
+  "title": "A Very Big Video Reasoning Suite",
+  "abstract": "Rapid progress in video models has largely focused on visual quality, leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence in spatiotemporally consistent visual environments that go beyond what text can naturally capture, enabling intuitive reasoning over spatiotemporal structure such as continuity, interaction, and causality. However, systematically studying video reasoning and its scaling behavior is hindered by the lack of large-scale training data. To address this gap, we introduce the Very Big Video Reasoning (VBVR) Dataset, an unprecedentedly large-scale resource spanning 200 curated reasoning tasks following a principled taxonomy and over one million video clips, approximately three orders of magnitude larger than existing datasets. We further present VBVR-Bench, a verifiable evaluation framework that moves beyond model-based judging by incorporating rule-based, human-aligned scorers, enabling reproducible and interpretable diagnosis of video reasoning capabilities. Leveraging the VBVR suite, we conduct one of the first large-scale scaling studies of video reasoning and observe early signs of emergent generalization to unseen reasoning tasks. Together, VBVR lays a foundation for the next stage of research in generalizable video reasoning. The data, benchmark toolkit, and models are publicly available at https://video-reason.com/ .",
+  "authors": [
+    {
+      "name": "Maijunxian Wang"
+    },
+    {
+      "name": "Ruisi Wang"
+    },
+    {
+      "name": "Juyi Lin"
+    },
+    {
+      "name": "Ran Ji"
+    },
+    {
+      "name": "Thaddäus Wiedemer"
+    },
+    {
+      "name": "Qingying Gao"
+    },
+    {
+      "name": "Dezhi Luo"
+    },
+    {
+      "name": "Yaoyao Qian"
+    },
+    {
+      "name": "Lianyu Huang"
+    },
+    {
+      "name": "Zelong Hong"
+    },
+    {
+      "name": "Jiahui Ge"
+    },
+    {
+      "name": "Qianli Ma"
+    },
+    {
+      "name": "Hang He"
+    },
+    {
+      "name": "Yifan Zhou"
+    },
+    {
+      "name": "Lingzi Guo"
+    },
+    {
+      "name": "Lantao Mei"
+    },
+    {
+      "name": "Jiachen Li"
+    },
+    {
+      "name": "Hanwen Xing"
+    },
+    {
+      "name": "Tianqi Zhao"
+    },
+    {
+      "name": "Fengyuan Yu"
+    },
+    {
+      "name": "Weihang Xiao"
+    },
+    {
+      "name": "Yizheng Jiao"
+    },
+    {
+      "name": "Jianheng Hou"
+    },
+    {
+      "name": "Danyang Zhang"
+    },
+    {
+      "name": "Pengcheng Xu"
+    },
+    {
+      "name": "Boyang Zhong"
+    },
+    {
+      "name": "Zehong Zhao"
+    },
+    {
+      "name": "Gaoyun Fang"
+    },
+    {
+      "name": "John Kitaoka"
+    },
+    {
+      "name": "Yile Xu"
+    },
+    {
+      "name": "Hua Xu"
+    },
+    {
+      "name": "Kenton Blacutt"
+    },
+    {
+      "name": "Tin Nguyen"
+    },
+    {
+      "name": "Siyuan Song"
+    },
+    {
+      "name": "Haoran Sun"
+    },
+    {
+      "name": "Shaoyue Wen"
+    },
+    {
+      "name": "Linyang He"
+    },
+    {
+      "name": "Runming Wang"
+    },
+    {
+      "name": "Yanzhi Wang"
+    },
+    {
+      "name": "Mengyue Yang"
+    },
+    {
+      "name": "Ziqiao Ma"
+    },
+    {
+      "name": "Raphaël Millière"
+    },
+    {
+      "name": "Freda Shi"
+    },
+    {
+      "name": "Nuno Vasconcelos"
+    },
+    {
+      "name": "Daniel Khashabi"
+    },
+    {
+      "name": "Alan Yuille"
+    },
+    {
+      "name": "Yilun Du"
+    },
+    {
+      "name": "Ziming Liu"
+    },
+    {
+      "name": "Bo Li"
+    },
+    {
+      "name": "Dahua Lin"
+    },
+    {
+      "name": "Ziwei Liu"
+    },
+    {
+      "name": "Vikash Kumar"
+    },
+    {
+      "name": "Yijiang Li"
+    },
+    {
+      "name": "Lei Yang"
+    },
+    {
+      "name": "Zhongang Cai"
+    },
+    {
+      "name": "Hokin Deng"
+    }
+  ],
+  "submitted_at": "2026-02-23",
+  "updated_at": "2026-02-24",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG",
+    "cs.MM",
+    "cs.RO"
+  ],
+  "metrics": {
+    "cross_list_count": 4,
+    "version_count": 1,
+    "trending_score": 0.8407,
+    "recent_score": 0.7398,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.8386
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "toolkit"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.20159v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.20159v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

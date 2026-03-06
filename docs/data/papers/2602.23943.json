@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2602.23943",
+  "canonical_url": "https://arxiv.org/abs/2602.23943v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.23943v1",
+  "title": "A flexible approach to sequential prediction under intervention",
+  "abstract": "We propose a causal predictive framework for estimating risk under preventative interventions. The Unexposed Mediator Model maintains mediators that are also predictors at their unexposed level, removing double counting of intervention effects at followup visits. The Modifiable Risk Factor Model handles multiple interventions flexibly by modelling their effects via mediators that are also predictors, assuming a known causal structure. The Two Component Model combines a predictive baseline model with an intervention model to improve predictive performance. We illustrate the framework in primary prevention of cardiovascular disease. The proposed models allow arbitrary interventions to be evaluated within a prediction under intervention framework, with causally consistent risk estimates across repeated visits. Limitations include reliance on predictor values from an arbitrary first visit, requirements for causal structural knowledge, and a consistency assumption, that interventions with identical effects on predictors have identical effects on outcomes, which warrant further investigation.",
+  "authors": [
+    {
+      "name": "Matthew Sperrin"
+    },
+    {
+      "name": "Bowen Jiang"
+    },
+    {
+      "name": "Joyce Huang"
+    },
+    {
+      "name": "Niels Peek"
+    },
+    {
+      "name": "Alexander Pate"
+    }
+  ],
+  "submitted_at": "2026-02-27",
+  "updated_at": "2026-02-27",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6784,
+    "recent_score": 0.8194,
+    "canonical_score": 0.7193,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.6647
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.23943v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.23943v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

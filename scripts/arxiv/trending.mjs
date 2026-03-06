@@ -21,7 +21,7 @@ export function computeTrending(papers, momentumByTopic, config, { referenceDate
   const halfLife = config.recency_half_life_days ?? 14;
 
   return papers.map((paper) => {
-    const recency = recencyScore(paper.submitted_at, ref, halfLife);
+    const recency = paper.metrics?.recent_score ?? recencyScore(paper.submitted_at, ref, halfLife);
     const updatedRecency = recencyScore(paper.updated_at, ref, 30);
     const topicMomentum = (paper.topic_tags ?? [])
       .map((tag) => momentumByTopic[tag.topic_id] ?? 0)
@@ -29,17 +29,24 @@ export function computeTrending(papers, momentumByTopic, config, { referenceDate
     const crossList = Math.min(1, (paper.metrics?.cross_list_count ?? 0) / 3);
     const versionCount = paper.metrics?.version_count ?? 1;
     const churn = Math.min(1, Math.max(0, (versionCount - 1) / 3)) * updatedRecency;
-
-    const score =
+    const risingScore =
+      paper.metrics?.rising_score ??
       weights.recency * recency +
-      weights.momentum * topicMomentum +
-      weights.cross_list * crossList +
-      weights.churn * churn;
+        weights.momentum * topicMomentum +
+        weights.cross_list * crossList +
+        weights.churn * churn;
+    const canonicalScore = paper.metrics?.canonical_score ?? 0;
+
+    const score = risingScore * 0.75 + canonicalScore * 0.25;
 
     return {
       ...paper,
       metrics: {
         ...paper.metrics,
+        recent_score: Number(recency.toFixed(4)),
+        rising_score: Number(risingScore.toFixed(4)),
+        canonical_score: Number(canonicalScore.toFixed(4)),
+        max_topic_confidence: paper.metrics?.max_topic_confidence ?? 0,
         trending_score: Number(score.toFixed(4))
       }
     };

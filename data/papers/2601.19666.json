@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2601.19666",
+  "canonical_url": "https://arxiv.org/abs/2601.19666v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.19666v1",
+  "title": "Direct Doubly Robust Estimation of Conditional Quantile Contrasts",
+  "abstract": "Within heterogeneous treatment effect (HTE) analysis, various estimands have been proposed to capture the effect of a treatment conditional on covariates. Recently, the conditional quantile comparator (CQC) has emerged as a promising estimand, offering quantile-level summaries akin to the conditional quantile treatment effect (CQTE) while preserving some interpretability of the conditional average treatment effect (CATE). It achieves this by summarising the treated response conditional on both the covariates and the untreated response. Despite these desirable properties, the CQC's current estimation is limited by the need to first estimate the difference in conditional cumulative distribution functions and then invert it. This inversion obscures the CQC estimate, hampering our ability to both model and interpret it. To address this, we propose the first direct estimator of the CQC, allowing for explicit modelling and parameterisation. This explicit parameterisation enables better interpretation of our estimate while also providing a means to constrain and inform the model. We show, both theoretically and empirically, that our estimation error depends directly on the complexity of the CQC itself, improving upon the existing estimation procedure. Furthermore, it retains the desirable double robustness property with respect to nuisance parameter estimation. We further show our method to outperform existing procedures in estimation accuracy across multiple data scenarios while varying sample size and nuisance error. Finally, we apply it to real-world data from an employment scheme, uncovering a reduced range of potential earnings improvement as participant age increases.",
+  "authors": [
+    {
+      "name": "Josh Givens"
+    },
+    {
+      "name": "Song Liu"
+    },
+    {
+      "name": "Henry W J Reeve"
+    },
+    {
+      "name": "Katarzyna Reluga"
+    }
+  ],
+  "submitted_at": "2026-01-27",
+  "updated_at": "2026-01-27",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.5981,
+    "recent_score": 0.344,
+    "canonical_score": 0.6997,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.5643
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.19666v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.19666v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

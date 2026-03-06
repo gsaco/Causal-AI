@@ -1,46 +1,129 @@
 {
   "arxiv_id": "1703.06856",
-  "canonical_url": "https://arxiv.org/abs/1703.06856",
-  "pdf_url": "https://arxiv.org/pdf/1703.06856.pdf",
+  "canonical_url": "https://arxiv.org/abs/1703.06856v3",
+  "pdf_url": "https://arxiv.org/pdf/1703.06856v3",
   "title": "Counterfactual Fairness",
   "abstract": "A causal definition of fairness based on comparing decisions across counterfactual worlds where protected attributes differ.",
   "authors": [
-    { "name": "Matt J. Kusner" },
-    { "name": "Joshua Loftus" },
-    { "name": "Chris Russell" },
-    { "name": "Ricardo Silva" }
+    {
+      "name": "Matt J. Kusner"
+    },
+    {
+      "name": "Joshua Loftus"
+    },
+    {
+      "name": "Chris Russell"
+    },
+    {
+      "name": "Ricardo Silva"
+    }
   ],
   "submitted_at": "2017-03-20",
   "updated_at": "2018-03-12",
-  "primary_category": "cs.LG",
-  "categories": ["cs.LG", "stat.ML"],
+  "primary_category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "stat.ML",
+    "cs.CY"
+  ],
   "metrics": {
-    "cross_list_count": 1,
-    "version_count": 2,
-    "trending_score": 0.27
+    "cross_list_count": 2,
+    "version_count": 3,
+    "trending_score": 0.4652,
+    "recent_score": 0,
+    "rising_score": 0.2869,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.89
   },
   "topic_tags": [
     {
       "topic_id": "causal-fairness",
-      "confidence": 0.93,
+      "confidence": 0.89,
       "rationale": {
-        "matched_keywords": ["counterfactual fairness"],
-        "rules_version": "v0.1"
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
       }
     }
   ],
   "versions": [
-    { "version": "v1", "updated_at": "2017-03-20" },
-    { "version": "v2", "updated_at": "2018-03-12" }
+    {
+      "version": "v1",
+      "updated_at": "2017-03-20"
+    },
+    {
+      "version": "v2",
+      "updated_at": "2018-03-12"
+    },
+    {
+      "version": "v3",
+      "updated_at": "2018-03-08"
+    }
   ],
   "links": {
-    "arxiv_abs": "https://arxiv.org/abs/1703.06856",
-    "arxiv_pdf": "https://arxiv.org/pdf/1703.06856.pdf"
+    "arxiv_abs": "https://arxiv.org/abs/1703.06856v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/1703.06856v3"
   },
   "provenance": {
     "source": "arxiv_api",
-    "harvested_at": "2026-01-22T02:10:00Z",
-    "harvest_run_id": "demo-2026-01-22",
-    "queries": ["ti:\"counterfactual fairness\""]
-  }
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "seed-papers-2026-03-05",
+    "queries": [
+      "ti:\"counterfactual fairness\"",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
 }

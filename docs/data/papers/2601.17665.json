@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2601.17665",
+  "canonical_url": "https://arxiv.org/abs/2601.17665v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.17665v1",
+  "title": "Comment on \"Aharonov-Bohm Phase is Locally Generated Like All Other Quantum Phases\"",
+  "abstract": "Marletto and Vedral [Phys. Rev. Lett. 125, 040401 (2020)] propose that the Aharonov-Bohm (AB) phase is locally mediated by entanglement between a charged particle and the quantized electromagnetic field, asserting gauge independence for non-closed paths. In this Comment, we critically analyze their model and demonstrate that the AB phase arises from the interaction with the vector potential \\(\\mathbf{A}\\), not from entanglement, which is a byproduct of the quantum electrodynamics (QED) framework. We show that their field-based energy formulation, intended to reflect local electromagnetic interactions, is mathematically flawed due to an incorrect prefactor and yields \\( +q \\mathbf{v} \\cdot \\mathbf{A}_{\\mathbf{s}} \\) in the Coulomb gauge, conflicting with QED's \\( -q \\mathbf{v} \\cdot \\mathbf{A}_{\\mathbf{s}} \\). This equivalence to \\( q \\mathbf{v} \\cdot \\mathbf{A}_{\\mathbf{s}} \\) holds only approximately in the Coulomb gauge under static conditions, failing for time-dependent fields and other gauges, undermining their claim of a gauge-independent local mechanism. Furthermore, we confirm that the AB phase is gauge-dependent for non-closed paths, contradicting their assertion. Our analysis reaffirms the conventional explanation in the semi-classical picture, where the AB phase is driven by the vector potential \\(\\mathbf{A}\\), with entanglement playing no causal role in its generation.",
+  "authors": [
+    {
+      "name": "Shan Gao"
+    }
+  ],
+  "submitted_at": "2026-01-25",
+  "updated_at": "2026-01-25",
+  "primary_category": "quant-ph",
+  "categories": [
+    "quant-ph"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5117,
+    "recent_score": 0.3255,
+    "canonical_score": 0.7193,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.4425
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.17665v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.17665v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

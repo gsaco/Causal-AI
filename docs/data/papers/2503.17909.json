@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2503.17909",
+  "canonical_url": "https://arxiv.org/abs/2503.17909v1",
+  "pdf_url": "https://arxiv.org/pdf/2503.17909v1",
+  "title": "Financial Wind Tunnel: A Retrieval-Augmented Market Simulator",
+  "abstract": "Market simulator tries to create high-quality synthetic financial data that mimics real-world market dynamics, which is crucial for model development and robust assessment. Despite continuous advancements in simulation methodologies, market fluctuations vary in terms of scale and sources, but existing frameworks often excel in only specific tasks. To address this challenge, we propose Financial Wind Tunnel (FWT), a retrieval-augmented market simulator designed to generate controllable, reasonable, and adaptable market dynamics for model testing. FWT offers a more comprehensive and systematic generative capability across different data frequencies. By leveraging a retrieval method to discover cross-sectional information as the augmented condition, our diffusion-based simulator seamlessly integrates both macro- and micro-level market patterns. Furthermore, our framework allows the simulation to be controlled with wide applicability, including causal generation through \"what-if\" prompts or unprecedented cross-market trend synthesis. Additionally, we develop an automated optimizer for downstream quantitative models, using stress testing of simulated scenarios via FWT to enhance returns while controlling risks. Experimental results demonstrate that our approach enables the generalizable and reliable market simulation, significantly improve the performance and adaptability of downstream models, particularly in highly complex and volatile market conditions. Our code and data sample is available at https://anonymous.4open.science/r/fwt_-E852",
+  "authors": [
+    {
+      "name": "Bokai Cao"
+    },
+    {
+      "name": "Xueyuan Lin"
+    },
+    {
+      "name": "Yiyan Qi"
+    },
+    {
+      "name": "Chengjin Xu"
+    },
+    {
+      "name": "Cehao Yang"
+    },
+    {
+      "name": "Jian Guo"
+    }
+  ],
+  "submitted_at": "2025-03-23",
+  "updated_at": "2025-03-23",
+  "primary_category": "cs.CE",
+  "categories": [
+    "cs.CE",
+    "cs.LG",
+    "q-fin.CP"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.5088,
+    "recent_score": 0.0002,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.3961
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-03-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2503.17909v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2503.17909v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

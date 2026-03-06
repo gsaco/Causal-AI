@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2511.21636",
+  "canonical_url": "https://arxiv.org/abs/2511.21636v1",
+  "pdf_url": "https://arxiv.org/pdf/2511.21636v1",
+  "title": "Bridging the Unavoidable A Priori: A Framework for Comparative Causal Modeling",
+  "abstract": "AI/ML models have rapidly gained prominence as innovations for solving previously unsolved problems and their unintended consequences from amplifying human biases. Advocates for responsible AI/ML have sought ways to draw on the richer causal models of system dynamics to better inform the development of responsible AI/ML. However, a major barrier to advancing this work is the difficulty of bringing together methods rooted in different underlying assumptions (i.e., Dana Meadow's \"the unavoidable a priori\"). This paper brings system dynamics and structural equation modeling together into a common mathematical framework that can be used to generate systems from distributions, develop methods, and compare results to inform the underlying epistemology of system dynamics for data science and AI/ML applications.",
+  "authors": [
+    {
+      "name": "Peter S. Hovmand"
+    },
+    {
+      "name": "Kari O'Donnell"
+    },
+    {
+      "name": "Callie Ogland-Hand"
+    },
+    {
+      "name": "Brian Biroscak"
+    },
+    {
+      "name": "Douglas D. Gunzler"
+    }
+  ],
+  "submitted_at": "2025-11-26",
+  "updated_at": "2025-11-26",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "stat.AP",
+    "stat.CO",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 4,
+    "version_count": 1,
+    "trending_score": 0.6591,
+    "recent_score": 0.0649,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.586
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-11-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2511.21636v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2511.21636v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

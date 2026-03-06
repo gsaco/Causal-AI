@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2505.17542",
+  "canonical_url": "https://arxiv.org/abs/2505.17542v2",
+  "pdf_url": "https://arxiv.org/pdf/2505.17542v2",
+  "title": "Graph Inverse Style Transfer for Counterfactual Explainability",
+  "abstract": "Counterfactual explainability seeks to uncover model decisions by identifying minimal changes to the input that alter the predicted outcome. This task becomes particularly challenging for graph data due to preserving structural integrity and semantic meaning. Unlike prior approaches that rely on forward perturbation mechanisms, we introduce Graph Inverse Style Transfer (GIST), the first framework to re-imagine graph counterfactual generation as a backtracking process, leveraging spectral style transfer. By aligning the global structure with the original input spectrum and preserving local content faithfulness, GIST produces valid counterfactuals as interpolations between the input style and counterfactual content. Tested on 8 binary and multi-class graph classification benchmarks, GIST achieves a remarkable +7.6% improvement in the validity of produced counterfactuals and significant gains (+45.5%) in faithfully explaining the true class distribution. Additionally, GIST's backtracking mechanism effectively mitigates overshooting the underlying predictor's decision boundary, minimizing the spectral differences between the input and the counterfactuals. These results challenge traditional forward perturbation methods, offering a novel perspective that advances graph explainability.",
+  "authors": [
+    {
+      "name": "Bardh Prenkaj"
+    },
+    {
+      "name": "Efstratios Zaradoukas"
+    },
+    {
+      "name": "Gjergji Kasneci"
+    }
+  ],
+  "submitted_at": "2025-05-23",
+  "updated_at": "2025-07-05",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3911,
+    "recent_score": 0.0016,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2166
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-07-05"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2505.17542v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2505.17542v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

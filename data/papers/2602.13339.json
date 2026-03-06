@@ -1,0 +1,138 @@
+{
+  "arxiv_id": "2602.13339",
+  "canonical_url": "https://arxiv.org/abs/2602.13339v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.13339v1",
+  "title": "An Integrated Causal Inference Framework for Traffic Safety Modeling with Semantic Street-View Visual Features",
+  "abstract": "Macroscopic traffic safety modeling aims to identify critical risk factors for regional crashes, thereby informing targeted policy interventions for safety improvement. However, current approaches rely heavily on static sociodemographic and infrastructure metrics, frequently overlooking the impacts from drivers' visual perception of driving environment. Although visual environment features have been found to impact driving and traffic crashes, existing evidence remains largely observational, failing to establish the robust causality for traffic policy evaluation under complex spatial environment. To fill these gaps, we applied semantic segmentation on Google Street View imageries to extract visual environmental features and proposed a Double Machine Learning framework to quantify their causal effects on regional crashes. Meanwhile, we utilized SHAP values to characterize the nonlinear influence mechanisms of confounding variables in the models and applied causal forests to estimate conditional average treatment effects. Leveraging crash records from the Miami metropolitan area, Florida, and 220,000 street view images, evidence shows that greenery proportion exerts a significant and robust negative causal effect on traffic crashes (Average Treatment Effect = -6.38, p = 0.005). This protective effect exhibits spatial heterogeneity, being most pronounced in densely populated and socially vulnerable urban cores. While greenery significantly mitigates angle and rear-end crashes, its protective benefit for vulnerable road users (VRUs) remains limited. Our findings provide causal evidence for greening as a potential safety intervention, prioritizing hazardous visual environments while highlighting the need for distinct design optimizations to protect VRUs.",
+  "authors": [
+    {
+      "name": "Lishan Sun"
+    },
+    {
+      "name": "Yujia Cheng"
+    },
+    {
+      "name": "Pengfei Cui"
+    },
+    {
+      "name": "Lei Han"
+    },
+    {
+      "name": "Mohamed Abdel-Aty"
+    },
+    {
+      "name": "Yunhan Zheng"
+    },
+    {
+      "name": "Xingchen Zhang"
+    }
+  ],
+  "submitted_at": "2026-02-12",
+  "updated_at": "2026-02-12",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.592,
+    "recent_score": 0.5368,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.507
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-12"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.13339v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.13339v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

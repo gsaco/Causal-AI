@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2601.00136",
+  "canonical_url": "https://arxiv.org/abs/2601.00136v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.00136v1",
+  "title": "Subgroup Identification and Individualized Treatment Policies: A Tutorial on the Hybrid Two-Stage Workflow",
+  "abstract": "Patients in clinical studies often exhibit heterogeneous treatment effect (HTE). Classical subgroup analyses provide inferential tools to test for effect modification, while modern machine learning methods estimate the Conditional Average Treatment Effect (CATE) to enable individual level prediction. Each paradigm has limitations: inference focused approaches may sacrifice predictive utility, and prediction focused approaches often lack statistical guarantees. We present a hybrid two-stage workflow that integrates these perspectives. Stage 1 applies statistical inference to test whether credible treatment effect heterogeneity exists with the protection against spurious findings. Stage 2 translates heterogeneity evidence into individualized treatment policies, evaluated by cross fitted doubly robust (DR) metrics with Neyman-Pearson (NP) constraints on harm. We illustrate the workflow with working examples based on simulated data and a real ACTG 175 HIV trial. This tutorial provides practical implementation checklists and discusses links to sponsor oriented HTE workflows, offering a transparent and auditable pathway from heterogeneity assessment to individualized treatment policies.",
+  "authors": [
+    {
+      "name": "Nan Miles Xi"
+    },
+    {
+      "name": "Xin Huang"
+    },
+    {
+      "name": "Lin Wang"
+    }
+  ],
+  "submitted_at": "2025-12-31",
+  "updated_at": "2025-12-31",
+  "primary_category": "stat.AP",
+  "categories": [
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4626,
+    "recent_score": 0.1646,
+    "canonical_score": 0.6997,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.3836
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-31"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.00136v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.00136v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

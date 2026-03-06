@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2402.15819",
+  "canonical_url": "https://arxiv.org/abs/2402.15819v1",
+  "pdf_url": "https://arxiv.org/pdf/2402.15819v1",
+  "title": "Debiased Model-based Interactive Recommendation",
+  "abstract": "Existing model-based interactive recommendation systems are trained by querying a world model to capture the user preference, but learning the world model from historical logged data will easily suffer from bias issues such as popularity bias and sampling bias. This is why some debiased methods have been proposed recently. However, two essential drawbacks still remain: 1) ignoring the dynamics of the time-varying popularity results in a false reweighting of items. 2) taking the unknown samples as negative samples in negative sampling results in the sampling bias. To overcome these two drawbacks, we develop a model called \\textbf{i}dentifiable \\textbf{D}ebiased \\textbf{M}odel-based \\textbf{I}nteractive \\textbf{R}ecommendation (\\textbf{iDMIR} in short). In iDMIR, for the first drawback, we devise a debiased causal world model based on the causal mechanism of the time-varying recommendation generation process with identification guarantees; for the second drawback, we devise a debiased contrastive policy, which coincides with the debiased contrastive learning and avoids sampling bias. Moreover, we demonstrate that the proposed method not only outperforms several latest interactive recommendation algorithms but also enjoys diverse recommendation performance.",
+  "authors": [
+    {
+      "name": "Zijian Li"
+    },
+    {
+      "name": "Ruichu Cai"
+    },
+    {
+      "name": "Haiqin Huang"
+    },
+    {
+      "name": "Sili Zhang"
+    },
+    {
+      "name": "Yuguang Yan"
+    },
+    {
+      "name": "Zhifeng Hao"
+    },
+    {
+      "name": "Zhenghua Dong"
+    }
+  ],
+  "submitted_at": "2024-02-24",
+  "updated_at": "2024-02-24",
+  "primary_category": "cs.IR",
+  "categories": [
+    "cs.IR",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5303,
+    "recent_score": 0,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.4368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-world-models",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "world model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2402.15819v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2402.15819v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

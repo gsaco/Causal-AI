@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2602.00775",
+  "canonical_url": "https://arxiv.org/abs/2602.00775v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.00775v1",
+  "title": "Stable Time Series Prediction of Enterprise Carbon Emissions Based on Causal Inference",
+  "abstract": "Against the backdrop of ongoing carbon peaking and carbon neutrality goals, accurate prediction of enterprise carbon emission trends constitutes an essential foundation for energy structure optimization and low-carbon transformation decision-making. Nevertheless, significant heterogeneity persists across regions, industries and individual enterprises regarding energy structure, production scale, policy intensity and governance efficacy, resulting in pronounced distribution shifts and non-stationarity in carbon emission data across both temporal and spatial dimensions. Such cross-regional and cross-enterprise data drift not only compromises the accuracy of carbon emission reporting but substantially undermines the guidance value of predictive models for production planning and carbon quota trading decisions. To address this critical challenge, we integrate causal inference perspectives with stable learning methodologies and time-series modelling, proposing a stable temporal prediction mechanism tailored to distribution shift environments. This mechanism incorporates enterprise-level energy inputs, capital investment, labour deployment, carbon pricing, governmental interventions and policy implementation intensity, constructing a risk consistency-constrained stable learning framework that extracts causal stable features (robust against external perturbations yet demonstrating long-term stable effects on carbon dioxide emissions) from multi-environment samples across diverse policies, regions and industrial sectors. Furthermore, through adaptive normalization and sample reweighting strategies, the approach dynamically rectifies temporal non-stationarity induced by economic fluctuations and policy transitions, ultimately enhancing model generalization capability and explainability in complex environments.",
+  "authors": [
+    {
+      "name": "Zitao Hong"
+    },
+    {
+      "name": "Zhen Peng"
+    },
+    {
+      "name": "Xueping Liu"
+    }
+  ],
+  "submitted_at": "2026-01-31",
+  "updated_at": "2026-01-31",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6124,
+    "recent_score": 0.3842,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4997
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-31"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.00775v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.00775v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

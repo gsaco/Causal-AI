@@ -1,0 +1,105 @@
+{
+  "arxiv_id": "2603.01698",
+  "canonical_url": "https://arxiv.org/abs/2603.01698v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.01698v1",
+  "title": "Towards Principled Dataset Distillation: A Spectral Distribution Perspective",
+  "abstract": "Dataset distillation (DD) aims to compress large-scale datasets into compact synthetic counterparts for efficient model training. However, existing DD methods exhibit substantial performance degradation on long-tailed datasets. We identify two fundamental challenges: heuristic design choices for distribution discrepancy measure and uniform treatment of imbalanced classes. To address these limitations, we propose Class-Aware Spectral Distribution Matching (CSDM), which reformulates distribution alignment via the spectrum of a well-behaved kernel function. This technique maps the original samples into frequency space, resulting in the Spectral Distribution Distance (SDD). To mitigate class imbalance, we exploit the unified form of SDD to perform amplitude-phase decomposition, which adaptively prioritizes the realism in tail classes. On CIFAR-10-LT, with 10 images per class, CSDM achieves a 14.0% improvement over state-of-the-art DD methods, with only a 5.7% performance drop when the number of images in tail classes decreases from 500 to 25, demonstrating strong stability on long-tailed data.",
+  "authors": [
+    {
+      "name": "Ruixi Wu"
+    },
+    {
+      "name": "Shaobo Wang"
+    },
+    {
+      "name": "Jiahuan Chen"
+    },
+    {
+      "name": "Zhiyuan Liu"
+    },
+    {
+      "name": "Yicun Yang"
+    },
+    {
+      "name": "Zhaorun Chen"
+    },
+    {
+      "name": "Zekai Li"
+    },
+    {
+      "name": "Kaixin Li"
+    },
+    {
+      "name": "Xinming Wang"
+    },
+    {
+      "name": "Hongzhu Yi"
+    },
+    {
+      "name": "Kai Wang"
+    },
+    {
+      "name": "Linfeng Zhang"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7552,
+    "recent_score": 0.8924,
+    "canonical_score": 0.536,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.8282
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.01698v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.01698v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

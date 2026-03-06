@@ -1,9 +1,39 @@
 {
-  "version": "2026-01-22/v1",
+  "id": "llms-agents",
+  "version": "2026-03-05/v2",
   "group": "LLMs & Agents",
+  "title": "Causal Reasoning in Language Models and Agents",
+  "enabled": true,
+  "priority": 5,
   "topics": ["causal-llms", "causal-agents"],
-  "queries": [
-    "ti:causal AND (ti:LLM OR abs:\"language model\")",
-    "ti:causal AND (ti:agent OR abs:agent)"
+  "category_allowlist": ["cs.CL", "cs.AI", "cs.LG"],
+  "required_keywords_any": ["causal", "counterfactual", "intervention", "language model", "agent"],
+  "exclude_keywords": ["causal grpo", "wisdom of the crowd"],
+  "seed_papers": ["2307.16405", "2511.22842"],
+  "per_pack_cap": 55,
+  "candidate_queries": [
+    {
+      "id": "llms-causal-reasoning",
+      "query": "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)",
+      "max_results": 45,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "agents-intervention-planning",
+      "query": "((ti:causal OR abs:causal) AND (ti:agent OR abs:agent) AND (abs:intervention OR abs:planning OR abs:tool use)) AND (cat:cs.AI OR cat:cs.LG)",
+      "max_results": 35,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ],
+  "precision_queries": [
+    {
+      "id": "llms-counterfactual-eval",
+      "query": "((abs:\"counterfactual evaluation\" OR abs:\"counterfactual benchmark\" OR abs:\"causal benchmark\") AND (abs:\"language model\" OR abs:llm))",
+      "max_results": 30,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
   ]
 }

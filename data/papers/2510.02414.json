@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2510.02414",
+  "canonical_url": "https://arxiv.org/abs/2510.02414v2",
+  "pdf_url": "https://arxiv.org/pdf/2510.02414v2",
+  "title": "RainSeer: Fine-Grained Rainfall Reconstruction via Physics-Guided Modeling",
+  "abstract": "Reconstructing high-resolution rainfall fields is essential for flood forecasting, hydrological modeling, and climate analysis. However, existing spatial interpolation methods-whether based on automatic weather station (AWS) measurements or enhanced with satellite/radar observations often over-smooth critical structures, failing to capture sharp transitions and localized extremes. We introduce RainSeer, a structure-aware reconstruction framework that reinterprets radar reflectivity as a physically grounded structural prior-capturing when, where, and how rain develops. This shift, however, introduces two fundamental challenges: (i) translating high-resolution volumetric radar fields into sparse point-wise rainfall observations, and (ii) bridging the physical disconnect between aloft hydro-meteors and ground-level precipitation. RainSeer addresses these through a physics-informed two-stage architecture: a Structure-to-Point Mapper performs spatial alignment by projecting mesoscale radar structures into localized ground-level rainfall, through a bidirectional mapping, and a Geo-Aware Rain Decoder captures the semantic transformation of hydro-meteors through descent, melting, and evaporation via a causal spatiotemporal attention mechanism. We evaluate RainSeer on two public datasets-RAIN-F (Korea, 2017-2019) and MeteoNet (France, 2016-2018)-and observe consistent improvements over state-of-the-art baselines, reducing MAE by over 13.31% and significantly enhancing structural fidelity in reconstructed rainfall fields.",
+  "authors": [
+    {
+      "name": "Lin Chen"
+    },
+    {
+      "name": "Jun Chen"
+    },
+    {
+      "name": "Minghui Qiu"
+    },
+    {
+      "name": "Shuxin Zhong"
+    },
+    {
+      "name": "Binghong Chen"
+    },
+    {
+      "name": "Kaishun Wu"
+    }
+  ],
+  "submitted_at": "2025-10-02",
+  "updated_at": "2025-10-07",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4796,
+    "recent_score": 0.0174,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3346
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-10-07"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.02414v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.02414v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

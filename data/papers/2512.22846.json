@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2512.22846",
+  "canonical_url": "https://arxiv.org/abs/2512.22846v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.22846v1",
+  "title": "Causal-Policy Forest for End-to-End Policy Learning",
+  "abstract": "This study proposes an end-to-end algorithm for policy learning in causal inference. We observe data consisting of covariates, treatment assignments, and outcomes, where only the outcome corresponding to the assigned treatment is observed. The goal of policy learning is to train a policy from the observed data, where a policy is a function that recommends an optimal treatment for each individual, to maximize the policy value. In this study, we first show that maximizing the policy value is equivalent to minimizing the mean squared error for the conditional average treatment effect (CATE) under $\\{-1, 1\\}$ restricted regression models. Based on this finding, we modify the causal forest, an end-to-end CATE estimation algorithm, for policy learning. We refer to our algorithm as the causal-policy forest. Our algorithm has three advantages. First, it is a simple modification of an existing, widely used CATE estimation method, therefore, it helps bridge the gap between policy learning and CATE estimation in practice. Second, while existing studies typically estimate nuisance parameters for policy learning as a separate task, our algorithm trains the policy in a more end-to-end manner. Third, as in standard decision trees and random forests, we train the models efficiently, avoiding computational intractability.",
+  "authors": [
+    {
+      "name": "Masahiro Kato"
+    }
+  ],
+  "submitted_at": "2025-12-28",
+  "updated_at": "2025-12-28",
+  "primary_category": "econ.EM",
+  "categories": [
+    "econ.EM",
+    "cs.LG",
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 4,
+    "version_count": 1,
+    "trending_score": 0.6065,
+    "recent_score": 0.1518,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.5143
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.22846v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.22846v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

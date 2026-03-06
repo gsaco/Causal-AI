@@ -1,0 +1,146 @@
+{
+  "arxiv_id": "2602.06603",
+  "canonical_url": "https://arxiv.org/abs/2602.06603v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.06603v2",
+  "title": "The hidden risks of temporal resampling in clinical reinforcement learning",
+  "abstract": "Offline reinforcement learning (ORL) has shown potential for improving decision-making in healthcare. However, contemporary research typically aggregates patient data into fixed time intervals, simplifying their mapping to standard ORL frameworks. The impact of these temporal manipulations on model safety and efficacy remains poorly understood. In this work, using both a gridworld navigation task and the UVA/Padova clinical diabetes simulator, we demonstrate that temporal resampling significantly degrades the performance of offline reinforcement learning algorithms during live deployment. We propose three mechanisms that drive this failure: (i) the generation of counterfactual trajectories, (ii) the distortion of temporal expectations, and (iii) the compounding of generalisation errors. Crucially, we find that standard off-policy evaluation metrics can fail to detect these drops in performance. Our findings reveal a fundamental risk in current healthcare ORL pipelines and emphasise the need for methods that explicitly handle the irregular timing of clinical decision-making.",
+  "authors": [
+    {
+      "name": "Thomas Frost"
+    },
+    {
+      "name": "Hrisheekesh Vaidya"
+    },
+    {
+      "name": "Steve Harris"
+    }
+  ],
+  "submitted_at": "2026-02-06",
+  "updated_at": "2026-02-10",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5632,
+    "recent_score": 0.4768,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4461
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-10"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.06603v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.06603v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

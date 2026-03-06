@@ -1,0 +1,128 @@
+{
+  "arxiv_id": "2602.19851",
+  "canonical_url": "https://arxiv.org/abs/2602.19851v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.19851v1",
+  "title": "Orthogonal Uplift Learning with Permutation-Invariant Representations for Combinatorial Treatments",
+  "abstract": "We study uplift estimation for combinatorial treatments. Uplift measures the pure incremental causal effect of an intervention (e.g., sending a coupon or a marketing message) on user behavior, modeled as a conditional individual treatment effect. Many real-world interventions are combinatorial: a treatment is a policy that specifies context-dependent action distributions rather than a single atomic label. Although recent work considers structured treatments, most methods rely on categorical or opaque encodings, limiting robustness and generalization to rare or newly deployed policies. We propose an uplift estimation framework that aligns treatment representation with causal semantics. Each policy is represented by the mixture it induces over contextaction components and embedded via a permutation-invariant aggregation. This representation is integrated into an orthogonalized low-rank uplift model, extending Robinson-style decompositions to learned, vector-valued treatments. We show that the resulting estimator is expressive for policy-induced causal effects, orthogonally robust to nuisance estimation errors, and stable under small policy perturbations. Experiments on large-scale randomized platform data demonstrate improved uplift accuracy and stability in long-tailed policy regimes",
+  "authors": [
+    {
+      "name": "Xinyan Su"
+    },
+    {
+      "name": "Jiacan Gao"
+    },
+    {
+      "name": "Mingyuan Ma"
+    },
+    {
+      "name": "Xiao Xu"
+    },
+    {
+      "name": "Xinrui Wan"
+    },
+    {
+      "name": "Tianqi Gu"
+    },
+    {
+      "name": "Enyun Yu"
+    },
+    {
+      "name": "Jiecheng Guo"
+    },
+    {
+      "name": "Zhiheng Zhang"
+    }
+  ],
+  "submitted_at": "2026-02-23",
+  "updated_at": "2026-02-23",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7361,
+    "recent_score": 0.7316,
+    "rising_score": 0.6752,
+    "canonical_score": 0.919,
+    "max_topic_confidence": 0.82
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.82,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate",
+          "uplift"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.19851v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.19851v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))",
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

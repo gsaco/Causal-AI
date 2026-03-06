@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2411.19395",
+  "canonical_url": "https://arxiv.org/abs/2411.19395v1",
+  "pdf_url": "https://arxiv.org/pdf/2411.19395v1",
+  "title": "Concept-driven Off Policy Evaluation",
+  "abstract": "Evaluating off-policy decisions using batch data poses significant challenges due to limited sample sizes leading to high variance. To improve Off-Policy Evaluation (OPE), we must identify and address the sources of this variance. Recent research on Concept Bottleneck Models (CBMs) shows that using human-explainable concepts can improve predictions and provide better understanding. We propose incorporating concepts into OPE to reduce variance. Our work introduces a family of concept-based OPE estimators, proving that they remain unbiased and reduce variance when concepts are known and predefined. Since real-world applications often lack predefined concepts, we further develop an end-to-end algorithm to learn interpretable, concise, and diverse parameterized concepts optimized for variance reduction. Our experiments with synthetic and real-world datasets show that both known and learned concept-based estimators significantly improve OPE performance. Crucially, we show that, unlike other OPE methods, concept-based estimators are easily interpretable and allow for targeted interventions on specific concepts, further enhancing the quality of these estimators.",
+  "authors": [
+    {
+      "name": "Ritam Majumdar"
+    },
+    {
+      "name": "Jack Teversham"
+    },
+    {
+      "name": "Sonali Parbhoo"
+    }
+  ],
+  "submitted_at": "2024-11-28",
+  "updated_at": "2024-11-28",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.3662,
+    "recent_score": 0,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.1714
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "off policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-11-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2411.19395v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2411.19395v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

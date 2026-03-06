@@ -1,0 +1,140 @@
+{
+  "arxiv_id": "2010.15745",
+  "canonical_url": "https://arxiv.org/abs/2010.15745v2",
+  "pdf_url": "https://arxiv.org/pdf/2010.15745v2",
+  "title": "Reinforcement Learning of Causal Variables Using Mediation Analysis",
+  "abstract": "Many open problems in machine learning are intrinsically related to causality, however, the use of causal analysis in machine learning is still in its early stage. Within a general reinforcement learning setting, we consider the problem of building a general reinforcement learning agent which uses experience to construct a causal graph of the environment, and use this graph to inform its policy. Our approach has three characteristics: First, we learn a simple, coarse-grained causal graph, in which the variables reflect states at many time instances, and the interventions happen at the level of policies, rather than individual actions. Secondly, we use mediation analysis to obtain an optimization target. By minimizing this target, we define the causal variables. Thirdly, our approach relies on estimating conditional expectations rather the familiar expected return from reinforcement learning, and we therefore apply a generalization of Bellman's equations. We show the method can learn a plausible causal graph in a grid-world environment, and the agent obtains an improvement in performance when using the causally informed policy. To our knowledge, this is the first attempt to apply causal analysis in a reinforcement learning setting without strict restrictions on the number of states. We have observed that mediation analysis provides a promising avenue for transforming the problem of causal acquisition into one of cost-function minimization, but importantly one which involves estimating conditional expectations. This is a new challenge, and we think that causal reinforcement learning will involve development methods suited for online estimation of such conditional expectations. Finally, a benefit of our approach is the use of very simple causal models, which are arguably a more natural model of human causal understanding.",
+  "authors": [
+    {
+      "name": "Tue Herlau"
+    },
+    {
+      "name": "Rasmus Larsen"
+    }
+  ],
+  "submitted_at": "2020-10-29",
+  "updated_at": "2022-05-17",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4465,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2905
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2022-05-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2010.15745v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2010.15745v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2601.22717",
+  "canonical_url": "https://arxiv.org/abs/2601.22717v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.22717v1",
+  "title": "Policy learning under constraint: Maximizing a primary outcome while controlling an adverse event",
+  "abstract": "A medical policy aims to support decision-making by mapping patient characteristics to individualized treatment recommendations. Standard approaches typically optimize a single outcome criterion. For example, recommending treatment according to the sign of the Conditional Average Treatment Effect (CATE) maximizes the policy \"value\" by exploiting treatment effect heterogeneity. This point of view shifts policy learning towards the challenge of learning a reliable CATE estimator. However, in multi-outcome settings, such strategies ignore the risk of adverse events, despite their relevance. PLUC (Policy Learning Under Constraint) addresses this challenges by learning an estimator of the CATE that yields smoothed policies controlling the probability of an adverse event in observational settings. Inspired by insights from EP-learning, PLUC involves the optimization of strongly convex Lagrangian criteria over a convex hull of functions. Its alternating procedure iteratively applies the Frank-Wolfe algorithm to minimize the current criterion, then performs a targeting step that updates the criterion so that its evaluations at previously visited landmarks become targeted estimators of the corresponding theoretical quantities. An R package PLUC-R provides a practical implementation. We illustrate PLUC's performance through a series of numerical experiments.",
+  "authors": [
+    {
+      "name": "Laura Fuentes-Vicente"
+    },
+    {
+      "name": "Mathieu Even"
+    },
+    {
+      "name": "Gaelle Dormion"
+    },
+    {
+      "name": "Julie Josse"
+    },
+    {
+      "name": "Antoine Chambaz"
+    }
+  ],
+  "submitted_at": "2026-01-30",
+  "updated_at": "2026-01-30",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5606,
+    "recent_score": 0.3737,
+    "canonical_score": 0.608,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.5448
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-30"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.22717v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.22717v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

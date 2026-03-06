@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2602.03517",
+  "canonical_url": "https://arxiv.org/abs/2602.03517v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.03517v1",
+  "title": "Rank-Learner: Orthogonal Ranking of Treatment Effects",
+  "abstract": "Many decision-making problems require ranking individuals by their treatment effects rather than estimating the exact effect magnitudes. Examples include prioritizing patients for preventive care interventions, or ranking customers by the expected incremental impact of an advertisement. Surprisingly, while causal effect estimation has received substantial attention in the literature, the problem of directly learning rankings of treatment effects has largely remained unexplored. In this paper, we introduce Rank-Learner, a novel two-stage learner that directly learns the ranking of treatment effects from observational data. We first show that naive approaches based on precise treatment effect estimation solve a harder problem than necessary for ranking, while our Rank-Learner optimizes a pairwise learning objective that recovers the true treatment effect ordering, without explicit CATE estimation. We further show that our Rank-Learner is Neyman-orthogonal and thus comes with strong theoretical guarantees, including robustness to estimation errors in the nuisance functions. In addition, our Rank-Learner is model-agnostic, and can be instantiated with arbitrary machine learning models (e.g., neural networks). We demonstrate the effectiveness of our method through extensive experiments where Rank-Learner consistently outperforms standard CATE estimators and non-orthogonal ranking methods. Overall, we provide practitioners with a new, orthogonal two-stage learner for ranking individuals by their treatment effects.",
+  "authors": [
+    {
+      "name": "Henri Arno"
+    },
+    {
+      "name": "Dennis Frauen"
+    },
+    {
+      "name": "Emil Javurek"
+    },
+    {
+      "name": "Thomas Demeester"
+    },
+    {
+      "name": "Stefan Feuerriegel"
+    }
+  ],
+  "submitted_at": "2026-02-03",
+  "updated_at": "2026-02-03",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6006,
+    "recent_score": 0.4176,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4839
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.03517v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.03517v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

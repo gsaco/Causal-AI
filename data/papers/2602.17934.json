@@ -1,0 +1,156 @@
+{
+  "arxiv_id": "2602.17934",
+  "canonical_url": "https://arxiv.org/abs/2602.17934v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.17934v1",
+  "title": "Causal Neighbourhood Learning for Invariant Graph Representations",
+  "abstract": "Graph data often contain noisy and spurious correlations that mask the true causal relationships, which are essential for enabling graph models to make predictions based on the underlying causal structure of the data. Dependence on spurious connections makes it challenging for traditional Graph Neural Networks (GNNs) to generalize effectively across different graphs. Furthermore, traditional aggregation methods tend to amplify these spurious patterns, limiting model robustness under distribution shifts. To address these issues, we propose Causal Neighbourhood Learning with Graph Neural Networks (CNL-GNN), a novel framework that performs causal interventions on graph structure. CNL-GNN effectively identifies and preserves causally relevant connections and reduces spurious influences through the generation of counterfactual neighbourhoods and adaptive edge perturbation guided by learnable importance masking and an attention-based mechanism. In addition, by combining structural-level interventions with the disentanglement of causal features from confounding factors, the model learns invariant node representations that are robust and generalize well across different graph structures. Our approach improves causal graph learning beyond traditional feature-based methods, resulting in a robust classification model. Extensive experiments on four publicly available datasets, including multiple domain variants of one dataset, demonstrate that CNL-GNN outperforms state-of-the-art GNN models.",
+  "authors": [
+    {
+      "name": "Simi Job"
+    },
+    {
+      "name": "Xiaohui Tao"
+    },
+    {
+      "name": "Taotao Cai"
+    },
+    {
+      "name": "Haoran Xie"
+    },
+    {
+      "name": "Jianming Yong"
+    }
+  ],
+  "submitted_at": "2026-02-20",
+  "updated_at": "2026-02-20",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6456,
+    "recent_score": 0.6722,
+    "rising_score": 0.532,
+    "canonical_score": 0.9865,
+    "max_topic_confidence": 0.97
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.97,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.17934v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.17934v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "(abs:disentanglement AND abs:causal AND (cat:cs.LG OR cat:stat.ML))",
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "representation",
+      "robustness-policy",
+      "foundations",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

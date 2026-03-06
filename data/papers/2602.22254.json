@@ -1,0 +1,109 @@
+{
+  "arxiv_id": "2602.22254",
+  "canonical_url": "https://arxiv.org/abs/2602.22254v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.22254v1",
+  "title": "Causal Direction from Convergence Time: Faster Training in the True Causal Direction",
+  "abstract": "We introduce Causal Computational Asymmetry (CCA), a principle for causal direction identification based on optimization dynamics in which one neural network is trained to predict $Y$ from $X$ and another to predict $X$ from $Y$, and the direction that converges faster is inferred to be causal. Under the additive noise model $Y = f(X) + \\varepsilon$ with $\\varepsilon \\perp X$ and $f$ nonlinear and injective, we establish a formal asymmetry: in the reverse direction, residuals remain statistically dependent on the input regardless of approximation quality, inducing a strictly higher irreducible loss floor and non-separable gradient noise in the optimization dynamics, so that the reverse model requires strictly more gradient steps in expectation to reach any fixed loss threshold; consequently, the forward (causal) direction converges in fewer expected optimization steps. CCA operates in optimization-time space, distinguishing it from methods such as RESIT, IGCI, and SkewScore that rely on statistical independence or distributional asymmetries, and proper z-scoring of both variables is required for valid comparison of convergence rates. On synthetic benchmarks, CCA achieves 26/30 correct causal identifications across six neural architectures, including 30/30 on sine and exponential data-generating processes. We further embed CCA into a broader framework termed Causal Compression Learning (CCL), which integrates graph structure learning, causal information compression, and policy optimization, with all theoretical guarantees formally proved and empirically validated on synthetic datasets.",
+  "authors": [
+    {
+      "name": "Abdulrahman Tamim"
+    }
+  ],
+  "submitted_at": "2026-02-24",
+  "updated_at": "2026-02-24",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7515,
+    "recent_score": 0.7526,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.6972
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structure learning",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.22254v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.22254v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

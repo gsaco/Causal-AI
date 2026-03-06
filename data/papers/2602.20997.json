@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2602.20997",
+  "canonical_url": "https://arxiv.org/abs/2602.20997v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.20997v1",
+  "title": "Characterization-free classification and identification of the environment between two quantum players",
+  "abstract": "Classifying the causal structure of quantum channels is essential for verifying quantum networks and certifying quantum resources. We introduce a characterization-free protocol enabling two isolated players, Alice and Bob, to classify and identify the definite-order strategy adopted by an unknown environment mediating their channels. Without assuming knowledge of their devices or the environment, the players infer the causal order solely from input-output statistics by testing Markovian conditions that we prove are necessary and sufficient for each strategy class. Remarkably, we prove that even with a minimal random channel consisting of two-outcome POVMs and two-state preparations, the protocol retains full performance with probability one. We experimentally demonstrate the protocol on an optical platform, reliably distinguishing between several strategies. Our results provide a strong and robust tool for causal inference in quantum networks.",
+  "authors": [
+    {
+      "name": "Masahito Hayashi"
+    },
+    {
+      "name": "Longyang Cao"
+    },
+    {
+      "name": "Baichu Yu"
+    },
+    {
+      "name": "Yuan-Yuan Zhao"
+    }
+  ],
+  "submitted_at": "2026-02-24",
+  "updated_at": "2026-02-24",
+  "primary_category": "quant-ph",
+  "categories": [
+    "quant-ph"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6177,
+    "recent_score": 0.7526,
+    "canonical_score": 0.6637,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.6024
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.20997v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.20997v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

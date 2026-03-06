@@ -1,0 +1,115 @@
+{
+  "arxiv_id": "2602.02777",
+  "canonical_url": "https://arxiv.org/abs/2602.02777v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02777v1",
+  "title": "Disentangling spatial interference and spatial confounding biases in causal inference",
+  "abstract": "Spatial interference and spatial confounding are two major issues inhibiting precise causal estimates when dealing with observational spatial data. Moreover, the definition and interpretation of spatial confounding remain arguable in the literature. In this paper, our goal is to provide clarity in a novel way on misconception and issues around spatial confounding from Directed Acyclic Graph (DAG) perspective and to disentangle both direct, indirect spatial confounding and spatial interference based on bias induced on causal estimates. Also, existing analyses of spatial confounding bias typically rely on Normality assumptions for treatments and confounders, assumptions that are often violated in practice. Relaxing these assumptions, we derive analytical expressions for spatial confounding bias under more general distributional settings using Poisson as example . We showed that the choice of spatial weights, the distribution of the treatment, and the magnitude of interference critically determine the extent of bias due to spatial interference. We further demonstrate that direct and indirect spatial confounding can be disentangled, with both the weight matrix and the nature of exposure playing central roles in determining the magnitude of indirect bias. Theoretical results are supported by simulation studies and an application to real-world spatial data. In future, parametric frameworks for concomitantly adjusting for spatial interference, direct and indirect spatial confounding for both direct and mediated effects estimation will be developed.",
+  "authors": [
+    {
+      "name": "Isqeel Ogunsola"
+    },
+    {
+      "name": "Olatunji Johnson"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-02",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.648,
+    "recent_score": 0.4062,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5816
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02777v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02777v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

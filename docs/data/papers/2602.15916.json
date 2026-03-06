@@ -1,0 +1,156 @@
+{
+  "arxiv_id": "2602.15916",
+  "canonical_url": "https://arxiv.org/abs/2602.15916v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.15916v1",
+  "title": "Nonparametric Identification and Inference for Counterfactual Distributions with Confounding",
+  "abstract": "We propose nonparametric identification and semiparametric estimation of joint potential outcome distributions in the presence of confounding. First, in settings with observed confounding, we derive tighter, covariate-informed bounds on the joint distribution by leveraging conditional copulas. To overcome the non-differentiability of bounding min/max operators, we establish the asymptotic properties for both a direct estimator with polynomial margin condition and a smooth approximation with log-sum-exp operator, facilitating valid inference for individual-level effects under the canonical rank-preserving assumption. Second, we tackle the challenge of unmeasured confounding by introducing a causal representation learning framework. By utilizing instrumental variables, we prove the nonparametric identifiability of the latent confounding subspace under injectivity and completeness conditions. We develop a ``triple machine learning\" estimator that employs cross-fitting scheme to sequentially handle the learned representation, nuisance parameters, and target functional. We characterize the asymptotic distribution with variance inflation induced by representation learning error, and provide conditions for semiparametric efficiency. We also propose a practical VAE-based algorithm for confounding representation learning. Simulations and real-world analysis validate the effectiveness of proposed methods. By bridging classical semiparametric theory with modern representation learning, this work provides a robust statistical foundation for distributional and counterfactual inference in complex causal systems.",
+  "authors": [
+    {
+      "name": "Jianle Sun"
+    },
+    {
+      "name": "Kun Zhang"
+    }
+  ],
+  "submitted_at": "2026-02-17",
+  "updated_at": "2026-02-17",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.544,
+    "recent_score": 0.6177,
+    "rising_score": 0.443,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "latent confound"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.15916v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.15916v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)",
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))",
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

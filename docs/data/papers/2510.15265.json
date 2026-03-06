@@ -1,0 +1,138 @@
+{
+  "arxiv_id": "2510.15265",
+  "canonical_url": "https://arxiv.org/abs/2510.15265v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.15265v1",
+  "title": "Causal Time Series Modeling of Supraglacial Lake Evolution in Greenland under Distribution Shift",
+  "abstract": "Causal modeling offers a principled foundation for uncovering stable, invariant relationships in time-series data, thereby improving robustness and generalization under distribution shifts. Yet its potential is underutilized in spatiotemporal Earth observation, where models often depend on purely correlational features that fail to transfer across heterogeneous domains. We propose RIC-TSC, a regionally-informed causal time-series classification framework that embeds lag-aware causal discovery directly into sequence modeling, enabling both predictive accuracy and scientific interpretability. Using multi-modal satellite and reanalysis data-including Sentinel-1 microwave backscatter, Sentinel-2 and Landsat-8 optical reflectance, and CARRA meteorological variables-we leverage Joint PCMCI+ (J-PCMCI+) to identify region-specific and invariant predictors of supraglacial lake evolution in Greenland. Causal graphs are estimated globally and per basin, with validated predictors and their time lags supplied to lightweight classifiers. On a balanced benchmark of 1000 manually labeled lakes from two contrasting melt seasons (2018-2019), causal models achieve up to 12.59% higher accuracy than correlation-based baselines under out-of-distribution evaluation. These results show that causal discovery is not only a means of feature selection but also a pathway to generalizable and mechanistically grounded models of dynamic Earth surface processes.",
+  "authors": [
+    {
+      "name": "Emam Hossain"
+    },
+    {
+      "name": "Muhammad Hasan Ferdous"
+    },
+    {
+      "name": "Devon Dunmire"
+    },
+    {
+      "name": "Aneesh Subramanian"
+    },
+    {
+      "name": "Md Osman Gani"
+    }
+  ],
+  "submitted_at": "2025-10-17",
+  "updated_at": "2025-10-17",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4723,
+    "recent_score": 0.0231,
+    "rising_score": 0.3009,
+    "canonical_score": 0.9865,
+    "max_topic_confidence": 0.97
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.97,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal time series",
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.15265v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.15265v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))",
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2602.04990",
+  "canonical_url": "https://arxiv.org/abs/2602.04990v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.04990v2",
+  "title": "Position: Machine Learning for Heart Transplant Allocation Policy Optimization Should Account for Incentives",
+  "abstract": "The allocation of scarce donor organs constitutes one of the most consequential algorithmic challenges in healthcare. While the field is rapidly transitioning from rigid, rule-based systems to machine learning and data-driven optimization, we argue that current approaches often overlook a fundamental barrier: incentives. In this position paper, we highlight that organ allocation is not merely an optimization problem, but rather a complex game involving organ procurement organizations, transplant centers, clinicians, patients, and regulators. Focusing on US adult heart transplant allocation, we identify critical incentive misalignments across the decision-making pipeline, and present data showing that they are having adverse consequences today. Our main position is that the next generation of allocation policies should be incentive aware. We outline a research agenda for the machine learning community, calling for the integration of mechanism design, strategic classification, causal inference, and social choice to ensure robustness, efficiency, fairness, and trust in the face of strategic behavior from the various constituent groups.",
+  "authors": [
+    {
+      "name": "Ioannis Anagnostides"
+    },
+    {
+      "name": "Itai Zilberstein"
+    },
+    {
+      "name": "Zachary W. Sollie"
+    },
+    {
+      "name": "Arman Kilic"
+    },
+    {
+      "name": "Tuomas Sandholm"
+    }
+  ],
+  "submitted_at": "2026-02-04",
+  "updated_at": "2026-02-06",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.GT"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6702,
+    "recent_score": 0.44,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5888
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-06"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.04990v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.04990v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

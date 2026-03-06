@@ -1,28 +1,116 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { readJson } from "@utils/data";
+import { withBase } from "@utils/withBase";
+
+const facets = await readJson("navigator/facets.json");
+
+const quickLinks = [
+  {
+    href: "/papers",
+    title: "Paper Navigator",
+    note: "Slice the corpus by lens, topic, category, application, and year."
+  },
+  {
+    href: "/topics",
+    title: "Topic Dossiers",
+    note: "Read structured overviews with canonical papers, rising work, and open questions."
+  },
+  {
+    href: "/applications",
+    title: "Application Briefs",
+    note: "See where intervention-aware modeling matters operationally."
+  },
+  {
+    href: "/observatory",
+    title: "Signals",
+    note: "Inspect momentum, revision churn, cross-list behavior, and emerging clusters."
+  }
+];
 ---
 <BaseLayout wide title="Search - Causal AI Futures" description="Search across papers, topics, and tendencies.">
-  <section class="section hero">
-    <div class="container">
-      <h1>Search</h1>
-      <p class="subtle">Query the full site index with filters for content type.</p>
+  <section class="section hero hero-ambient">
+    <div class="container search-hero">
+      <div>
+        <p class="eyebrow">Search</p>
+        <h1>Query the atlas without losing the editorial map.</h1>
+        <p class="subtle hero-copy">
+          Search across the paper corpus, topic dossiers, applications, tendencies, and frontiers while preserving type
+          filters and direct jumps into the atlas.
+        </p>
+      </div>
+
+      <div class="card hero-stats">
+        <div>
+          <span>Papers</span>
+          <strong>{facets.counts.papers}</strong>
+        </div>
+        <div>
+          <span>Topics</span>
+          <strong>{Object.keys(facets.counts.topics).length}</strong>
+        </div>
+        <div>
+          <span>Applications</span>
+          <strong>{Object.keys(facets.counts.applications).length}</strong>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container search-shell">
       <div class="card search-panel">
-        <input type="search" placeholder="Search causal AI" data-search-input />
+        <div class="panel-copy">
+          <p class="eyebrow">Site index</p>
+          <h2>Search every public surface</h2>
+          <p class="subtle">Use the filters to narrow by content type. The command palette remains available with <span class="kbd">Cmd+K</span>.</p>
+        </div>
+
+        <div class="search-field">
+          <label for="site-search">Search query</label>
+          <input id="site-search" type="search" placeholder="counterfactual planning, identifiability, causal agents..." data-search-input />
+        </div>
+
         <div class="filters">
-          <label><input type="checkbox" value="paper" checked /> Papers</label>
-          <label><input type="checkbox" value="topic" checked /> Topics</label>
-          <label><input type="checkbox" value="trend" checked /> Tendencies</label>
-          <label><input type="checkbox" value="application" checked /> Applications</label>
-          <label><input type="checkbox" value="frontier" checked /> Frontiers</label>
+          <label class="filter-pill"><input type="checkbox" value="paper" checked /> Papers</label>
+          <label class="filter-pill"><input type="checkbox" value="topic" checked /> Topics</label>
+          <label class="filter-pill"><input type="checkbox" value="trend" checked /> Tendencies</label>
+          <label class="filter-pill"><input type="checkbox" value="application" checked /> Applications</label>
+          <label class="filter-pill"><input type="checkbox" value="frontier" checked /> Frontiers</label>
+        </div>
+
+        <div class="quick-links">
+          {quickLinks.map((link) => (
+            <a class="quick-link" href={withBase(link.href)}>
+              <strong>{link.title}</strong>
+              <p>{link.note}</p>
+            </a>
+          ))}
         </div>
       </div>
-      <div class="card search-results" data-search-results>
-        <p class="subtle">Type to search the site.</p>
+
+      <div class="card search-results">
+        <div class="results-head">
+          <div>
+            <p class="eyebrow">Results</p>
+            <strong data-search-summary>Type to search the site.</strong>
+          </div>
+          <span class="chip secondary" data-search-count>Index ready</span>
+        </div>
+
+        <template data-empty-state>
+          <div class="empty-state">
+            <p class="subtle">Try a paper title, a method, or a domain problem.</p>
+            <div class="suggestions">
+              <span class="chip">causal discovery</span>
+              <span class="chip secondary">distribution shift</span>
+              <span class="chip">counterfactual planning</span>
+              <span class="chip secondary">LLM agents</span>
+            </div>
+          </div>
+        </template>
+
+        <div data-search-results></div>
       </div>
     </div>
   </section>
@@ -30,43 +118,98 @@ import BaseLayout from "@layouts/BaseLayout.astro";
   <script is:inline>
     const input = document.querySelector("[data-search-input]");
     const results = document.querySelector("[data-search-results]");
+    const summary = document.querySelector("[data-search-summary]");
+    const countBadge = document.querySelector("[data-search-count]");
     const filterInputs = Array.from(document.querySelectorAll(".filters input"));
+    const emptyState = document.querySelector("[data-empty-state]");
+
+    function renderEmptyState() {
+      summary.textContent = "Type to search the site.";
+      countBadge.textContent = "Index ready";
+      results.innerHTML = emptyState?.innerHTML ?? "<p class='subtle'>Type to search the site.</p>";
+    }
 
     async function runSearch() {
       const query = input.value.trim();
       if (!query) {
-        results.innerHTML = "<p class='subtle'>Type to search the site.</p>";
+        renderEmptyState();
         return;
       }
       if (!window.pagefind) return;
 
       const activeFilters = filterInputs.filter((el) => el.checked).map((el) => el.value);
-      const filter = activeFilters.length ? { type: activeFilters } : undefined;
+      const filter = activeFilters.length && activeFilters.length !== filterInputs.length ? { type: activeFilters } : undefined;
       const search = await window.pagefind.search(query, filter ? { filters: filter } : {});
       const entries = await Promise.all(search.results.map((result) => result.data()));
+      summary.textContent = `Results for "${query}"`;
+      countBadge.textContent = `${entries.length} matches`;
       results.innerHTML = entries
         .map((entry) => {
           return `
             <a class="result" href="${entry.url}">
               <div>
-                <strong>${entry.meta.title ?? entry.title}</strong>
+                <div class="result-head">
+                  <strong>${entry.meta.title ?? entry.title}</strong>
+                  <span class="chip secondary">${entry.meta.type ?? "result"}</span>
+                </div>
                 <p>${entry.excerpt}</p>
               </div>
-              <span class="chip">${entry.meta.type ?? "result"}</span>
             </a>
           `;
         })
-        .join("") || "<p class='subtle'>No matches.</p>";
+        .join("") || "<p class='subtle'>No matches for that query.</p>";
     }
 
+    renderEmptyState();
     input.addEventListener("input", runSearch);
     filterInputs.forEach((el) => el.addEventListener("change", runSearch));
   </script>
 
   <style>
     h1 {
-      margin: 0 0 0.6rem;
-      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0;
+      font-size: clamp(2.8rem, 4.8vw, 4.6rem);
+      line-height: 0.98;
+      max-width: 11ch;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .search-hero {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      max-width: 58ch;
+      line-height: 1.72;
+      font-size: 1.05rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hero-stats span {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    .hero-stats strong {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 1.45rem;
     }
 
     .search-shell {
@@ -77,42 +220,148 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 
     .search-panel {
       display: grid;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
-    .search-panel input {
-      padding: 0.7rem 0.9rem;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--bg-elevated);
+    .panel-copy {
+      display: grid;
+      gap: 0.55rem;
     }
 
-    .filters {
+    .search-field {
       display: grid;
       gap: 0.5rem;
     }
 
+    .search-field label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .search-panel input {
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--bg-elevated) 92%, white);
+      box-shadow: inset 0 1px 0 color-mix(in srgb, white 28%, transparent);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface) 84%, white);
+      color: var(--muted);
+    }
+
+    .filter-pill:has(input:checked) {
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+
+    .quick-links {
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quick-link {
+      display: grid;
+      gap: 0.4rem;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+      background: color-mix(in srgb, var(--surface) 75%, white);
+    }
+
+    .quick-link strong {
+      font-size: 1rem;
+    }
+
+    .quick-link p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .search-results {
       display: grid;
-      gap: 0.6rem;
+      gap: 1rem;
+      align-content: start;
+      min-height: 26rem;
+    }
+
+    .results-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    }
+
+    .results-head strong {
+      font-size: 1.1rem;
+    }
+
+    .empty-state {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .result {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.6rem 0.7rem;
-      border-radius: 10px;
+      display: grid;
+      gap: 0.55rem;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+      background: color-mix(in srgb, var(--surface) 72%, white);
     }
 
     .result:hover,
     .result:focus {
-      background: var(--surface);
+      background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+    }
+
+    .result-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .result p {
+      margin: 0;
+      color: var(--muted);
     }
 
     @media (max-width: 900px) {
+      .search-hero,
       .search-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats,
+      .quick-links {
         grid-template-columns: 1fr;
       }
     }

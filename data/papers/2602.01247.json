@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2602.01247",
+  "canonical_url": "https://arxiv.org/abs/2602.01247v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.01247v1",
+  "title": "Mechanistic Interpretability of Brain-to-Speech Models Across Speech Modes",
+  "abstract": "Brain-to-speech decoding models demonstrate robust performance in vocalized, mimed, and imagined speech; yet, the fundamental mechanisms via which these models capture and transmit information across different speech modalities are less explored. In this work, we use mechanistic interpretability to causally investigate the internal representations of a neural speech decoder. We perform cross-mode activation patching of internal activations across speech modes, and use tri-modal interpolation to examine whether speech representations vary discretely or continuously. We use coarse-to-fine causal tracing and causal scrubbing to find localized causal structure, allowing us to find internal subspaces that are sufficient for cross-mode transfer. In order to determine how finely distributed these effects are within layers, we perform neuron-level activation patching. We discover that small but not distributed subsets of neurons, rather than isolated units, affect the cross-mode transfer. Our results show that speech modes lie on a shared continuous causal manifold, and cross-mode transfer is mediated by compact, layer-specific subspaces rather than diffuse activity. Together, our findings give a causal explanation for how speech modality information is organized and used in brain-to-speech decoding models, revealing hierarchical and direction-dependent representational structure across speech modes.",
+  "authors": [
+    {
+      "name": "Maryam Maghsoudi"
+    },
+    {
+      "name": "Ayushi Mishra"
+    }
+  ],
+  "submitted_at": "2026-02-01",
+  "updated_at": "2026-02-01",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6215,
+    "recent_score": 0.395,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5238
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.01247v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.01247v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

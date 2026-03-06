@@ -1,0 +1,124 @@
+{
+  "arxiv_id": "2601.20405",
+  "canonical_url": "https://arxiv.org/abs/2601.20405v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.20405v1",
+  "title": "Position: A Potential Outcomes Perspective on Pearl's Causal Hierarchy",
+  "abstract": "Pearl's causal hierarchy has garnered sustained attention as a foundational lens for formulating and understanding causal questions, and has been extensively discussed within the framework of structural causal models. In this paper, we revisit the hierarchy from a potential outcomes perspective and provide a formal, systematic classification of how various causal estimands are mapped to specific layers. Building on this classification, we summarize key identifiability challenges for estimands at different layers and review general strategies for achieving identification under varying assumptions. Our perspective is both intuitive and theoretically grounded, as higher layers of the hierarchy correspond to progressively richer features of the potential outcomes distribution, which in turn require stronger assumptions for identification. We expect this perspective to help clarify and deepen understanding of various causal estimands, particularly those in the third layer of the causal hierarchy, along with their associated identifiability challenges, identifiability strategies, and application scenarios.",
+  "authors": [
+    {
+      "name": "Peng Wu"
+    },
+    {
+      "name": "Linbo Wang"
+    }
+  ],
+  "submitted_at": "2026-01-28",
+  "updated_at": "2026-01-28",
+  "primary_category": "stat.OT",
+  "categories": [
+    "stat.OT"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5524,
+    "recent_score": 0.3536,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.4662
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.20405v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.20405v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

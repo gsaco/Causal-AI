@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2312.06403",
+  "canonical_url": "https://arxiv.org/abs/2312.06403v4",
+  "pdf_url": "https://arxiv.org/pdf/2312.06403v4",
+  "title": "RoME: A Robust Mixed-Effects Bandit Algorithm for Optimizing Mobile Health Interventions",
+  "abstract": "Mobile health leverages personalized and contextually tailored interventions optimized through bandit and reinforcement learning algorithms. In practice, however, challenges such as participant heterogeneity, nonstationarity, and nonlinear relationships hinder algorithm performance. We propose RoME, a Robust Mixed-Effects contextual bandit algorithm that simultaneously addresses these challenges via (1) modeling the differential reward with user- and time-specific random effects, (2) network cohesion penalties, and (3) debiased machine learning for flexible estimation of baseline rewards. We establish a high-probability regret bound that depends solely on the dimension of the differential-reward model, enabling us to achieve robust regret bounds even when the baseline reward is highly complex. We demonstrate the superior performance of the RoME algorithm in a simulation and two off-policy evaluation studies.",
+  "authors": [
+    {
+      "name": "Easton K. Huch"
+    },
+    {
+      "name": "Jieru Shi"
+    },
+    {
+      "name": "Madeline R. Abbott"
+    },
+    {
+      "name": "Jessica R. Golbus"
+    },
+    {
+      "name": "Alexander Moreno"
+    },
+    {
+      "name": "Walter H. Dempsey"
+    }
+  ],
+  "submitted_at": "2023-12-11",
+  "updated_at": "2025-01-15",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3375,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.1452
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v4",
+      "updated_at": "2025-01-15"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2312.06403v4",
+    "arxiv_pdf": "https://arxiv.org/pdf/2312.06403v4"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

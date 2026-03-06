@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2601.22944",
+  "canonical_url": "https://arxiv.org/abs/2601.22944v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.22944v2",
+  "title": "Environment-Conditioned Tail Reweighting for Total Variation Invariant Risk Minimization",
+  "abstract": "Out-of-distribution (OOD) generalization remains challenging when models simultaneously encounter correlation shifts across environments and diversity shifts driven by rare or hard samples. Existing invariant risk minimization (IRM) methods primarily address spurious correlations at the environment level, but often overlook sample-level heterogeneity within environments, which can critically impact OOD performance. In this work, we propose Environment-Conditioned Tail Reweighting for Total Variation Invariant Risk Minimization (ECTR), a unified framework that augments TV-based invariant learning with environment-conditioned tail reweighting to jointly address both types of distribution shift. By integrating environment-level invariance with within-environment robustness, the proposed approach makes these two mechanisms complementary under mixed distribution shifts. We further extend the framework to scenarios without explicit environment annotations by inferring latent environments through a minimax formulation. Experiments across regression, tabular, time-series, and image classification benchmarks under mixed distribution shifts demonstrate consistent improvements in both worst-environment and average OOD performance.",
+  "authors": [
+    {
+      "name": "Yuanchao Wang"
+    },
+    {
+      "name": "Zhao-Rong Lai"
+    },
+    {
+      "name": "Tianqi Zhong"
+    },
+    {
+      "name": "Fengnan Li"
+    }
+  ],
+  "submitted_at": "2026-01-30",
+  "updated_at": "2026-02-02",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5778,
+    "recent_score": 0.3881,
+    "canonical_score": 0.8588,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4841
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "distribution shift",
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.22944v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.22944v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

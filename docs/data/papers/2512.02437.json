@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2512.02437",
+  "canonical_url": "https://arxiv.org/abs/2512.02437v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.02437v1",
+  "title": "LightHCG: a Lightweight yet powerful HSIC Disentanglement based Causal Glaucoma Detection Model framework",
+  "abstract": "As a representative optic degenerative condition, glaucoma has been a threat to millions due to its irreversibility and severe impact on human vision fields. Mainly characterized by dimmed and blurred visions, or peripheral vision loss, glaucoma is well known to occur due to damages in the optic nerve from increased intraocular pressure (IOP) or neovascularization within the retina. Traditionally, most glaucoma related works and clinical diagnosis focused on detecting these damages in the optic nerve by using patient data from perimetry tests, optic papilla inspections and tonometer-based IOP measurements. Recently, with advancements in computer vision AI models, such as VGG16 or Vision Transformers (ViT), AI-automatized glaucoma detection and optic cup segmentation based on retinal fundus images or OCT recently exhibited significant performance in aiding conventional diagnosis with high performance. However, current AI-driven glaucoma detection approaches still have significant room for improvement in terms of reliability, excessive parameter usage, possibility of spurious correlation within detection, and limitations in applications to intervention analysis or clinical simulations. Thus, this research introduced a novel causal representation driven glaucoma detection model: LightHCG, an extremely lightweight Convolutional VAE-based latent glaucoma representation model that can consider the true causality among glaucoma-related physical factors within the optic nerve region. Using HSIC-based latent space disentanglement and Graph Autoencoder based unsupervised causal representation learning, LightHCG not only exhibits higher performance in classifying glaucoma with 93~99% less weights, but also enhances the possibility of AI-driven intervention analysis, compared to existing advanced vision models such as InceptionV3, MobileNetV2 or VGG16.",
+  "authors": [
+    {
+      "name": "Daeyoung Kim"
+    }
+  ],
+  "submitted_at": "2025-12-02",
+  "updated_at": "2025-12-02",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4365,
+    "recent_score": 0.076,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.2997
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation",
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.02437v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.02437v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

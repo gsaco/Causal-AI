@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2602.06611",
+  "canonical_url": "https://arxiv.org/abs/2602.06611v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.06611v1",
+  "title": "Adaptive-CaRe: Adaptive Causal Regularization for Robust Outcome Prediction",
+  "abstract": "Accurate prediction of outcomes is crucial for clinical decision-making and personalized patient care. Supervised machine learning algorithms, which are commonly used for outcome prediction in the medical domain, optimize for predictive accuracy, which can result in models latching onto spurious correlations instead of robust predictors. Causal structure learning methods on the other hand have the potential to provide robust predictors for the target, but can be too conservative because of algorithmic and data assumptions, resulting in loss of diagnostic precision. Therefore, we propose a novel model-agnostic regularization strategy, Adaptive-CaRe, for generalized outcome prediction in the medical domain. Adaptive-CaRe strikes a balance between both predictive value and causal robustness by incorporating a penalty that is proportional to the difference between the estimated statistical contribution and estimated causal contribution of the input features for model predictions. Our experiments on synthetic data establish the efficacy of the proposed Adaptive-CaRe regularizer in finding robust predictors for the target while maintaining competitive predictive accuracy. With experiments on a standard causal benchmark, we provide a blueprint for navigating the trade-off between predictive accuracy and causal robustness by tweaking the regularization strength, $λ$. Validation using real-world dataset confirms that the results translate to practical, real-domain settings. Therefore, Adaptive-CaRe provides a simple yet effective solution to the long-standing trade-off between predictive accuracy and causal robustness in the medical domain. Future work would involve studying alternate causal structure learning frameworks and complex classification models to provide deeper insights at a larger scale.",
+  "authors": [
+    {
+      "name": "Nithya Bhasker"
+    },
+    {
+      "name": "Fiona R. Kolbinger"
+    },
+    {
+      "name": "Susu Hu"
+    },
+    {
+      "name": "Gitta Kutyniok"
+    },
+    {
+      "name": "Stefanie Speidel"
+    }
+  ],
+  "submitted_at": "2026-02-06",
+  "updated_at": "2026-02-06",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6133,
+    "recent_score": 0.454,
+    "rising_score": 0.5129,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structure learning"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-06"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.06611v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.06611v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))",
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "systems",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

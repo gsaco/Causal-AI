@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2602.07825",
+  "canonical_url": "https://arxiv.org/abs/2602.07825v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.07825v1",
+  "title": "Estimation Strategies for Causal Decomposition Analysis with Allowability Specifications",
+  "abstract": "Causal decomposition analysis (CDA) is an approach for modeling the impact of hypothetical interventions to reduce disparities. It is useful for identifying foci that future interventions, including multilevel and multimodal interventions, could focus on to reduce disparities. Based within the potential outcomes framework, CDA has a causal interpretation when the identifying assumptions are met. CDA also allows an analyst to consider which covariates are allowable (i.e., fair) for defining the disparity in the outcome and in the point of intervention, so that its interpretation is also meaningful. While the incorporation of causal inference and allowability promotes robustness, transparency, and dialogue in disparities research, it can lead to challenges in estimation such as the need to correctly model densities. Also, how CDA differs from commonly used estimators may not be clear, which may limit its uptake. To address these challenges, we provide a tour of estimation strategies for CDA, reviewing existing proposals and introducing novel estimators that overcome key estimation challenges. Among them we introduce what we call \"bridging\" estimators that avoid directly modeling any density, and weighted sequential regression estimators that are multiply robust. Additionally, we provide diagnostics to assess the quality of the nuisance density models and weighting functions they rely on. We formally establish the estimators' robustness to model mis-specification, demonstrate their performance through a simulation study based on real data, and apply them to study disparities in hypertension control using electronic health records in a large healthcare system.",
+  "authors": [
+    {
+      "name": "John W. Jackson"
+    },
+    {
+      "name": "Ting-Hsuan Chang"
+    },
+    {
+      "name": "Aster Meche"
+    },
+    {
+      "name": "Trang Q. Nguyen"
+    }
+  ],
+  "submitted_at": "2026-02-08",
+  "updated_at": "2026-02-08",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5052,
+    "recent_score": 0.48,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4219
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-08"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.07825v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.07825v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,112 @@
+{
+  "arxiv_id": "2601.21135",
+  "canonical_url": "https://arxiv.org/abs/2601.21135v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.21135v1",
+  "title": "TRACE: Trajectory Recovery for Continuous Mechanism Evolution in Causal Representation Learning",
+  "abstract": "Temporal causal representation learning methods assume that causal mechanisms switch instantaneously between discrete domains, yet real-world systems often exhibit continuous mechanism transitions. For example, a vehicle's dynamics evolve gradually through a turning maneuver, and human gait shifts smoothly from walking to running. We formalize this setting by modeling transitional mechanisms as convex combinations of finitely many atomic mechanisms, governed by time-varying mixing coefficients. Our theoretical contributions establish that both the latent causal variables and the continuous mixing trajectory are jointly identifiable. We further propose TRACE, a Mixture-of-Experts framework where each expert learns one atomic mechanism during training, enabling recovery of mechanism trajectories at test time. This formulation generalizes to intermediate mechanism states never observed during training. Experiments on synthetic and real-world data demonstrate that TRACE recovers mixing trajectories with up to 0.99 correlation, substantially outperforming discrete-switching baselines.",
+  "authors": [
+    {
+      "name": "Shicheng Fan"
+    },
+    {
+      "name": "Kun Zhang"
+    },
+    {
+      "name": "Lu Cheng"
+    }
+  ],
+  "submitted_at": "2026-01-29",
+  "updated_at": "2026-01-29",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4535,
+    "recent_score": 0.3635,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.3118
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.21135v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.21135v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

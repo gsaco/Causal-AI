@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2602.03994",
+  "canonical_url": "https://arxiv.org/abs/2602.03994v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.03994v2",
+  "title": "Bypassing the Rationale: Causal Auditing of Implicit Reasoning in Language Models",
+  "abstract": "Chain-of-thought (CoT) prompting is widely used as a reasoning aid and is often treated as a transparency mechanism. Yet behavioral gains under CoT do not imply that the model's internal computation causally depends on the emitted reasoning text, i.e., models may produce fluent rationales while routing decision-critical computation through latent pathways. We introduce a causal, layerwise audit of CoT faithfulness based on activation patching. Our key metric, the CoT Mediation Index (CMI), isolates CoT-specific causal influence by comparing performance degradation from patching CoT-token hidden states against matched control patches. Across multiple model families (Phi, Qwen, DialoGPT) and scales, we find that CoT-specific influence is typically depth-localized into narrow \"reasoning windows,\" and we identify bypass regimes where CMI is near-zero despite plausible CoT text. We further observe that models tuned explicitly for reasoning tend to exhibit stronger and more structured mediation than larger untuned counterparts, while Mixture-of-Experts models show more distributed mediation consistent with routing-based computation. Overall, our results show that CoT faithfulness varies substantially across models and tasks and cannot be inferred from behavior alone, motivating causal, layerwise audits when using CoT as a transparency signal.",
+  "authors": [
+    {
+      "name": "Anish Sathyanarayanan"
+    },
+    {
+      "name": "Aditya Nagarsekar"
+    },
+    {
+      "name": "Aarush Rathore"
+    }
+  ],
+  "submitted_at": "2026-02-03",
+  "updated_at": "2026-02-08",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6312,
+    "recent_score": 0.4445,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-08"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.03994v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.03994v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2510.22567",
+  "canonical_url": "https://arxiv.org/abs/2510.22567v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.22567v1",
+  "title": "Semi-Supervised Learning under General Causal Models",
+  "abstract": "Semi-supervised learning (SSL) aims to train a machine learning model using both labelled and unlabelled data. While the unlabelled data have been used in various ways to improve the prediction accuracy, the reason why unlabelled data could help is not fully understood. One interesting and promising direction is to understand SSL from a causal perspective. In light of the independent causal mechanisms principle, the unlabelled data can be helpful when the label causes the features but not vice versa. However, the causal relations between the features and labels can be complex in real world applications. In this paper, we propose a SSL framework that works with general causal models in which the variables have flexible causal relations. More specifically, we explore the causal graph structures and design corresponding causal generative models which can be learned with the help of unlabelled data. The learned causal generative model can generate synthetic labelled data for training a more accurate predictive model. We verify the effectiveness of our proposed method by empirical studies on both simulated and real data.",
+  "authors": [
+    {
+      "name": "Archer Moore"
+    },
+    {
+      "name": "Heejung Shim"
+    },
+    {
+      "name": "Jingge Zhu"
+    },
+    {
+      "name": "Mingming Gong"
+    }
+  ],
+  "submitted_at": "2025-10-26",
+  "updated_at": "2025-10-26",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4598,
+    "recent_score": 0.0291,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.3202
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal generative"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.22567v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.22567v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

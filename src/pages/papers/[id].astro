@@ -7,6 +7,7 @@ import { readJson, listJsonFiles } from "@utils/data";
 import { withBase } from "@utils/withBase";
 import { toBibTex } from "@lib/bibtex.js";
 import { findRelatedPapers } from "@lib/relatedPapers";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const files = await listJsonFiles("papers");
@@ -17,12 +18,31 @@ const id = Astro.params.id;
 if (!id) {
   throw new Error("Missing paper id");
 }
-const paper = await readJson(`papers/${id}.json`);
-const build = await readJson("provenance/build.json");
-const index = await readJson("papers.index.json");
+
+const [paper, build, index, taxonomy, applicationEntries, trails] = await Promise.all([
+  readJson(`papers/${id}.json`),
+  readJson("provenance/build.json"),
+  readJson("papers.index.json"),
+  readJson("taxonomy/topics.json"),
+  getCollection("applications"),
+  readJson("curation/paper_trails.json")
+]);
+
 const related = findRelatedPapers({ paper, index, limit: 4 });
 const bibtex = toBibTex(paper);
 const topicTags = (paper.topic_tags ?? []).map((tag) => tag.topic_id);
+const relatedTopics = topicTags
+  .map((topicId) => taxonomy.find((topic) => topic.id === topicId))
+  .filter(Boolean);
+const relatedApplications = (paper.application_tags ?? [])
+  .map((slug) => applicationEntries.find((entry) => entry.slug === slug))
+  .filter(Boolean);
+const whyItMatters = trails
+  .flatMap((trail) => trail.steps)
+  .filter((step) => step.arxiv_id === paper.arxiv_id)
+  .map((step) => step.why_it_matters);
+const isCanonical = Number(paper.metrics?.canonical_score ?? 0) >= 0.82;
+const isRising = Number(paper.metrics?.rising_score ?? 0) >= 0.42;
 const canonicalUrl = Astro.site
   ? new URL(withBase(`/papers/${paper.arxiv_id}`), Astro.site).toString()
   : paper.links.arxiv_abs;
@@ -49,26 +69,31 @@ const jsonLd = {
   {(paper.topic_tags ?? []).map((tag) => (
     <span data-pagefind-filter={`topic:${tag.topic_id}`} hidden></span>
   ))}
-  <span data-pagefind-filter={`cat:${paper.primary_category}`} hidden></span>
-  <section class="section hero">
+  <section class="section hero hero-ambient">
     <div class="container paper-hero">
-      <div>
+      <div class="paper-copy">
         <div class="tag-row">
           <ArxivIdChip id={paper.arxiv_id} />
-          {paper.categories.map((cat) => (
-            <span class="chip secondary">{cat}</span>
+          {isCanonical && <span class="chip">Canonical</span>}
+          {isRising && <span class="chip secondary">Rising</span>}
+          {(paper.provenance?.query_packs ?? []).map((pack) => (
+            <span class="chip secondary">{pack}</span>
           ))}
         </div>
         <h1>{paper.title}</h1>
-        <p class="subtle">{paper.authors.map((a) => a.name).join(", ")}</p>
+        <p class="subtle authors">{paper.authors.map((author) => author.name).join(", ")}</p>
         <div class="tag-row">
-          {(paper.topic_tags ?? []).map((tag) => (
-            <span class="chip">{tag.topic_id}</span>
+          {paper.categories.map((cat) => (
+            <span class="chip secondary">{cat}</span>
+          ))}
+          {(paper.application_tags ?? []).map((tag) => (
+            <span class="chip secondary">{tag.replace(/-/g, " ")}</span>
           ))}
         </div>
       </div>
-      <div class="card">
-        <h3>Paper metadata</h3>
+
+      <div class="card meta-card">
+        <p class="eyebrow">Paper Snapshot</p>
         <div class="meta-grid">
           <div>
             <span>Submitted</span>
@@ -81,6 +106,10 @@ const jsonLd = {
           <div>
             <span>Versions</span>
             <strong>v{paper.metrics.version_count}</strong>
+          </div>
+          <div>
+            <span>Primary Category</span>
+            <strong>{paper.primary_category}</strong>
           </div>
         </div>
         <div class="actions">
@@ -92,80 +121,93 @@ const jsonLd = {
   </section>
 
   <section class="section">
-    <div class="container glance-grid">
+    <div class="container insight-grid">
       <div class="card">
-        <h2>At a glance</h2>
-        <div class="meta-grid">
-          <div>
-            <span>Submitted</span>
-            <strong>{paper.submitted_at}</strong>
-          </div>
-          <div>
-            <span>Updated</span>
-            <strong>{paper.updated_at}</strong>
-          </div>
-          <div>
-            <span>Versions</span>
-            <strong>v{paper.metrics.version_count}</strong>
-          </div>
-          <div>
-            <span>Primary category</span>
-            <strong>{paper.primary_category}</strong>
-          </div>
-        </div>
-        <h3>Topics & categories</h3>
-        <div class="tag-row">
-          {paper.categories.map((cat) => (
-            <span class="chip secondary">{cat}</span>
-          ))}
-          {topicTags.map((tag) => (
-            <span class="chip">{tag}</span>
-          ))}
-        </div>
-        <h3>Version history</h3>
-        <div class="versions">
-          {paper.versions?.map((version) => (
-            <div class="version-row">
-              <span class="chip">{version.version}</span>
-              <span>{version.updated_at}</span>
-            </div>
-          ))}
-        </div>
+        <p class="eyebrow">Why It Matters</p>
+        <h2>Editorial framing</h2>
+        {whyItMatters.length > 0 ? (
+          whyItMatters.map((note) => <p>{note}</p>)
+        ) : (
+          <p>
+            This paper sits inside the causal AI atlas because it contributes to intervention-aware modeling, evaluation,
+            or tooling rather than only predictive fit.
+          </p>
+        )}
       </div>
-      <div class="card export-card">
-        <h2>Export</h2>
-        <div class="section-head">
-          <h3>BibTeX</h3>
-          <button class="button secondary" data-copy="bibtex">Copy</button>
-        </div>
-        <pre id="bibtex" class="bibtex">{bibtex}</pre>
-        <div class="export-actions">
-          <button class="button ghost" data-download="bibtex">Download .bib</button>
-          <button class="button ghost" data-download="json">Download JSON</button>
+
+      <div class="card">
+        <p class="eyebrow">Atlas Placement</p>
+        <h2>Topics and applications</h2>
+        <div class="chip-group">
+          {relatedTopics.map((topic) => (
+            <a class="chip" href={withBase(`/topics/${topic.id}`)}>{topic.title}</a>
+          ))}
+          {relatedApplications.map((application) => (
+            <a class="chip secondary" href={withBase(`/applications/${application.slug}`)}>{application.data.title}</a>
+          ))}
         </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container two-col">
+    <div class="container body-grid">
       <div class="card">
         <div class="section-head">
-          <h2>Abstract</h2>
+          <div>
+            <p class="eyebrow">Abstract</p>
+            <h2>Primary-source summary</h2>
+          </div>
           <button class="button secondary" data-copy="abstract">Copy</button>
         </div>
         <p id="abstract" class="abstract">{paper.abstract}</p>
       </div>
-      <div class="side-rail">
-        <ProvenancePanel provenance={build} />
-      </div>
+
+      <aside class="side-rail">
+        <div class="card">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Export</p>
+              <h2>BibTeX</h2>
+            </div>
+            <button class="button secondary" data-copy="bibtex">Copy</button>
+          </div>
+          <pre id="bibtex" class="bibtex">{bibtex}</pre>
+          <div class="export-actions">
+            <button class="button ghost" data-download="bibtex">Download .bib</button>
+            <button class="button ghost" data-download="json">Download JSON</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Provenance</p>
+          <h2>How this page was built</h2>
+          <ProvenancePanel provenance={build} />
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Version History</p>
+          <h2>Revision trace</h2>
+          <div class="versions">
+            {paper.versions?.map((version) => (
+              <div class="version-row">
+                <span class="chip">{version.version}</span>
+                <span>{version.updated_at}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <h2>Related papers</h2>
-      <p class="subtle">Similarity is based on topic overlap and keyword signals, not citations.</p>
+      <div class="section-header">
+        <p class="eyebrow">Related Reading</p>
+        <h2>Nearby papers in the atlas</h2>
+        <p>Relatedness combines shared topics, shared query packs, application overlap, and temporal proximity.</p>
+      </div>
       <div class="grid">
         {related.map((item) => (
           <PaperCard paper={item} />
@@ -186,118 +228,149 @@ const jsonLd = {
       });
     });
 
-    const downloadBib = document.querySelector(\"[data-download='bibtex']\");\n    if (downloadBib) {\n      downloadBib.addEventListener(\"click\", () => {\n        const content = document.getElementById(\"bibtex\").textContent;\n        const blob = new Blob([content], { type: \"text/plain\" });\n        const link = document.createElement(\"a\");\n        link.href = URL.createObjectURL(blob);\n        link.download = \"paper.bib\";\n        link.click();\n        URL.revokeObjectURL(link.href);\n      });\n    }\n\n    const downloadJson = document.querySelector(\"[data-download='json']\");\n    if (downloadJson) {\n      downloadJson.addEventListener(\"click\", () => {\n        const content = JSON.stringify(${JSON.stringify(paper)}, null, 2);\n        const blob = new Blob([content], { type: \"application/json\" });\n        const link = document.createElement(\"a\");\n        link.href = URL.createObjectURL(blob);\n        link.download = `${paper.arxiv_id}.json`;\n        link.click();\n        URL.revokeObjectURL(link.href);\n      });\n    }\n   </script>
+    const downloadBib = document.querySelector("[data-download='bibtex']");
+    downloadBib?.addEventListener("click", () => {
+      const content = document.getElementById("bibtex").textContent;
+      const blob = new Blob([content], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "paper.bib";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+
+    const downloadJson = document.querySelector("[data-download='json']");
+    downloadJson?.addEventListener("click", () => {
+      const content = JSON.stringify(${JSON.stringify(paper)}, null, 2);
+      const blob = new Blob([content], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "${paper.arxiv_id}.json";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
   </script>
 
   <style>
     h1 {
-      margin: 0.6rem 0 0.6rem;
-      font-size: clamp(2rem, 3vw, 3rem);
+      margin: 0.5rem 0;
+      font-size: clamp(2.5rem, 4.4vw, 4.6rem);
+      line-height: 1.02;
+    }
+
+    h2 {
+      margin: 0;
     }
 
     .paper-hero {
       display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.9fr);
       align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .paper-copy {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .authors {
+      font-size: 1rem;
+    }
+
+    .meta-card,
+    .side-rail {
+      display: grid;
+      gap: 1rem;
     }
 
     .meta-grid {
       display: grid;
-      gap: 0.6rem;
+      gap: 0.9rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       margin: 1rem 0;
     }
 
-    .meta-grid span {
-      text-transform: uppercase;
-      font-size: 0.7rem;
+    .meta-grid span,
+    .version-row span:last-child {
       color: var(--muted);
-      letter-spacing: 0.08em;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .meta-grid strong {
-      font-size: 0.95rem;
-    }
-
-    .actions {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-    }
-
-    .glance-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
-      align-items: start;
-    }
-
-    .export-card {
-      display: grid;
-      gap: 1rem;
-    }
-
+    .actions,
     .export-actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 0.6rem;
+      flex-wrap: wrap;
     }
 
-    .two-col {
+    .insight-grid,
+    .body-grid {
       display: grid;
       gap: 1.5rem;
-      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
-    }
-
-    .side-rail {
-      display: grid;
-      gap: 1rem;
-      align-content: start;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .section-head {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     .abstract {
-      font-family: var(--font-serif);
-      line-height: 1.7;
       color: var(--muted);
+      font-family: var(--font-serif);
+      line-height: 1.72;
+      font-size: 1.02rem;
     }
 
     .bibtex {
+      white-space: pre-wrap;
+      padding: 1rem;
+      border-radius: 16px;
       background: var(--code-bg);
       color: var(--code-text);
-      padding: 1rem;
-      border-radius: 12px;
+      font-size: 0.88rem;
       overflow-x: auto;
     }
 
     .versions {
       display: grid;
-      gap: 0.6rem;
-      margin-top: 0.6rem;
+      gap: 0.75rem;
     }
 
     .version-row {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
     }
 
     .grid {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    @media (max-width: 900px) {
-      .two-col {
+    @media (max-width: 980px) {
+      .paper-hero,
+      .insight-grid,
+      .body-grid,
+      .meta-grid {
         grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .version-row {
+        display: grid;
       }
     }
   </style>

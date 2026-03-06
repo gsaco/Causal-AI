@@ -1,0 +1,107 @@
+{
+  "arxiv_id": "2510.08724",
+  "canonical_url": "https://arxiv.org/abs/2510.08724v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.08724v1",
+  "title": "Counterfactually Fair Conformal Prediction",
+  "abstract": "While counterfactual fairness of point predictors is well studied, its extension to prediction sets--central to fair decision-making under uncertainty--remains underexplored. On the other hand, conformal prediction (CP) provides efficient, distribution-free, finite-sample valid prediction sets, yet does not ensure counterfactual fairness. We close this gap by developing Counterfactually Fair Conformal Prediction (CF-CP) that produces counterfactually fair prediction sets. Through symmetrization of conformity scores across protected-attribute interventions, we prove that CF-CP results in counterfactually fair prediction sets while maintaining the marginal coverage property. Furthermore, we empirically demonstrate that on both synthetic and real datasets, across regression and classification tasks, CF-CP achieves the desired counterfactual fairness and meets the target coverage rate with minimal increase in prediction set size. CF-CP offers a simple, training-free route to counterfactually fair uncertainty quantification.",
+  "authors": [
+    {
+      "name": "Ozgur Guldogan"
+    },
+    {
+      "name": "Neeraj Sarna"
+    },
+    {
+      "name": "Yuanyuan Li"
+    },
+    {
+      "name": "Michael Berger"
+    }
+  ],
+  "submitted_at": "2025-10-09",
+  "updated_at": "2025-10-09",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3864,
+    "recent_score": 0.0189,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.1984
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.08724v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.08724v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

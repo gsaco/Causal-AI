@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2601.20880",
+  "canonical_url": "https://arxiv.org/abs/2601.20880v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.20880v1",
+  "title": "Spatial Heterogeneity in Climate Risk and Human Flourishing: An Exploration with Generative AI",
+  "abstract": "Recent advances in Generative Artificial Intelligence (AI), particularly Large Language Models (LLMs), enable scalable extraction of spatial information from unstructured text and offer new methodological opportunities for studying climate geography. This study develops a spatial framework to examine how cumulative climate risk relates to multidimensional human flourishing across U.S. counties. High-resolution climate hazard indicators are integrated with a Human Flourishing Geographic Index (HFGI), an index derived from classification of 2.6 billion geotagged tweets using fine-tuned open-source Large Language Models (LLMs). These indicators are aggregated to the US county-level and mapped to a structural equation model to infer overall climate risk and human flourishing dimensions, including expressed well-being, meaning and purpose, social connectedness, psychological distress, physical condition, economic stability, religiosity, character and virtue, and institutional trust. The results reveal spatially heterogeneous associations between greater cumulative climate risk and lower levels of expressed human flourishing, with coherent spatial patterns corresponding to recurrent exposure to heat, flooding, wind, drought, and wildfire hazards. The study demonstrates how Generative AI can be combined with latent construct modeling for geographical analysis and for spatial knowledge extraction.",
+  "authors": [
+    {
+      "name": "Stefano Maria Iacus"
+    },
+    {
+      "name": "Haodong Qi"
+    },
+    {
+      "name": "Devika Jain"
+    }
+  ],
+  "submitted_at": "2026-01-26",
+  "updated_at": "2026-01-26",
+  "primary_category": "stat.AP",
+  "categories": [
+    "stat.AP",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6948,
+    "recent_score": 0.3346,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.6441
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.20880v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.20880v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "representation",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2507.17784",
+  "canonical_url": "https://arxiv.org/abs/2507.17784v1",
+  "pdf_url": "https://arxiv.org/pdf/2507.17784v1",
+  "title": "Knowledge Abstraction for Knowledge-based Semantic Communication: A Generative Causality Invariant Approach",
+  "abstract": "In this study, we design a low-complexity and generalized AI model that can capture common knowledge to improve data reconstruction of the channel decoder for semantic communication. Specifically, we propose a generative adversarial network that leverages causality-invariant learning to extract causal and non-causal representations from the data. Causal representations are invariant and encompass crucial information to identify the data's label. They can encapsulate semantic knowledge and facilitate effective data reconstruction at the receiver. Moreover, the causal mechanism ensures that learned representations remain consistent across different domains, making the system reliable even with users collecting data from diverse domains. As user-collected data evolves over time causing knowledge divergence among users, we design sparse update protocols to improve the invariant properties of the knowledge while minimizing communication overheads. Three key observations were drawn from our empirical evaluations. Firstly, causality-invariant knowledge ensures consistency across different devices despite the diverse training data. Secondly, invariant knowledge has promising performance in classification tasks, which is pivotal for goal-oriented semantic communications. Thirdly, our knowledge-based data reconstruction highlights the robustness of our decoder, which surpasses other state-of-the-art data reconstruction and semantic compression methods in terms of Peak Signal-to-Noise Ratio (PSNR).",
+  "authors": [
+    {
+      "name": "Minh-Duong Nguyen"
+    },
+    {
+      "name": "Quoc-Viet Pham"
+    },
+    {
+      "name": "Nguyen H. Tran"
+    },
+    {
+      "name": "Hoang-Khoi Do"
+    },
+    {
+      "name": "Duy T. Ngo"
+    },
+    {
+      "name": "Won-Joo Hwang"
+    }
+  ],
+  "submitted_at": "2025-07-23",
+  "updated_at": "2025-07-23",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3786,
+    "recent_score": 0.0027,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.188
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-07-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2507.17784v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2507.17784v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

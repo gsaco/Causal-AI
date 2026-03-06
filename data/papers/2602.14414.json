@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2602.14414",
+  "canonical_url": "https://arxiv.org/abs/2602.14414v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.14414v1",
+  "title": "The Role of Measured Covariates in Assessing Sensitivity to Unmeasured Confounding",
+  "abstract": "Sensitivity analysis is widely used to assess the robustness of causal conclusions in observational studies, yet its interaction with the structure of measured covariates is often overlooked. When latent confounders cannot be directly adjusted for and are instead controlled using proxy variables, strong associations between exposure and measured proxies can amplify sensitivity to residual confounding. We formalize this phenomenon in linear regression settings by showing that a simple ratio involving the exposure model coefficient and residual exposure variance provides an observable measure of this increased sensitivity. Applying our framework to smoking and lung cancer, we document how growing socioeconomic stratification in smoking behavior over time leads to heightened sensitivity to unmeasured confounding in more recent data. These results highlight the importance of multicollinearity when interpreting sensitivity analyses based on proxy adjustment.",
+  "authors": [
+    {
+      "name": "Abhinandan Dalal"
+    },
+    {
+      "name": "Iris Horng"
+    },
+    {
+      "name": "Yang Feng"
+    },
+    {
+      "name": "Dylan S. Small"
+    }
+  ],
+  "submitted_at": "2026-02-16",
+  "updated_at": "2026-02-16",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "econ.EM",
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6322,
+    "recent_score": 0.6006,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5606
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "adjustment"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "latent confound"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-16"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.14414v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.14414v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

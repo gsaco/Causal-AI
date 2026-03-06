@@ -1,0 +1,115 @@
+{
+  "arxiv_id": "2603.01339",
+  "canonical_url": "https://arxiv.org/abs/2603.01339v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.01339v1",
+  "title": "Causal Effects with Unobserved Unit Types in Interacting Human-AI Systems",
+  "abstract": "We study experiments on interacting populations of humans and AI agents, where both unit types and the interaction network remain unobserved. Although causal effects propagate throughout the system, the goal is to estimate effects on humans. Examples include online platforms where human users interact alongside AI-driven accounts. We assume a human-AI prior that gives each unit a probability of being human. While humans cannot be distinguished at the unit level, the prior allows us to compute the average human composition within large subpopulations. We then model outcome dynamics through a causal message passing (CMP) framework and analyze sample-mean outcomes across subpopulations. We show that by constructing subpopulations that vary in expected human composition and treatment exposure, one can consistently recover human-specific causal effects. Our results characterize when distributional knowledge of population composition (without observing unit types or the interaction network) is sufficient for identification. We validate the approach on a simulated human-AI platform driven by behaviorally differentiated LLM agents. Together, these results provide a theoretical and practical framework for experimentation in emerging human-AI systems.",
+  "authors": [
+    {
+      "name": "William Overman"
+    },
+    {
+      "name": "Sadegh Shirani"
+    },
+    {
+      "name": "Mohsen Bayati"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.8156,
+    "recent_score": 0.8924,
+    "rising_score": 0.7946,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.01339v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.01339v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:causal OR abs:causal OR abs:counterfactual) AND (ti:LLM OR abs:LLM OR ti:\"language model\" OR abs:\"language model\")) AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)",
+      "((ti:causal OR abs:causal) AND (ti:agent OR abs:agent) AND (abs:intervention OR abs:planning OR abs:tool use)) AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

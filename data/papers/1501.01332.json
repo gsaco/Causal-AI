@@ -1,45 +1,104 @@
 {
   "arxiv_id": "1501.01332",
-  "canonical_url": "https://arxiv.org/abs/1501.01332",
-  "pdf_url": "https://arxiv.org/pdf/1501.01332.pdf",
+  "canonical_url": "https://arxiv.org/abs/1501.01332v3",
+  "pdf_url": "https://arxiv.org/pdf/1501.01332v3",
   "title": "Invariant Causal Prediction",
   "abstract": "A framework for causal discovery based on invariance of conditional distributions across environments.",
   "authors": [
-    { "name": "Peter Buhlmann" },
-    { "name": "Jonas Peters" },
-    { "name": "Nicolai Meinshausen" }
+    {
+      "name": "Peter Buhlmann"
+    },
+    {
+      "name": "Jonas Peters"
+    },
+    {
+      "name": "Nicolai Meinshausen"
+    }
   ],
   "submitted_at": "2015-01-06",
   "updated_at": "2016-05-02",
-  "primary_category": "stat.ML",
-  "categories": ["stat.ML", "cs.LG"],
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "stat.ME"
+  ],
   "metrics": {
-    "cross_list_count": 1,
-    "version_count": 2,
-    "trending_score": 0.21
+    "cross_list_count": 2,
+    "version_count": 3,
+    "trending_score": 0.5224,
+    "recent_score": 0,
+    "rising_score": 0.3632,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.66
   },
   "topic_tags": [
     {
       "topic_id": "distribution-shift",
-      "confidence": 0.89,
+      "confidence": 0.66,
       "rationale": {
-        "matched_keywords": ["invariant prediction"],
-        "rules_version": "v0.1"
+        "matched_keywords": [
+          "invariant",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
       }
     }
   ],
   "versions": [
-    { "version": "v1", "updated_at": "2015-01-06" },
-    { "version": "v2", "updated_at": "2016-05-02" }
+    {
+      "version": "v1",
+      "updated_at": "2015-01-06"
+    },
+    {
+      "version": "v2",
+      "updated_at": "2016-05-02"
+    },
+    {
+      "version": "v3",
+      "updated_at": "2015-11-24"
+    }
   ],
   "links": {
-    "arxiv_abs": "https://arxiv.org/abs/1501.01332",
-    "arxiv_pdf": "https://arxiv.org/pdf/1501.01332.pdf"
+    "arxiv_abs": "https://arxiv.org/abs/1501.01332v3",
+    "arxiv_pdf": "https://arxiv.org/pdf/1501.01332v3"
   },
   "provenance": {
     "source": "arxiv_api",
-    "harvested_at": "2026-01-22T02:10:00Z",
-    "harvest_run_id": "demo-2026-01-22",
-    "queries": ["ti:\"invariant prediction\" OR abs:\"invariant\""]
-  }
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "seed-papers-2026-03-05",
+    "queries": [
+      "ti:\"invariant prediction\" OR abs:\"invariant\"",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
 }

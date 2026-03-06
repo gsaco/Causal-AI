@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2505.21330",
+  "canonical_url": "https://arxiv.org/abs/2505.21330v1",
+  "pdf_url": "https://arxiv.org/pdf/2505.21330v1",
+  "title": "UGCE: User-Guided Incremental Counterfactual Exploration",
+  "abstract": "Counterfactual explanations (CFEs) are a popular approach for interpreting machine learning predictions by identifying minimal feature changes that alter model outputs. However, in real-world settings, users often refine feasibility constraints over time, requiring counterfactual generation to adapt dynamically. Existing methods fail to support such iterative updates, instead recomputing explanations from scratch with each change, an inefficient and rigid approach. We propose User-Guided Incremental Counterfactual Exploration (UGCE), a genetic algorithm-based framework that incrementally updates counterfactuals in response to evolving user constraints. Experimental results across five benchmark datasets demonstrate that UGCE significantly improves computational efficiency while maintaining high-quality solutions compared to a static, non-incremental approach. Our evaluation further shows that UGCE supports stable performance under varying constraint sequences, benefits from an efficient warm-start strategy, and reveals how different constraint types may affect search behavior.",
+  "authors": [
+    {
+      "name": "Christos Fragkathoulas"
+    },
+    {
+      "name": "Evaggelia Pitoura"
+    }
+  ],
+  "submitted_at": "2025-05-27",
+  "updated_at": "2025-05-27",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3729,
+    "recent_score": 0.0007,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.1924
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-05-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2505.21330v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2505.21330v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

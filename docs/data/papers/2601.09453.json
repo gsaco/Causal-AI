@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2601.09453",
+  "canonical_url": "https://arxiv.org/abs/2601.09453v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.09453v1",
+  "title": "Lee Bounds for Random Objects",
+  "abstract": "In applied research, Lee (2009) bounds are widely applied to bound the average treatment effect in the presence of selection bias. This paper extends the methodology of Lee bounds to accommodate outcomes in a general metric space, such as compositional and distributional data. By exploiting a representation of the Fréchet mean of the potential outcome via embedding in an Euclidean or Hilbert space, we present a feasible characterization of the identified set of the causal effect of interest, and then propose its analog estimator and bootstrap confidence region. The proposed method is illustrated by numerical examples on compositional and distributional data.",
+  "authors": [
+    {
+      "name": "Daisuke Kurisu"
+    },
+    {
+      "name": "Yuta Okamoto"
+    },
+    {
+      "name": "Taisuke Otsu"
+    }
+  ],
+  "submitted_at": "2026-01-14",
+  "updated_at": "2026-01-14",
+  "primary_category": "econ.EM",
+  "categories": [
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4679,
+    "recent_score": 0.2407,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.3721
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-14"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.09453v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.09453v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,118 @@
+{
+  "arxiv_id": "2602.13475",
+  "canonical_url": "https://arxiv.org/abs/2602.13475v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.13475v1",
+  "title": "Efficient and Debiased Learning of Average Hazard Under Non-Proportional Hazards",
+  "abstract": "The hazard ratio from the Cox proportional hazards model is a ubiquitous summary of treatment effect. However, when hazards are non-proportional, the hazard ratio can lose a stable causal interpretation and become study-dependent because it effectively averages time-varying effects with weights determined by follow-up and censoring. We consider the average hazard (AH) as an alternative causal estimand: a population-level person-time event rate that remains well-defined and interpretable without assuming proportional hazards. Although AH can be estimated nonparametrically and regression-style adjustments have been proposed, existing approaches do not provide a general framework for flexible, high-dimensional nuisance estimation with valid sqrt{n} inference. We address this gap by developing a semiparametric, doubly robust framework for covariate-adjusted AH. We establish pathwise differentiability of AH in the nonparametric model, derive its efficient influence function, and construct cross-fitted, debiased estimators that leverage machine learning for nuisance estimation while retaining asymptotically normal, sqrt{n}-consistent inference under mild product-rate conditions. Simulations demonstrate that the proposed estimator achieves small bias and near-nominal confidence-interval coverage across proportional and non-proportional hazards settings, including crossing-hazards regimes where Cox-based summaries can be unstable. We illustrate practical utility in comparative effectiveness research by comparing immunotherapy regimens for advanced melanoma using SEER-Medicare linked data.",
+  "authors": [
+    {
+      "name": "Xiang Meng"
+    },
+    {
+      "name": "Lu Tian"
+    },
+    {
+      "name": "Kenneth Kehl"
+    },
+    {
+      "name": "Hajime Uno"
+    }
+  ],
+  "submitted_at": "2026-02-13",
+  "updated_at": "2026-02-13",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6632,
+    "recent_score": 0.5521,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.6019
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "adjustment"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-13"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.13475v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.13475v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

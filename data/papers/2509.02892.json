@@ -1,0 +1,109 @@
+{
+  "arxiv_id": "2509.02892",
+  "canonical_url": "https://arxiv.org/abs/2509.02892v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.02892v1",
+  "title": "Improving Generative Methods for Causal Evaluation via Simulation-Based Inference",
+  "abstract": "Generating synthetic datasets that accurately reflect real-world observational data is critical for evaluating causal estimators, but remains a challenging task. Existing generative methods offer a solution by producing synthetic datasets anchored in the observed data (source data) while allowing variation in key parameters such as the treatment effect and amount of confounding bias. However, existing methods typically require users to provide point estimates of such parameters (rather than distributions) and fixed estimates (rather than estimates that can be improved with reference to the source data). This denies users the ability to express uncertainty over parameter values and removes the potential for posterior inference, potentially leading to unreliable estimator comparisons. We introduce simulation-based inference for causal evaluation (SBICE), a framework that models generative parameters as uncertain and infers their posterior distribution given a source dataset. Leveraging techniques in simulation-based inference, SBICE identifies parameter configurations that produce synthetic datasets closely aligned with the source data distribution. Empirical results demonstrate that SBICE improves the reliability of estimator evaluations by generating more realistic datasets, which supports a robust and data-consistent approach to causal benchmarking under uncertainty.",
+  "authors": [
+    {
+      "name": "Pracheta Amaranath"
+    },
+    {
+      "name": "Vinitra Muralikrishnan"
+    },
+    {
+      "name": "Amit Sharma"
+    },
+    {
+      "name": "David D. Jensen"
+    }
+  ],
+  "submitted_at": "2025-09-02",
+  "updated_at": "2025-09-02",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4907,
+    "recent_score": 0.0075,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3494
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.02892v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.02892v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

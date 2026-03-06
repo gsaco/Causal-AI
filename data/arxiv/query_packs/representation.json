@@ -1,0 +1,39 @@
+{
+  "id": "representation",
+  "version": "2026-03-05/v2",
+  "group": "Representation",
+  "title": "Causal Representations and Generative Models",
+  "enabled": true,
+  "priority": 3,
+  "topics": ["causal-representation-learning", "causal-generative-models"],
+  "category_allowlist": ["cs.LG", "stat.ML", "cs.AI"],
+  "required_keywords_any": ["causal", "counterfactual", "representation", "generative", "disentangle"],
+  "exclude_keywords": ["graph neural networks"],
+  "seed_papers": ["2305.10032", "2406.04598"],
+  "per_pack_cap": 60,
+  "candidate_queries": [
+    {
+      "id": "representation-core",
+      "query": "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))",
+      "max_results": 40,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "representation-generative",
+      "query": "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))",
+      "max_results": 35,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ],
+  "precision_queries": [
+    {
+      "id": "representation-disentanglement",
+      "query": "(abs:disentanglement AND abs:causal AND (cat:cs.LG OR cat:stat.ML))",
+      "max_results": 25,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "arxiv_id": "2601.14022",
+  "canonical_url": "https://arxiv.org/abs/2601.14022v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.14022v1",
+  "title": "Credible CO2 Comparisons: A Machine Learning Approach to Vehicle Powertrain Assessment",
+  "abstract": "Decarbonizing road transport requires consistent and transparent methods for comparing CO2 emissions across vehicle technologies. This paper proposes a machine learning-based framework for like-for-like operational assessment of internal combustion engine vehicles (ICEVs) and electric vehicles (EVs) under identical, real-world driving conditions. The approach isolates technology-specific effects by holding the observed speed profile and environmental context fixed, enabling direct comparison of powertrain performance. Recurrent neural network models are trained independently for each domain to learn the mapping from contextual driving variables (speed, acceleration, temperature) to internal actuation variables (torque, throttle) and instantaneous CO2-equivalent emission rates. This structure allows the construction of counterfactual scenarios that answer: What emissions would an EV have generated if it had followed the same driving profile as an ICEV? By aligning both vehicle types on a unified instantaneous emissions metric, the framework enables fair and reproducible evaluation of powertrain technologies. It offers a scalable foundation for credible, data-driven assessments of vehicle carbon performance under real-world operating conditions.",
+  "authors": [
+    {
+      "name": "Rodrigo Pereira David"
+    },
+    {
+      "name": "Luciano Araujo Dourado Filho"
+    },
+    {
+      "name": "Daniel Marques da Silva"
+    },
+    {
+      "name": "João Alfredo Cal-Braz"
+    }
+  ],
+  "submitted_at": "2026-01-20",
+  "updated_at": "2026-01-20",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5347,
+    "recent_score": 0.2837,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4081
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.14022v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.14022v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

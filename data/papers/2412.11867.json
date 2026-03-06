@@ -1,0 +1,128 @@
+{
+  "arxiv_id": "2412.11867",
+  "canonical_url": "https://arxiv.org/abs/2412.11867v2",
+  "pdf_url": "https://arxiv.org/pdf/2412.11867v2",
+  "title": "Transformers Use Causal World Models in Maze-Solving Tasks",
+  "abstract": "Recent studies in interpretability have explored the inner workings of transformer models trained on tasks across various domains, often discovering that these networks naturally develop highly structured representations. When such representations comprehensively reflect the task domain's structure, they are commonly referred to as \"World Models\" (WMs). In this work, we identify WMs in transformers trained on maze-solving tasks. By using Sparse Autoencoders (SAEs) and analyzing attention patterns, we examine the construction of WMs and demonstrate consistency between SAE feature-based and circuit-based analyses. By subsequently intervening on isolated features to confirm their causal role, we find that it is easier to activate features than to suppress them. Furthermore, we find that models can reason about mazes involving more simultaneously active features than they encountered during training; however, when these same mazes (with greater numbers of connections) are provided to models via input tokens instead, the models fail. Finally, we demonstrate that positional encoding schemes appear to influence how World Models are structured within the model's residual stream.",
+  "authors": [
+    {
+      "name": "Alex F. Spies"
+    },
+    {
+      "name": "William Edwards"
+    },
+    {
+      "name": "Michael I. Ivanitskiy"
+    },
+    {
+      "name": "Adrians Skapars"
+    },
+    {
+      "name": "Tilman Räuker"
+    },
+    {
+      "name": "Katsumi Inoue"
+    },
+    {
+      "name": "Alessandra Russo"
+    },
+    {
+      "name": "Murray Shanahan"
+    }
+  ],
+  "submitted_at": "2024-12-16",
+  "updated_at": "2025-03-05",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5472,
+    "recent_score": 0.0001,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.4368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-world-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "world model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-03-05"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2412.11867v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2412.11867v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

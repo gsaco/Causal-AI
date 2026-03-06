@@ -1,0 +1,108 @@
+{
+  "arxiv_id": "2602.09145",
+  "canonical_url": "https://arxiv.org/abs/2602.09145v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.09145v1",
+  "title": "Estimating causal effects of functional treatments with modified functional treatment policies",
+  "abstract": "Functional data are increasingly prevalent in biomedical research. While functional data analysis has been established for decades, causal inference with functional treatments remains largely unexplored. Existing methods typically focus on estimating the causal average dose response functional (ADRF), which requires strong positivity assumptions and offers limited interpretability. In this work, we target a new causal estimand, the modified functional treatment policy (MFTP), which focuses on estimating the average potential outcome when each individual slightly modifies their treatment trajectory from the observed one. A major challenge for this new estimand is the need to define an average over an infinite-dimensional object with no density. By proposing a novel definition of the population average over a functional variable using a functional principal component analysis (FPCA) decomposition, we establish the causal identifiability of the MFTP estimand. We further derive outcome regression, inverse probability weighting, and doubly robust estimators for the MFTP, and provide theoretical guarantees under mild regularity conditions. The proposed estimators are validated through extensive simulation studies. Applying our MFTP framework to the National Health and Nutrition Examination Survey (NHANES) accelerometer data, we estimate the causal effects of reducing disruptive nighttime activity and low-activity duration on all-cause mortality.",
+  "authors": [
+    {
+      "name": "Ziren Jiang"
+    },
+    {
+      "name": "Erjia Cui"
+    },
+    {
+      "name": "Jared D. Huling"
+    }
+  ],
+  "submitted_at": "2026-02-09",
+  "updated_at": "2026-02-09",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5685,
+    "recent_score": 0.4936,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4756
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.09145v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.09145v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

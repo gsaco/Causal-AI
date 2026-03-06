@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2603.02178",
+  "canonical_url": "https://arxiv.org/abs/2603.02178v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02178v1",
+  "title": "Reservoir Subspace Injection for Online ICA under Top-n Whitening",
+  "abstract": "Reservoir expansion can improve online independent component analysis (ICA) under nonlinear mixing, yet top-$n$ whitening may discard injected features. We formalize this bottleneck as \\emph{reservoir subspace injection} (RSI): injected features help only if they enter the retained eigenspace without displacing passthrough directions. RSI diagnostics (IER, SSO, $ρ_x$) identify a failure mode in our top-$n$ setting: stronger injection increases IER but crowds out passthrough energy ($ρ_x: 1.00\\!\\rightarrow\\!0.77$), degrading SI-SDR by up to $2.2$\\,dB. A guarded RSI controller preserves passthrough retention and recovers mean performance to within $0.1$\\,dB of baseline $1/N$ scaling. With passthrough preserved, RE-OICA improves over vanilla online ICA by $+1.7$\\,dB under nonlinear mixing and achieves positive SI-SDR$_{\\mathrm{sc}}$ on the tested super-Gaussian benchmark ($+0.6$\\,dB).",
+  "authors": [
+    {
+      "name": "Wenjun Xiao"
+    },
+    {
+      "name": "Yuda Bi"
+    },
+    {
+      "name": "Vince D Calhoun"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.8216,
+    "recent_score": 0.8924,
+    "canonical_score": 0.6035,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.8943
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02178v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02178v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

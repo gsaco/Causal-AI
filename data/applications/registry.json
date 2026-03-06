@@ -2,36 +2,54 @@
   {
     "slug": "healthcare-clinical",
     "title": "Healthcare & Clinical Decision Support",
+    "topics": ["effect-estimation", "causal-discovery", "distribution-shift"],
+    "keywords_any": ["clinical", "healthcare", "medical", "patient", "hospital"],
+    "category_allowlist": ["cs.LG", "stat.ML", "cs.AI", "q-bio.QM", "stat.AP"],
     "query": "ti:causal AND (ti:clinical OR abs:clinical OR abs:healthcare OR abs:medical)",
     "window_days": 30
   },
   {
     "slug": "climate-energy-earth",
     "title": "Climate, Energy, and Earth Systems",
+    "topics": ["causal-time-series", "distribution-shift", "causal-discovery"],
+    "keywords_any": ["climate", "earth", "weather", "atmospheric", "energy systems"],
+    "category_allowlist": ["stat.ML", "cs.LG", "cs.AI", "physics.ao-ph", "physics.geo-ph"],
     "query": "ti:causal AND (ti:climate OR abs:climate OR abs:energy OR abs:earth system)",
     "window_days": 30
   },
   {
     "slug": "economics-policy-social",
     "title": "Economics, Policy, and Social Science",
+    "topics": ["effect-estimation", "instrumental-variables", "causal-fairness"],
+    "keywords_any": ["economics", "econometric", "social science", "market design", "welfare"],
+    "category_allowlist": ["econ.EM", "stat.ML", "cs.LG", "cs.AI"],
     "query": "ti:causal AND (ti:policy OR abs:policy OR abs:economics OR abs:social)",
     "window_days": 30
   },
   {
     "slug": "recommenders-online-experiments",
     "title": "Recommender Systems & Online Experiments",
+    "topics": ["off-policy-evaluation", "effect-estimation", "causal-rl"],
+    "keywords_any": ["recommender", "recommendation", "online experiment", "ads", "marketplace"],
+    "category_allowlist": ["cs.LG", "cs.IR", "cs.AI", "stat.ML"],
     "query": "ti:causal AND (ti:recommender OR abs:recommendation OR abs:online experiment)",
     "window_days": 30
   },
   {
     "slug": "robotics-autonomy",
     "title": "Robotics & Autonomy",
+    "topics": ["causal-world-models", "causal-rl", "causal-agents"],
+    "keywords_any": ["robot", "robotics", "autonomy", "autonomous", "control"],
+    "category_allowlist": ["cs.RO", "cs.AI", "cs.LG"],
     "query": "ti:causal AND (ti:robotics OR abs:robotics OR abs:autonomy)",
     "window_days": 30
   },
   {
     "slug": "biology-genomics-drug-discovery",
     "title": "Biology, Genomics, and Drug Discovery",
+    "topics": ["causal-discovery", "effect-estimation", "causal-representation-learning"],
+    "keywords_any": ["biology", "genomics", "drug discovery", "cell", "protein"],
+    "category_allowlist": ["q-bio.GN", "q-bio.QM", "cs.LG", "stat.ML"],
     "query": "ti:causal AND (ti:genomics OR abs:genomics OR abs:biology OR abs:drug)",
     "window_days": 30
   }

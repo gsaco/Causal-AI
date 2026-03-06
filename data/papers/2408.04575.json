@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2408.04575",
+  "canonical_url": "https://arxiv.org/abs/2408.04575v2",
+  "pdf_url": "https://arxiv.org/pdf/2408.04575v2",
+  "title": "SCENE: Evaluating Explainable AI Techniques Using Soft Counterfactuals",
+  "abstract": "Explainable Artificial Intelligence (XAI) plays a crucial role in enhancing the transparency and accountability of AI models, particularly in natural language processing (NLP) tasks. However, popular XAI methods such as LIME and SHAP have been found to be unstable and potentially misleading, underscoring the need for a standardized evaluation approach. This paper introduces SCENE (Soft Counterfactual Evaluation for Natural language Explainability), a novel evaluation method that leverages large language models (LLMs) to generate Soft Counterfactual explanations in a zero-shot manner. By focusing on token-based substitutions, SCENE creates contextually appropriate and semantically meaningful Soft Counterfactuals without extensive fine-tuning. SCENE adopts Validitysoft and Csoft metrics to assess the effectiveness of model-agnostic XAI methods in text classification tasks. Applied to CNN, RNN, and Transformer architectures, SCENE provides valuable insights into the strengths and limitations of various XAI techniques.",
+  "authors": [
+    {
+      "name": "Haoran Zheng"
+    },
+    {
+      "name": "Utku Pamuksuz"
+    }
+  ],
+  "submitted_at": "2024-08-08",
+  "updated_at": "2024-08-16",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4479,
+    "recent_score": 0,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2804
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2024-08-16"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2408.04575v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2408.04575v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"counterfactual evaluation\" OR abs:\"counterfactual benchmark\" OR abs:\"causal benchmark\") AND (abs:\"language model\" OR abs:llm))"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "foundations",
+      "representation",
+      "sequential",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

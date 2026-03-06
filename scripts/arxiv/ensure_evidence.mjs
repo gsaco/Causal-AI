@@ -28,7 +28,7 @@ async function loadExistingIds() {
   return ids;
 }
 
-export async function ensureEvidence({ offline = false, harvestRunId = "evidence" } = {}) {
+export async function ensureEvidence({ offline = false, harvestRunId = "evidence", writeOutput = true } = {}) {
   const referenced = await extractArxivIds();
   const existing = await loadExistingIds();
   const missing = Array.from(referenced).filter((id) => !existing.has(id));
@@ -60,7 +60,9 @@ export async function ensureEvidence({ offline = false, harvestRunId = "evidence
     }
   }
 
-  await writeSnapshots(normalized);
+  if (writeOutput) {
+    await writeSnapshots(normalized);
+  }
   console.log(`ensure_evidence: fetched ${normalized.length} records`);
   return normalized;
 }

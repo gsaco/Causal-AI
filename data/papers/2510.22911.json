@@ -1,0 +1,121 @@
+{
+  "arxiv_id": "2510.22911",
+  "canonical_url": "https://arxiv.org/abs/2510.22911v4",
+  "pdf_url": "https://arxiv.org/pdf/2510.22911v4",
+  "title": "Towards Personalized Treatment Plan: Geometrical Model-Agnostic Approach to Counterfactual Explanations",
+  "abstract": "In our article, we describe a method for generating counterfactual explanations in high-dimensional spaces using four steps that involve fitting our dataset to a model, finding the decision boundary, determining constraints on the problem, and computing the closest point (counterfactual explanation) from that boundary. We propose a discretized approach where we find many discrete points on the boundary and then identify the closest feasible counterfactual explanation. This method, which we later call $\\textit{Segmented Sampling for Boundary Approximation}$ (SSBA), applies binary search to find decision boundary points and then searches for the closest boundary point. Across four datasets of varying dimensionality, we show that our method can outperform current methods for counterfactual generation with reductions in distance between $5\\%$ to $50\\%$ in terms of the $L_2$ norm. Our method can also handle real-world constraints by restricting changes to immutable and categorical features, such as age, gender, sex, height, and other related characteristics such as the case for a health-based dataset. In terms of runtime, the SSBA algorithm generates decision boundary points on multiple orders of magnitude in the same given time when we compare to a grid-based approach. In general, our method provides a simple and effective model-agnostic method that can compute nearest feasible (i.e. realistic with constraints) counterfactual explanations. All of our results and code are available at: https://github.com/dsin85691/SSBA_For_Counterfactuals",
+  "authors": [
+    {
+      "name": "Daniel Sin"
+    },
+    {
+      "name": "Milad Toutounchian"
+    }
+  ],
+  "submitted_at": "2025-10-27",
+  "updated_at": "2025-11-13",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4328,
+    "recent_score": 0.0406,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2603
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v4",
+      "updated_at": "2025-11-13"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.22911v4",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.22911v4"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

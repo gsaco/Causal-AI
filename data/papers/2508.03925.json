@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2508.03925",
+  "canonical_url": "https://arxiv.org/abs/2508.03925v1",
+  "pdf_url": "https://arxiv.org/pdf/2508.03925v1",
+  "title": "Point-Based Shape Representation Generation with a Correspondence-Preserving Diffusion Model",
+  "abstract": "We propose a diffusion model designed to generate point-based shape representations with correspondences. Traditional statistical shape models have considered point correspondences extensively, but current deep learning methods do not take them into account, focusing on unordered point clouds instead. Current deep generative models for point clouds do not address generating shapes with point correspondences between generated shapes. This work aims to formulate a diffusion model that is capable of generating realistic point-based shape representations, which preserve point correspondences that are present in the training data. Using shape representation data with correspondences derived from Open Access Series of Imaging Studies 3 (OASIS-3), we demonstrate that our correspondence-preserving model effectively generates point-based hippocampal shape representations that are highly realistic compared to existing methods. We further demonstrate the applications of our generative model by downstream tasks, such as conditional generation of healthy and AD subjects and predicting morphological changes of disease progression by counterfactual generation.",
+  "authors": [
+    {
+      "name": "Shen Zhu"
+    },
+    {
+      "name": "Yinzhu Jin"
+    },
+    {
+      "name": "Ifrah Zawar"
+    },
+    {
+      "name": "P. Thomas Fletcher"
+    }
+  ],
+  "submitted_at": "2025-08-05",
+  "updated_at": "2025-08-05",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3946,
+    "recent_score": 0.0038,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.2438
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-08-05"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2508.03925v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2508.03925v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,140 @@
+{
+  "arxiv_id": "2502.12874",
+  "canonical_url": "https://arxiv.org/abs/2502.12874v1",
+  "pdf_url": "https://arxiv.org/pdf/2502.12874v1",
+  "title": "Testing for Causal Fairness",
+  "abstract": "Causality is widely used in fairness analysis to prevent discrimination on sensitive attributes, such as genders in career recruitment and races in crime prediction. However, the current data-based Potential Outcomes Framework (POF) often leads to untrustworthy fairness analysis results when handling high-dimensional data. To address this, we introduce a distribution-based POF that transform fairness analysis into Distributional Closeness Testing (DCT) by intervening on sensitive attributes. We define counterfactual closeness fairness as the null hypothesis of DCT, where a sensitive attribute is considered fair if its factual and counterfactual potential outcome distributions are sufficiently close. We introduce the Norm-Adaptive Maximum Mean Discrepancy Treatment Effect (N-TE) as a statistic for measuring distributional closeness and apply DCT using the empirical estimator of NTE, referred to Counterfactual Fairness-CLOseness Testing ($\\textrm{CF-CLOT}$). To ensure the trustworthiness of testing results, we establish the testing consistency of N-TE through rigorous theoretical analysis. $\\textrm{CF-CLOT}$ demonstrates sensitivity in fairness analysis through the flexibility of the closeness parameter $ε$. Unfair sensitive attributes have been successfully tested by $\\textrm{CF-CLOT}$ in extensive experiments across various real-world scenarios, which validate the consistency of the testing.",
+  "authors": [
+    {
+      "name": "Jiarun Fu"
+    },
+    {
+      "name": "LiZhong Ding"
+    },
+    {
+      "name": "Pengqi Li"
+    },
+    {
+      "name": "Qiuning Wei"
+    },
+    {
+      "name": "Yurong Cheng"
+    },
+    {
+      "name": "Xu Chen"
+    }
+  ],
+  "submitted_at": "2025-02-18",
+  "updated_at": "2025-02-18",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4126,
+    "recent_score": 0.0001,
+    "canonical_score": 0.9865,
+    "max_topic_confidence": 0.97,
+    "rising_score": 0.2213
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.97,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "causal fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-02-18"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2502.12874v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2502.12874v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

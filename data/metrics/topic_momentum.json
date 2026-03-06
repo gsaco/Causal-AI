@@ -1,14 +1,29 @@
 {
-  "generated_at": "2026-01-22",
+  "generated_at": "2026-03-05",
   "window": {
-    "A": "2026-01-15_to_2026-01-21",
-    "B": "2026-01-01_to_2026-01-14"
+    "A": "2026-02-26_to_2026-03-05",
+    "B": "2026-02-12_to_2026-02-26"
   },
   "topics": {
-    "causal-discovery": 0.2,
-    "distribution-shift": 0.35,
-    "effect-estimation": 0.1,
-    "causal-fairness": 0.05,
-    "systems-tooling": 0.18
+    "foundations-scm": 3.4,
+    "identifiability-do-calculus": 0.333,
+    "counterfactuals": 0.13,
+    "causal-discovery": 1.435,
+    "latent-confounding-discovery": -0.5,
+    "effect-estimation": 1.442,
+    "instrumental-variables": 1.571,
+    "mediation": 1,
+    "causal-representation-learning": -1,
+    "causal-generative-models": 0,
+    "causal-world-models": 3,
+    "causal-time-series": 0.8,
+    "causal-rl": 0,
+    "off-policy-evaluation": -1,
+    "causal-llms": 1.022,
+    "causal-agents": 2.125,
+    "distribution-shift": 0.701,
+    "causal-fairness": 0.444,
+    "causal-privacy": -1,
+    "systems-tooling": 3
   }
 }

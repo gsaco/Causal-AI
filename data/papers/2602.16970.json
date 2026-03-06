@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2602.16970",
+  "canonical_url": "https://arxiv.org/abs/2602.16970v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.16970v1",
+  "title": "Temperature and Respiratory Emergency Department Visits: A Mediation Analysis with Ambient Ozone Exposure",
+  "abstract": "High temperatures are associated with adverse respiratory health outcomes and increases in ambient air pollution. Limited research has quantified air pollution's mediating role in the relationship between temperature and respiratory morbidity, such as emergency department (ED) visits. In this study, we conducted a causal mediation analysis to decompose the total effect of daily temperature on respiratory ED visits in Los Angeles from 2005 to 2016. We focused on ambient ozone as a mediator because its precursors and formation are directly driven by sunlight and temperature. We estimated natural direct, indirect, and total effects on the relative risk scale across deciles of temperature exposure compared to the median. We utilized Bayesian additive regression trees (BART) to flexibly characterize the nonlinear relationship between temperature and ozone and quantified uncertainty via posterior prediction and the Bayesian bootstrap. Our results showed that ozone partially mediated the association between high temperatures and respiratory ED visits, particularly at moderately high temperatures. We also validated our modeling approach through simulation studies. This study extends the existing literature by considering acute respiratory morbidity and employing a flexible modeling approach, offering new insights into the mechanisms underlying temperature-related health risks.",
+  "authors": [
+    {
+      "name": "Chen Li"
+    },
+    {
+      "name": "Thomas W. Hsiao"
+    },
+    {
+      "name": "Stefanie Ebelt"
+    },
+    {
+      "name": "Rebecca H. Zhang"
+    },
+    {
+      "name": "Howard H. Chang"
+    }
+  ],
+  "submitted_at": "2026-02-19",
+  "updated_at": "2026-02-19",
+  "primary_category": "stat.AP",
+  "categories": [
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6384,
+    "recent_score": 0.6535,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.5809
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-19"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.16970v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.16970v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

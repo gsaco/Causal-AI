@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2508.10455",
+  "canonical_url": "https://arxiv.org/abs/2508.10455v1",
+  "pdf_url": "https://arxiv.org/pdf/2508.10455v1",
+  "title": "RealAC: A Domain-Agnostic Framework for Realistic and Actionable Counterfactual Explanations",
+  "abstract": "Counterfactual explanations provide human-understandable reasoning for AI-made decisions by describing minimal changes to input features that would alter a model's prediction. To be truly useful in practice, such explanations must be realistic and feasible -- they should respect both the underlying data distribution and user-defined feasibility constraints. Existing approaches often enforce inter-feature dependencies through rigid, hand-crafted constraints or domain-specific knowledge, which limits their generalizability and ability to capture complex, nonlinear relations inherent in data. Moreover, they rarely accommodate user-specified preferences and suggest explanations that are causally implausible or infeasible to act upon. We introduce RealAC, a domain-agnostic framework for generating realistic and actionable counterfactuals. RealAC automatically preserves complex inter-feature dependencies without relying on explicit domain knowledge -- by aligning the joint distributions of feature pairs between factual and counterfactual instances. The framework also allows end-users to ``freeze'' attributes they cannot or do not wish to change by suppressing change in frozen features during optimization. Evaluations on three synthetic and two real datasets demonstrate that RealAC balances realism with actionability. Our method outperforms state-of-the-art baselines and Large Language Model-based counterfactual generation techniques in causal edge score, dependency preservation score, and IM1 realism metric and offers a solution for causality-aware and user-centric counterfactual generation.",
+  "authors": [
+    {
+      "name": "Asiful Arefeen"
+    },
+    {
+      "name": "Shovito Barua Soumma"
+    },
+    {
+      "name": "Hassan Ghasemzadeh"
+    }
+  ],
+  "submitted_at": "2025-08-14",
+  "updated_at": "2025-08-14",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3936,
+    "recent_score": 0.0047,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.2079
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-08-14"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2508.10455v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2508.10455v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

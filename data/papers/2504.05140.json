@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2504.05140",
+  "canonical_url": "https://arxiv.org/abs/2504.05140v1",
+  "pdf_url": "https://arxiv.org/pdf/2504.05140v1",
+  "title": "Unifying Physics- and Data-Driven Modeling via Novel Causal Spatiotemporal Graph Neural Network for Interpretable Epidemic Forecasting",
+  "abstract": "Accurate epidemic forecasting is crucial for effective disease control and prevention. Traditional compartmental models often struggle to estimate temporally and spatially varying epidemiological parameters, while deep learning models typically overlook disease transmission dynamics and lack interpretability in the epidemiological context. To address these limitations, we propose a novel Causal Spatiotemporal Graph Neural Network (CSTGNN), a hybrid framework that integrates a Spatio-Contact SIR model with Graph Neural Networks (GNNs) to capture the spatiotemporal propagation of epidemics. Inter-regional human mobility exhibits continuous and smooth spatiotemporal patterns, leading to adjacent graph structures that share underlying mobility dynamics. To model these dynamics, we employ an adaptive static connectivity graph to represent the stable components of human mobility and utilize a temporal dynamics model to capture fluctuations within these patterns. By integrating the adaptive static connectivity graph with the temporal dynamics graph, we construct a dynamic graph that encapsulates the comprehensive properties of human mobility networks. Additionally, to capture temporal trends and variations in infectious disease spread, we introduce a temporal decomposition model to handle temporal dependence. This model is then integrated with a dynamic graph convolutional network for epidemic forecasting. We validate our model using real-world datasets at the provincial level in China and the state level in Germany. Extensive studies demonstrate that our method effectively models the spatiotemporal dynamics of infectious diseases, providing a valuable tool for forecasting and intervention strategies. Furthermore, analysis of the learned parameters offers insights into disease transmission mechanisms, enhancing the interpretability and practical applicability of our model.",
+  "authors": [
+    {
+      "name": "Shuai Han"
+    },
+    {
+      "name": "Lukas Stelz"
+    },
+    {
+      "name": "Thomas R. Sokolowski"
+    },
+    {
+      "name": "Kai Zhou"
+    },
+    {
+      "name": "Horst Stöcker"
+    }
+  ],
+  "submitted_at": "2025-04-07",
+  "updated_at": "2025-04-07",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.soc-ph",
+    "q-bio.QM",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.559,
+    "recent_score": 0.0002,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4405
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-04-07"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2504.05140v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2504.05140v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

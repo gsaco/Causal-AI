@@ -1,51 +1,99 @@
 {
   "arxiv_id": "2011.04216",
-  "canonical_url": "https://arxiv.org/abs/2011.04216",
-  "pdf_url": "https://arxiv.org/pdf/2011.04216.pdf",
+  "canonical_url": "https://arxiv.org/abs/2011.04216v1",
+  "pdf_url": "https://arxiv.org/pdf/2011.04216v1",
   "title": "DoWhy: An End-to-End Library for Causal Inference",
   "abstract": "A practical Python library that unifies causal inference workflows across identification, estimation, and refutation.",
   "authors": [
-    { "name": "Amit Sharma" },
-    { "name": "Emre Kiciman" }
+    {
+      "name": "Amit Sharma"
+    },
+    {
+      "name": "Emre Kiciman"
+    }
   ],
   "submitted_at": "2020-11-09",
   "updated_at": "2021-03-15",
-  "primary_category": "cs.AI",
-  "categories": ["cs.AI", "stat.ML"],
+  "primary_category": "stat.ME",
+  "categories": [
+    "cs.AI",
+    "stat.ML",
+    "stat.ME",
+    "cs.MS",
+    "econ.EM"
+  ],
   "metrics": {
-    "cross_list_count": 1,
+    "cross_list_count": 4,
     "version_count": 2,
-    "trending_score": 0.31
+    "trending_score": 0.6577,
+    "recent_score": 0,
+    "rising_score": 0.5436,
+    "canonical_score": 1,
+    "max_topic_confidence": 0.58
   },
   "topic_tags": [
     {
-      "topic_id": "systems-tooling",
-      "confidence": 0.86,
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
       "rationale": {
-        "matched_keywords": ["library", "causal inference"],
-        "rules_version": "v0.1"
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "library"
+        ],
+        "rules_version": "v2"
       }
     }
   ],
   "versions": [
-    { "version": "v1", "updated_at": "2020-11-09" },
-    { "version": "v2", "updated_at": "2021-03-15" }
+    {
+      "version": "v1",
+      "updated_at": "2020-11-09"
+    },
+    {
+      "version": "v2",
+      "updated_at": "2021-03-15"
+    }
   ],
   "links": {
-    "arxiv_abs": "https://arxiv.org/abs/2011.04216",
-    "arxiv_pdf": "https://arxiv.org/pdf/2011.04216.pdf",
-    "code": [
-      {
-        "url": "https://github.com/py-why/dowhy",
-        "label": "official",
-        "evidence": "author_link"
-      }
-    ]
+    "arxiv_abs": "https://arxiv.org/abs/2011.04216v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2011.04216v1"
   },
   "provenance": {
     "source": "arxiv_api",
-    "harvested_at": "2026-01-22T02:10:00Z",
-    "harvest_run_id": "demo-2026-01-22",
-    "queries": ["ti:\"DoWhy\" OR abs:\"causal inference library\""]
-  }
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "seed-papers-2026-03-05",
+    "queries": [
+      "ti:\"DoWhy\" OR abs:\"causal inference library\"",
+      "id_list:seed-papers:1501.01332,1705.08821,1907.02893,1803.01422,2002.02770,2002.11631,2305.10032,2406.04598,2010.05761,2404.06349,2307.16405,2511.22842,1703.06856,2011.04216"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
 }

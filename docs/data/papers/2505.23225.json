@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2505.23225",
+  "canonical_url": "https://arxiv.org/abs/2505.23225v1",
+  "pdf_url": "https://arxiv.org/pdf/2505.23225v1",
+  "title": "Generalizability vs. Counterfactual Explainability Trade-Off",
+  "abstract": "In this work, we investigate the relationship between model generalization and counterfactual explainability in supervised learning. We introduce the notion of $\\varepsilon$-valid counterfactual probability ($\\varepsilon$-VCP) -- the probability of finding perturbations of a data point within its $\\varepsilon$-neighborhood that result in a label change. We provide a theoretical analysis of $\\varepsilon$-VCP in relation to the geometry of the model's decision boundary, showing that $\\varepsilon$-VCP tends to increase with model overfitting. Our findings establish a rigorous connection between poor generalization and the ease of counterfactual generation, revealing an inherent trade-off between generalization and counterfactual explainability. Empirical results validate our theory, suggesting $\\varepsilon$-VCP as a practical proxy for quantitatively characterizing overfitting.",
+  "authors": [
+    {
+      "name": "Fabiano Veglianti"
+    },
+    {
+      "name": "Flavio Giorgi"
+    },
+    {
+      "name": "Fabrizio Silvestri"
+    },
+    {
+      "name": "Gabriele Tolomei"
+    }
+  ],
+  "submitted_at": "2025-05-29",
+  "updated_at": "2025-05-29",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3729,
+    "recent_score": 0.0007,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.1924
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-05-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2505.23225v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2505.23225v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

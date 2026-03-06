@@ -1,0 +1,112 @@
+{
+  "arxiv_id": "2510.16677",
+  "canonical_url": "https://arxiv.org/abs/2510.16677v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.16677v1",
+  "title": "Renaissance of RNNs in Streaming Clinical Time Series: Compact Recurrence Remains Competitive with Transformers",
+  "abstract": "We present a compact, strictly causal benchmark for streaming clinical time series on the MIT--BIH Arrhythmia Database using per-second heart rate. Two tasks are studied under record-level, non-overlapping splits: near-term tachycardia risk (next ten seconds) and one-step heart rate forecasting. We compare a GRU-D (RNN) and a Transformer under matched training budgets against strong non-learned baselines. Evaluation is calibration-aware for classification and proper for forecasting, with temperature scaling and grouped bootstrap confidence intervals. On MIT-BIH, GRU-D slightly surpasses the Transformer for tachycardia risk, while the Transformer clearly lowers forecasting error relative to GRU-D and persistence. Our results show that, in longitudinal monitoring, model choice is task-dependent: compact RNNs remain competitive for short-horizon risk scoring, whereas compact Transformers deliver clearer gains for point forecasting.",
+  "authors": [
+    {
+      "name": "Ran Tong"
+    },
+    {
+      "name": "Jiaqi Liu"
+    },
+    {
+      "name": "Su Liu"
+    },
+    {
+      "name": "Xin Hu"
+    },
+    {
+      "name": "Lanruo Wang"
+    }
+  ],
+  "submitted_at": "2025-10-19",
+  "updated_at": "2025-10-19",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4873,
+    "recent_score": 0.0243,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.3569
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-19"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.16677v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.16677v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

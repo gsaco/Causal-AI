@@ -1,0 +1,126 @@
+{
+  "arxiv_id": "2602.21381",
+  "canonical_url": "https://arxiv.org/abs/2602.21381v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.21381v1",
+  "title": "VCDF: A Validated Consensus-Driven Framework for Time Series Causal Discovery",
+  "abstract": "Time series causal discovery is essential for understanding dynamic systems, yet many existing methods remain sensitive to noise, non-stationarity, and sampling variability. We propose the Validated Consensus-Driven Framework (VCDF), a simple and method-agnostic layer that improves robustness by evaluating the stability of causal relations across blocked temporal subsets. VCDF requires no modification to base algorithms and can be applied to methods such as VAR-LiNGAM and PCMCI. Experiments on synthetic datasets show that VCDF improves VAR-LiNGAM by approximately 0.08-0.12 in both window and summary F1 scores across diverse data characteristics, with gains most pronounced for moderate-to-long sequences. The framework also benefits from longer sequences, yielding up to 0.18 absolute improvement on time series of length 1000 and above. Evaluations on simulated fMRI data and IT-monitoring scenarios further demonstrate enhanced stability and structural accuracy under realistic noise conditions. VCDF provides an effective reliability layer for time series causal discovery without altering underlying modeling assumptions.",
+  "authors": [
+    {
+      "name": "Gene Yu"
+    },
+    {
+      "name": "Ce Guo"
+    },
+    {
+      "name": "Wayne Luk"
+    }
+  ],
+  "submitted_at": "2026-02-22",
+  "updated_at": "2026-02-22",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CE"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.7615,
+    "recent_score": 0.7112,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.7105
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-22"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.21381v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.21381v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,121 @@
+{
+  "arxiv_id": "2601.18189",
+  "canonical_url": "https://arxiv.org/abs/2601.18189v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.18189v1",
+  "title": "Smooth, Sparse, and Stable: Finite-Time Exact Skeleton Recovery via Smoothed Proximal Gradients",
+  "abstract": "Continuous optimization has significantly advanced causal discovery, yet existing methods (e.g., NOTEARS) generally guarantee only asymptotic convergence to a stationary point. This often yields dense weighted matrices that require arbitrary post-hoc thresholding to recover a DAG. This gap between continuous optimization and discrete graph structures remains a fundamental challenge. In this paper, we bridge this gap by proposing the Hybrid-Order Acyclicity Constraint (AHOC) and optimizing it via the Smoothed Proximal Gradient (SPG-AHOC). Leveraging the Manifold Identification Property of proximal algorithms, we provide a rigorous theoretical guarantee: the Finite-Time Oracle Property. We prove that under standard identifiability assumptions, SPG-AHOC recovers the exact DAG support (structure) in finite iterations, even when optimizing a smoothed approximation. This result eliminates structural ambiguity, as our algorithm returns graphs with exact zero entries without heuristic truncation. Empirically, SPG-AHOC achieves state-of-the-art accuracy and strongly corroborates the finite-time identification theory.",
+  "authors": [
+    {
+      "name": "Rui Wu"
+    },
+    {
+      "name": "Yongjun Li"
+    }
+  ],
+  "submitted_at": "2026-01-26",
+  "updated_at": "2026-01-26",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.611,
+    "recent_score": 0.3346,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.4978
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.18189v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.18189v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

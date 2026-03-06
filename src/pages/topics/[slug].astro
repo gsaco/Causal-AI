@@ -1,10 +1,26 @@
 ---
-import DocLayout from "@layouts/DocLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 import PaperCard from "@components/PaperCard.astro";
 import ProvenancePanel from "@components/ProvenancePanel.astro";
 import ContinueExploring from "@components/ContinueExploring.astro";
 import { getCollection } from "astro:content";
 import { readJson } from "@utils/data";
+import { withBase } from "@utils/withBase";
+
+function uniq(values) {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+
+function matchesBenchmark(topic, benchmark) {
+  const text = `${benchmark.name} ${benchmark.scope} ${benchmark.focus}`.toLowerCase();
+  return (
+    text.includes(topic.id.replace(/-/g, " ")) ||
+    text.includes(topic.title.toLowerCase()) ||
+    (topic.group === "Discovery" && text.includes("discovery")) ||
+    (topic.group === "LLMs & Agents" && (text.includes("llm") || text.includes("text"))) ||
+    (topic.group === "Sequential" && (text.includes("policy") || text.includes("time")))
+  );
+}
 
 export async function getStaticPaths() {
   const topics = await getCollection("topics");
@@ -14,127 +30,324 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 const { data } = entry;
-const build = await readJson("provenance/build.json");
-const feed = await readJson(`topic_feeds/${entry.slug}.json`);
-const index = await readJson("papers.index.json");
-const trails = await readJson("curation/paper_trails.json");
-const taxonomy = await readJson("taxonomy/topics.json");
+
+const [build, feed, index, trails, taxonomy, applications, benchmarks, toolsData] = await Promise.all([
+  readJson("provenance/build.json"),
+  readJson(`topic_feeds/${entry.slug}.json`),
+  readJson("papers.index.json"),
+  readJson("curation/paper_trails.json"),
+  readJson("taxonomy/topics.json"),
+  getCollection("applications"),
+  readJson("benchmarks/benchmarks.json"),
+  readJson("tools/tools.json")
+]);
+
 const currentTopic = taxonomy.find((topic) => topic.id === entry.slug);
+const paperMap = new Map(index.map((paper) => [paper.arxiv_id, paper]));
+const canonicalIds = uniq([...(data.landmark_papers ?? []), ...(data.anchors ?? []), ...(currentTopic?.anchors ?? [])]);
+const canonicalPapers = canonicalIds.map((paperId) => paperMap.get(paperId)).filter(Boolean);
+const risingIds = uniq([
+  ...(data.rising_papers ?? []),
+  ...(feed.trending ?? []).filter((paperId) => !canonicalIds.includes(paperId))
+]).slice(0, 6);
+const risingPapers = risingIds.map((paperId) => paperMap.get(paperId)).filter(Boolean);
+const latestPapers = (feed.latest ?? []).map((paperId) => paperMap.get(paperId)).filter(Boolean).slice(0, 6);
+const relevantTrails = trails.filter((trail) => trail.steps.some((step) => canonicalIds.includes(step.arxiv_id)));
 const relatedTopicIds = taxonomy
-  .filter((topic) => topic.group && topic.group === currentTopic?.group && topic.id !== entry.slug)
+  .filter((topic) => topic.group === currentTopic?.group && topic.id !== entry.slug)
   .slice(0, 2)
   .map((topic) => topic.id);
-const relevantTrails = trails.filter((trail) =>
-  trail.steps.some((step) => data.anchors.includes(step.arxiv_id))
-);
-const paperMap = new Map(index.map((paper) => [paper.arxiv_id, paper]));
-const latest = feed.latest.map((id) => paperMap.get(id)).filter(Boolean);
-const trending = feed.trending.map((id) => paperMap.get(id)).filter(Boolean);
-const readingPath = data.reading_path ?? { beginner: data.anchors };
+const relatedApplications = applications.filter((application) => (application.data.topics ?? []).includes(entry.slug));
+const benchmarksForTopic = benchmarks.filter((benchmark) => matchesBenchmark(currentTopic, benchmark));
+const groupTools = toolsData.find((group) => group.group === currentTopic?.group || group.group === "Inference");
+const readingPath = data.reading_path ?? { beginner: canonicalIds.slice(0, 2), intermediate: risingIds.slice(0, 2) };
+const evaluationCues =
+  data.evaluation_cues ??
+  [
+    `State the estimand and intervention assumptions before interpreting results in ${data.title}.`,
+    `Check whether evaluation settings actually stress interventions or distribution shift, not only predictive fit.`,
+    `Use canonical papers to frame the claim and rising papers to track what is changing right now.`
+  ];
+const openQuestions =
+  data.open_questions ??
+  [
+    `What assumptions are still doing the most hidden work in ${data.title}?`,
+    `Which benchmarks in ${data.title} still fail to reflect deployment conditions or intervention realism?`,
+    `Where should the field demand stronger evidence before claiming progress in ${data.title}?`
+  ];
+const topicThesis =
+  data.thesis ??
+  `${data.title} matters because it pushes causal AI from static association toward interventions, robustness, and falsifiable assumptions.`;
+const whyNow =
+  data.why_now ??
+  `This topic is active because newer work is trying to make causal claims operational under modern ML constraints, not only theoretically elegant.`;
 ---
-<DocLayout
-  title={`${data.title} - Causal AI Futures`}
-  description={data.scope}
-  headings={headings}
-  evidence={data.anchors}
-  trails={relevantTrails}
->
+<BaseLayout wide title={`${data.title} - Causal AI Futures`} description={data.scope}>
   <span data-pagefind-filter="type:topic" hidden></span>
   <span data-pagefind-filter={`topic:${entry.slug}`} hidden></span>
   <span data-pagefind-meta="type" hidden>topic</span>
   <span data-pagefind-meta="title" hidden>{data.title}</span>
-  <section class="topic-grid">
-    <div class="card">
-      <h2>Field guide</h2>
-      <Content />
-    </div>
-    <aside class="card reading">
-      <h3>Reading path</h3>
-      <div class="reading-block">
-        <strong>Beginner</strong>
-        <ul>
-          {readingPath.beginner.map((id) => (
-            <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
+
+  <section class="section hero hero-ambient">
+    <div class="container topic-hero">
+      <div class="topic-copy">
+        <p class="eyebrow">{currentTopic?.group ?? "Topic Dossier"}</p>
+        <h1>{data.title}</h1>
+        <p class="topic-scope">{data.scope}</p>
+        <div class="tag-row">
+          {canonicalIds.slice(0, 4).map((paperId) => (
+            <span class="chip">{paperId}</span>
           ))}
-        </ul>
+        </div>
       </div>
-      {readingPath.intermediate && (
-        <div class="reading-block">
-          <strong>Intermediate</strong>
-          <ul>
-            {readingPath.intermediate.map((id) => (
-              <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
+      <div class="card hero-side">
+        <p class="eyebrow">Dossier Thesis</p>
+        <h2>{topicThesis}</h2>
+        <p class="subtle">{whyNow}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container dossier-grid">
+      <div class="content-column">
+        <div class="card">
+          <p class="eyebrow">Overview</p>
+          <Content />
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Canonical Papers</p>
+          <h2>Landmarks that define the topic</h2>
+          <div class="paper-grid">
+            {canonicalPapers.map((paper) => (
+              <PaperCard paper={paper} />
+            ))}
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Rising Papers</p>
+          <h2>What is moving right now</h2>
+          <div class="paper-grid">
+            {risingPapers.map((paper) => (
+              <PaperCard paper={paper} />
+            ))}
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Live arXiv Feed</p>
+          <h2>Latest additions in this topic</h2>
+          <div class="paper-grid">
+            {latestPapers.map((paper) => (
+              <PaperCard paper={paper} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <aside class="rail">
+        <div class="card">
+          <p class="eyebrow">On This Page</p>
+          <ul class="toc">
+            {headings.map((heading) => (
+              <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
             ))}
           </ul>
         </div>
-      )}
-      {readingPath.advanced && (
-        <div class="reading-block">
-          <strong>Advanced</strong>
-          <ul>
-            {readingPath.advanced.map((id) => (
-              <li><a href={`https://arxiv.org/abs/${id}`} target="_blank" rel="noreferrer">{id}</a></li>
+
+        <div class="card">
+          <p class="eyebrow">Evaluation Cues</p>
+          <ul class="rail-list">
+            {evaluationCues.map((cue) => (
+              <li>{cue}</li>
             ))}
           </ul>
         </div>
-      )}
-    </aside>
+
+        <div class="card">
+          <p class="eyebrow">Benchmarks and Tools</p>
+          <div class="resource-stack">
+            {benchmarksForTopic.map((benchmark) => (
+              <div>
+                <strong>{benchmark.name}</strong>
+                <p class="subtle">{benchmark.focus}</p>
+              </div>
+            ))}
+            {(groupTools?.items ?? []).slice(0, 3).map((tool) => (
+              <div>
+                <strong>{tool.name}</strong>
+                <p class="subtle">{tool.summary}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Open Questions</p>
+          <ul class="rail-list">
+            {openQuestions.map((question) => (
+              <li>{question}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Related Applications</p>
+          <div class="tag-row">
+            {relatedApplications.map((application) => (
+              <a class="chip secondary" href={withBase(`/applications/${application.slug}`)}>{application.data.title}</a>
+            ))}
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Reading Path</p>
+          <div class="reading-block">
+            <strong>Beginner</strong>
+            <ul>
+              {(readingPath.beginner ?? []).map((paperId) => (
+                <li><a href={`https://arxiv.org/abs/${paperId}`} target="_blank" rel="noreferrer">{paperId}</a></li>
+              ))}
+            </ul>
+          </div>
+          {readingPath.intermediate && (
+            <div class="reading-block">
+              <strong>Intermediate</strong>
+              <ul>
+                {readingPath.intermediate.map((paperId) => (
+                  <li><a href={`https://arxiv.org/abs/${paperId}`} target="_blank" rel="noreferrer">{paperId}</a></li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {readingPath.advanced && (
+            <div class="reading-block">
+              <strong>Advanced</strong>
+              <ul>
+                {readingPath.advanced.map((paperId) => (
+                  <li><a href={`https://arxiv.org/abs/${paperId}`} target="_blank" rel="noreferrer">{paperId}</a></li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Provenance</p>
+          <ProvenancePanel provenance={build} />
+        </div>
+      </aside>
+    </div>
   </section>
 
-  <section class="card">
-    <h2>Snapshot provenance</h2>
-    <ProvenancePanel provenance={build} />
-  </section>
-
-  <section>
-    <h2>What's new in this topic</h2>
-    <div class="grid">
-      {latest.map((paper) => (
-        <PaperCard paper={paper} />
-      ))}
-    </div>
-    <h3 class="subhead">Trending</h3>
-    <div class="grid">
-      {trending.map((paper) => (
-        <PaperCard paper={paper} />
-      ))}
-    </div>
-  </section>
+  {relevantTrails.length > 0 && (
+    <section class="section">
+      <div class="container trail-card card">
+        <p class="eyebrow">Paper Trails</p>
+        <h2>Narrative reading routes</h2>
+        <div class="trail-list">
+          {relevantTrails.map((trail) => (
+            <div>
+              <strong>{trail.title}</strong>
+              <p class="subtle">{trail.premise}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <ContinueExploring currentType="topic" relatedTopicIds={relatedTopicIds} />
 
   <style>
-    .topic-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 4.6vw, 4.8rem);
+      line-height: 1.02;
     }
 
-    .reading {
+    h2 {
+      margin: 0;
+    }
+
+    .topic-hero {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.9fr);
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topic-copy,
+    .hero-side,
+    .content-column,
+    .rail {
       display: grid;
       gap: 1rem;
-      align-content: start;
+    }
+
+    .topic-scope {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 60ch;
+    }
+
+    .dossier-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.85fr);
+      align-items: start;
+    }
+
+    .rail {
+      position: sticky;
+      top: 5.5rem;
+    }
+
+    .paper-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      margin-top: 1rem;
+    }
+
+    .rail-list,
+    .toc {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .resource-stack {
+      display: grid;
+      gap: 0.9rem;
     }
 
     .reading-block ul {
-      margin: 0.4rem 0 0;
+      margin: 0.35rem 0 0;
       padding-left: 1.2rem;
     }
 
-    .grid {
+    .trail-list {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
-    .subhead {
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 900px) {
-      .topic-grid {
+    @media (max-width: 980px) {
+      .topic-hero,
+      .dossier-grid {
         grid-template-columns: 1fr;
+      }
+
+      .rail {
+        position: static;
       }
     }
   </style>
-</DocLayout>
+</BaseLayout>

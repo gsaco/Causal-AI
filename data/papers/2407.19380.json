@@ -1,0 +1,104 @@
+{
+  "arxiv_id": "2407.19380",
+  "canonical_url": "https://arxiv.org/abs/2407.19380v1",
+  "pdf_url": "https://arxiv.org/pdf/2407.19380v1",
+  "title": "Empowering Clinicians with Medical Decision Transformers: A Framework for Sepsis Treatment",
+  "abstract": "Offline reinforcement learning has shown promise for solving tasks in safety-critical settings, such as clinical decision support. Its application, however, has been limited by the lack of interpretability and interactivity for clinicians. To address these challenges, we propose the medical decision transformer (MeDT), a novel and versatile framework based on the goal-conditioned reinforcement learning paradigm for sepsis treatment recommendation. MeDT uses the decision transformer architecture to learn a policy for drug dosage recommendation. During offline training, MeDT utilizes collected treatment trajectories to predict administered treatments for each time step, incorporating known treatment outcomes, target acuity scores, past treatment decisions, and current and past medical states. This analysis enables MeDT to capture complex dependencies among a patient's medical history, treatment decisions, outcomes, and short-term effects on stability. Our proposed conditioning uses acuity scores to address sparse reward issues and to facilitate clinician-model interactions, enhancing decision-making. Following training, MeDT can generate tailored treatment recommendations by conditioning on the desired positive outcome (survival) and user-specified short-term stability improvements. We carry out rigorous experiments on data from the MIMIC-III dataset and use off-policy evaluation to demonstrate that MeDT recommends interventions that outperform or are competitive with existing offline reinforcement learning methods while enabling a more interpretable, personalized and clinician-directed approach.",
+  "authors": [
+    {
+      "name": "Aamer Abdul Rahman"
+    },
+    {
+      "name": "Pranav Agarwal"
+    },
+    {
+      "name": "Rita Noumeir"
+    },
+    {
+      "name": "Philippe Jouvet"
+    },
+    {
+      "name": "Vincent Michalski"
+    },
+    {
+      "name": "Samira Ebrahimi Kahou"
+    }
+  ],
+  "submitted_at": "2024-07-28",
+  "updated_at": "2024-07-28",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3919,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2177
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-07-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2407.19380v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2407.19380v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "recommenders-online-experiments"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2509.01916",
+  "canonical_url": "https://arxiv.org/abs/2509.01916v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.01916v1",
+  "title": "Causal representation learning from network data",
+  "abstract": "Causal disentanglement from soft interventions is identifiable under the assumptions of linear interventional faithfulness and availability of both observational and interventional data. Previous research has looked into this problem from the perspective of i.i.d. data. Here, we develop a framework, GraCE-VAE, for non-i.i.d. settings, in which structured context in the form of network data is available. GraCE-VAE integrates discrepancy-based variational autoencoders with graph neural networks to jointly recover the true latent causal graph and intervention effects. We show that the theoretical results of identifiability from i.i.d. data hold in our setup. We also empirically evaluate GraCE-VAE against state-of-the-art baselines on three genetic perturbation datasets to demonstrate the impact of leveraging structured context for causal disentanglement.",
+  "authors": [
+    {
+      "name": "Jifan Zhang"
+    },
+    {
+      "name": "Michelle M. Li"
+    },
+    {
+      "name": "Elena Zheleva"
+    }
+  ],
+  "submitted_at": "2025-09-02",
+  "updated_at": "2025-09-02",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3785,
+    "recent_score": 0.0075,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.1999
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation",
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.01916v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.01916v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,157 @@
+{
+  "arxiv_id": "2408.13498",
+  "canonical_url": "https://arxiv.org/abs/2408.13498v1",
+  "pdf_url": "https://arxiv.org/pdf/2408.13498v1",
+  "title": "Rethinking State Disentanglement in Causal Reinforcement Learning",
+  "abstract": "One of the significant challenges in reinforcement learning (RL) when dealing with noise is estimating latent states from observations. Causality provides rigorous theoretical support for ensuring that the underlying states can be uniquely recovered through identifiability. Consequently, some existing work focuses on establishing identifiability from a causal perspective to aid in the design of algorithms. However, these results are often derived from a purely causal viewpoint, which may overlook the specific RL context. We revisit this research line and find that incorporating RL-specific context can reduce unnecessary assumptions in previous identifiability analyses for latent states. More importantly, removing these assumptions allows algorithm design to go beyond the earlier boundaries constrained by them. Leveraging these insights, we propose a novel approach for general partially observable Markov Decision Processes (POMDPs) by replacing the complicated structural constraints in previous methods with two simple constraints for transition and reward preservation. With the two constraints, the proposed algorithm is guaranteed to disentangle state and noise that is faithful to the underlying dynamics. Empirical evidence from extensive benchmark control tasks demonstrates the superiority of our approach over existing counterparts in effectively disentangling state belief from noise.",
+  "authors": [
+    {
+      "name": "Haiyao Cao"
+    },
+    {
+      "name": "Zhen Zhang"
+    },
+    {
+      "name": "Panpan Cai"
+    },
+    {
+      "name": "Yuhang Liu"
+    },
+    {
+      "name": "Jinan Zou"
+    },
+    {
+      "name": "Ehsan Abbasnejad"
+    },
+    {
+      "name": "Biwei Huang"
+    },
+    {
+      "name": "Mingming Gong"
+    },
+    {
+      "name": "Anton van den Hengel"
+    },
+    {
+      "name": "Javen Qinfeng Shi"
+    }
+  ],
+  "submitted_at": "2024-08-24",
+  "updated_at": "2024-08-24",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3376,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.1453
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "identifiability"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-08-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2408.13498v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2408.13498v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

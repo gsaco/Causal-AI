@@ -1,0 +1,105 @@
+{
+  "arxiv_id": "2601.20176",
+  "canonical_url": "https://arxiv.org/abs/2601.20176v2",
+  "pdf_url": "https://arxiv.org/pdf/2601.20176v2",
+  "title": "Causal-Driven Feature Evaluation for Cross-Domain Image Classification",
+  "abstract": "Out-of-distribution (OOD) generalization remains a fundamental challenge in real-world classification, where test distributions often differ substantially from training data. Most existing approaches pursue domain-invariant representations, implicitly assuming that invariance implies reliability. However, features that are invariant across domains are not necessarily causally effective for prediction. In this work, we revisit OOD classification from a causal perspective and propose to evaluate learned representations based on their necessity and sufficiency under distribution shift. We introduce an explicit segment-level framework that directly measures causal effectiveness across domains, providing a more faithful criterion than invariance alone. Experiments on multi-domain benchmarks demonstrate consistent improvements in OOD performance, particularly under challenging domain shifts, highlighting the value of causal evaluation for robust generalization.",
+  "authors": [
+    {
+      "name": "Chen Cheng"
+    },
+    {
+      "name": "Ang Li"
+    }
+  ],
+  "submitted_at": "2026-01-28",
+  "updated_at": "2026-01-29",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.627,
+    "recent_score": 0.3581,
+    "rising_score": 0.5071,
+    "canonical_score": 0.9865,
+    "max_topic_confidence": 0.97
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.97,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-01-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.20176v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.20176v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))",
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "systems",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

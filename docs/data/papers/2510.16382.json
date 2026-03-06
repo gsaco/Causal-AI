@@ -1,0 +1,150 @@
+{
+  "arxiv_id": "2510.16382",
+  "canonical_url": "https://arxiv.org/abs/2510.16382v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.16382v1",
+  "title": "Humanoid-inspired Causal Representation Learning for Domain Generalization",
+  "abstract": "This paper proposes the Humanoid-inspired Structural Causal Model (HSCM), a novel causal framework inspired by human intelligence, designed to overcome the limitations of conventional domain generalization models. Unlike approaches that rely on statistics to capture data-label dependencies and learn distortion-invariant representations, HSCM replicates the hierarchical processing and multi-level learning of human vision systems, focusing on modeling fine-grained causal mechanisms. By disentangling and reweighting key image attributes such as color, texture, and shape, HSCM enhances generalization across diverse domains, ensuring robust performance and interpretability. Leveraging the flexibility and adaptability of human intelligence, our approach enables more effective transfer and learning in dynamic, complex environments. Through both theoretical and empirical evaluations, we demonstrate that HSCM outperforms existing domain generalization models, providing a more principled method for capturing causal relationships and improving model robustness. The code is available at https://github.com/lambett/HSCM.",
+  "authors": [
+    {
+      "name": "Ze Tao"
+    },
+    {
+      "name": "Jian Zhang"
+    },
+    {
+      "name": "Haowei Li"
+    },
+    {
+      "name": "Xianshuai Li"
+    },
+    {
+      "name": "Yifei Peng"
+    },
+    {
+      "name": "Xiyao Liu"
+    },
+    {
+      "name": "Senzhang Wang"
+    },
+    {
+      "name": "Chao Liu"
+    },
+    {
+      "name": "Sheng Ren"
+    },
+    {
+      "name": "Shichao Zhang"
+    }
+  ],
+  "submitted_at": "2025-10-18",
+  "updated_at": "2025-10-18",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4982,
+    "recent_score": 0.0237,
+    "canonical_score": 0.919,
+    "max_topic_confidence": 0.82,
+    "rising_score": 0.358
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.82,
+      "rationale": {
+        "matched_keywords": [
+          "invariant",
+          "domain generalization",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "SCM"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal representation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-18"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.16382v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.16382v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal representation\" OR abs:\"causal representation\" OR abs:\"causal representation learning\") AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,140 @@
+{
+  "arxiv_id": "2502.03953",
+  "canonical_url": "https://arxiv.org/abs/2502.03953v2",
+  "pdf_url": "https://arxiv.org/pdf/2502.03953v2",
+  "title": "Fairness Aware Reinforcement Learning via Proximal Policy Optimization",
+  "abstract": "Fairness in multi-agent systems (MAS) focuses on equitable reward distribution among agents in scenarios involving sensitive attributes such as race, gender, or socioeconomic status. This paper introduces fairness in Proximal Policy Optimization (PPO) with a penalty term derived from a fairness definition such as demographic parity, counterfactual fairness, or conditional statistical parity. The proposed method, which we call Fair-PPO, balances reward maximisation with fairness by integrating two penalty components: a retrospective component that minimises disparities in past outcomes and a prospective component that ensures fairness in future decision-making. We evaluate our approach in two games: the Allelopathic Harvest, a cooperative and competitive MAS focused on resource collection, where some agents possess a sensitive attribute, and HospitalSim, a hospital simulation, in which agents coordinate the operations of hospital patients with different mobility and priority needs. Experiments show that Fair-PPO achieves fairer policies than PPO across the fairness metrics and, through the retrospective and prospective penalty components, reveals a wide spectrum of strategies to improve fairness; at the same time, its performance pairs with that of state-of-the-art fair reinforcement-learning algorithms. Fairness comes at the cost of reduced efficiency, but does not compromise equality among the overall population (Gini index). These findings underscore the potential of Fair-PPO to address fairness challenges in MAS.",
+  "authors": [
+    {
+      "name": "Gabriele La Malfa"
+    },
+    {
+      "name": "Jie M. Zhang"
+    },
+    {
+      "name": "Michael Luck"
+    },
+    {
+      "name": "Elizabeth Black"
+    }
+  ],
+  "submitted_at": "2025-02-06",
+  "updated_at": "2025-09-02",
+  "primary_category": "cs.MA",
+  "categories": [
+    "cs.MA",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4792,
+    "recent_score": 0.0063,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.3446
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-09-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2502.03953v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2502.03953v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

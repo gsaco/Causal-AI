@@ -1,0 +1,137 @@
+{
+  "arxiv_id": "2510.12818",
+  "canonical_url": "https://arxiv.org/abs/2510.12818v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.12818v1",
+  "title": "MEDEQUALQA: Evaluating Biases in LLMs with Counterfactual Reasoning",
+  "abstract": "Large language models (LLMs) are increasingly deployed in clinical decision support, yet subtle demographic cues can influence their reasoning. Prior work has documented disparities in outputs across patient groups, but little is known about how internal reasoning shifts under controlled demographic changes. We introduce MEDEQUALQA, a counterfactual benchmark that perturbs only patient pronouns (he/him, she/her, they/them) while holding critical symptoms and conditions (CSCs) constant. Each clinical vignette is expanded into single-CSC ablations, producing three parallel datasets of approximately 23,000 items each (69,000 total). We evaluate a GPT-4.1 model and compute Semantic Textual Similarity (STS) between reasoning traces to measure stability across pronoun variants. Our results show overall high similarity (mean STS >0.80), but reveal consistent localized divergences in cited risk factors, guideline anchors, and differential ordering, even when final diagnoses remain unchanged. Our error analysis highlights certain cases in which the reasoning shifts, underscoring clinically relevant bias loci that may cascade into inequitable care. MEDEQUALQA offers a controlled diagnostic setting for auditing reasoning stability in medical AI.",
+  "authors": [
+    {
+      "name": "Rajarshi Ghosh"
+    },
+    {
+      "name": "Abhay Gupta"
+    },
+    {
+      "name": "Hudson McBride"
+    },
+    {
+      "name": "Anurag Vaidya"
+    },
+    {
+      "name": "Faisal Mahmood"
+    }
+  ],
+  "submitted_at": "2025-10-09",
+  "updated_at": "2025-10-09",
+  "primary_category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CY"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.5079,
+    "recent_score": 0.0189,
+    "rising_score": 0.3603,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "llm",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.12818v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.12818v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"counterfactual evaluation\" OR abs:\"counterfactual benchmark\" OR abs:\"causal benchmark\") AND (abs:\"language model\" OR abs:llm))",
+      "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "llms-agents",
+      "systems",
+      "foundations",
+      "representation",
+      "sequential",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "robotics-autonomy"
+  ]
+}

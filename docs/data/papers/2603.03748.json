@@ -1,0 +1,121 @@
+{
+  "arxiv_id": "2603.03748",
+  "canonical_url": "https://arxiv.org/abs/2603.03748v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.03748v1",
+  "title": "JANUS: Structured Bidirectional Generation for Guaranteed Constraints and Analytical Uncertainty",
+  "abstract": "High-stakes synthetic data generation faces a fundamental Quadrilemma: achieving Fidelity to the original distribution, Control over complex logical constraints, Reliability in uncertainty estimation, and Efficiency in computational cost -- simultaneously. State-of-the-art Deep Generative Models (CTGAN, TabDDPM) excel at fidelity but rely on inefficient rejection sampling for continuous range constraints. Conversely, Structural Causal Models offer logical control but struggle with high-dimensional fidelity and complex noise inversion. We introduce JANUS (Joint Ancestral Network for Uncertainty and Synthesis), a framework that unifies these capabilities using a DAG of Bayesian Decision Trees. Our key innovation is Reverse-Topological Back-filling, an algorithm that propagates constraints backwards through the causal graph, achieving 100% constraint satisfaction on feasible constraint sets without rejection sampling. This is paired with an Analytical Uncertainty Decomposition derived from Dirichlet priors, enabling 128x faster uncertainty estimation than Monte Carlo methods. Across 15 datasets and 523 constrained scenarios, JANUS achieves state-of-the-art fidelity (Detection Score 0.497), eliminates mode collapse on imbalanced data, and provides exact handling of complex inter-column constraints (e.g., Salary_offered >= Salary_requested) where baselines fail entirely.",
+  "authors": [
+    {
+      "name": "Taha Racicot"
+    }
+  ],
+  "submitted_at": "2026-03-04",
+  "updated_at": "2026-03-04",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.8841,
+    "recent_score": 0.9447,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.8739
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-04"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.03748v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.03748v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

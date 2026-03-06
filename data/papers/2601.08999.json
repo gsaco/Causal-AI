@@ -1,0 +1,124 @@
+{
+  "arxiv_id": "2601.08999",
+  "canonical_url": "https://arxiv.org/abs/2601.08999v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.08999v1",
+  "title": "Physics-Guided Counterfactual Explanations for Large-Scale Multivariate Time Series: Application in Scalable and Interpretable SEP Event Prediction",
+  "abstract": "Accurate prediction of solar energetic particle events is vital for safeguarding satellites, astronauts, and space-based infrastructure. Modern space weather monitoring generates massive volumes of high-frequency, multivariate time series (MVTS) data from sources such as the Geostationary perational Environmental Satellites (GOES). Machine learning (ML) models trained on this data show strong predictive power, but most existing methods overlook domain-specific feasibility constraints. Counterfactual explanations have emerged as a key tool for improving model interpretability, yet existing approaches rarely enforce physical plausibility. This work introduces a Physics-Guided Counterfactual Explanation framework, a novel method for generating counterfactual explanations in time series classification tasks that remain consistent with underlying physical principles. Applied to solar energetic particles (SEP) forecasting, this framework achieves over 80% reduction in Dynamic Time Warping (DTW) distance increasing the proximity, produces counterfactual explanations with higher sparsity, and reduces runtime by nearly 50% compared to state-of-the-art baselines such as DiCE. Beyond numerical improvements, this framework ensures that generated counterfactual explanations are physically plausible and actionable in scientific domains. In summary, the framework generates counterfactual explanations that are both valid and physically consistent, while laying the foundation for scalable counterfactual generation in big data environments.",
+  "authors": [
+    {
+      "name": "Pranjal Patil"
+    },
+    {
+      "name": "Anli Ji"
+    },
+    {
+      "name": "Berkay Aydin"
+    }
+  ],
+  "submitted_at": "2026-01-13",
+  "updated_at": "2026-01-13",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4517,
+    "recent_score": 0.2342,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2974
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-13"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.08999v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.08999v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

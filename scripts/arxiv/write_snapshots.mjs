@@ -60,9 +60,15 @@ export function mergePaperRecords(existing, incoming) {
       ...(incoming.metrics ?? {}),
       cross_list_count: Math.max(0, categories.length - 1),
       version_count: versions.length || incoming.metrics?.version_count || 1,
-      trending_score: incoming.metrics?.trending_score ?? existing.metrics?.trending_score ?? 0
+      trending_score: incoming.metrics?.trending_score ?? existing.metrics?.trending_score ?? 0,
+      recent_score: incoming.metrics?.recent_score ?? existing.metrics?.recent_score ?? 0,
+      rising_score: incoming.metrics?.rising_score ?? existing.metrics?.rising_score ?? 0,
+      canonical_score: incoming.metrics?.canonical_score ?? existing.metrics?.canonical_score ?? 0,
+      max_topic_confidence:
+        incoming.metrics?.max_topic_confidence ?? existing.metrics?.max_topic_confidence ?? 0
     },
     topic_tags: incoming.topic_tags?.length ? incoming.topic_tags : existing.topic_tags ?? [],
+    application_tags: incoming.application_tags ?? existing.application_tags ?? [],
     versions,
     links: incoming.links ?? existing.links,
     canonical_url: incoming.canonical_url ?? existing.canonical_url,
@@ -73,6 +79,10 @@ export function mergePaperRecords(existing, incoming) {
       queries: unique([
         ...(existing.provenance?.queries ?? []),
         ...(incoming.provenance?.queries ?? [])
+      ]),
+      query_packs: unique([
+        ...(existing.provenance?.query_packs ?? []),
+        ...(incoming.provenance?.query_packs ?? [])
       ])
     }
   };
@@ -107,13 +117,14 @@ function buildIndexEntry(paper) {
     primary_category: paper.primary_category,
     categories: paper.categories,
     topic_tags: paper.topic_tags ?? [],
+    application_tags: paper.application_tags ?? [],
     metrics: paper.metrics,
     links: paper.links,
     provenance: paper.provenance
   };
 }
 
-export async function writeSnapshots(normalizedPapers, { dataDir = "data" } = {}) {
+export async function writeSnapshots(normalizedPapers, { dataDir = "data", pruneToIds } = {}) {
   const papersDir = path.join(dataDir, "papers");
   await fs.mkdir(papersDir, { recursive: true });
   const existingMap = await loadExistingPapers(papersDir);
@@ -121,6 +132,16 @@ export async function writeSnapshots(normalizedPapers, { dataDir = "data" } = {}
   for (const paper of normalizedPapers) {
     const merged = mergePaperRecords(existingMap.get(paper.arxiv_id), paper);
     existingMap.set(paper.arxiv_id, merged);
+  }
+
+  if (pruneToIds) {
+    const eligible = pruneToIds instanceof Set ? pruneToIds : new Set(pruneToIds);
+    for (const id of Array.from(existingMap.keys())) {
+      if (!eligible.has(id)) {
+        existingMap.delete(id);
+        await fs.rm(path.join(papersDir, `${id}.json`), { force: true });
+      }
+    }
   }
 
   const papers = Array.from(existingMap.values()).sort((a, b) => {

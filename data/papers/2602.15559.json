@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2602.15559",
+  "canonical_url": "https://arxiv.org/abs/2602.15559v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.15559v1",
+  "title": "Fixed-Horizon Self-Normalized Inference for Adaptive Experiments via Martingale AIPW/DML with Logged Propensities",
+  "abstract": "Adaptive randomized experiments update treatment probabilities as data accrue, but still require an end-of-study interval for the average treatment effect (ATE) at a prespecified horizon. Under adaptive assignment, propensities can keep changing, so the predictable quadratic variation of AIPW/DML score increments may remain random. When no deterministic variance limit exists, Wald statistics normalized by a single long-run variance target can be conditionally miscalibrated given the realized variance regime. We assume no interference, sequential randomization, i.i.d. arrivals, and executed overlap on a prespecified scored set, and we require two auditable pipeline conditions: the platform logs the executed randomization probability for each unit, and the nuisance regressions used to score unit $t$ are constructed predictably from past data only. These conditions make the centered AIPW/DML scores an exact martingale difference sequence. Using self-normalized martingale limit theory, we show that the Studentized statistic, with variance estimated by realized quadratic variation, is asymptotically N(0,1) at the prespecified horizon, even without variance stabilization. Simulations validate the theory and highlight when standard fixed-variance Wald reporting fails.",
+  "authors": [
+    {
+      "name": "Gabriel Saco"
+    }
+  ],
+  "submitted_at": "2026-02-17",
+  "updated_at": "2026-02-17",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.8627,
+    "recent_score": 0.6177,
+    "rising_score": 0.929,
+    "canonical_score": 0.6637,
+    "max_topic_confidence": 0.66
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "pipeline"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.15559v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.15559v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

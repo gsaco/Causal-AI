@@ -1,10 +1,39 @@
 {
-  "version": "2026-01-22/v1",
+  "id": "foundations",
+  "version": "2026-03-05/v2",
   "group": "Foundations",
+  "title": "Structural Causality Foundations",
+  "enabled": true,
+  "priority": 1,
   "topics": ["foundations-scm", "identifiability-do-calculus", "counterfactuals"],
-  "queries": [
-    "ti:\"structural causal\" OR abs:\"structural causal\"",
-    "ti:identifiability OR abs:identifiability OR ti:\"do-calculus\"",
-    "ti:counterfactual OR abs:counterfactual"
+  "category_allowlist": ["stat.ML", "cs.AI", "cs.LG", "math.ST"],
+  "required_keywords_any": ["causal", "counterfactual", "intervention", "do-calculus", "identifiability"],
+  "exclude_keywords": ["counterfactual explanation in graph neural networks"],
+  "seed_papers": ["1501.01332", "1705.08821", "1907.02893"],
+  "per_pack_cap": 70,
+  "candidate_queries": [
+    {
+      "id": "foundations-core",
+      "query": "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)",
+      "max_results": 60,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "foundations-identifiability",
+      "query": "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)",
+      "max_results": 60,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ],
+  "precision_queries": [
+    {
+      "id": "foundations-potential-outcomes",
+      "query": "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)",
+      "max_results": 30,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
   ]
 }

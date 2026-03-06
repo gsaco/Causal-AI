@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2601.15360",
+  "canonical_url": "https://arxiv.org/abs/2601.15360v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.15360v1",
+  "title": "Robust X-Learner: Breaking the Curse of Imbalance and Heavy Tails via Robust Cross-Imputation",
+  "abstract": "Estimating Heterogeneous Treatment Effects (HTE) in industrial applications such as AdTech and healthcare presents a dual challenge: extreme class imbalance and heavy-tailed outcome distributions. While the X-Learner framework effectively addresses imbalance through cross-imputation, we demonstrate that it is fundamentally vulnerable to \"Outlier Smearing\" when reliant on Mean Squared Error (MSE) minimization. In this failure mode, the bias from a few extreme observations (\"whales\") in the minority group is propagated to the entire majority group during the imputation step, corrupting the estimated treatment effect structure. To resolve this, we propose the Robust X-Learner (RX-Learner). This framework integrates a redescending γ-divergence objective -- structurally equivalent to the Welsch loss under Gaussian assumptions -- into the gradient boosting machinery. We further stabilize the non-convex optimization using a Proxy Hessian strategy grounded in Majorization-Minimization (MM) principles. Empirical evaluation on a semi-synthetic Criteo Uplift dataset demonstrates that the RX-Learner reduces the Precision in Estimation of Heterogeneous Effect (PEHE) metric by 98.6% compared to the standard X-Learner, effectively decoupling the stable \"Core\" population from the volatile \"Periphery\".",
+  "authors": [
+    {
+      "name": "Eichi Uehara"
+    }
+  ],
+  "submitted_at": "2026-01-21",
+  "updated_at": "2026-01-21",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.6577,
+    "recent_score": 0.2916,
+    "canonical_score": 0.8588,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.5907
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "uplift"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.15360v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.15360v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

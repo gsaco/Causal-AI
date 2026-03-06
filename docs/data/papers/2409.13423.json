@@ -1,0 +1,118 @@
+{
+  "arxiv_id": "2409.13423",
+  "canonical_url": "https://arxiv.org/abs/2409.13423v1",
+  "pdf_url": "https://arxiv.org/pdf/2409.13423v1",
+  "title": "Causal Reinforcement Learning for Optimisation of Robot Dynamics in Unknown Environments",
+  "abstract": "Autonomous operations of robots in unknown environments are challenging due to the lack of knowledge of the dynamics of the interactions, such as the objects' movability. This work introduces a novel Causal Reinforcement Learning approach to enhancing robotics operations and applies it to an urban search and rescue (SAR) scenario. Our proposed machine learning architecture enables robots to learn the causal relationships between the visual characteristics of the objects, such as texture and shape, and the objects' dynamics upon interaction, such as their movability, significantly improving their decision-making processes. We conducted causal discovery and RL experiments demonstrating the Causal RL's superior performance, showing a notable reduction in learning times by over 24.5% in complex situations, compared to non-causal models.",
+  "authors": [
+    {
+      "name": "Julian Gerald Dcruz"
+    },
+    {
+      "name": "Sam Mahoney"
+    },
+    {
+      "name": "Jia Yun Chua"
+    },
+    {
+      "name": "Adoundeth Soukhabandith"
+    },
+    {
+      "name": "John Mugabe"
+    },
+    {
+      "name": "Weisi Guo"
+    },
+    {
+      "name": "Miguel Arana-Catania"
+    }
+  ],
+  "submitted_at": "2024-09-20",
+  "updated_at": "2024-09-20",
+  "primary_category": "cs.RO",
+  "categories": [
+    "cs.RO",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.3973,
+    "recent_score": 0,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.2474
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal rl",
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2024-09-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2409.13423v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2409.13423v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

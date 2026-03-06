@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2602.02514",
+  "canonical_url": "https://arxiv.org/abs/2602.02514v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02514v1",
+  "title": "Design and Evaluation of Whole-Page Experience Optimization for E-commerce Search",
+  "abstract": "E-commerce Search Results Pages (SRPs) are evolving from linear lists to complex, non-linear layouts, rendering traditional position-biased ranking models insufficient. Moreover, existing optimization frameworks typically maximize short-term signals (e.g., clicks, same-day revenue) because long-term satisfaction metrics (e.g., expected two-week revenue) involve delayed feedback and challenging long-horizon credit attribution. To bridge these gaps, we propose a novel Whole-Page Experience Optimization Framework. Unlike traditional list-wise rankers, our approach explicitly models the interplay between item relevance, 2D positional layout, and visual elements. We use a causal framework to develop metrics for measuring long-term user satisfaction based on quasi-experimental data. We validate our approach through industry-scale A/B testing, where the model demonstrated a 1.86% improvement in brand relevance (our primary customer experience metric) while simultaneously achieving a statistically significant revenue uplift of +0.05%",
+  "authors": [
+    {
+      "name": "Pratik Lahiri"
+    },
+    {
+      "name": "Bingqing Ge"
+    },
+    {
+      "name": "Zhou Qin"
+    },
+    {
+      "name": "Aditya Jumde"
+    },
+    {
+      "name": "Shuning Huo"
+    },
+    {
+      "name": "Lucas Scottini"
+    },
+    {
+      "name": "Yi Liu"
+    },
+    {
+      "name": "Mahmoud Mamlouk"
+    },
+    {
+      "name": "Wenyang Liu"
+    }
+  ],
+  "submitted_at": "2026-01-23",
+  "updated_at": "2026-01-23",
+  "primary_category": "cs.IR",
+  "categories": [
+    "cs.IR",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5511,
+    "recent_score": 0.3081,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4524
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "uplift"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02514v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02514v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

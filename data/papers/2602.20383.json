@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2602.20383",
+  "canonical_url": "https://arxiv.org/abs/2602.20383v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.20383v1",
+  "title": "Detecting and Mitigating Group Bias in Heterogeneous Treatment Effects",
+  "abstract": "Heterogeneous treatment effects (HTEs) are increasingly estimated using machine learning models that produce highly personalized predictions of treatment effects. In practice, however, predicted treatment effects are rarely interpreted, reported, or audited at the individual level but, instead, are often aggregated to broader subgroups, such as demographic segments, risk strata, or markets. We show that such aggregation can induce systematic bias of the group-level causal effect: even when models for predicting the individual-level conditional average treatment effect (CATE) are correctly specified and trained on data from randomized experiments, aggregating the predicted CATEs up to the group level does not, in general, recover the corresponding group average treatment effect (GATE). We develop a unified statistical framework to detect and mitigate this form of group bias in randomized experiments. We first define group bias as the discrepancy between the model-implied and experimentally identified GATEs, derive an asymptotically normal estimator, and then provide a simple-to-implement statistical test. For mitigation, we propose a shrinkage-based bias-correction, and show that the theoretically optimal and empirically feasible solutions have closed-form expressions. The framework is fully general, imposes minimal assumptions, and only requires computing sample moments. We analyze the economic implications of mitigating detected group bias for profit-maximizing personalized targeting, thereby characterizing when bias correction alters targeting decisions and profits, and the trade-offs involved. Applications to large-scale experimental data at major digital platforms validate our theoretical results and demonstrate empirical performance.",
+  "authors": [
+    {
+      "name": "Joel Persson"
+    },
+    {
+      "name": "Jurriën Bakker"
+    },
+    {
+      "name": "Dennis Bohle"
+    },
+    {
+      "name": "Stefan Feuerriegel"
+    },
+    {
+      "name": "Florian von Wangenheim"
+    }
+  ],
+  "submitted_at": "2026-02-23",
+  "updated_at": "2026-02-23",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "cs.LG",
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.7741,
+    "recent_score": 0.7316,
+    "rising_score": 0.7378,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.20383v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.20383v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

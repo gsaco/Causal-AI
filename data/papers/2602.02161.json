@@ -1,0 +1,155 @@
+{
+  "arxiv_id": "2602.02161",
+  "canonical_url": "https://arxiv.org/abs/2602.02161v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02161v1",
+  "title": "Generating Causal Temporal Interaction Graphs for Counterfactual Validation of Temporal Link Prediction",
+  "abstract": "Temporal link prediction (TLP) models are commonly evaluated based on predictive accuracy, yet such evaluations do not assess whether these models capture the causal mechanisms that govern temporal interactions. In this work, we propose a framework for counterfactual validation of TLP models by generating causal temporal interaction graphs (CTIGs) with known ground-truth causal structure. We first introduce a structural equation model for continuous-time event sequences that supports both excitatory and inhibitory effects, and then extend this mechanism to temporal interaction graphs. To compare causal models, we propose a distance metric based on cross-model predictive error, and empirically validate the hypothesis that predictors trained on one causal model degrade when evaluated on sufficiently distant models. Finally, we instantiate counterfactual evaluation under (i) controlled causal shifts between generating models and (ii) timestamp shuffling as a stochastic distortion with measurable causal distance. Our framework provides a foundation for causality-aware benchmarking.",
+  "authors": [
+    {
+      "name": "Aniq Ur Rahman"
+    },
+    {
+      "name": "Justin P. Coon"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-02",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "eess.SY"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6312,
+    "recent_score": 0.4062,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.5368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02161v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02161v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

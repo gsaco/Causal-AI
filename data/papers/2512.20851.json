@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2512.20851",
+  "canonical_url": "https://arxiv.org/abs/2512.20851v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.20851v1",
+  "title": "Testing Exclusion and Shape Restrictions in Potential Outcomes Models",
+  "abstract": "Exclusion and shape restrictions play a central role in defining causal effects and interpreting estimates in potential outcomes models. To date, the testable implications of such restrictions have been studied on a case-by-case basis in a limited set of models. In this paper, we develop a general framework for characterizing sharp testable implications of general support restrictions on the potential response functions, based on a novel graph-based representation of the model. The framework provides a unified and constructive method for deriving all observable implications of the modeling assumptions. We illustrate the approach in several popular settings, including instrumental variables, treatment selection, mediation, and interference. As an empirical application, we revisit the US Lung Health Study and test for the presence of spillovers between spouses, specification of exposure maps, and persistence of treatment effects over time.",
+  "authors": [
+    {
+      "name": "Hiroaki Kaido"
+    },
+    {
+      "name": "Kirill Ponomarev"
+    }
+  ],
+  "submitted_at": "2025-12-24",
+  "updated_at": "2025-12-24",
+  "primary_category": "econ.EM",
+  "categories": [
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4702,
+    "recent_score": 0.1364,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3221
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "potential outcomes"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-24"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.20851v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.20851v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"potential outcomes\" OR abs:\"potential outcomes\") AND (abs:causal OR abs:counterfactual)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

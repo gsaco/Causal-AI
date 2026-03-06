@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2603.02059",
+  "canonical_url": "https://arxiv.org/abs/2603.02059v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.02059v1",
+  "title": "TRAKNN: Efficient Trajectory Aware Spatiotemporal kNN for Rare Meteorological Trajectory Detection",
+  "abstract": "Extreme weather events, such as windstorms and heatwaves, are driven by persistent atmospheric circulation patterns that evolve over several consecutive days. While traditional circulation-based studies often focus on instantaneous atmospheric states, capturing the temporal evolution, or trajectory, of these spatial fields is essential for characterizing rare and potentially impactful atmospheric behavior. However, performing an exhaustive similarity search on multi-decadal, continental-scale gridded datasets presents significant computational and memory challenges. In this paper, we propose TRAKNN (TRajectory Aware KNN), a fully unsupervised and data-agnostic framework for detecting geometrically rare short trajectories in spatio-temporal data with an exact kNN approach. TRAKNN leverages a recurrence-based algorithm that decouples computational complexity from trajectory length and efficient batch operations, maximizing computational intensity. These optimizations enable exhaustive analysis on standard workstations, either on CPU or on GPU. We evaluate our approach on 75 years of daily European sea-level pressure data. Our results illustrate that rare trajectories identified by TRAKNN correspond to physically coherent atmospheric anomalies and align with independent extreme-event databases.",
+  "authors": [
+    {
+      "name": "Guillaume Coulaud"
+    },
+    {
+      "name": "Davide Faranda"
+    }
+  ],
+  "submitted_at": "2026-03-02",
+  "updated_at": "2026-03-02",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7598,
+    "recent_score": 0.8924,
+    "canonical_score": 0.7312,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.7693
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.02059v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.02059v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:identifiability OR abs:identifiability OR ti:\"do-calculus\" OR abs:\"do-calculus\" OR ti:counterfactual OR abs:counterfactual) AND (cat:stat.ML OR cat:cs.AI OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "arxiv_id": "2510.17517",
+  "canonical_url": "https://arxiv.org/abs/2510.17517v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.17517v1",
+  "title": "SAFE-D: A Spatiotemporal Detection Framework for Abnormal Driving Among Parkinson's Disease-like Drivers",
+  "abstract": "A driver's health state serves as a determinant factor in driving behavioral regulation. Subtle deviations from normalcy can lead to operational anomalies, posing risks to public transportation safety. While prior efforts have developed detection mechanisms for functionally-driven temporary anomalies such as drowsiness and distraction, limited research has addressed pathologically-triggered deviations, especially those stemming from chronic medical conditions. To bridge this gap, we investigate the driving behavior of Parkinson's disease patients and propose SAFE-D, a novel framework for detecting Parkinson-related behavioral anomalies to enhance driving safety. Our methodology starts by performing analysis of Parkinson's disease symptomatology, focusing on primary motor impairments, and establishes causal links to degraded driving performance. To represent the subclinical behavioral variations of early-stage Parkinson's disease, our framework integrates data from multiple vehicle control components to build a behavioral profile. We then design an attention-based network that adaptively prioritizes spatiotemporal features, enabling robust anomaly detection under physiological variability. Finally, we validate SAFE-D on the Logitech G29 platform and CARLA simulator, using data from three road maps to emulate real-world driving. Our results show SAFE-D achieves 96.8% average accuracy in distinguishing normal and Parkinson-affected driving patterns.",
+  "authors": [
+    {
+      "name": "Hangcheng Cao"
+    },
+    {
+      "name": "Baixiang Huang"
+    },
+    {
+      "name": "Longzhi Yuan"
+    },
+    {
+      "name": "Haonan An"
+    },
+    {
+      "name": "Zihan Fang"
+    },
+    {
+      "name": "Xianhao Chen"
+    },
+    {
+      "name": "Yuguang Fang"
+    }
+  ],
+  "submitted_at": "2025-10-20",
+  "updated_at": "2025-10-20",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.HC"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4821,
+    "recent_score": 0.025,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.338
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.17517v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.17517v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "robotics-autonomy"
+  ]
+}

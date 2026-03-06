@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2602.00458",
+  "canonical_url": "https://arxiv.org/abs/2602.00458v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.00458v1",
+  "title": "LatentTrack: Sequential Weight Generation via Latent Filtering",
+  "abstract": "We introduce LatentTrack (LT), a sequential neural architecture for online probabilistic prediction under nonstationary dynamics. LT performs causal Bayesian filtering in a low-dimensional latent space and uses a lightweight hypernetwork to generate predictive model parameters at each time step, enabling constant-time online adaptation without per-step gradient updates. At each time step, a learned latent model predicts the next latent distribution, which is updated via amortized inference using new observations, yielding a predict--generate--update filtering framework in function space. The formulation supports both structured (Markovian) and unstructured latent dynamics within a unified objective, while Monte Carlo inference over latent trajectories produces calibrated predictive mixtures with fixed per-step cost. Evaluated on long-horizon online regression using the Jena Climate benchmark, LT consistently achieves lower negative log-likelihood and mean squared error than stateful sequential and static uncertainty-aware baselines, with competitive calibration, demonstrating that latent-conditioned function evolution is an effective alternative to traditional latent-state modeling under distribution shift.",
+  "authors": [
+    {
+      "name": "Omer Haq"
+    }
+  ],
+  "submitted_at": "2026-01-31",
+  "updated_at": "2026-01-31",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.RO",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.6928,
+    "recent_score": 0.3842,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.6189
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-31"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.00458v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.00458v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "climate-energy-earth"
+  ]
+}

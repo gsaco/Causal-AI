@@ -3,77 +3,34 @@ import ThemeToggle from "@components/ThemeToggle.astro";
 import { withBase } from "@utils/withBase";
 import { siteMeta } from "@lib/siteMeta";
 
-const navGroups = [
-  {
-    label: "Explore",
-    links: [
-      { href: "/observatory", label: "Observatory" },
-      { href: "/trends", label: "Tendencies" },
-      { href: "/topics", label: "Topics" },
-      { href: "/atlas", label: "Atlas" },
-      { href: "/papers", label: "Papers" }
-    ]
-  },
-  {
-    label: "Learn",
-    links: [
-      { href: "/learn", label: "Start Here" },
-      { href: "/learn#playlists", label: "Playlists" },
-      { href: "/frontiers", label: "Frontiers" },
-      { href: "/glossary", label: "Glossary" }
-    ]
-  },
-  {
-    label: "Practice",
-    links: [
-      { href: "/applications", label: "Applications" },
-      { href: "/tools", label: "Tools" },
-      { href: "/benchmarks", label: "Benchmarks" }
-    ]
-  }
+const primaryLinks = [
+  { href: "/atlas", label: "Atlas" },
+  { href: "/papers", label: "Papers" },
+  { href: "/topics", label: "Topics" },
+  { href: "/applications", label: "Applications" },
+  { href: "/observatory", label: "Signals" }
 ];
+
 const trustLinks = [
-  { href: "/trust/editorial", label: "Editorial Policy" },
-  { href: "/trust/provenance", label: "Data Provenance" },
-  { href: "/trust/update-log", label: "Update Log" },
-  { href: "/trust/ranking", label: "Ranking Methodology" },
-  { href: "/trust/citation-coverage", label: "Citation Coverage" },
-  { href: "/trust/how-to-cite", label: "How to Cite" }
+  { href: "/trust", label: "Trust" },
+  { href: "/trust/editorial", label: "Editorial" },
+  { href: "/trust/provenance", label: "Provenance" },
+  { href: "/trust/ranking", label: "Ranking" }
 ];
 ---
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href={withBase("/")}>{siteMeta.title}</a>
-    <details class="mobile-menu">
-      <summary>Menu</summary>
-      <div class="mobile-panel">
-        {navGroups.map((group) => (
-          <div class="mobile-group">
-            <span>{group.label}</span>
-            {group.links.map((link) => (
-              <a href={withBase(link.href)}>{link.label}</a>
-            ))}
-          </div>
-        ))}
-        <div class="mobile-trust">
-          <span>Trust</span>
-          {trustLinks.map((link) => (
-            <a href={withBase(link.href)}>{link.label}</a>
-          ))}
-        </div>
-        <a href={withBase("/contribute")}>Contribute</a>
-      </div>
-    </details>
-    <nav class="nav-links" aria-label="Primary">
-      {navGroups.map((group) => (
-        <details class="nav-group">
-          <summary>{group.label}</summary>
-          <div class="nav-panel">
-            {group.links.map((link) => (
-              <a href={withBase(link.href)}>{link.label}</a>
-            ))}
-          </div>
-        </details>
+  <div class="container header-shell">
+    <a class="brand" href={withBase("/")}>
+      <span class="brand-mark">C</span>
+      <span class="brand-copy">
+        <strong>{siteMeta.title}</strong>
+        <small>{siteMeta.tagline}</small>
+      </span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      {primaryLinks.map((link) => (
+        <a href={withBase(link.href)}>{link.label}</a>
       ))}
       <details class="trust-menu">
         <summary>Trust</summary>
@@ -83,14 +40,29 @@ const trustLinks = [
           ))}
         </div>
       </details>
-      <a href={withBase("/contribute")}>Contribute</a>
     </nav>
-    <div class="actions">
+
+    <div class="header-actions">
       <button class="button ghost cmdk-trigger" type="button" data-cmdk-open>
         Search <span class="kbd">Cmd+K</span>
       </button>
+      <a class="button secondary" href={withBase("/learn")}>Start here</a>
       <ThemeToggle />
     </div>
+
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <div class="mobile-panel">
+        {primaryLinks.map((link) => (
+          <a href={withBase(link.href)}>{link.label}</a>
+        ))}
+        {trustLinks.map((link) => (
+          <a href={withBase(link.href)}>{link.label}</a>
+        ))}
+        <a href={withBase("/learn")}>Start here</a>
+        <a href={withBase("/contribute")}>Contribute</a>
+      </div>
+    </details>
   </div>
 </header>
 
@@ -98,107 +70,76 @@ const trustLinks = [
   .site-header {
     position: sticky;
     top: 0;
-    z-index: 10;
-    backdrop-filter: blur(12px);
-    background: color-mix(in srgb, var(--bg) 82%, transparent);
-    border-bottom: 1px solid var(--border);
+    z-index: 40;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+    backdrop-filter: blur(18px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
   }
 
-  .header-inner {
-    display: flex;
+  .header-shell {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
+    gap: 1.2rem;
     padding: 0.9rem 0;
-    gap: 1rem;
   }
 
-  .logo {
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.02em;
-  }
-
-  .mobile-menu {
-    position: relative;
-  }
-
-  .mobile-menu summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 0.35rem 0.6rem;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--bg-elevated);
-  }
-
-  .mobile-menu summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .mobile-panel {
-    position: absolute;
-    top: 2.6rem;
-    left: 0;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 0.8rem;
-    min-width: 220px;
-    display: grid;
-    gap: 0.4rem;
-    box-shadow: 0 16px 24px -20px var(--shadow);
-  }
-
-  .mobile-panel a {
-    padding: 0.35rem 0.5rem;
-    border-radius: 8px;
-  }
-
-  .mobile-group {
-    display: grid;
-    gap: 0.25rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.45rem;
-  }
-
-  .mobile-group span {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-  }
-
-  .mobile-trust {
-    border-top: 1px solid var(--border);
-    padding-top: 0.4rem;
-    display: grid;
-    gap: 0.2rem;
-  }
-
-  .mobile-trust span {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin-bottom: 0.2rem;
-  }
-
-  .nav-links {
-    display: none;
-    gap: 1rem;
+  .brand {
+    display: inline-flex;
     align-items: center;
-    font-size: 0.95rem;
+    gap: 0.8rem;
+    min-width: 0;
   }
 
-  .nav-links a,
-  .nav-links summary {
-    padding: 0.35rem 0.5rem;
-    border-radius: 8px;
+  .brand-mark {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent-2) 72%, white));
+    color: white;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    box-shadow: 0 12px 30px -20px var(--shadow);
   }
 
-  .nav-links a:hover,
-  .nav-links summary:hover {
-    background: var(--surface);
+  .brand-copy {
+    display: grid;
+    gap: 0.1rem;
+  }
+
+  .brand-copy strong {
+    font-size: 0.96rem;
+    letter-spacing: 0.01em;
+  }
+
+  .brand-copy small {
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .primary-nav {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .primary-nav a,
+  .primary-nav summary {
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    color: var(--muted);
+  }
+
+  .primary-nav a:hover,
+  .primary-nav summary:hover,
+  .trust-menu[open] > summary {
+    color: var(--text);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
   }
 
   .trust-menu {
@@ -210,87 +151,82 @@ const trustLinks = [
     cursor: pointer;
   }
 
-  .nav-group {
-    position: relative;
-  }
-
-  .nav-group summary {
-    list-style: none;
-    cursor: pointer;
-  }
-
-  .nav-group summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .nav-panel {
-    position: absolute;
-    top: 2.2rem;
-    left: 0;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 0.6rem;
-    min-width: 200px;
-    display: grid;
-    gap: 0.2rem;
-    box-shadow: 0 16px 24px -20px var(--shadow);
-  }
-
-  .nav-panel a {
-    padding: 0.45rem 0.6rem;
-    border-radius: 8px;
-  }
-
-  .nav-panel a:hover {
-    background: var(--surface);
-  }
-
   .trust-menu summary::-webkit-details-marker {
     display: none;
   }
 
   .trust-panel {
     position: absolute;
-    top: 2.2rem;
+    top: 2.8rem;
     left: 0;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 0.6rem;
-    min-width: 220px;
+    min-width: 190px;
     display: grid;
     gap: 0.2rem;
-    box-shadow: 0 16px 24px -20px var(--shadow);
+    padding: 0.55rem;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg-elevated) 92%, white);
+    box-shadow: 0 30px 60px -42px var(--shadow);
   }
 
   .trust-panel a {
-    padding: 0.45rem 0.6rem;
-    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
   }
 
-  .trust-panel a:hover {
-    background: var(--surface);
-  }
-
-  .actions {
-    display: flex;
+  .header-actions {
+    display: none;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.7rem;
   }
 
-  .cmdk-trigger {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.7rem;
+  .mobile-menu {
+    justify-self: end;
   }
 
-  @media (min-width: 960px) {
-    .mobile-menu {
-      display: none;
+  .mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-panel {
+    position: absolute;
+    right: 1.25rem;
+    top: 4rem;
+    min-width: 220px;
+    display: grid;
+    gap: 0.3rem;
+    padding: 0.7rem;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--bg-elevated) 94%, white);
+    box-shadow: 0 30px 60px -42px var(--shadow);
+  }
+
+  .mobile-panel a {
+    padding: 0.65rem 0.7rem;
+    border-radius: 12px;
+  }
+
+  .mobile-panel a:hover {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  @media (min-width: 980px) {
+    .primary-nav,
+    .header-actions {
+      display: flex;
     }
 
-    .nav-links {
-      display: flex;
+    .mobile-menu {
+      display: none;
     }
   }
 </style>

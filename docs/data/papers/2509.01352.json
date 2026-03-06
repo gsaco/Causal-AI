@@ -1,0 +1,134 @@
+{
+  "arxiv_id": "2509.01352",
+  "canonical_url": "https://arxiv.org/abs/2509.01352v1",
+  "pdf_url": "https://arxiv.org/pdf/2509.01352v1",
+  "title": "Causal Sensitivity Identification using Generative Learning",
+  "abstract": "In this work, we propose a novel generative method to identify the causal impact and apply it to prediction tasks. We conduct causal impact analysis using interventional and counterfactual perspectives. First, applying interventions, we identify features that have a causal influence on the predicted outcome, which we refer to as causally sensitive features, and second, applying counterfactuals, we evaluate how changes in the cause affect the effect. Our method exploits the Conditional Variational Autoencoder (CVAE) to identify the causal impact and serve as a generative predictor. We are able to reduce confounding bias by identifying causally sensitive features. We demonstrate the effectiveness of our method by recommending the most likely locations a user will visit next in their spatiotemporal trajectory influenced by the causal relationships among various features. Experiments on the large-scale GeoLife [Zheng et al., 2010] dataset and the benchmark Asia Bayesian network validate the ability of our method to identify causal impact and improve predictive performance.",
+  "authors": [
+    {
+      "name": "Soma Bandyopadhyay"
+    },
+    {
+      "name": "Sudeshna Sarkar"
+    }
+  ],
+  "submitted_at": "2025-09-01",
+  "updated_at": "2025-09-01",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4323,
+    "recent_score": 0.0073,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2715
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-09-01"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2509.01352v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2509.01352v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

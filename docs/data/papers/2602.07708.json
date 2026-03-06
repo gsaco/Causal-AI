@@ -1,0 +1,114 @@
+{
+  "arxiv_id": "2602.07708",
+  "canonical_url": "https://arxiv.org/abs/2602.07708v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.07708v1",
+  "title": "Quantifying Explanation Quality in Graph Neural Networks using Out-of-Distribution Generalization",
+  "abstract": "Evaluating the quality of post-hoc explanations for Graph Neural Networks (GNNs) remains a significant challenge. While recent years have seen an increasing development of explainability methods, current evaluation metrics (e.g., fidelity, sparsity) often fail to assess whether an explanation identifies the true underlying causal variables. To address this, we propose the Explanation-Generalization Score (EGS), a metric that quantifies the causal relevance of GNN explanations. EGS is founded on the principle of feature invariance and posits that if an explanation captures true causal drivers, it should lead to stable predictions across distribution shifts. To quantify this, we introduce a framework that trains GNNs using explanatory subgraphs and evaluates their performance in Out-of-Distribution (OOD) settings (here, OOD generalization serves as a rigorous proxy for the explanation's causal validity). Through large-scale validation involving 11,200 model combinations across synthetic and real-world datasets, our results demonstrate that EGS provides a principled benchmark for ranking explainers based on their ability to capture causal substructures, offering a robust alternative to traditional fidelity-based metrics.",
+  "authors": [
+    {
+      "name": "Ding Zhang"
+    },
+    {
+      "name": "Siddharth Betala"
+    },
+    {
+      "name": "Chirag Agarwal"
+    }
+  ],
+  "submitted_at": "2026-02-07",
+  "updated_at": "2026-02-07",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6266,
+    "recent_score": 0.4668,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.5186
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "distribution shift",
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-07"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.07708v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.07708v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

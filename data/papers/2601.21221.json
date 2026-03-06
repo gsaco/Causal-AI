@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2601.21221",
+  "canonical_url": "https://arxiv.org/abs/2601.21221v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.21221v1",
+  "title": "Causal Discovery for Explainable AI: A Dual-Encoding Approach",
+  "abstract": "Understanding causal relationships among features is fundamental for explaining machine learning model decisions. However, traditional causal discovery methods face challenges with categorical variables due to numerical instability in conditional independence testing. We propose a dual-encoding causal discovery approach that addresses these limitations by running constraint-based algorithms with complementary encoding strategies and merging results through majority voting. Applied to the Titanic dataset, our method identifies causal structures that align with established explainable methods.",
+  "authors": [
+    {
+      "name": "Henry Salgado"
+    },
+    {
+      "name": "Meagan R. Kendall"
+    },
+    {
+      "name": "Martine Ceberio"
+    }
+  ],
+  "submitted_at": "2026-01-29",
+  "updated_at": "2026-01-29",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5579,
+    "recent_score": 0.3635,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.4511
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.21221v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.21221v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal discovery\" OR abs:\"causal discovery\" OR ti:\"structure learning\" OR abs:\"structure learning\") AND (abs:causal OR ti:causal) AND (cat:stat.ML OR cat:cs.LG OR cat:cs.AI))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

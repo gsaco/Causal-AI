@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2512.24767",
+  "canonical_url": "https://arxiv.org/abs/2512.24767v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.24767v1",
+  "title": "From Trial to Deployment: A SEM Analysis of Traveler Adoptions to Fully Operational Autonomous Taxis",
+  "abstract": "Autonomous taxi services represent a transformative advancement in urban mobility, offering safety, efficiency, and round-the-clock operations. While existing literature has explored user acceptance of autonomous taxis through stated preference experiments and hypothetical scenarios, few studies have investigated actual user behavior based on operational AV services. This study addresses that gap by leveraging survey data from Wuhan, China, where Baidu's Apollo Robotaxi service operates at scale. We design a realistic survey incorporating actual service attributes and collect 336 valid responses from actual users. Using Structural Equation Modeling, we identify six latent psychological constructs, namely Trust \\& Policy Support, Cost Sensitivity, Performance, Behavioral Intention, Lifestyle, and Education. Their influences on adoption behavior, measured by the selection frequency of autonomous taxis in ten scenarios, are examined and interpreted. Results show that Cost Sensitivity and Behavioral Intention are the strongest positive predictors of adoption, while other latent constructs play more nuanced roles. The model demonstrates strong goodness-of-fit across multiple indices. Our findings offer empirical evidence to support policymaking, fare design, and public outreach strategies for scaling autonomous taxis deployments in real-world urban settings.",
+  "authors": [
+    {
+      "name": "Yutong Cai"
+    },
+    {
+      "name": "Hua Wang"
+    }
+  ],
+  "submitted_at": "2025-12-31",
+  "updated_at": "2025-12-31",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6302,
+    "recent_score": 0.1646,
+    "canonical_score": 0.6952,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.6085
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-31"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.24767v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.24767v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

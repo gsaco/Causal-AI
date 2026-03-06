@@ -1,34 +1,350 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { readJson } from "@utils/data";
 import { withBase } from "@utils/withBase";
 
-const applications = await getCollection("applications");
+const [entries, registry, facets, papers, topics] = await Promise.all([
+  getCollection("applications"),
+  readJson("applications/registry.json"),
+  readJson("navigator/facets.json"),
+  readJson("papers.index.json"),
+  readJson("taxonomy/topics.json")
+]);
+
+const registryOrder = new Map(registry.map((item, index) => [item.slug, index]));
+const topicLabels = Object.fromEntries(topics.map((topic) => [topic.id, topic.title]));
+const paperMap = new Map(papers.map((paper) => [paper.arxiv_id, paper]));
+
+const feedEntries = await Promise.all(
+  entries.map(async (entry) => {
+    try {
+      const feed = await readJson(`applications/${entry.slug}.json`);
+      return [entry.slug, feed];
+    } catch (error) {
+      return [entry.slug, { latest: [], trending: [], query: "", window: "" }];
+    }
+  })
+);
+
+const feedMap = new Map(feedEntries);
+
+const applications = entries
+  .map((entry) => {
+    const feed = feedMap.get(entry.slug) ?? { latest: [], trending: [], query: "", window: "" };
+    return {
+      entry,
+      count: facets.counts.applications?.[entry.slug] ?? 0,
+      latestPaper: paperMap.get(feed.latest?.[0]),
+      risingPaper: paperMap.get(feed.trending?.[0]),
+      window: feed.window,
+      query: feed.query
+    };
+  })
+  .sort((a, b) => (registryOrder.get(a.entry.slug) ?? 99) - (registryOrder.get(b.entry.slug) ?? 99));
+
+const featured = [...applications].sort((a, b) => b.count - a.count).slice(0, 3);
+const totalTaggedPapers = applications.reduce((sum, item) => sum + item.count, 0);
+const uniqueTopicCount = new Set(applications.flatMap((item) => item.entry.data.topics ?? [])).size;
+const topSurface = featured[0];
 ---
-<BaseLayout wide title="Applications - Causal AI Futures" description="Applied causal AI field notes grounded in evidence.">
-  <section class="section hero">
-    <div class="container">
-      <p class="eyebrow">Applications</p>
-      <h1>Real-world causal AI field notes</h1>
-      <p class="subtle">Where interventions matter most, grounded in arXiv evidence and open problems.</p>
+<BaseLayout wide title="Applications - Causal AI Futures" description="Application briefs for causal AI across healthcare, robotics, climate, online experiments, economics, and biology.">
+  <section class="section hero hero-ambient">
+    <div class="container applications-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Application Atlas</p>
+        <h1>Where causal AI stops being theory and starts carrying operational risk.</h1>
+        <p class="subtle intro">
+          These briefs connect methods to domains where interventions, counterfactuals, and distribution shift actually
+          matter: clinics, autonomy stacks, online marketplaces, scientific discovery, and policy systems.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href={withBase("/papers")}>Open paper navigator</a>
+          <a class="button secondary" href={withBase("/topics")}>Browse topic dossiers</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="card stat-panel">
+          <div>
+            <span>Briefs</span>
+            <strong>{applications.length}</strong>
+          </div>
+          <div>
+            <span>Tagged papers</span>
+            <strong>{totalTaggedPapers}</strong>
+          </div>
+          <div>
+            <span>Topics connected</span>
+            <strong>{uniqueTopicCount}</strong>
+          </div>
+        </div>
+
+        {topSurface && (
+          <div class="card spotlight-panel">
+            <p class="eyebrow">Largest live surface</p>
+            <h2>{topSurface.entry.data.title}</h2>
+            <p class="subtle">{topSurface.entry.data.summary}</p>
+            <div class="spotlight-meta">
+              <span class="chip">{topSurface.count} papers</span>
+              {topSurface.risingPaper && <span class="chip secondary">Rising: {topSurface.risingPaper.arxiv_id}</span>}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-band">
+    <div class="container signals-grid">
+      {featured.map((item) => (
+        <article class="card signal-card">
+          <span class="signal-rank">0{featured.indexOf(item) + 1}</span>
+          <h2>{item.entry.data.title}</h2>
+          <p class="subtle">{item.entry.data.summary}</p>
+          <div class="signal-meta">
+            <span>{item.count} papers</span>
+            <span>{(item.entry.data.topics ?? []).length} core topics</span>
+          </div>
+        </article>
+      ))}
     </div>
   </section>
 
   <section class="section">
-    <div class="container card-grid">
-      {applications.map((app) => (
-        <a class="card" href={withBase(`/applications/${app.slug}`)}>
-          <h3>{app.data.title}</h3>
-          <p class="subtle">{app.data.summary}</p>
-        </a>
-      ))}
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Domain Briefs</p>
+        <h2>Each application surface has its own live feed and problem framing.</h2>
+        <p>
+          The briefs below are no longer aliases of the global corpus. Each one tracks a distinct query, window, and
+          recent wave of papers.
+        </p>
+      </div>
+
+      <div class="application-grid">
+        {applications.map(({ entry, count, latestPaper, risingPaper, window }) => (
+          <a class="card application-card" href={withBase(`/applications/${entry.slug}`)}>
+            <div class="card-top">
+              <span class="paper-count">{count} papers</span>
+              <span class="chip secondary">Live feed</span>
+            </div>
+
+            <div class="copy-stack">
+              <h3>{entry.data.title}</h3>
+              <p class="subtle">{entry.data.summary}</p>
+            </div>
+
+            <div class="tag-row">
+              {(entry.data.topics ?? []).slice(0, 3).map((topicId) => (
+                <span class="chip">{topicLabels[topicId] ?? topicId}</span>
+              ))}
+            </div>
+
+            <div class="feed-preview">
+              {risingPaper ? (
+                <div>
+                  <span>Rising now</span>
+                  <strong>{risingPaper.title}</strong>
+                </div>
+              ) : (
+                <div>
+                  <span>Rising now</span>
+                  <strong>Feed updates with the next snapshot.</strong>
+                </div>
+              )}
+              {latestPaper ? (
+                <div>
+                  <span>Latest ingest</span>
+                  <strong>{latestPaper.title}</strong>
+                </div>
+              ) : (
+                <div>
+                  <span>Latest ingest</span>
+                  <strong>Waiting for the next query window.</strong>
+                </div>
+              )}
+            </div>
+
+            {window && <p class="window-note">Window: {window}</p>}
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
   <style>
     h1 {
-      margin: 0 0 0.6rem;
-      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.98;
+      max-width: 11ch;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    .applications-hero {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy,
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .intro {
+      max-width: 60ch;
+      line-height: 1.72;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-panel {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .stat-panel span,
+    .paper-count,
+    .feed-preview span,
+    .window-note,
+    .signal-rank {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+    }
+
+    .stat-panel strong {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 1.5rem;
+    }
+
+    .spotlight-panel {
+      background:
+        linear-gradient(160deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--accent-2) 10%, transparent)),
+        var(--bg-elevated);
+    }
+
+    .spotlight-panel h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .spotlight-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .signals-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .signal-card {
+      display: grid;
+      gap: 0.7rem;
+      min-height: 100%;
+    }
+
+    .signal-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .signal-meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .application-grid {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .application-card {
+      display: grid;
+      gap: 1rem;
+      min-height: 100%;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .application-card:hover {
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+      box-shadow: 0 26px 50px -38px var(--shadow);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .copy-stack {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .application-card h3 {
+      font-size: 1.45rem;
+    }
+
+    .feed-preview {
+      display: grid;
+      gap: 0.75rem;
+      padding-top: 0.2rem;
+      border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    }
+
+    .feed-preview div {
+      display: grid;
+      gap: 0.28rem;
+    }
+
+    .feed-preview strong {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .window-note {
+      margin: 0;
+    }
+
+    @media (max-width: 980px) {
+      .applications-hero,
+      .signals-grid,
+      .stat-panel {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </BaseLayout>

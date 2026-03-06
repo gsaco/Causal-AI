@@ -1,0 +1,128 @@
+{
+  "arxiv_id": "2512.12804",
+  "canonical_url": "https://arxiv.org/abs/2512.12804v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.12804v1",
+  "title": "Causal Counterfactuals Reconsidered",
+  "abstract": "I develop a novel semantics for probabilities of counterfactuals that generalizes the standard Pearlian semantics: it applies to probabilistic causal models that cannot be extended into realistic structural causal models and are therefore beyond the scope of Pearl's semantics. This generalization is needed because, as I show, such probabilistic causal models arise even in simple settings. My semantics offer a natural compromize in the long-standing debate between Pearl and Dawid over counterfactuals: I agree with Dawid that universal causal determinism and unrealistic variables should be rejected, but I agree with Pearl that a general semantics of counterfactuals is nonetheless possible. I restrict attention to causal models that satisfy the Markov condition, only contain realistic variables, and are causally complete. Although I formulate my proposal using structural causal models, as does Pearl, I refrain from using so-called response variables. Moreover, I prove that my semantics is equivalent to two other recent proposals that do not involve structural causal models, and that it is in line with various comments on stochastic counterfactuals that have appeared in the literature more broadly. Throughout I also reflect on the universality of the Markov condition and explore a novel generalization of causal abstractions",
+  "authors": [
+    {
+      "name": "Sander Beckers"
+    }
+  ],
+  "submitted_at": "2025-12-14",
+  "updated_at": "2025-12-14",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4972,
+    "recent_score": 0.1044,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3581
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-14"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.12804v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.12804v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

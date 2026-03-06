@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2602.12043",
+  "canonical_url": "https://arxiv.org/abs/2602.12043v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.12043v1",
+  "title": "Improved Inference for CSDID Using the Cluster Jackknife",
+  "abstract": "Obtaining reliable inferences with traditional difference-in-differences (DiD) methods can be difficult. Problems can arise when both outcomes and errors are serially correlated, when there are few clusters or few treated clusters, when cluster sizes vary greatly, and in various other cases. In recent years, recognition of the ``staggered adoption'' problem has shifted the focus away from inference towards consistent estimation of treatment effects. One of the most popular new estimators is the CSDID procedure of Callaway and Sant'Anna (2021). We find that the issues of over-rejection with few clusters and/or few treated clusters are at least as severe for CSDID as for traditional DiD methods. We also propose using a cluster jackknife for inference with CSDID, which simulations suggest greatly improves inference. We provide software packages in Stata csdidjack and R didjack to calculate cluster-jackknife standard errors easily.",
+  "authors": [
+    {
+      "name": "Sunny R. Karim"
+    },
+    {
+      "name": "Morten Ørregaard Nielsen"
+    },
+    {
+      "name": "James G. MacKinnon"
+    },
+    {
+      "name": "Matthew D. Webb"
+    }
+  ],
+  "submitted_at": "2026-02-12",
+  "updated_at": "2026-02-12",
+  "primary_category": "econ.EM",
+  "categories": [
+    "econ.EM",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.8156,
+    "recent_score": 0.5368,
+    "canonical_score": 0.572,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.8968
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "software"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-12"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.12043v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.12043v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

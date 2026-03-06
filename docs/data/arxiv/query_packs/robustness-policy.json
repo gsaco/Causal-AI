@@ -1,0 +1,39 @@
+{
+  "id": "robustness-policy",
+  "version": "2026-03-05/v2",
+  "group": "Robustness, Fairness, and Policy",
+  "title": "Robustness, Fairness, Privacy, and Shift",
+  "enabled": true,
+  "priority": 6,
+  "topics": ["distribution-shift", "causal-fairness", "causal-privacy"],
+  "category_allowlist": ["cs.LG", "stat.ML", "cs.AI"],
+  "required_keywords_any": ["causal", "counterfactual", "invariant", "fairness", "privacy"],
+  "exclude_keywords": ["magic state distillation", "acopf", "pde foundation models"],
+  "seed_papers": ["1501.01332", "1907.02893", "1703.06856"],
+  "per_pack_cap": 55,
+  "candidate_queries": [
+    {
+      "id": "robustness-invariance",
+      "query": "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))",
+      "max_results": 40,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "policy-fairness",
+      "query": "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)",
+      "max_results": 35,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ],
+  "precision_queries": [
+    {
+      "id": "policy-counterfactual-fairness",
+      "query": "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))",
+      "max_results": 25,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ]
+}

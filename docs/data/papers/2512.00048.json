@@ -1,0 +1,156 @@
+{
+  "arxiv_id": "2512.00048",
+  "canonical_url": "https://arxiv.org/abs/2512.00048v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.00048v1",
+  "title": "Causal Reinforcement Learning based Agent-Patient Interaction with Clinical Domain Knowledge",
+  "abstract": "Reinforcement Learning (RL) faces significant challenges in adaptive healthcare interventions, such as dementia care, where data is scarce, decisions require interpretability, and underlying patient-state dynamic are complex and causal in nature. In this work, we present a novel framework called Causal structure-aware Reinforcement Learning (CRL) that explicitly integrates causal discovery and reasoning into policy optimization. This method enables an agent to learn and exploit a directed acyclic graph (DAG) that describes the causal dependencies between human behavioral states and robot actions, facilitating more efficient, interpretable, and robust decision-making. We validate our approach in a simulated robot-assisted cognitive care scenario, where the agent interacts with a virtual patient exhibiting dynamic emotional, cognitive, and engagement states. The experimental results show that CRL agents outperform conventional model-free RL baselines by achieving higher cumulative rewards, maintaining desirable patient states more consistently, and exhibiting interpretable, clinically-aligned behavior. We further demonstrate that CRL's performance advantage remains robust across different weighting strategies and hyperparameter settings. In addition, we demonstrate a lightweight LLM-based deployment: a fixed policy is embedded into a system prompt that maps inferred states to actions, producing consistent, supportive dialogue without LLM finetuning. Our work illustrates the promise of causal reinforcement learning for human-robot interaction applications, where interpretability, adaptiveness, and data efficiency are paramount.",
+  "authors": [
+    {
+      "name": "Wenzheng Zhao"
+    },
+    {
+      "name": "Ran Zhang"
+    },
+    {
+      "name": "Ruth Palan Lopez"
+    },
+    {
+      "name": "Shu-Fen Wung"
+    },
+    {
+      "name": "Fengpei Yuan"
+    }
+  ],
+  "submitted_at": "2025-11-17",
+  "updated_at": "2025-11-17",
+  "primary_category": "cs.RO",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5497,
+    "recent_score": 0.0513,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.4386
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "causal discovery",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "llm"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-11-17"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.00048v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.00048v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical",
+    "robotics-autonomy"
+  ]
+}

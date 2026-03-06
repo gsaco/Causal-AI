@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2601.17146",
+  "canonical_url": "https://arxiv.org/abs/2601.17146v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.17146v1",
+  "title": "Falsifying Predictive Algorithm",
+  "abstract": "Empirical investigations into unintended model behavior often show that the algorithm is predicting another outcome than what was intended. These exposes highlight the need to identify when algorithms predict unintended quantities - ideally before deploying them into consequential settings. We propose a falsification framework that provides a principled statistical test for discriminant validity: the requirement that an algorithm predict intended outcomes better than impermissible ones. Drawing on falsification practices from causal inference, econometrics, and psychometrics, our framework compares calibrated prediction losses across outcomes to assess whether the algorithm exhibits discriminant validity with respect to a specified impermissible proxy. In settings where the target outcome is difficult to observe, multiple permissible proxy outcomes may be available; our framework accommodates both this setting and the case with a single permissible proxy. Throughout we use nonparametric hypothesis testing methods that make minimal assumptions on the data-generating process. We illustrate the method in an admissions setting, where the framework establishes discriminant validity with respect to gender but fails to establish discriminant validity with respect to race. This demonstrates how falsification can serve as an early validity check, prior to fairness or robustness analyses. We also provide analysis in a criminal justice setting, where we highlight the limitations of our framework and emphasize the need for complementary approaches to assess other aspects of construct validity and external validity.",
+  "authors": [
+    {
+      "name": "Amanda Coston"
+    }
+  ],
+  "submitted_at": "2026-01-23",
+  "updated_at": "2026-01-23",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "cs.CY",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 3,
+    "version_count": 1,
+    "trending_score": 0.6224,
+    "recent_score": 0.3081,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5476
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.17146v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.17146v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "economics-policy-social"
+  ]
+}

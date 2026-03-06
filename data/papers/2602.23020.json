@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2602.23020",
+  "canonical_url": "https://arxiv.org/abs/2602.23020v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.23020v1",
+  "title": "Testing Partially-Identifiable Causal Queries Using Ternary Tests",
+  "abstract": "We consider hypothesis testing of binary causal queries using observational data. Since the mapping of causal models to the observational distribution that they induce is not one-to-one, in general, causal queries are often only partially identifiable. When binary statistical tests are used for testing partially-identifiable causal queries, their results do not translate in a straightforward manner to the causal hypothesis testing problem. We propose using ternary (three-outcome) statistical tests to test partially-identifiable causal queries. We establish testability requirements that ternary tests must satisfy in terms of uniform consistency and present equivalent topological conditions on the hypotheses. To leverage the existing toolbox of binary tests, we prove that obtaining ternary tests by combining binary tests is complete. Finally, we demonstrate how topological conditions serve as a guide to construct ternary tests for two concrete causal hypothesis testing problems, namely testing the instrumental variable (IV) inequalities and comparing treatment efficacy.",
+  "authors": [
+    {
+      "name": "Sourbh Bhadane"
+    },
+    {
+      "name": "Joris M. Mooij"
+    },
+    {
+      "name": "Philip Boeken"
+    },
+    {
+      "name": "Onno Zoeter"
+    }
+  ],
+  "submitted_at": "2026-02-26",
+  "updated_at": "2026-02-26",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.74,
+    "recent_score": 0.7965,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.7044
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.23020v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.23020v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations"
+    ]
+  },
+  "application_tags": []
+}

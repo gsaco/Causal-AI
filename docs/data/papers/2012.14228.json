@@ -1,0 +1,174 @@
+{
+  "arxiv_id": "2012.14228",
+  "canonical_url": "https://arxiv.org/abs/2012.14228v1",
+  "pdf_url": "https://arxiv.org/pdf/2012.14228v1",
+  "title": "Causal World Models by Unsupervised Deconfounding of Physical Dynamics",
+  "abstract": "The capability of imagining internally with a mental model of the world is vitally important for human cognition. If a machine intelligent agent can learn a world model to create a \"dream\" environment, it can then internally ask what-if questions -- simulate the alternative futures that haven't been experienced in the past yet -- and make optimal decisions accordingly. Existing world models are established typically by learning spatio-temporal regularities embedded from the past sensory signal without taking into account confounding factors that influence state transition dynamics. As such, they fail to answer the critical counterfactual questions about \"what would have happened\" if a certain action policy was taken. In this paper, we propose Causal World Models (CWMs) that allow unsupervised modeling of relationships between the intervened observations and the alternative futures by learning an estimator of the latent confounding factors. We empirically evaluate our method and demonstrate its effectiveness in a variety of physical reasoning environments. Specifically, we show reductions in sample complexity for reinforcement learning tasks and improvements in counterfactual physical reasoning.",
+  "authors": [
+    {
+      "name": "Minne Li"
+    },
+    {
+      "name": "Mengyue Yang"
+    },
+    {
+      "name": "Furui Liu"
+    },
+    {
+      "name": "Xu Chen"
+    },
+    {
+      "name": "Zhitang Chen"
+    },
+    {
+      "name": "Jun Wang"
+    }
+  ],
+  "submitted_at": "2020-12-28",
+  "updated_at": "2020-12-28",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4674,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3184
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "latent-confounding-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "latent confound"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-world-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "world model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2020-12-28"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2012.14228v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2012.14228v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

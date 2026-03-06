@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2603.00343",
+  "canonical_url": "https://arxiv.org/abs/2603.00343v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.00343v1",
+  "title": "Causal Inference with MNAR Self-Masking Confounders: A Stratified Delta-Imputed Propensity Estimation Method",
+  "abstract": "In observational studies, causal inference becomes difficult when confounders are missing-not-at-random (MNAR), particularly where the missingness depends on the confounder's own unreported value (self-masking). Existing methods for handling MNAR confounders often rely on strong, unverifiable assumptions, leading to biased estimates. We propose a simple approach with Stratified Delta-Imputed Propensity Estimator (SDIPE) in the presence of self-masking confounders. SDIPE first stratifies data into observed and missing groups, imputes missing confounders via delta-adjusted multiple imputation. Then, within each group, average-treatment-effects (ATEs) are estimated by stabilized-inverse-probability-weights. The final ATE is obtained by combining the subgroup-specific estimates, weighted by respective proportions in the sample. Simulation study shows that SDIPE achieves low bias and near-nominal coverage (94-96%) across varying missingness, sample sizes, and treatment prevalence. In contrast, conventional sensitivity-based multiple imputation exhibits substantial bias and poor coverage (18-89%). Additionally, SDIPE is robust to the choice of the delta parameter. Applied to NHANES-2017-2018, SDIPE estimates that married individuals have a 1.19-point lower depression score than unmarried individuals (95% CI: -1.76, -0.64), adjusting for MNAR income data. SDIPE provides a practical and robust approach for causal inference with self-masking MNAR confounders, offering improved performance over existing methods without requiring restrictive assumptions about the missingness mechanism.",
+  "authors": [
+    {
+      "name": "Md. Niamul Islam Sium"
+    },
+    {
+      "name": "Mohammad Hridoy Patwary"
+    }
+  ],
+  "submitted_at": "2026-02-27",
+  "updated_at": "2026-02-27",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6874,
+    "recent_score": 0.8194,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.6647
+  },
+  "topic_tags": [
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.00343v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.00343v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

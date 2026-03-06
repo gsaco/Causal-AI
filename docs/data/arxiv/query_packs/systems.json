@@ -1,0 +1,30 @@
+{
+  "id": "systems",
+  "version": "2026-03-05/v2",
+  "group": "Systems",
+  "title": "Tooling and Operational Causal AI",
+  "enabled": true,
+  "priority": 7,
+  "topics": ["systems-tooling"],
+  "category_allowlist": ["cs.AI", "cs.LG", "stat.ML"],
+  "required_keywords_any": ["causal inference", "library", "toolkit", "benchmark", "evaluation"],
+  "exclude_keywords": ["library catalog", "tool use"],
+  "seed_papers": ["2011.04216"],
+  "per_pack_cap": 35,
+  "candidate_queries": [
+    {
+      "id": "systems-toolkits",
+      "query": "((ti:\"causal inference\" OR abs:\"causal inference\") AND (ti:library OR ti:toolkit OR abs:library OR abs:toolkit OR abs:framework)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)",
+      "max_results": 25,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    },
+    {
+      "id": "systems-benchmarks",
+      "query": "((abs:\"causal benchmark\" OR abs:\"causal evaluation\" OR abs:\"counterfactual benchmark\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))",
+      "max_results": 20,
+      "sort_by": "submittedDate",
+      "sort_order": "descending"
+    }
+  ]
+}

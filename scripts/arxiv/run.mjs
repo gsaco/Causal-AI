@@ -1,8 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { fetchPage } from "./arxiv_atom.mjs";
+import { fetchAllByQuery, fetchPage } from "./arxiv_atom.mjs";
 import { normalizeEntry } from "./normalize.mjs";
-import { writeSnapshots } from "./write_snapshots.mjs";
+import { mergePaperRecords, writeSnapshots } from "./write_snapshots.mjs";
 import { ensureEvidence } from "./ensure_evidence.mjs";
 import { tagTopics } from "./tag_topics.mjs";
 import { computeTopicMomentum } from "./metrics_topic_momentum.mjs";
@@ -18,6 +18,14 @@ import { buildAtlasGraph } from "./build_atlas_graph.mjs";
 import { writeProvenance } from "./provenance.mjs";
 import { computeCoverage } from "../validate/compute_coverage.mjs";
 import { harvestOai } from "./oai_harvest.mjs";
+import { buildHarvestPlan, collectSeedPaperIds, loadQueryPacks } from "./query_packs.mjs";
+import {
+  filterAndEnrichCorpus,
+  loadApplicationRegistry,
+  scoreCorpusForRanking
+} from "./enrich_corpus.mjs";
+import { generateNavigatorData } from "./generate_navigator_data.mjs";
+import { extractArxivIds } from "../validate/extract_arxiv_ids.mjs";
 
 function getArgValue(prefix, fallback) {
   const arg = process.argv.find((item) => item.startsWith(prefix));
@@ -42,45 +50,82 @@ async function loadJson(filePath) {
 async function loadAllPapers(dataDir) {
   const papersDir = path.join(dataDir, "papers");
   const papers = [];
-  const files = await fs.readdir(papersDir);
-  for (const file of files) {
-    if (!file.endsWith(".json")) continue;
-    const raw = await fs.readFile(path.join(papersDir, file), "utf-8");
-    papers.push(JSON.parse(raw));
+  try {
+    const files = await fs.readdir(papersDir);
+    for (const file of files) {
+      if (!file.endsWith(".json")) continue;
+      const raw = await fs.readFile(path.join(papersDir, file), "utf-8");
+      papers.push(JSON.parse(raw));
+    }
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
   }
   return papers;
 }
 
-async function fetchTopicEntries(topics, { maxPerTopic = 200, offline = false } = {}) {
+function mergePaperList(papers) {
+  const merged = new Map();
+  for (const paper of papers) {
+    const current = merged.get(paper.arxiv_id);
+    merged.set(paper.arxiv_id, mergePaperRecords(current, paper));
+  }
+  return Array.from(merged.values());
+}
+
+function chunkArray(items, size) {
+  const chunks = [];
+  for (let index = 0; index < items.length; index += size) {
+    chunks.push(items.slice(index, index + size));
+  }
+  return chunks;
+}
+
+async function fetchPlanEntries(plan, { offline = false } = {}) {
   if (offline) return [];
   const harvestedAt = new Date().toISOString();
   const harvestRunId = `snapshot-${formatDate(new Date())}`;
   const normalized = [];
 
-  for (const topic of topics) {
-    if (!topic.query) continue;
-    let start = 0;
-    const pageSize = Math.min(100, maxPerTopic);
-    let fetched = 0;
-    while (fetched < maxPerTopic) {
-      const { entries } = await fetchPage({
-        search_query: topic.query,
-        start,
-        max_results: pageSize
-      });
-      if (entries.length === 0) break;
-      for (const entry of entries) {
-        normalized.push(
-          normalizeEntry(entry, {
-            query: topic.query,
-            harvestedAt,
-            harvestRunId
-          })
-        );
-      }
-      fetched += entries.length;
-      if (entries.length < pageSize) break;
-      start += pageSize;
+  for (const task of plan) {
+    const { entries } = await fetchPage({
+      search_query: task.query,
+      start: 0,
+      max_results: task.maxResults,
+      sortBy: task.sortBy,
+      sortOrder: task.sortOrder
+    });
+    for (const entry of entries) {
+      normalized.push(
+        normalizeEntry(entry, {
+          query: task.query,
+          queryPackId: task.packId,
+          harvestedAt,
+          harvestRunId
+        })
+      );
+    }
+  }
+
+  return normalized;
+}
+
+async function hydratePaperIds(ids, { offline = false, reason = "hydrate" } = {}) {
+  if (offline || ids.length === 0) return [];
+  const harvestedAt = new Date().toISOString();
+  const normalized = [];
+  const chunks = chunkArray(Array.from(new Set(ids)), 25);
+
+  for (const chunk of chunks) {
+    const idList = chunk.join(",");
+    const entries = await fetchAllByQuery({ id_list: idList, max_results: chunk.length });
+    for (const entry of entries) {
+      normalized.push(
+        normalizeEntry(entry, {
+          query: `id_list:${reason}:${idList}`,
+          harvestedAt,
+          harvestRunId: `${reason}-${formatDate(new Date())}`
+        })
+      );
     }
   }
 
@@ -109,50 +154,101 @@ async function updateEditorialLedger({ dataDir, rankingVersion }) {
 
 export async function runPipeline() {
   const dataDir = "data";
-  const windowDays = Number(getArgValue("--windowDays=", "30"));
-  const maxPerTopic = Number(getArgValue("--maxPerTopic=", "200"));
+  const windowDays = Number(getArgValue("--windowDays=", "120"));
   const dryRun = parseBooleanFlag("--dryRun");
   const offline = parseBooleanFlag("--offline");
   const useOai = parseBooleanFlag("--useOai=true");
+  const retentionDays = Number(getArgValue("--retentionDays=", "730"));
 
-  const topics = await loadJson(path.join(dataDir, "taxonomy", "topics.json"));
-  const rankingConfig = await loadJson(path.join(dataDir, "ranking", "config.json"));
-  const queryPack = await loadJson(path.join(dataDir, "editorial", "query-pack-version.json")).catch(() => ({ version: "" }));
+  const [topics, rankingConfig, queryPackVersionMeta, queryPacks, applicationRegistry] = await Promise.all([
+    loadJson(path.join(dataDir, "taxonomy", "topics.json")),
+    loadJson(path.join(dataDir, "ranking", "config.json")),
+    loadJson(path.join(dataDir, "editorial", "query-pack-version.json")).catch(() => ({ version: "" })),
+    loadQueryPacks({ dataDir }),
+    loadApplicationRegistry({ dataDir })
+  ]);
 
+  const harvestPlan = buildHarvestPlan(queryPacks);
+  const seedPaperIds = collectSeedPaperIds(queryPacks);
+  const referencedIds = Array.from(await extractArxivIds());
+  const anchoredIds = topics.flatMap((topic) => topic.anchors ?? []);
+  const canonicalIds = new Set([...seedPaperIds, ...referencedIds, ...anchoredIds]);
+
+  let oaiIds = [];
   if (useOai && !offline) {
-    await harvestOai({ dataDir });
+    const oai = await harvestOai({ dataDir });
+    oaiIds = (oai.ids ?? []).slice(0, 120);
   }
 
-  await ensureEvidence({ offline, harvestRunId: `evidence-${formatDate(new Date())}` });
+  const [existingPapers, evidencePapers, harvested, seedPapers, oaiPapers] = await Promise.all([
+    loadAllPapers(dataDir),
+    ensureEvidence({ offline, harvestRunId: `evidence-${formatDate(new Date())}`, writeOutput: false }),
+    fetchPlanEntries(harvestPlan, { offline }),
+    hydratePaperIds(seedPaperIds, { offline, reason: "seed-papers" }),
+    hydratePaperIds(oaiIds, { offline, reason: "oai-delta" })
+  ]);
 
-  const harvested = await fetchTopicEntries(topics, { maxPerTopic, offline });
-  if (harvested.length > 0) {
-    await writeSnapshots(harvested, { dataDir });
-  }
+  const retentionCutoff = new Date(Date.now() - retentionDays * 24 * 60 * 60 * 1000);
+  const retainedExisting = existingPapers.filter((paper) => {
+    if (canonicalIds.has(paper.arxiv_id)) return true;
+    const submitted = new Date(paper.submitted_at ?? 0);
+    return !Number.isNaN(submitted.getTime()) && submitted >= retentionCutoff;
+  });
 
-  const papers = await loadAllPapers(dataDir);
-  const tagged = tagTopics(papers, topics, { rulesVersion: "v1" });
+  const mergedCandidates = mergePaperList([
+    ...retainedExisting,
+    ...evidencePapers,
+    ...seedPapers,
+    ...oaiPapers,
+    ...harvested
+  ]);
+  const tagged = tagTopics(mergedCandidates, topics, { rulesVersion: "v2" });
+  const filtered = filterAndEnrichCorpus({
+    papers: tagged,
+    packs: queryPacks,
+    registry: applicationRegistry,
+    canonicalIds,
+    retainedIds: canonicalIds
+  });
 
-  const momentum = computeTopicMomentum(tagged, topics, {
+  const momentum = computeTopicMomentum(filtered, topics, {
     windowA: rankingConfig.momentum_window_days,
     windowB: rankingConfig.baseline_window_days
   });
+  const scored = scoreCorpusForRanking({
+    papers: filtered,
+    momentumByTopic: momentum.topics,
+    canonicalIds
+  });
+  const trended = computeTrending(scored, momentum.topics, rankingConfig);
+
   if (!dryRun) {
     await fs.mkdir(path.join(dataDir, "metrics"), { recursive: true });
     await fs.writeFile(
       path.join(dataDir, "metrics", "topic_momentum.json"),
       JSON.stringify(momentum, null, 2)
     );
-  }
 
-  const trended = computeTrending(tagged, momentum.topics, rankingConfig);
-  if (!dryRun) {
-    await writeSnapshots(trended, { dataDir });
-  }
+    await writeSnapshots(trended, {
+      dataDir,
+      pruneToIds: trended.map((paper) => paper.arxiv_id)
+    });
 
-  if (!dryRun) {
-    await generateTopicFeeds({ dataDir, limitLatest: 12, limitTrending: 12 });
-    await generateApplicationFeeds({ dataDir, windowDays, limitLatest: 12, limitTrending: 12 });
+    await generateTopicFeeds({
+      dataDir,
+      papers: trended,
+      topics,
+      limitLatest: 12,
+      limitTrending: 12
+    });
+    await generateApplicationFeeds({
+      dataDir,
+      windowDays,
+      limitLatest: 12,
+      limitTrending: 12,
+      papers: trended
+    });
+    await generateNavigatorData({ dataDir });
     await writeTopicTimeseries({ dataDir });
     await writeTrendRadar({ dataDir });
     await writeCrosslistHeatmap({ dataDir });
@@ -169,14 +265,14 @@ export async function runPipeline() {
   await writeProvenance({
     dataDir,
     harvestWindow,
-    source: "arxiv_api",
+    source: useOai && !offline ? "arxiv_api+oai" : "arxiv_api",
     dataset: offline ? "offline" : "prod",
     records,
     rankingConfigVersion: rankingConfig.version,
-    queryPackVersion: queryPack.version ?? ""
+    queryPackVersion: queryPackVersionMeta.version || queryPacks[0]?.version || ""
   });
 
-  console.log(`Pipeline complete. Papers: ${records}`);
+  console.log(`Pipeline complete. Papers: ${records}. Harvest tasks: ${harvestPlan.length}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

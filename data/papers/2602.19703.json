@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2602.19703",
+  "canonical_url": "https://arxiv.org/abs/2602.19703v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.19703v1",
+  "title": "Testing Effect Homogeneity and Confounding in High-Dimensional Experimental and Observational Studies",
+  "abstract": "We propose a framework for testing the homogeneity of conditional average treatment effects (CATEs) across multiple experimental and observational studies. Our approach leverages multiple randomized trials to assess whether treatment effects vary with unobserved heterogeneity that differs across trials: if CATEs are homogeneous, this indicates the absence of interactions between treatment and unobservables in the mean effect. Comparing CATEs between experimental and observational data further allows evaluation of potential confounding: if the estimands coincide, there is no unobserved confounding; if they differ, deviations may arise from unobserved confounding, effect heterogeneity, or both. We extend the framework to settings with alternative identification strategies, namely instrumental variable settings and panel data with parallel trends assumptions based on differences in differences, where effects are identified only locally for subpopulations such as compliers or treated units. In these contexts, testing homogeneity is useful for assessing whether local effects can be extrapolated to the total population. We suggest a test based on double machine learning that accommodates high-dimensional covariates in a data-driven way and investigate its finite-sample performance through a simulation study. Finally, we apply the test to the International Stroke Trial (IST), a large multi-country randomized controlled trial in patients with acute ischaemic stroke that evaluated whether early treatment with aspirin altered subsequent clinical outcomes. Our methodology provides a flexible tool for both validating identification assumptions and understanding the generalizability of estimated treatment effects.",
+  "authors": [
+    {
+      "name": "Ana Armendariz"
+    },
+    {
+      "name": "Martin Huber"
+    }
+  ],
+  "submitted_at": "2026-02-23",
+  "updated_at": "2026-02-23",
+  "primary_category": "econ.EM",
+  "categories": [
+    "econ.EM",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7497,
+    "recent_score": 0.7316,
+    "rising_score": 0.7558,
+    "canonical_score": 0.7312,
+    "max_topic_confidence": 0.81
+  },
+  "topic_tags": [
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "instrumental variable",
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.19703v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.19703v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)",
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

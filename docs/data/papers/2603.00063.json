@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2603.00063",
+  "canonical_url": "https://arxiv.org/abs/2603.00063v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.00063v1",
+  "title": "Measuring What AI Systems Might Do: Towards A Measurement Science in AI",
+  "abstract": "Scientists, policy-makers, business leaders, and members of the public care about what modern artificial intelligence systems are disposed to do. Yet terms such as capabilities, propensities, skills, values, and abilities are routinely used interchangeably and conflated with observable performance, with AI evaluation practices rarely specifying what quantity they purport to measure. We argue that capabilities and propensities are dispositional properties - stable features of systems characterised by counterfactual relationships between contextual conditions and behavioural outputs. Measuring a disposition requires (i) hypothesising which contextual properties are causally relevant, (ii) independently operationalising and measuring those properties, and (iii) empirically mapping how variation in those properties affects the probability of the behaviour. Dominant approaches to AI evaluation, from benchmark averages to data-driven latent-variable models such as Item Response Theory, bypass these steps entirely. Building on ideas from philosophy of science, measurement theory, and cognitive science, we develop a principled account of AI capabilities and propensities as dispositions, show why prevailing evaluation practices fail to measure them, and outline what disposition-respecting, scientifically defensible AI evaluation would require.",
+  "authors": [
+    {
+      "name": "Konstantinos Voudouris"
+    },
+    {
+      "name": "Mirko Thalmann"
+    },
+    {
+      "name": "Alex Kipnis"
+    },
+    {
+      "name": "José Hernández-Orallo"
+    },
+    {
+      "name": "Eric Schulz"
+    }
+  ],
+  "submitted_at": "2026-02-10",
+  "updated_at": "2026-02-10",
+  "primary_category": "cs.CY",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.624,
+    "recent_score": 0.5076,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5497
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-10"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.00063v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.00063v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"treatment effect\" OR abs:\"treatment effect\" OR ti:counterfactual OR abs:counterfactual) AND (abs:causal OR abs:estimation OR abs:estimate)) AND (cat:stat.ML OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

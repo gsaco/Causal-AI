@@ -1,0 +1,135 @@
+{
+  "arxiv_id": "2510.06935",
+  "canonical_url": "https://arxiv.org/abs/2510.06935v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.06935v1",
+  "title": "PyCFRL: A Python library for counterfactually fair offline reinforcement learning via sequential data preprocessing",
+  "abstract": "Reinforcement learning (RL) aims to learn and evaluate a sequential decision rule, often referred to as a \"policy\", that maximizes the population-level benefit in an environment across possibly infinitely many time steps. However, the sequential decisions made by an RL algorithm, while optimized to maximize overall population benefits, may disadvantage certain individuals who are in minority or socioeconomically disadvantaged groups. To address this problem, we introduce PyCFRL, a Python library for ensuring counterfactual fairness in offline RL. PyCFRL implements a novel data preprocessing algorithm for learning counterfactually fair RL policies from offline datasets and provides tools to evaluate the values and counterfactual unfairness levels of RL policies. We describe the high-level functionalities of PyCFRL and demonstrate one of its major use cases through a data example. The library is publicly available on PyPI and Github (https://github.com/JianhanZhang/PyCFRL), and detailed tutorials can be found in the PyCFRL documentation (https://pycfrl-documentation.netlify.app).",
+  "authors": [
+    {
+      "name": "Jianhan Zhang"
+    },
+    {
+      "name": "Jitao Wang"
+    },
+    {
+      "name": "Chengchun Shi"
+    },
+    {
+      "name": "John D. Piette"
+    },
+    {
+      "name": "Donglin Zeng"
+    },
+    {
+      "name": "Zhenke Wu"
+    }
+  ],
+  "submitted_at": "2025-10-08",
+  "updated_at": "2025-10-08",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5191,
+    "recent_score": 0.0184,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.3753
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "systems-tooling",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "library"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-08"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.06935v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.06935v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

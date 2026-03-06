@@ -1,0 +1,127 @@
+{
+  "arxiv_id": "2602.23611",
+  "canonical_url": "https://arxiv.org/abs/2602.23611v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.23611v1",
+  "title": "Fairness under Graph Uncertainty: Achieving Interventional Fairness with Partially Known Causal Graphs over Clusters of Variables",
+  "abstract": "Algorithmic decisions about individuals require predictions that are not only accurate but also fair with respect to sensitive attributes such as gender and race. Causal notions of fairness align with legal requirements, yet many methods assume access to detailed knowledge of the underlying causal graph, which is a demanding assumption in practice. We propose a learning framework that achieves interventional fairness by leveraging a causal graph over \\textit{clusters of variables}, which is substantially easier to estimate than a variable-level graph. With possible \\textit{adjustment cluster sets} identified from such a cluster causal graph, our framework trains a prediction model by reducing the worst-case discrepancy between interventional distributions across these sets. To this end, we develop a computationally efficient barycenter kernel maximum mean discrepancy (MMD) that scales favorably with the number of sensitive attribute values. Extensive experiments show that our framework strikes a better balance between fairness and accuracy than existing approaches, highlighting its effectiveness under limited causal graph knowledge.",
+  "authors": [
+    {
+      "name": "Yoichi Chikahara"
+    }
+  ],
+  "submitted_at": "2026-02-27",
+  "updated_at": "2026-02-27",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.7198,
+    "recent_score": 0.8194,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.6669
+  },
+  "topic_tags": [
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "adjustment"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.23611v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.23611v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

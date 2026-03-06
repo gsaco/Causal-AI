@@ -1,0 +1,98 @@
+{
+  "arxiv_id": "2602.15332",
+  "canonical_url": "https://arxiv.org/abs/2602.15332v2",
+  "pdf_url": "https://arxiv.org/pdf/2602.15332v2",
+  "title": "Directional Reasoning Trajectory Change (DRTC): Identifying Critical Trace Segments in Reasoning Models",
+  "abstract": "Understanding how language models carry out long-horizon reasoning remains an open challenge. Existing interpretability methods often highlight tokens correlated with an answer, but rarely reveal where consequential reasoning turns occur, which earlier context triggers them under causal intervention, or whether highlighted text actually steers the rollout. We introduce Directional Reasoning Trajectory Change (DRTC), a process-causal method that (i) detects pivot decision points via uncertainty and distribution-shift signals and (ii) applies receiver-side interventions that preserve the realized continuation without resampling while blocking information flow from selected earlier chunks only at a pivot. DRTC measures how each intervention redirects the log-probability trajectory relative to the realized rollout direction, yielding signed per-chunk attributions; we also compute logit-space curvature changes and curvature signatures as a complementary geometric diagnostic. Across four reasoning models, influence is sharply concentrated (Gini approximately 0.50-0.58, top-5% mass approximately 0.23-0.28), and learned pivots induce stronger effects than matched random spans. In a 500-problem MATH scaling study with R1-Distill-Qwen-1.5B, learned spans continue to outperform matched random spans (median Delta=0.409, 355/500 positive; p=2.3e-21), and curvature-impact co-localizes with DRTC within traces as a diagnostic. We benchmark against gradient- and perturbation-based chunk attributions and show graded outcome linkage: under embedding-interpolation edits, top-ranked DRTC chunks reduce teacher-forced gold-answer log-probability more than strict position-matched random chunks on a stability-filtered subset. Overall, DRTC provides a causally grounded view of how specific context elements steer on-policy reasoning trajectories.",
+  "authors": [
+    {
+      "name": "Waldemar Chang"
+    }
+  ],
+  "submitted_at": "2026-02-17",
+  "updated_at": "2026-02-27",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.6857,
+    "recent_score": 0.6967,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.6095
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "language model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-27"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.15332v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.15332v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:invariant OR abs:invariant OR ti:\"distribution shift\" OR abs:\"distribution shift\" OR ti:\"domain generalization\" OR abs:\"domain generalization\") AND (abs:causal OR abs:\"invariant prediction\" OR abs:\"invariant risk minimization\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

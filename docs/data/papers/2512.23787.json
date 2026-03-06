@@ -1,0 +1,133 @@
+{
+  "arxiv_id": "2512.23787",
+  "canonical_url": "https://arxiv.org/abs/2512.23787v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.23787v1",
+  "title": "TabMixNN: A Unified Deep Learning Framework for Structural Mixed Effects Modeling on Tabular Data",
+  "abstract": "We present TabMixNN, a flexible PyTorch-based deep learning framework that synthesizes classical mixed-effects modeling with modern neural network architectures for tabular data analysis. TabMixNN addresses the growing need for methods that can handle hierarchical data structures while supporting diverse outcome types including regression, classification, and multitask learning. The framework implements a modular three-stage architecture: (1) a mixed-effects encoder with variational random effects and flexible covariance structures, (2) backbone architectures including Generalized Structural Equation Models (GSEM) and spatial-temporal manifold networks, and (3) outcome-specific prediction heads supporting multiple outcome families. Key innovations include an R-style formula interface for accessibility, support for directed acyclic graph (DAG) constraints for causal structure learning, Stochastic Partial Differential Equation (SPDE) kernels for spatial modeling, and comprehensive interpretability tools including SHAP values and variance decomposition. We demonstrate the framework's flexibility through applications to longitudinal data analysis, genomic prediction, and spatial-temporal modeling. TabMixNN provides a unified interface for researchers to leverage deep learning while maintaining the interpretability and theoretical grounding of classical mixed-effects models.",
+  "authors": [
+    {
+      "name": "Deniz Akdemir"
+    }
+  ],
+  "submitted_at": "2025-12-29",
+  "updated_at": "2025-12-29",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.6431,
+    "recent_score": 0.156,
+    "canonical_score": 0.9505,
+    "max_topic_confidence": 0.89,
+    "rising_score": 0.5406
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.89,
+      "rationale": {
+        "matched_keywords": [
+          "structure learning",
+          "DAG",
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural equation",
+          "DAG"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.23787v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.23787v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

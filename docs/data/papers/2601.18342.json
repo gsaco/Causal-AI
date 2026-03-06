@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2601.18342",
+  "canonical_url": "https://arxiv.org/abs/2601.18342v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.18342v1",
+  "title": "Structural Gender Bias in Credit Scoring: Proxy Leakage",
+  "abstract": "As financial institutions increasingly adopt machine learning for credit risk assessment, the persistence of algorithmic bias remains a critical barrier to equitable financial inclusion. This study provides a comprehensive audit of structural gender bias within the Taiwan Credit Default dataset, specifically challenging the prevailing doctrine of \"fairness through blindness.\" Despite the removal of explicit protected attributes and the application of industry standard fairness interventions, our results demonstrate that gendered predictive signals remain deeply embedded within non-sensitive features. Utilizing SHAP (SHapley Additive exPlanations), we identify that variables such as Marital Status, Age, and Credit Limit function as potent proxies for gender, allowing models to maintain discriminatory pathways while appearing statistically fair. To mathematically quantify this leakage, we employ an adversarial inverse modeling framework. Our findings reveal that the protected gender attribute can be reconstructed from purely non-sensitive financial features with an ROC AUC score of 0.65, demonstrating that traditional fairness audits are insufficient for detecting implicit structural bias. These results advocate for a shift from surface-level statistical parity toward causal-aware modeling and structural accountability in financial AI.",
+  "authors": [
+    {
+      "name": "Navya SD"
+    },
+    {
+      "name": "Sreekanth D"
+    },
+    {
+      "name": "SS Uma Sankari"
+    }
+  ],
+  "submitted_at": "2026-01-26",
+  "updated_at": "2026-01-26",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5358,
+    "recent_score": 0.3346,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.4096
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-26"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.18342v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.18342v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:fairness OR abs:fairness OR ti:privacy OR abs:privacy) AND (abs:causal OR ti:causal OR abs:counterfactual)) AND (cat:cs.LG OR cat:stat.ML OR cat:cs.AI)"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents"
+    ]
+  },
+  "application_tags": []
+}

@@ -1,0 +1,165 @@
+{
+  "arxiv_id": "2405.06925",
+  "canonical_url": "https://arxiv.org/abs/2405.06925v2",
+  "pdf_url": "https://arxiv.org/pdf/2405.06925v2",
+  "title": "Semi-supervised Anomaly Detection via Adaptive Reinforcement Learning-Enabled Method with Causal Inference for Sensor Signals",
+  "abstract": "Semi-supervised anomaly detection for sensor signals is critical in ensuring system reliability in smart manufacturing. However, existing methods rely heavily on data correlation, neglecting causality and leading to potential misinterpretations due to confounding factors. Moreover, while current reinforcement learning-based methods can effectively identify known and unknown anomalies with limited labeled samples, these methods still face several challenges, such as under-utilization of priori knowledge, lack of model flexibility, and deficient reward feedback during environmental interactions. To address the above problems, this paper innovatively constructs a counterfactual causal reinforcement learning model, termed Triple-Assisted Causal Reinforcement Learning Anomaly Detector (Tri-CRLAD). The model leverages causal inference to extract the intrinsic causal feature in data, enhancing the agent's utilization of prior knowledge and improving its generalization capability. In addition, Tri-CRLAD features a triple decision support mechanism, including a sampling strategy based on historical similarity, an adaptive threshold smoothing adjustment strategy, and an adaptive decision reward mechanism. These mechanisms further enhance the flexibility and generalization ability of the model, enabling it to effectively respond to various complex and dynamically changing environments. Experimental results across seven diverse sensor signal datasets demonstrate that Tri-CRLAD outperforms nine state-of-the-art baseline methods. Notably, Tri-CRLAD achieves up to a 23\\% improvement in anomaly detection stability with minimal known anomaly samples, highlighting its potential in semi-supervised anomaly detection scenarios. Our code is available at https://github.com/Aoudsung/Tri-CRLAD.",
+  "authors": [
+    {
+      "name": "Xiangwei Chen"
+    },
+    {
+      "name": "Ruliang Xiaoa"
+    },
+    {
+      "name": "Zhixia Zeng"
+    },
+    {
+      "name": "Zhipeng Qiu"
+    },
+    {
+      "name": "Shi Zhang"
+    },
+    {
+      "name": "Xin Du"
+    }
+  ],
+  "submitted_at": "2024-05-11",
+  "updated_at": "2024-05-16",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.428,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2658
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-agents",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "agent"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "adjustment"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2024-05-16"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2405.06925v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2405.06925v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

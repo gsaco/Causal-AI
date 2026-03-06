@@ -1,0 +1,139 @@
+{
+  "arxiv_id": "2510.18841",
+  "canonical_url": "https://arxiv.org/abs/2510.18841v1",
+  "pdf_url": "https://arxiv.org/pdf/2510.18841v1",
+  "title": "A Hybrid Enumeration Framework for Optimal Counterfactual Generation in Post-Acute COVID-19 Heart Failure",
+  "abstract": "Counterfactual inference provides a mathematical framework for reasoning about hypothetical outcomes under alternative interventions, bridging causal reasoning and predictive modeling. We present a counterfactual inference framework for individualized risk estimation and intervention analysis, illustrated through a clinical application to post-acute sequelae of COVID-19 (PASC) among patients with pre-existing heart failure (HF). Using longitudinal diagnosis, laboratory, and medication data from a large health-system cohort, we integrate regularized predictive modeling with counterfactual search to identify actionable pathways to PASC-related HF hospital admissions. The framework combines exact enumeration with optimization-based methods, including the Nearest Instance Counterfactual Explanations (NICE) and Multi-Objective Counterfactuals (MOC) algorithms, to efficiently explore high-dimensional intervention spaces. Applied to more than 2700 individuals with confirmed SARS-CoV-2 infection and prior HF, the model achieved strong discriminative performance (AUROC: 0.88, 95% CI: 0.84-0.91) and generated interpretable, patient-specific counterfactuals that quantify how modifying comorbidity patterns or treatment factors could alter predicted outcomes. This work demonstrates how counterfactual reasoning can be formalized as an optimization problem over predictive functions, offering a rigorous, interpretable, and computationally efficient approach to personalized inference in complex biomedical systems.",
+  "authors": [
+    {
+      "name": "Jingya Cheng"
+    },
+    {
+      "name": "Alaleh Azhir"
+    },
+    {
+      "name": "Jiazi Tian"
+    },
+    {
+      "name": "Hossein Estiri"
+    }
+  ],
+  "submitted_at": "2025-10-21",
+  "updated_at": "2025-10-21",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.3795,
+    "recent_score": 0.0256,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2012
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-generative-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual generation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-10-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2510.18841v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2510.18841v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal generative\" OR abs:\"causal generative\" OR ti:\"counterfactual generation\" OR abs:\"counterfactual generation\") AND (cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "representation",
+      "foundations",
+      "discovery-inference",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "healthcare-clinical"
+  ]
+}

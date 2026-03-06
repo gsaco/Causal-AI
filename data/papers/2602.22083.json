@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2602.22083",
+  "canonical_url": "https://arxiv.org/abs/2602.22083v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.22083v1",
+  "title": "Coarsening Bias from Variable Discretization in Causal Functionals",
+  "abstract": "A class of causal effect functionals requires integration over conditional densities of continuous variables, as in mediation effects and nonparametric identification in causal graphical models. Estimating such densities and evaluating the resulting integrals can be statistically and computationally demanding. A common workaround is to discretize the variable and replace integrals with finite sums. Although convenient, discretization alters the population-level functional and can induce non-negligible approximation bias, even under correct identification. Under smoothness conditions, we show that this coarsening bias is first order in the bin width and arises at the level of the target functional, distinct from statistical estimation error. We propose a simple bias-reduced functional that evaluates the outcome regression at within-bin conditional means, eliminating the leading term and yielding a second-order approximation error. We derive plug-in and one-step estimators for the bias-reduced functional. Simulations demonstrate substantial bias reduction and near-nominal confidence interval coverage, even under coarse binning. Our results provide a simple framework for controlling the impact of variable discretization on parameter approximation and estimation.",
+  "authors": [
+    {
+      "name": "Xiaxian Ou"
+    },
+    {
+      "name": "Razieh Nabi"
+    }
+  ],
+  "submitted_at": "2026-02-25",
+  "updated_at": "2026-02-25",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.7631,
+    "recent_score": 0.7743,
+    "canonical_score": 0.811,
+    "max_topic_confidence": 0.58,
+    "rising_score": 0.7472
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-discovery",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "graph"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "mediation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "mediation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-25"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.22083v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.22083v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference",
+      "foundations",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

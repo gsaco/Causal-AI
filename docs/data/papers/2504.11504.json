@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2504.11504",
+  "canonical_url": "https://arxiv.org/abs/2504.11504v2",
+  "pdf_url": "https://arxiv.org/pdf/2504.11504v2",
+  "title": "Counterfactual Fairness Evaluation of Machine Learning Models on Educational Datasets",
+  "abstract": "As machine learning models are increasingly used in educational settings, from detecting at-risk students to predicting student performance, algorithmic bias and its potential impacts on students raise critical concerns about algorithmic fairness. Although group fairness is widely explored in education, works on individual fairness in a causal context are understudied, especially on counterfactual fairness. This paper explores the notion of counterfactual fairness for educational data by conducting counterfactual fairness analysis of machine learning models on benchmark educational datasets. We demonstrate that counterfactual fairness provides meaningful insight into the causality of sensitive attributes and causal-based individual fairness in education.",
+  "authors": [
+    {
+      "name": "Woojin Kim"
+    },
+    {
+      "name": "Hyeoncheol Kim"
+    }
+  ],
+  "submitted_at": "2025-04-15",
+  "updated_at": "2025-04-20",
+  "primary_category": "cs.CY",
+  "categories": [
+    "cs.CY",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4243,
+    "recent_score": 0.0003,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.2714
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual fairness",
+          "fairness",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal",
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2025-04-20"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2504.11504v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2504.11504v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

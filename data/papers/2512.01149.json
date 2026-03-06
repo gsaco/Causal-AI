@@ -1,0 +1,110 @@
+{
+  "arxiv_id": "2512.01149",
+  "canonical_url": "https://arxiv.org/abs/2512.01149v2",
+  "pdf_url": "https://arxiv.org/pdf/2512.01149v2",
+  "title": "A Benchmark of Causal vs. Correlation AI for Predictive Maintenance",
+  "abstract": "Predictive maintenance in manufacturing environments presents a challenging optimization problem characterized by extreme cost asymmetry, where missed failures incur costs roughly fifty times higher than false alarms. Predictive maintenance in manufacturing environments presents a challenging optimization problem characterized by extreme cost asymmetry, where missed failures incur costs roughly fifty times higher than false alarms. Conventional machine learning approaches typically optimize statistical accuracy metrics that do not reflect this operational reality and cannot reliably distinguish causal relationships from spurious correlations. This study benchmarks eight predictive models, ranging from baseline statistical approaches to Bayesian structural causal methods, on a dataset of 10,000 CNC machines with a 3.3 percent failure prevalence. While ensemble correlation-based models such as Random Forest (L4) achieve the highest raw cost savings (70.8 percent reduction), the Bayesian Structural Causal Model (L7) delivers competitive financial performance (66.4 percent cost reduction) with an inherent ability of failure attribution, which correlation-based models do not readily provide. The model achieves perfect attribution for HDF, PWF, and OSF failure types. These results suggest that causal methods, when combined with domain knowledge and Bayesian inference, offer a potentially favorable trade-off between predictive performance and operational interpretability in predictive maintenance applications.",
+  "authors": [
+    {
+      "name": "Shaunak Dhande"
+    },
+    {
+      "name": "Chutian Ma"
+    },
+    {
+      "name": "Giacinto Paolo Saggese"
+    },
+    {
+      "name": "Paul Smith"
+    },
+    {
+      "name": "Krishna Taduri"
+    }
+  ],
+  "submitted_at": "2025-11-30",
+  "updated_at": "2026-02-23",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.6966,
+    "recent_score": 0.3722,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.6359
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2",
+      "updated_at": "2026-02-23"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.01149v2",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.01149v2"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": []
+}

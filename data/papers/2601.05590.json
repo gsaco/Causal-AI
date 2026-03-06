@@ -1,0 +1,120 @@
+{
+  "arxiv_id": "2601.05590",
+  "canonical_url": "https://arxiv.org/abs/2601.05590v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.05590v1",
+  "title": "A Causal Information-Flow Framework for Unbiased Learning-to-Rank",
+  "abstract": "In web search and recommendation systems, user clicks are widely used to train ranking models. However, click data is heavily biased, i.e., users tend to click higher-ranked items (position bias), choose only what was shown to them (selection bias), and trust top results more (trust bias). Without explicitly modeling these biases, the true relevance of ranked items cannot be correctly learned from clicks. Existing Unbiased Learning-to-Rank (ULTR) methods mainly correct position bias and rely on propensity estimation, but they cannot measure remaining bias, provide risk guarantees, or jointly handle multiple bias sources. To overcome these challenges, this paper introduces a novel causal learning-based ranking framework that extends ULTR by combining Structural Causal Models (SCMs) with information-theoretic tools. SCMs specify how clicks are generated and help identify the true relevance signal from click data, while conditional mutual information, measures how much bias leaks into the learned relevance estimates. We use this leakage measure to define a rigorous notion of disentanglement and include it as a regularizer during model training to reduce bias. In addition, we incorporate a causal inference estimator, i.e., doubly robust estimator, to ensure more reliable risk estimation. Experiments on standard Learning-to-Rank benchmarks show that our method consistently reduces measured bias leakage and improves ranking performance, especially in realistic scenarios where multiple biases-such as position and trust bias-interact strongly.",
+  "authors": [
+    {
+      "name": "Haoming Gong"
+    },
+    {
+      "name": "Qingyao Ai"
+    },
+    {
+      "name": "Zhihao Tao"
+    },
+    {
+      "name": "Yongfeng Zhang"
+    }
+  ],
+  "submitted_at": "2026-01-09",
+  "updated_at": "2026-01-09",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5082,
+    "recent_score": 0.21,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.3728
+  },
+  "topic_tags": [
+    {
+      "topic_id": "foundations-scm",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "structural causal",
+          "SCM"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-representation-learning",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "disentanglement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "robust",
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.05590v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.05590v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"structural causal\" OR abs:\"structural causal\" OR ti:\"structural equation model\" OR abs:\"structural equation model\") AND (cat:stat.ML OR cat:cs.AI OR cat:cs.LG OR cat:math.ST)"
+    ],
+    "query_packs": [
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "sequential",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

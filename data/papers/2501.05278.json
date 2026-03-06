@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2501.05278",
+  "canonical_url": "https://arxiv.org/abs/2501.05278v1",
+  "pdf_url": "https://arxiv.org/pdf/2501.05278v1",
+  "title": "Off-Policy Evaluation and Counterfactual Methods in Dynamic Auction Environments",
+  "abstract": "Counterfactual estimators are critical for learning and refining policies using logged data, a process known as Off-Policy Evaluation (OPE). OPE allows researchers to assess new policies without costly experiments, speeding up the evaluation process. Online experimental methods, such as A/B tests, are effective but often slow, thus delaying the policy selection and optimization process. In this work, we explore the application of OPE methods in the context of resource allocation in dynamic auction environments. Given the competitive nature of environments where rapid decision-making is crucial for gaining a competitive edge, the ability to quickly and accurately assess algorithmic performance is essential. By utilizing counterfactual estimators as a preliminary step before conducting A/B tests, we aim to streamline the evaluation process, reduce the time and resources required for experimentation, and enhance confidence in the chosen policies. Our investigation focuses on the feasibility and effectiveness of using these estimators to predict the outcomes of potential resource allocation strategies, evaluate their performance, and facilitate more informed decision-making in policy selection. Motivated by the outcomes of our initial study, we envision an advanced analytics system designed to seamlessly and dynamically assess new resource allocation strategies and policies.",
+  "authors": [
+    {
+      "name": "Ritam Guha"
+    },
+    {
+      "name": "Nilavra Pathak"
+    }
+  ],
+  "submitted_at": "2025-01-09",
+  "updated_at": "2025-01-09",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "q-fin.CP"
+  ],
+  "metrics": {
+    "cross_list_count": 2,
+    "version_count": 1,
+    "trending_score": 0.4164,
+    "recent_score": 0,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.2504
+  },
+  "topic_tags": [
+    {
+      "topic_id": "off-policy-evaluation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "off-policy",
+          "policy evaluation"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-01-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2501.05278v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2501.05278v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"off-policy evaluation\" OR abs:\"off-policy evaluation\" OR ti:\"off policy evaluation\") AND (abs:causal OR abs:counterfactual OR abs:intervention)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "recommenders-online-experiments"
+  ]
+}

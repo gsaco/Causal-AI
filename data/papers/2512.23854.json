@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2512.23854",
+  "canonical_url": "https://arxiv.org/abs/2512.23854v1",
+  "pdf_url": "https://arxiv.org/pdf/2512.23854v1",
+  "title": "Extrapolating LATE with Weak IVs",
+  "abstract": "To evaluate the effectiveness of a counterfactual policy, it is often necessary to extrapolate treatment effects on compliers to broader populations. This extrapolation relies on exogenous variation in instruments, which is often weak in practice. This limited variation leads to invalid confidence intervals that are typically too short and cannot be accurately detected by classical methods. For instance, the F-test may falsely conclude that the instruments are strong. Consequently, I develop inference results that are valid even with limited variation in the instruments. These results lead to asymptotically valid confidence sets for various linear functionals of marginal treatment effects, including LATE, ATE, ATT, and policy-relevant treatment effects, regardless of identification strength. This is the first paper to provide weak instrument robust inference results for this class of parameters. Finally, I illustrate my results using data from Agan, Doleac, and Harvey (2023) to analyze counterfactual policies of changing prosecutors' leniency and their effects on reducing recidivism.",
+  "authors": [
+    {
+      "name": "Muyang Ren"
+    }
+  ],
+  "submitted_at": "2025-12-29",
+  "updated_at": "2025-12-29",
+  "primary_category": "econ.EM",
+  "categories": [
+    "econ.EM"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.4393,
+    "recent_score": 0.156,
+    "canonical_score": 0.883,
+    "max_topic_confidence": 0.74,
+    "rising_score": 0.2914
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.74,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "counterfactual",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "counterfactuals",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "robust"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "counterfactual"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-12-29"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2512.23854v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2512.23854v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

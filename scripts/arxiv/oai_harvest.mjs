@@ -23,6 +23,11 @@ function extractResumptionToken(xml) {
   return match?.[1] ?? "";
 }
 
+export function extractIdsFromOaiXml(xml) {
+  const matches = xml.matchAll(/\b(\d{4}\.\d{4,5}|[a-z-]+\/\d{7})\b/gi);
+  return Array.from(new Set(Array.from(matches, (match) => match[1])));
+}
+
 export async function harvestOai({ dataDir = "data", baseUrl = "https://export.arxiv.org/oai2", metadataPrefix = "arXivRaw" } = {}) {
   const statePath = path.join(dataDir, "provenance", "oai_state.json");
   let state = { last_harvest: undefined, resumption_token: undefined };
@@ -50,7 +55,7 @@ export async function harvestOai({ dataDir = "data", baseUrl = "https://export.a
   await fs.mkdir(path.dirname(statePath), { recursive: true });
   await fs.writeFile(statePath, JSON.stringify(nextState, null, 2));
 
-  return { token };
+  return { token, ids: extractIdsFromOaiXml(xml) };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

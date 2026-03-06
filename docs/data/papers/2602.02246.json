@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2602.02246",
+  "canonical_url": "https://arxiv.org/abs/2602.02246v1",
+  "pdf_url": "https://arxiv.org/pdf/2602.02246v1",
+  "title": "Cumulative Treatment Effect Testing under Continuous Time Reinforcement Learning",
+  "abstract": "Understanding the impact of treatment effect over time is a fundamental aspect of many scientific and medical studies. In this paper, we introduce a novel approach under a continuous-time reinforcement learning framework for testing a treatment effect. Specifically, our method provides an effective test on carryover effects of treatment over time utilizing the average treatment effect (ATE). The average treatment effect is defined as difference of value functions over an infinite horizon, which accounts for cumulative treatment effects, both immediate and carryover. The proposed method outperforms existing testing procedures such as discrete time reinforcement learning strategies in multi-resolution observation settings where observation times can be irregular. Another advantage of the proposed method is that it can capture treatment effects of a shorter duration and provide greater accuracy compared to discrete-time approximations, through the use of continuous-time estimation for the value function. We establish the asymptotic normality of the proposed test statistics and apply it to OhioT1DM diabetes data to evaluate the cumulative treatment effects of bolus insulin on patients' glucose levels.",
+  "authors": [
+    {
+      "name": "Jiuchen Zhang"
+    },
+    {
+      "name": "Annie Qu"
+    }
+  ],
+  "submitted_at": "2026-02-02",
+  "updated_at": "2026-02-02",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.5625,
+    "recent_score": 0.4062,
+    "canonical_score": 0.572,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.5594
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-02-02"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2602.02246v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2602.02246v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:CATE OR abs:ATE OR abs:uplift) AND (abs:causal OR abs:\"treatment effect\"))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

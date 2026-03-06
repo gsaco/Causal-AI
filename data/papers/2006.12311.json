@@ -1,0 +1,125 @@
+{
+  "arxiv_id": "2006.12311",
+  "canonical_url": "https://arxiv.org/abs/2006.12311v1",
+  "pdf_url": "https://arxiv.org/pdf/2006.12311v1",
+  "title": "Provably Efficient Causal Reinforcement Learning with Confounded Observational Data",
+  "abstract": "Empowered by expressive function approximators such as neural networks, deep reinforcement learning (DRL) achieves tremendous empirical successes. However, learning expressive function approximators requires collecting a large dataset (interventional data) by interacting with the environment. Such a lack of sample efficiency prohibits the application of DRL to critical scenarios, e.g., autonomous driving and personalized medicine, since trial and error in the online setting is often unsafe and even unethical. In this paper, we study how to incorporate the dataset (observational data) collected offline, which is often abundantly available in practice, to improve the sample efficiency in the online setting. To incorporate the possibly confounded observational data, we propose the deconfounded optimistic value iteration (DOVI) algorithm, which incorporates the confounded observational data in a provably efficient manner. More specifically, DOVI explicitly adjusts for the confounding bias in the observational data, where the confounders are partially observed or unobserved. In both cases, such adjustments allow us to construct the bonus based on a notion of information gain, which takes into account the amount of information acquired from the offline setting. In particular, we prove that the regret of DOVI is smaller than the optimal regret achievable in the pure online setting by a multiplicative factor, which decreases towards zero when the confounded observational data are more informative upon the adjustments. Our algorithm and analysis serve as a step towards causal reinforcement learning.",
+  "authors": [
+    {
+      "name": "Lingxiao Wang"
+    },
+    {
+      "name": "Zhuoran Yang"
+    },
+    {
+      "name": "Zhaoran Wang"
+    }
+  ],
+  "submitted_at": "2020-06-22",
+  "updated_at": "2020-06-22",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4155,
+    "recent_score": 0,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.2612
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-rl",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal reinforcement"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "identifiability-do-calculus",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "adjustment"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2020-06-22"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2006.12311v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2006.12311v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(ti:\"causal reinforcement learning\" OR abs:\"causal reinforcement learning\" OR abs:\"causal rl\") AND (cat:cs.AI OR cat:cs.LG)"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": [
+    "robotics-autonomy"
+  ]
+}

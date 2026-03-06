@@ -1,0 +1,106 @@
+{
+  "arxiv_id": "2601.13449",
+  "canonical_url": "https://arxiv.org/abs/2601.13449v1",
+  "pdf_url": "https://arxiv.org/pdf/2601.13449v1",
+  "title": "Identifying Causes of Test Unfairness: Manipulability and Separability",
+  "abstract": "Differential item functioning (DIF) is a widely used statistical notion for identifying items that may disadvantage specific groups of test-takers. These groups are often defined by non-manipulable characteristics, e.g., gender, race/ethnicity, or English-language learner (ELL) status. While DIF can be framed as a causal fairness problem by treating group membership as the treatment variable, this invokes the long-standing controversy over the interpretation of causal effects for non-manipulable treatments. To better identify and interpret causal sources of DIF, this study leverages an interventionist approach using treatment decomposition proposed by Robins and Richardson (2010). Under this framework, we can decompose a non-manipulable treatment into intervening variables. For example, ELL status can be decomposed into English vocabulary unfamiliarity and classroom learning barriers, each of which influences the outcome through different causal pathways. We formally define separable DIF effects associated with these decomposed components, depending on the absence or presence of item impact, and provide causal identification strategies for each effect. We then apply the framework to biased test items in the SAT and Regents exams. We also provide formal detection methods using causal machine learning methods, namely causal forests and Bayesian additive regression trees, and demonstrate their performance through a simulation study. Finally, we discuss the implications of adopting interventionist approaches in educational testing practices.",
+  "authors": [
+    {
+      "name": "Youmi Suk"
+    },
+    {
+      "name": "Weicong Lyu"
+    }
+  ],
+  "submitted_at": "2026-01-19",
+  "updated_at": "2026-01-19",
+  "primary_category": "stat.ME",
+  "categories": [
+    "stat.ME",
+    "stat.AP"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5366,
+    "recent_score": 0.276,
+    "canonical_score": 0.847,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.4332
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-fairness",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "causal fairness",
+          "fairness"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-01-19"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2601.13449v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2601.13449v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"counterfactual fairness\" OR abs:\"counterfactual fairness\" OR ti:\"causal fairness\" OR abs:\"causal fairness\"))"
+    ],
+    "query_packs": [
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

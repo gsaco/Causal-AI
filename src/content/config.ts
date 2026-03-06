@@ -1,5 +1,11 @@
 import { defineCollection, z } from "astro:content";
 
+const resourceCard = z.object({
+  label: z.string(),
+  note: z.string().optional(),
+  url: z.string().url().optional()
+});
+
 const topics = defineCollection({
   type: "content",
   schema: z.object({
@@ -7,6 +13,16 @@ const topics = defineCollection({
     scope: z.string(),
     anchors: z.array(z.string()),
     last_reviewed: z.string(),
+    thesis: z.string().optional(),
+    why_now: z.string().optional(),
+    landmark_papers: z.array(z.string()).optional(),
+    rising_papers: z.array(z.string()).optional(),
+    evaluation_cues: z.array(z.string()).optional(),
+    benchmarks: z.array(resourceCard).optional(),
+    tools: z.array(resourceCard).optional(),
+    open_questions: z.array(z.string()).optional(),
+    related_topics: z.array(z.string()).optional(),
+    applications: z.array(z.string()).optional(),
     evidence_arxiv: z.array(z.string()).optional(),
     reading_path: z
       .object({
@@ -43,9 +59,13 @@ const trends = defineCollection({
     title: z.string(),
     summary: z.string(),
     signals: z.array(z.string()),
+    thesis: z.string().optional(),
+    why_now: z.string().optional(),
     foundational: z.array(z.string()),
     new_wave: z.array(z.string()),
     debates: z.array(z.string()),
+    benchmarks: z.array(resourceCard).optional(),
+    tools: z.array(resourceCard).optional(),
     open_problems: z
       .array(
         z.object({
@@ -72,8 +92,13 @@ const applications = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    thesis: z.string().optional(),
+    why_now: z.string().optional(),
     topics: z.array(z.string()).optional(),
     trends: z.array(z.string()).optional(),
+    benchmarks: z.array(resourceCard).optional(),
+    tools: z.array(resourceCard).optional(),
+    open_questions: z.array(z.string()).optional(),
     evidence_arxiv: z.array(z.string()).optional(),
     last_reviewed: z.string()
   })
@@ -84,8 +109,13 @@ const frontiers = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    thesis: z.string().optional(),
+    why_now: z.string().optional(),
     topics: z.array(z.string()).optional(),
     trends: z.array(z.string()).optional(),
+    benchmarks: z.array(resourceCard).optional(),
+    tools: z.array(resourceCard).optional(),
+    open_questions: z.array(z.string()).optional(),
     evidence_arxiv: z.array(z.string()).optional(),
     last_reviewed: z.string()
   })

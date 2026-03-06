@@ -1,0 +1,107 @@
+{
+  "arxiv_id": "2208.04892",
+  "canonical_url": "https://arxiv.org/abs/2208.04892v1",
+  "pdf_url": "https://arxiv.org/pdf/2208.04892v1",
+  "title": "Intrinsically Motivated Learning of Causal World Models",
+  "abstract": "Despite the recent progress in deep learning and reinforcement learning, transfer and generalization of skills learned on specific tasks is very limited compared to human (or animal) intelligence. The lifelong, incremental building of common sense knowledge might be a necessary component on the way to achieve more general intelligence. A promising direction is to build world models capturing the true physical mechanisms hidden behind the sensorimotor interaction with the environment. Here we explore the idea that inferring the causal structure of the environment could benefit from well-chosen actions as means to collect relevant interventional data.",
+  "authors": [
+    {
+      "name": "Louis Annabi"
+    }
+  ],
+  "submitted_at": "2022-08-09",
+  "updated_at": "2022-08-09",
+  "primary_category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.5472,
+    "recent_score": 0,
+    "canonical_score": 0.8785,
+    "max_topic_confidence": 0.73,
+    "rising_score": 0.4368
+  },
+  "topic_tags": [
+    {
+      "topic_id": "causal-world-models",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "world model"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2022-08-09"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2208.04892v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2208.04892v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((ti:\"causal time series\" OR abs:\"causal time series\" OR ti:\"causal world model\" OR abs:\"causal world model\") AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy"
+    ]
+  },
+  "application_tags": []
+}

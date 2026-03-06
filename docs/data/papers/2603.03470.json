@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2603.03470",
+  "canonical_url": "https://arxiv.org/abs/2603.03470v1",
+  "pdf_url": "https://arxiv.org/pdf/2603.03470v1",
+  "title": "Bisynchronous FIFOs and the FITO Category Mistake: Silicon-Proven Interaction Primitives for Distributed Coordination",
+  "abstract": "Bisynchronous FIFOs -- hardware buffers that mediate data transfer between independent clock domains without a shared global timebase -- have been designed, formally verified, and commercially deployed in silicon for over four decades. We survey this literature from Chapiro's 1984 GALS thesis through Cummings's Gray-code pointer techniques, Chelcea and Nowick's mixed-timing interfaces, Greenstreet's STARI protocol, and the 2015 NVIDIA pausible bisynchronous FIFO, and argue that this body of work constitutes a silicon-proven existence proof against the Forward-In-Time-Only (FITO) assumption that pervades distributed systems. The central claim is that interaction-based synchronization primitives -- handshakes, mutual exclusion, and causal flow control -- can replace timestamp-based coordination at the most demanding levels of digital engineering, directly undermining the FITO assumption in protocols such as PTP, TSN, and conventional Ethernet. We draw a structural parallel between on-chip bisynchronous coordination and the Open Atomic Ethernet (OAE) architecture, and identify the handshake -- not the timestamp -- as the fundamental primitive for coordination between independent causal domains.",
+  "authors": [
+    {
+      "name": "Paul Borrill"
+    }
+  ],
+  "submitted_at": "2026-03-03",
+  "updated_at": "2026-03-03",
+  "primary_category": "cs.DC",
+  "categories": [
+    "cs.DC"
+  ],
+  "metrics": {
+    "cross_list_count": 0,
+    "version_count": 1,
+    "trending_score": 0.7207,
+    "recent_score": 0.9181,
+    "canonical_score": 0.7553,
+    "max_topic_confidence": 0.66,
+    "rising_score": 0.7091
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.66,
+      "rationale": {
+        "matched_keywords": [
+          "ate",
+          "cate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2026-03-03"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2603.03470v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2603.03470v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "((abs:\"hidden confound\" OR abs:\"latent confound\" OR ti:\"instrumental variable\" OR abs:\"instrumental variable\" OR ti:mediation OR abs:mediation) AND (abs:causal OR ti:causal))"
+    ],
+    "query_packs": [
+      "discovery-inference"
+    ]
+  },
+  "application_tags": []
+}

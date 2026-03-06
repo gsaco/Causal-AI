@@ -1,0 +1,118 @@
+{
+  "arxiv_id": "2507.15899",
+  "canonical_url": "https://arxiv.org/abs/2507.15899v1",
+  "pdf_url": "https://arxiv.org/pdf/2507.15899v1",
+  "title": "Structural DID with ML: Theory, Simulation, and a Roadmap for Applied Research",
+  "abstract": "Causal inference in observational panel data has become a central concern in economics,policy analysis,and the broader social sciences.To address the core contradiction where traditional difference-in-differences (DID) struggles with high-dimensional confounding variables in observational panel data,while machine learning (ML) lacks causal structure interpretability,this paper proposes an innovative framework called S-DIDML that integrates structural identification with high-dimensional estimation.Building upon the structure of traditional DID methods,S-DIDML employs structured residual orthogonalization techniques (Neyman orthogonality+cross-fitting) to retain the group-time treatment effect (ATT) identification structure while resolving high-dimensional covariate interference issues.It designs a dynamic heterogeneity estimation module combining causal forests and semi-parametric models to capture spatiotemporal heterogeneity effects.The framework establishes a complete modular application process with standardized Stata implementation paths.The introduction of S-DIDML enriches methodological research on DID and DDML innovations, shifting causal inference from method stacking to architecture integration.This advancement enables social sciences to precisely identify policy-sensitive groups and optimize resource allocation.The framework provides replicable evaluation tools, decision optimization references,and methodological paradigms for complex intervention scenarios such as digital transformation policies and environmental regulations.",
+  "authors": [
+    {
+      "name": "Yile Yu"
+    },
+    {
+      "name": "Anzhi Xu"
+    },
+    {
+      "name": "Yi Wang"
+    }
+  ],
+  "submitted_at": "2025-07-21",
+  "updated_at": "2025-07-21",
+  "primary_category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "metrics": {
+    "cross_list_count": 1,
+    "version_count": 1,
+    "trending_score": 0.4746,
+    "recent_score": 0.0026,
+    "canonical_score": 0.9145,
+    "max_topic_confidence": 0.81,
+    "rising_score": 0.328
+  },
+  "topic_tags": [
+    {
+      "topic_id": "effect-estimation",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "treatment effect",
+          "ate"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-time-series",
+      "confidence": 0.81,
+      "rationale": {
+        "matched_keywords": [
+          "spatiotemporal",
+          "temporal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "instrumental-variables",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "IV"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "distribution-shift",
+      "confidence": 0.73,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    },
+    {
+      "topic_id": "causal-llms",
+      "confidence": 0.58,
+      "rationale": {
+        "matched_keywords": [
+          "causal"
+        ],
+        "rules_version": "v2"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "version": "v1",
+      "updated_at": "2025-07-21"
+    }
+  ],
+  "links": {
+    "arxiv_abs": "https://arxiv.org/abs/2507.15899v1",
+    "arxiv_pdf": "https://arxiv.org/pdf/2507.15899v1"
+  },
+  "provenance": {
+    "source": "arxiv_api",
+    "harvested_at": "2026-03-05T23:52:40.464Z",
+    "harvest_run_id": "snapshot-2026-03-05",
+    "queries": [
+      "(abs:spatiotemporal AND abs:causal AND (cat:stat.ML OR cat:cs.LG))"
+    ],
+    "query_packs": [
+      "sequential",
+      "foundations",
+      "discovery-inference",
+      "representation",
+      "llms-agents",
+      "robustness-policy",
+      "systems"
+    ]
+  },
+  "application_tags": [
+    "economics-policy-social"
+  ]
+}
